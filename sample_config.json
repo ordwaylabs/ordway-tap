@@ -1,5 +1,9 @@
 {
-  "username": "my_username",
-  "password": "my_password",
-  "start_date": "2017-01-01T00:00:00Z"
+  "api_credentials": {
+    "x_company": "Rocky",
+    "x_company_token": "oy4ipF-zEq-PWMBBF4eG",
+    "x_user_email": "mubarak.kollaru-kandiyil@ordwaylabs.com",
+    "x_user_token": "Qz-kabJxrtAjCKRnzHnK",
+    "endpoint": "http://localhost:3000"
+  }
 }

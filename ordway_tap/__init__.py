@@ -5,10 +5,15 @@ import singer
 from singer import utils, metadata
 from singer.catalog import Catalog, CatalogEntry
 from singer.schema import Schema
+import ordway_tap.property
+import ordway_tap.api_sync
+import ordway_tap.configs
 
-
-REQUIRED_CONFIG_KEYS = ["start_date", "username", "password"]
+REQUIRED_CONFIG_KEYS = ["api_credentials"]
+REQUIRED_API_CREDENTIAL_KEYS = ["x_company", "x_company_token", "x_user_email", "x_user_token", "endpoint"]
 LOGGER = singer.get_logger()
+
+global configs
 
 
 def get_abs_path(path):
@@ -31,8 +36,8 @@ def discover():
     streams = []
     for stream_id, schema in raw_schemas.items():
         # TODO: populate any metadata and stream's key properties here..
-        stream_metadata = []
-        key_properties = []
+        stream_metadata = property.get_stream_metadata(schema)
+        key_properties = property.get_key_properties(stream_id)
         streams.append(
             CatalogEntry(
                 tap_stream_id=stream_id,
@@ -63,28 +68,29 @@ def sync(config, state, catalog):
 
         singer.write_schema(
             stream_name=stream.tap_stream_id,
-            schema=stream.schema,
+            schema=stream.schema.to_dict(),
             key_properties=stream.key_properties,
         )
 
-        # TODO: delete and replace this inline function with your own data retrieval process:
-        tap_data = lambda: [{"id": x, "name": "row${x}"} for x in range(1000)]
-
-        max_bookmark = None
-        for row in tap_data():
-            # TODO: place type conversions or transformations here
-
-            # write one or more rows to the stream:
-            singer.write_records(stream.tap_stream_id, [row])
-            if bookmark_column:
-                if is_sorted:
-                    # update bookmark to latest value
-                    singer.write_state({stream.tap_stream_id: row[bookmark_column]})
-                else:
-                    # if data unsorted, save max value until end of writes
-                    max_bookmark = max(max_bookmark, row[bookmark_column])
-        if bookmark_column and not is_sorted:
-            singer.write_state({stream.tap_stream_id: max_bookmark})
+        api_sync.sync(stream.tap_stream_id)
+        # # TODO: delete and replace this inline function with your own data retrieval process:
+        # tap_data = lambda: [{"id": x, "name": "row${x}"} for x in range(1000)]
+        #
+        # max_bookmark = None
+        # for row in tap_data():
+        #     # TODO: place type conversions or transformations here
+        #
+        #     # write one or more rows to the stream:
+        #     singer.write_records(stream.tap_stream_id, [row])
+        #     if bookmark_column:
+        #         if is_sorted:
+        #             # update bookmark to latest value
+        #             singer.write_state({stream.tap_stream_id: row[bookmark_column]})
+        #         else:
+        #             # if data unsorted, save max value until end of writes
+        #             max_bookmark = max(max_bookmark, row[bookmark_column])
+        # if bookmark_column and not is_sorted:
+        #     singer.write_state({stream.tap_stream_id: max_bookmark})
     return
 
 
@@ -92,6 +98,10 @@ def sync(config, state, catalog):
 def main():
     # Parse command line arguments
     args = utils.parse_args(REQUIRED_CONFIG_KEYS)
+    # Check API credential keys
+    utils.check_config(args.config['api_credentials'], REQUIRED_API_CREDENTIAL_KEYS)
+
+    configs.api_credentials = args.config['api_credentials']
 
     # If discover flag was passed, run discovery mode and dump output to stdout
     if args.discover:

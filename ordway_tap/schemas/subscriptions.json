@@ -1,0 +1,191 @@
+{
+	"type": ["null", "object"],
+	"additionalProperties": false,
+	"required": ["company_id", "subscription_id", "subscription_line_id"],
+	"properties": {
+		"company_id": {
+			"type": "string"
+		},
+		"subscription_id": {
+			"type": "string"
+		},
+		"subscription_line_id": {
+			"type": "string"
+		},
+		"customer_id": {
+			"type": "string"
+		},
+		"bill_contact_id": {
+			"type": ["null", "string"]
+		},
+		"shipping_contact_id": {
+			"type": ["null", "string"]
+		},
+		"status": {
+			"type": ["null", "string"]
+		},
+		"billing_start_date": {
+			"type": ["null", "string"],
+			"format": "date"
+		},
+		"service_start_date": {
+			"type": ["null", "string"],
+			"format": "date"
+		},
+		"order_placed_at": {
+			"type": ["null", "string"],
+			"format": "date"
+		},
+		"contract_effective_date": {
+			"type": ["null", "string"],
+			"format": "date"
+		},
+		"cancellation_date": {
+			"type": ["null", "string"],
+			"format": "date"
+		},
+		"auto_renew": {
+			"type": ["null", "boolean"]
+		},
+		"currency": {
+			"type": ["null", "string"]
+		},
+		"payment_terms": {
+			"type": ["null", "string"]
+		},
+		"cmrr": {
+			"type": ["null", "number"]
+		},
+		"discounted_cmrr": {
+			"type": ["null", "number"]
+		},
+		"separate_invoice": {
+			"type": ["null", "boolean"]
+		},
+		"notes": {
+			"type": ["null", "string"]
+		},
+		"version": {
+			"type": ["null", "integer"]
+		},
+		"version_type": {
+			"type": ["null", "string"]
+		},
+		"contract_term": {
+			"type": ["null", "string"]
+		},
+		"renewal_term": {
+			"type": ["null", "string"]
+		},
+		"tcv": {
+			"type": ["null", "number"]
+		},
+		"product_id": {
+			"type": ["null", "string"]
+		},
+		"product_name": {
+			"type": ["null", "string"]
+		},
+		"plan_name": {
+			"type": ["null", "string"]
+		},
+		"charge_id": {
+			"type": ["null", "string"]
+		},
+		"charge_name": {
+			"type": ["null", "string"]
+		},
+		"pricing_model": {
+			"type": ["null", "string"]
+		},
+		"list_price": {
+			"type": ["null", "number"]
+		},
+		"price_base": {
+			"type": ["null", "string"]
+		},
+		"quantity": {
+			"type": ["null", "number"]
+		},
+		"included_units": {
+			"type": ["null", "number"]
+		},
+		"discount": {
+			"type": ["null", "number"]
+		},
+		"effective_price": {
+			"type": ["null", "number"]
+		},
+		"charge_type": {
+			"type": ["null", "string"]
+		},
+		"billing_period": {
+			"type": ["null", "string"]
+		},
+		"unit_of_measure": {
+			"type": ["null", "string"]
+		},
+		"current_period_start_date": {
+			"type": ["null", "string"],
+			"format": "date"
+		},
+		"current_period_end_date": {
+			"type": ["null", "string"],
+			"format": "date"
+		},
+		"billing_schedule_id": {
+			"type": ["null", "string"]
+		},
+		"revenue_schedule_id": {
+			"type": ["null", "string"]
+		},
+		"charge_timing": {
+			"type": ["null", "string"]
+		},
+		"billing_period_start_alignment": {
+			"type": ["null", "string"]
+		},
+		"billing_day": {
+			"type": ["null", "string"]
+		},
+		"prorate_partial_periods": {
+			"type": ["null", "boolean"]
+		},
+		"backcharge_current_period": {
+			"type": ["null", "boolean"]
+		},
+		"prepayment_periods": {
+			"type": ["null", "number"]
+		},
+		"renewal_increment_percent": {
+			"type": ["null", "number"]
+		},
+		"override_renewal_increment_percent": {
+			"type": ["null", "boolean"]
+		},
+		"charge_end_date": {
+			"type": ["null", "string"],
+			"format": "date"
+		},
+		"created_by": {
+			"type": ["null", "string"]
+		},
+		"updated_by": {
+			"type": ["null", "string"]
+		},
+		"created_date": {
+			"type": ["null", "string"],
+			"format": "date-time"
+		},
+		"updated_date": {
+			"type": ["null", "string"],
+			"format": "date-time"
+		},
+		"custom_fields": {
+			"type": ["null", "object"]
+		},
+		"charge_custom_fields": {
+			"type": ["null", "object"]
+		}
+	}
+}

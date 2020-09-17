@@ -1,11 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="174eb720-7703-48bf-b380-d67796e8ab57" name="Default Changelist" comment="" />
+    <list default="true" id="174eb720-7703-48bf-b380-d67796e8ab57" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordway_tap/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordway_tap/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordway_tap/schemas/sample_stream.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/sample_config.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1hL3Rt5j6YdPnF2EIVOpQycTPdr" />
   <component name="ProjectViewState">
@@ -51,10 +85,22 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="349" y="139" key="SettingsEditor" timestamp="1599776649817">
-      <screen x="0" y="23" width="1680" height="954" />
+    <state x="349" y="128" key="SettingsEditor" timestamp="1600181577802">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="349" y="128" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1600181577802" />
     <state x="349" y="139" key="SettingsEditor/0.23.1680.954@0.23.1680.954" timestamp="1599776649817" />
   </component>
 </project>
