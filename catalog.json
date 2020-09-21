@@ -1,6 +1,146 @@
 {
   "streams": [
     {
+      "tap_stream_id": "credits",
+      "key_properties": [
+        "company_id",
+        "credit_id"
+      ],
+      "schema": {
+        "properties": {
+          "company_id": {
+            "type": "string"
+          },
+          "credit_id": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": "string"
+          },
+          "credit_date": {
+            "format": "date",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "notes": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "credit_amount": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "applied_amount": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "unapplied_amount": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "currency": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "reference_number": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "auto_apply": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "gl_account": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "invoices": {
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "refunds": {
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "created_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "custom_fields": {
+            "type": [
+              "null",
+              "object"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "credits",
+      "metadata": [
+        {
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": "true"
+          },
+          "breadcrumb": []
+        }
+      ]
+    },
+    {
       "tap_stream_id": "invoices",
       "key_properties": [
         "company_id",
@@ -850,6 +990,292 @@
         "additionalProperties": false
       },
       "stream": "subscriptions",
+      "metadata": [
+        {
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": "true"
+          },
+          "breadcrumb": []
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "payments",
+      "key_properties": [
+        "company_id",
+        "payment_id"
+      ],
+      "schema": {
+        "properties": {
+          "company_id": {
+            "type": "string"
+          },
+          "payment_id": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": "string"
+          },
+          "payment_date": {
+            "format": "date",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "notes": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "payment_amount": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "fee_amount": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "applied_amount": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "unapplied_amount": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "refunded_amount": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "payment_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "payment_method": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "currency": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "reference_number": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "auto_apply": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "retried_attempts": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "invoices": {
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "refunds": {
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "gl_account": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "custom_fields": {
+            "type": [
+              "null",
+              "object"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "payments",
+      "metadata": [
+        {
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": "true"
+          },
+          "breadcrumb": []
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "refunds",
+      "key_properties": [
+        "company_id",
+        "refund_id"
+      ],
+      "schema": {
+        "properties": {
+          "company_id": {
+            "type": "string"
+          },
+          "refund_id": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": "string"
+          },
+          "refund_date": {
+            "format": "date",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "refund_amount": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "refund_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "notes": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "payment_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "currency": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "reference_number": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "custom_fields": {
+            "type": [
+              "null",
+              "object"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "refunds",
       "metadata": [
         {
           "metadata": {

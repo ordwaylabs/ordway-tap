@@ -1,7 +1,10 @@
 KEY_PROPERTIES_MAP = {
     'customers': ['company_id', 'customer_id'],
     'subscriptions': ['company_id', 'subscription_id', 'subscription_line_id'],
-    'invoices': ['company_id', 'invoice_id', 'invoice_line_no']
+    'invoices': ['company_id', 'invoice_id', 'invoice_line_no'],
+    'payments': ['company_id', 'payment_id'],
+    'credits': ['company_id', 'credit_id'],
+    'refunds': ['company_id', 'refund_id']
 }
 
 
@@ -15,7 +18,8 @@ def get_key_properties(stream):
 def get_stream_metadata(schema):
     metadata = [{
         'metadata': {
-            'inclusion': 'automatic'
+            'inclusion': 'automatic',
+            'selected': 'true'
         },
         'breadcrumb': []
     }]
