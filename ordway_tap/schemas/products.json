@@ -1,0 +1,90 @@
+{
+	"type": ["null", "object"],
+	"additionalProperties": false,
+	"required": ["company_id", "product_id"],
+	"properties": {
+		"company_id": {
+			"type": "string"
+		},
+		"product_id": {
+			"type": "string"
+		},
+		"name": {
+			"type": "string"
+		},
+		"sku": {
+			"type": ["null", "string"]
+		},
+		"status": {
+			"type": ["null", "string"]
+		},
+		"taxable": {
+			"type": ["null", "boolean"]
+		},
+		"description": {
+			"type": ["null", "string"]
+		},
+		"price": {
+			"type": ["null", "number"]
+		},
+		"currency": {
+			"type": ["null", "string"]
+		},
+		"income_account": {
+			"type": ["null", "string"]
+		},
+		"deferred_revenue_enabled": {
+			"type": ["null", "boolean"]
+		},
+		"revenue_rule_id": {
+			"type": ["null", "string"]
+		},
+		"recognition_start_date": {
+			"type": ["null", "string"]
+		},
+		"order_journal_entry_enabled": {
+			"type": ["null", "boolean"]
+		},
+		"order_debit_account": {
+			"type": ["null", "string"]
+		},
+		"order_credit_account": {
+			"type": ["null", "string"]
+		},
+		"invoice_journal_entry_enabled": {
+			"type": ["null", "boolean"]
+		},
+		"invoice_debit_account": {
+			"type": ["null", "string"]
+		},
+		"invoice_credit_account": {
+			"type": ["null", "string"]
+		},
+		"revenue_journal_entry_enabled": {
+			"type": ["null", "boolean"]
+		},
+		"revenue_debit_account": {
+			"type": ["null", "string"]
+		},
+		"revenue_credit_account": {
+			"type": ["null", "string"]
+		},
+		"created_by": {
+			"type": ["null", "string"]
+		},
+		"updated_by": {
+			"type": ["null", "string"]
+		},
+		"created_date": {
+			"type": ["null", "string"],
+			"format": "date-time"
+		},
+		"updated_date": {
+			"type": ["null", "string"],
+			"format": "date-time"
+		},
+		"custom_fields": {
+			"type": ["null", "object"]
+		}
+	}
+}

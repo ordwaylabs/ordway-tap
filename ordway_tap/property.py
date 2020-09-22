@@ -4,7 +4,10 @@ KEY_PROPERTIES_MAP = {
     'invoices': ['company_id', 'invoice_id', 'invoice_line_no'],
     'payments': ['company_id', 'payment_id'],
     'credits': ['company_id', 'credit_id'],
-    'refunds': ['company_id', 'refund_id']
+    'refunds': ['company_id', 'refund_id'],
+    'billing_schedules': ['company_id', 'billing_schedule_id'],
+    'revenue_schedules': ['company_id', 'revenue_schedule_id'],
+    'products': ['company_id', 'product_id']
 }
 
 

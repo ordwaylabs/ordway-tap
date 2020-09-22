@@ -628,6 +628,318 @@
       ]
     },
     {
+      "tap_stream_id": "revenue_schedules",
+      "key_properties": [
+        "company_id",
+        "revenue_schedule_id"
+      ],
+      "schema": {
+        "properties": {
+          "company_id": {
+            "type": "string"
+          },
+          "revenue_schedule_id": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": "string"
+          },
+          "source_transaction": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "product_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "product_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "plan_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "plan_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "charge_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "charge_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "charge_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "charge_timing": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "total_revenue": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "recognized_revenue": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "unrecognized_revenue": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "start_date": {
+            "format": "date",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "end_date": {
+            "format": "date",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "schedule_lines": {
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "created_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "revenue_schedules",
+      "metadata": [
+        {
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": "true"
+          },
+          "breadcrumb": []
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "billing_schedules",
+      "key_properties": [
+        "company_id",
+        "billing_schedule_id"
+      ],
+      "schema": {
+        "properties": {
+          "company_id": {
+            "type": "string"
+          },
+          "billing_schedule_id": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": "string"
+          },
+          "customer_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "subscription_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "product_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "product_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "charge_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "charge_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "charge_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "charge_timing": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "start_date": {
+            "format": "date",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "end_date": {
+            "format": "date",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "monthly_recurring_revenue": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "annual_contract_revenue": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "total_contract_revenue": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "amount_invoiced": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "currency": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "schedule_lines": {
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "created_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "billing_schedules",
+      "metadata": [
+        {
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": "true"
+          },
+          "breadcrumb": []
+        }
+      ]
+    },
+    {
       "tap_stream_id": "subscriptions",
       "key_properties": [
         "company_id",
@@ -1160,6 +1472,187 @@
         "additionalProperties": false
       },
       "stream": "payments",
+      "metadata": [
+        {
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": "true"
+          },
+          "breadcrumb": []
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "products",
+      "key_properties": [
+        "company_id",
+        "product_id"
+      ],
+      "schema": {
+        "properties": {
+          "company_id": {
+            "type": "string"
+          },
+          "product_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "sku": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "taxable": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "price": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "currency": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "income_account": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "deferred_revenue_enabled": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "revenue_rule_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "recognition_start_date": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "order_journal_entry_enabled": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "order_debit_account": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "order_credit_account": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "invoice_journal_entry_enabled": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "invoice_debit_account": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "invoice_credit_account": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "revenue_journal_entry_enabled": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "revenue_debit_account": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "revenue_credit_account": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "custom_fields": {
+            "type": [
+              "null",
+              "object"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "products",
       "metadata": [
         {
           "metadata": {
