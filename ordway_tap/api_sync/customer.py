@@ -4,7 +4,7 @@ from ordway_tap.api_sync.utils import get_company_id, print_record, convert_to_d
 
 def sync():
     for customer_response in get_index_data('/api/v1/customers'):
-        print_record('subscriptions', map_customer_response(customer_response))
+        print_record('customers', map_customer_response(customer_response))
 
 
 def map_customer_response(customer_response):

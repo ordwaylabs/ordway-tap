@@ -444,6 +444,162 @@
       ]
     },
     {
+      "tap_stream_id": "orders",
+      "key_properties": [
+        "company_id",
+        "order_id",
+        "order_line_no"
+      ],
+      "schema": {
+        "properties": {
+          "company_id": {
+            "type": "string"
+          },
+          "order_id": {
+            "type": "string"
+          },
+          "order_line_no": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": "string"
+          },
+          "invoice_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "order_date": {
+            "format": "date",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "order_amount": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "separate_invoice": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "currency": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "notes": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "product_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "product_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "unit_price": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "quantity": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "discount": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "effective_price": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "created_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "custom_fields": {
+            "type": [
+              "null",
+              "object"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "orders",
+      "metadata": [
+        {
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": "true"
+          },
+          "breadcrumb": []
+        }
+      ]
+    },
+    {
       "tap_stream_id": "customers",
       "key_properties": [
         "company_id",
@@ -853,7 +1009,6 @@
             ]
           },
           "end_date": {
-            "format": "date",
             "type": [
               "null",
               "string"

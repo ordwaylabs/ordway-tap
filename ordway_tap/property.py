@@ -7,7 +7,8 @@ KEY_PROPERTIES_MAP = {
     'refunds': ['company_id', 'refund_id'],
     'billing_schedules': ['company_id', 'billing_schedule_id'],
     'revenue_schedules': ['company_id', 'revenue_schedule_id'],
-    'products': ['company_id', 'product_id']
+    'products': ['company_id', 'product_id'],
+    'orders': ['company_id', 'order_id', 'order_line_no']
 }
 
 

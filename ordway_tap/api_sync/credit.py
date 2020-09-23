@@ -10,7 +10,7 @@ def sync():
 def map_credit_response(credit_response):
     return {
         'company_id': get_company_id(),
-        'credit_id': credit_response.get('credit_id'),
+        'credit_id': credit_response.get('id'),
         'customer_id': credit_response.get('customer_id'),
         'credit_date': credit_response.get('credit_date'),
         'notes': credit_response.get('notes'),

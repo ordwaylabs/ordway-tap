@@ -1,5 +1,5 @@
 from ordway_tap.api_sync.api import get_index_data
-from ordway_tap.api_sync.utils import get_company_id, print_record, convert_to_decimal
+from ordway_tap.api_sync.utils import get_company_id, print_record, convert_to_decimal, format_date_string
 
 
 def sync():
@@ -19,11 +19,11 @@ def map_subscription_response(subscription_response):
             "bill_contact_id": subscription_response.get('bill_contact_id'),
             "shipping_contact_id": subscription_response.get('shipping_contact_id'),
             "status": subscription_response.get('status'),
-            "billing_start_date": subscription_response.get('billing_start_date'),
-            "service_start_date": subscription_response.get('service_start_date'),
-            "order_placed_at": subscription_response.get('order_placed_at'),
-            "contract_effective_date": subscription_response.get('contract_effective_date'),
-            "cancellation_date": subscription_response.get('cancellation_date'),
+            "billing_start_date": format_date_string(subscription_response.get('billing_start_date')),
+            "service_start_date": format_date_string(subscription_response.get('service_start_date')),
+            "order_placed_at": format_date_string(subscription_response.get('order_placed_at')),
+            "contract_effective_date": format_date_string(subscription_response.get('contract_effective_date')),
+            "cancellation_date": format_date_string(subscription_response.get('cancellation_date')),
             "auto_renew": subscription_response.get('auto_renew'),
             "currency": subscription_response.get('currency'),
             "payment_terms": subscription_response.get('payment_terms'),
@@ -63,7 +63,7 @@ def map_subscription_response(subscription_response):
             "prepayment_periods": convert_to_decimal(subscription_plan.get('prepayment_periods')),
             "renewal_increment_percent": convert_to_decimal(subscription_plan.get('renewal_increment_percent')),
             "override_renewal_increment_percent": subscription_plan.get('override_renewal_increment_percent'),
-            "charge_end_date": subscription_plan.get('charge_end_date'),
+            "charge_end_date": format_date_string(subscription_plan.get('charge_end_date')),
             "created_by": subscription_response.get('created_by'),
             "updated_by": subscription_response.get('updated_by'),
             "created_date": subscription_response.get('created_date'),

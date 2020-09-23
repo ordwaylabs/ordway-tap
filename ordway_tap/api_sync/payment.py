@@ -15,7 +15,7 @@ def map_payment_response(payment_response):
         'payment_date': payment_response.get('payment_date'),
         'notes': payment_response.get('notes'),
         'status': payment_response.get('status'),
-        'payment_amount': payment_response.get('payment_amount'),
+        'payment_amount': convert_to_decimal(payment_response.get('payment_amount')),
         'fee_amount': convert_to_decimal(payment_response.get('fee_amount')),
         'applied_amount': convert_to_decimal(payment_response.get('applied_amount')),
         'unapplied_amount': convert_to_decimal(payment_response.get('unapplied_amount')),

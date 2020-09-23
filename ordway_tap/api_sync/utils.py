@@ -15,7 +15,16 @@ def print_record(stream, record):
 
 def convert_to_decimal(value):
     try:
-        decimal.Decimal(value)
-    except (decimal.InvalidOperation, TypeError):
+        return decimal.Decimal(value)
+    except (decimal.InvalidOperation, TypeError) as error:
         return 0
 
+
+def format_date_string(value):
+    if value == '-':
+        return None
+    return value or None
+
+
+def format_array(value):
+    return value or None
