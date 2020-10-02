@@ -5,5 +5,14 @@
     "x_user_email": "mubarak.kollaru-kandiyil@ordwaylabs.com",
     "x_user_token": "Qz-kabJxrtAjCKRnzHnK",
     "endpoint": "http://localhost:3000"
+  },
+  "kafka_credentials": {
+    "topic": "rocky_events",
+    "bootstrap_servers": "192.168.0.4:9093",
+    "client_id": "rocky_tap",
+    "group_id": "ordway_tap",
+    "ssl_cafile": "/Users/mubarak/projects/tools/kafka-2.6.0/certs/client.pem",
+    "username": "rocky_consumer",
+    "password": "rocky@123"
   }
 }

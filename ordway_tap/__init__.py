@@ -8,12 +8,14 @@ from singer.schema import Schema
 import ordway_tap.property
 import ordway_tap.api_sync
 import ordway_tap.configs
+import ordway_tap.kafka_consumer
+from _datetime import datetime
 
-REQUIRED_CONFIG_KEYS = ["api_credentials"]
-REQUIRED_API_CREDENTIAL_KEYS = ["x_company", "x_company_token", "x_user_email", "x_user_token", "endpoint"]
+
+REQUIRED_CONFIG_KEYS = ['api_credentials', 'kafka_credentials']
+REQUIRED_API_CREDENTIAL_KEYS = ['x_company', 'x_company_token', 'x_user_email', 'x_user_token', 'endpoint']
+REQUIRED_KAFKA_CREDENTIAL_KEYS = ['topic', 'group_id', 'bootstrap_servers', 'client_id', 'ssl_cafile']
 LOGGER = singer.get_logger()
-
-global configs
 
 
 def get_abs_path(path):
@@ -29,6 +31,14 @@ def load_schemas():
         with open(path) as file:
             schemas[file_raw] = Schema.from_dict(json.load(file))
     return schemas
+
+
+def state_hash():
+    state = {}
+    for filename in os.listdir(get_abs_path('schemas')):
+        file_raw = filename.replace('.json', '')
+        state[file_raw] = { 'synced': False, 'last_synced': '' }
+    return state
 
 
 def discover():
@@ -59,12 +69,11 @@ def discover():
 
 def sync(config, state, catalog):
     """ Sync data from tap source """
+    if not bool(state):
+        state = state_hash()
     # Loop over selected streams in catalog
     for stream in catalog.get_selected_streams(state):
-        LOGGER.info("Syncing stream:" + stream.tap_stream_id)
-
-        bookmark_column = stream.replication_key
-        is_sorted = True  # TODO: indicate whether data is sorted ascending on bookmark value
+        LOGGER.info('Syncing stream:' + stream.tap_stream_id)
 
         singer.write_schema(
             stream_name=stream.tap_stream_id,
@@ -72,25 +81,15 @@ def sync(config, state, catalog):
             key_properties=stream.key_properties,
         )
 
-        api_sync.sync(stream.tap_stream_id)
-        # # TODO: delete and replace this inline function with your own data retrieval process:
-        # tap_data = lambda: [{"id": x, "name": "row${x}"} for x in range(1000)]
-        #
-        # max_bookmark = None
-        # for row in tap_data():
-        #     # TODO: place type conversions or transformations here
-        #
-        #     # write one or more rows to the stream:
-        #     singer.write_records(stream.tap_stream_id, [row])
-        #     if bookmark_column:
-        #         if is_sorted:
-        #             # update bookmark to latest value
-        #             singer.write_state({stream.tap_stream_id: row[bookmark_column]})
-        #         else:
-        #             # if data unsorted, save max value until end of writes
-        #             max_bookmark = max(max_bookmark, row[bookmark_column])
-        # if bookmark_column and not is_sorted:
-        #     singer.write_state({stream.tap_stream_id: max_bookmark})
+        current_time = datetime.utcnow().isoformat(sep='T', timespec='milliseconds')
+        if not state.get(stream.tap_stream_id, {}).get('synced', False):
+            # Sync records via API if replication method is FULL_TABLE
+            api_sync.sync(stream.tap_stream_id)
+            state[stream.tap_stream_id] = {'synced': True, 'last_synced': current_time}
+            singer.write_state(state)
+
+    # Realtime stream from Kafka
+    kafka_consumer.listen_topic(state)
     return
 
 
@@ -100,8 +99,11 @@ def main():
     args = utils.parse_args(REQUIRED_CONFIG_KEYS)
     # Check API credential keys
     utils.check_config(args.config['api_credentials'], REQUIRED_API_CREDENTIAL_KEYS)
+    # Check Kafka credential keys
+    utils.check_config(args.config['kafka_credentials'], REQUIRED_KAFKA_CREDENTIAL_KEYS)
 
     configs.api_credentials = args.config['api_credentials']
+    configs.kafka_credentials = args.config['kafka_credentials']
 
     # If discover flag was passed, run discovery mode and dump output to stdout
     if args.discover:
@@ -113,8 +115,9 @@ def main():
             catalog = args.catalog
         else:
             catalog = discover()
+        configs.catalog = catalog
         sync(args.config, args.state, catalog)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
