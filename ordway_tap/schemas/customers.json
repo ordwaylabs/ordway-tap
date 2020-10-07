@@ -46,7 +46,7 @@
 			"type": ["null", "boolean"]
 		},
 		"balance": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"auto_pay": {
 			"type": ["null", "boolean"]
@@ -61,13 +61,13 @@
 			"type": ["null", "string"]
 		},
 		"cmrr": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"discounted_cmrr": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"delivery_preferences": {
-			"type": ["null", "object"]
+			"type": ["null", "string"]
 		},
 		"created_by": {
 			"type": ["null", "string"]
@@ -84,7 +84,7 @@
 			"format": "date-time"
 		},
 		"custom_fields": {
-			"type": ["null", "object"]
+			"type": ["null", "string"]
 		}
 	}
 }

@@ -44,22 +44,22 @@
 			"type": ["null", "string"]
 		},
 		"monthly_recurring_revenue": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"annual_contract_revenue": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"total_contract_revenue": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"amount_invoiced": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"currency": {
 			"type": ["null", "string"]
 		},
 		"schedule_lines": {
-			"type": ["null", "array"]
+			"type": ["null", "string"]
 		},
 		"created_by": {
 			"type": ["null", "string"]

@@ -26,7 +26,7 @@
 			"type": ["null", "string"]
 		},
 		"order_amount": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"separate_invoice": {
 			"type": ["null", "boolean"]
@@ -47,16 +47,16 @@
 			"type": ["null", "string"]
 		},
 		"unit_price": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"quantity": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"discount": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"effective_price": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"created_by": {
 			"type": ["null", "string"]
@@ -73,7 +73,7 @@
 			"format": "date-time"
 		},
 		"custom_fields": {
-			"type": ["null", "object"]
+			"type": ["null", "string"]
 		}
 	}
 }

@@ -23,13 +23,13 @@
 			"type": ["null", "string"]
 		},
 		"credit_amount": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"applied_amount": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"unapplied_amount": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"currency": {
 			"type": ["null", "string"]
@@ -44,10 +44,10 @@
 			"type": ["null", "string"]
 		},
 		"invoices": {
-			"type": ["null", "array"]
+			"type": ["null", "string"]
 		},
 		"refunds": {
-			"type": ["null", "array"]
+			"type": ["null", "string"]
 		},
 		"created_by": {
 			"type": ["null", "string"]
@@ -64,7 +64,7 @@
 			"format": "date-time"
 		},
 		"custom_fields": {
-			"type": ["null", "object"]
+			"type": ["null", "string"]
 		}
 	}
 }

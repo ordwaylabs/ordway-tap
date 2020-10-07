@@ -25,7 +25,7 @@
 			"type": ["null", "string"]
 		},
 		"price": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"currency": {
 			"type": ["null", "string"]
@@ -84,7 +84,7 @@
 			"format": "date-time"
 		},
 		"custom_fields": {
-			"type": ["null", "object"]
+			"type": ["null", "string"]
 		}
 	}
 }

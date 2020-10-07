@@ -17,7 +17,7 @@
 			"format": "date"
 		},
 		"refund_amount": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"refund_type": {
 			"type": ["null", "string"]
@@ -52,7 +52,7 @@
 			"format": "date-time"
 		},
 		"custom_fields": {
-			"type": ["null", "object"]
+			"type": ["null", "string"]
 		}
 	}
 }

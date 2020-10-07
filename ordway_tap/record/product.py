@@ -1,4 +1,5 @@
-from ordway_tap.api_sync.utils import get_company_id, convert_to_decimal
+from ordway_tap.api_sync.utils import get_company_id
+import json
 
 
 def map_product_response(product_response):
@@ -10,7 +11,7 @@ def map_product_response(product_response):
         'status': product_response.get('status'),
         'taxable': product_response.get('taxable'),
         'description': product_response.get('description'),
-        'price': convert_to_decimal(product_response.get('price')),
+        'price': product_response.get('price'),
         'currency': product_response.get('currency'),
         'income_account': product_response.get('income_account'),
         'deferred_revenue_enabled': product_response.get('deferred_revenue_enabled'),
@@ -29,5 +30,5 @@ def map_product_response(product_response):
         'updated_by': product_response.get('updated_by'),
         'created_date': product_response.get('created_date'),
         'updated_date': product_response.get('updated_date'),
-        'custom_fields': product_response.get('custom_fields')
+        'custom_fields': json.dumps(product_response.get('custom_fields'))
     }

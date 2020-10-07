@@ -1,4 +1,5 @@
-from ordway_tap.api_sync.utils import get_company_id, convert_to_decimal
+from ordway_tap.api_sync.utils import get_company_id
+import json
 
 
 def map_order_response(order_response):
@@ -12,20 +13,20 @@ def map_order_response(order_response):
             'invoice_id': order_response.get('invoice_id'),
             'order_date': order_response.get('order_date'),
             'status': order_response.get('status'),
-            'order_amount': convert_to_decimal(order_response.get('order_amount')),
+            'order_amount': order_response.get('order_amount'),
             'separate_invoice': order_response.get('separate_invoice'),
             'currency': order_response.get('currency'),
             'notes': order_response.get('notes'),
             'product_id': order_line.get('product_id'),
             'product_name': order_line.get('product_name'),
             'description': order_line.get('description'),
-            'unit_price': convert_to_decimal(order_line.get('unit_price')),
-            'quantity': convert_to_decimal(order_line.get('quantity')),
-            'discount': convert_to_decimal(order_line.get('discount')),
-            'effective_price': convert_to_decimal(order_line.get('effective_price')),
+            'unit_price': order_line.get('unit_price'),
+            'quantity': str(order_line.get('quantity')),
+            'discount': str(order_line.get('discount')),
+            'effective_price': order_line.get('effective_price'),
             'created_by': order_response.get('created_by'),
             'updated_by': order_response.get('updated_by'),
             'created_date': order_response.get('created_date'),
             'updated_date': order_response.get('updated_date'),
-            'custom_fields': order_response.get('custom_fields')
+            'custom_fields': json.dumps(order_response.get('custom_fields'))
         }

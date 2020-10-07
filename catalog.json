@@ -39,19 +39,19 @@
           "credit_amount": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "applied_amount": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "unapplied_amount": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "currency": {
@@ -81,13 +81,13 @@
           "invoices": {
             "type": [
               "null",
-              "array"
+              "string"
             ]
           },
           "refunds": {
             "type": [
               "null",
-              "array"
+              "string"
             ]
           },
           "created_by": {
@@ -119,7 +119,7 @@
           "custom_fields": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           }
         },
@@ -134,8 +134,7 @@
         {
           "metadata": {
             "inclusion": "automatic",
-            "selected": "true",
-            "replication-method": "FULL_TABLE"
+            "selected": true
           },
           "breadcrumb": []
         }
@@ -165,13 +164,13 @@
           "billing_contact": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           },
           "shipping_contact": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           },
           "customer_name": {
@@ -203,31 +202,31 @@
           "subtotal": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "invoice_tax": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "invoice_amount": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "paid_amount": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "balance": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "status": {
@@ -331,13 +330,13 @@
           "unit_price": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "list_price": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "list_price_base": {
@@ -355,37 +354,37 @@
           "quantity": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "discount": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "effective_price": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "line_tax": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "tax_lines": {
             "type": [
               "null",
-              "array"
+              "string"
             ]
           },
           "applied_tiers": {
             "type": [
               "null",
-              "array"
+              "string"
             ]
           },
           "created_by": {
@@ -417,13 +416,13 @@
           "custom_fields": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           },
           "line_custom_fields": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           }
         },
@@ -438,8 +437,7 @@
         {
           "metadata": {
             "inclusion": "automatic",
-            "selected": "true",
-            "replication-method": "FULL_TABLE"
+            "selected": true
           },
           "breadcrumb": []
         }
@@ -488,7 +486,7 @@
           "order_amount": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "separate_invoice": {
@@ -530,25 +528,25 @@
           "unit_price": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "quantity": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "discount": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "effective_price": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "created_by": {
@@ -580,7 +578,7 @@
           "custom_fields": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           }
         },
@@ -595,8 +593,7 @@
         {
           "metadata": {
             "inclusion": "automatic",
-            "selected": "true",
-            "replication-method": "FULL_TABLE"
+            "selected": true
           },
           "breadcrumb": []
         }
@@ -691,7 +688,7 @@
           "balance": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "auto_pay": {
@@ -721,19 +718,19 @@
           "cmrr": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "discounted_cmrr": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "delivery_preferences": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           },
           "created_by": {
@@ -765,7 +762,7 @@
           "custom_fields": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           }
         },
@@ -780,8 +777,7 @@
         {
           "metadata": {
             "inclusion": "automatic",
-            "selected": "true",
-            "replication-method": "FULL_TABLE"
+            "selected": true
           },
           "breadcrumb": []
         }
@@ -861,19 +857,19 @@
           "total_revenue": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "recognized_revenue": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "unrecognized_revenue": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "start_date": {
@@ -893,7 +889,7 @@
           "schedule_lines": {
             "type": [
               "null",
-              "array"
+              "string"
             ]
           },
           "created_by": {
@@ -934,8 +930,7 @@
         {
           "metadata": {
             "inclusion": "automatic",
-            "selected": "true",
-            "replication-method": "FULL_TABLE"
+            "selected": true
           },
           "breadcrumb": []
         }
@@ -1022,25 +1017,25 @@
           "monthly_recurring_revenue": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "annual_contract_revenue": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "total_contract_revenue": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "amount_invoiced": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "currency": {
@@ -1052,7 +1047,7 @@
           "schedule_lines": {
             "type": [
               "null",
-              "array"
+              "string"
             ]
           },
           "created_by": {
@@ -1093,8 +1088,7 @@
         {
           "metadata": {
             "inclusion": "automatic",
-            "selected": "true",
-            "replication-method": "FULL_TABLE"
+            "selected": true
           },
           "breadcrumb": []
         }
@@ -1195,13 +1189,13 @@
           "cmrr": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "discounted_cmrr": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "separate_invoice": {
@@ -1243,7 +1237,7 @@
           "tcv": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "product_id": {
@@ -1285,7 +1279,7 @@
           "list_price": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "price_base": {
@@ -1297,25 +1291,25 @@
           "quantity": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "included_units": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "discount": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "effective_price": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "charge_type": {
@@ -1395,13 +1389,13 @@
           "prepayment_periods": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "renewal_increment_percent": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "override_renewal_increment_percent": {
@@ -1446,13 +1440,13 @@
           "custom_fields": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           },
           "charge_custom_fields": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           }
         },
@@ -1467,8 +1461,7 @@
         {
           "metadata": {
             "inclusion": "automatic",
-            "selected": "true",
-            "replication-method": "FULL_TABLE"
+            "selected": true
           },
           "breadcrumb": []
         }
@@ -1513,31 +1506,31 @@
           "payment_amount": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "fee_amount": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "applied_amount": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "unapplied_amount": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "refunded_amount": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "payment_type": {
@@ -1579,13 +1572,13 @@
           "invoices": {
             "type": [
               "null",
-              "array"
+              "string"
             ]
           },
           "refunds": {
             "type": [
               "null",
-              "array"
+              "string"
             ]
           },
           "gl_account": {
@@ -1623,7 +1616,7 @@
           "custom_fields": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           }
         },
@@ -1638,8 +1631,7 @@
         {
           "metadata": {
             "inclusion": "automatic",
-            "selected": "true",
-            "replication-method": "FULL_TABLE"
+            "selected": true
           },
           "breadcrumb": []
         }
@@ -1689,7 +1681,7 @@
           "price": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "currency": {
@@ -1805,7 +1797,7 @@
           "custom_fields": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           }
         },
@@ -1820,8 +1812,7 @@
         {
           "metadata": {
             "inclusion": "automatic",
-            "selected": "true",
-            "replication-method": "FULL_TABLE"
+            "selected": true
           },
           "breadcrumb": []
         }
@@ -1854,7 +1845,7 @@
           "refund_amount": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "refund_type": {
@@ -1922,7 +1913,7 @@
           "custom_fields": {
             "type": [
               "null",
-              "object"
+              "string"
             ]
           }
         },
@@ -1937,8 +1928,7 @@
         {
           "metadata": {
             "inclusion": "automatic",
-            "selected": "true",
-            "replication-method": "FULL_TABLE"
+            "selected": true
           },
           "breadcrumb": []
         }

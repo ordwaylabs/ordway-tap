@@ -41,13 +41,13 @@
 			"type": ["null", "string"]
 		},
 		"total_revenue": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"recognized_revenue": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"unrecognized_revenue": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"start_date": {
 			"type": ["null", "string"],
@@ -58,7 +58,7 @@
 			"format": "date"
 		},
 		"schedule_lines": {
-			"type": ["null", "array"]
+			"type": ["null", "string"]
 		},
 		"created_by": {
 			"type": ["null", "string"]

@@ -1,4 +1,5 @@
-from ordway_tap.api_sync.utils import get_company_id, convert_to_decimal
+from ordway_tap.api_sync.utils import get_company_id
+import json
 
 
 def map_refund_response(refund_response):
@@ -7,7 +8,7 @@ def map_refund_response(refund_response):
         'refund_id': refund_response.get('id'),
         'customer_id': refund_response.get('customer_id'),
         'refund_date': refund_response.get('refund_date'),
-        'refund_amount': convert_to_decimal(refund_response.get('refund_amount')),
+        'refund_amount': refund_response.get('refund_amount'),
         'refund_type': refund_response.get('refund_type'),
         'notes': refund_response.get('notes'),
         'status': refund_response.get('refund_status'),
@@ -18,5 +19,5 @@ def map_refund_response(refund_response):
         'updated_by': refund_response.get('updated_by'),
         'created_date': refund_response.get('created_date'),
         'updated_date': refund_response.get('updated_date'),
-        'custom_fields': refund_response.get('custom_fields')
+        'custom_fields': json.dumps(refund_response.get('custom_fields'))
     }

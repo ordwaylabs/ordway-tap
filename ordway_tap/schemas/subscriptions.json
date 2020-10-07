@@ -54,10 +54,10 @@
 			"type": ["null", "string"]
 		},
 		"cmrr": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"discounted_cmrr": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"separate_invoice": {
 			"type": ["null", "boolean"]
@@ -78,7 +78,7 @@
 			"type": ["null", "string"]
 		},
 		"tcv": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"product_id": {
 			"type": ["null", "string"]
@@ -99,22 +99,22 @@
 			"type": ["null", "string"]
 		},
 		"list_price": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"price_base": {
 			"type": ["null", "string"]
 		},
 		"quantity": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"included_units": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"discount": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"effective_price": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"charge_type": {
 			"type": ["null", "string"]
@@ -155,10 +155,10 @@
 			"type": ["null", "boolean"]
 		},
 		"prepayment_periods": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"renewal_increment_percent": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"override_renewal_increment_percent": {
 			"type": ["null", "boolean"]
@@ -182,10 +182,10 @@
 			"format": "date-time"
 		},
 		"custom_fields": {
-			"type": ["null", "object"]
+			"type": ["null", "string"]
 		},
 		"charge_custom_fields": {
-			"type": ["null", "object"]
+			"type": ["null", "string"]
 		}
 	}
 }

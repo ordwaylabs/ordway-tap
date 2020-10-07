@@ -23,19 +23,19 @@
 			"type": ["null", "string"]
 		},
 		"payment_amount": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"fee_amount": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"applied_amount": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"unapplied_amount": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"refunded_amount": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"payment_type": {
 			"type": ["null", "string"]
@@ -56,10 +56,10 @@
 			"type": ["null", "integer"]
 		},
 		"invoices": {
-			"type": ["null", "array"]
+			"type": ["null", "string"]
 		},
 		"refunds": {
-			"type": ["null", "array"]
+			"type": ["null", "string"]
 		},
 		"gl_account": {
 			"type": ["null", "string"]
@@ -79,7 +79,7 @@
 			"format": "date-time"
 		},
 		"custom_fields": {
-			"type": ["null", "object"]
+			"type": ["null", "string"]
 		}
 	}
 }

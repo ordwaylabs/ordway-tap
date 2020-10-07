@@ -1,4 +1,5 @@
-from ordway_tap.api_sync.utils import get_company_id, convert_to_decimal
+from ordway_tap.api_sync.utils import get_company_id
+import json
 
 
 def map_rs_response(rs_response):
@@ -15,12 +16,12 @@ def map_rs_response(rs_response):
         'charge_name': rs_response.get('charge_name'),
         'charge_type': rs_response.get('charge_type'),
         'charge_timing': rs_response.get('charge_timing'),
-        'total_revenue': convert_to_decimal(rs_response.get('total_revenue')),
-        'recognized_revenue': convert_to_decimal(rs_response.get('recognized_revenue')),
-        'unrecognized_revenue': convert_to_decimal(rs_response.get('unrecognized_revenue')),
+        'total_revenue': rs_response.get('total_revenue'),
+        'recognized_revenue': rs_response.get('recognized_revenue'),
+        'unrecognized_revenue': rs_response.get('unrecognized_revenue'),
         'start_date': rs_response.get('start_date'),
         'end_date': rs_response.get('end_date'),
-        'schedule_lines': rs_response.get('schedule_lines'),
+        'schedule_lines': json.dumps(rs_response.get('schedule_lines')),
         'created_by': rs_response.get('created_by'),
         'updated_by': rs_response.get('updated_by'),
         'created_date': rs_response.get('created_date'),

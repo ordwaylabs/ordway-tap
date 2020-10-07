@@ -16,10 +16,10 @@
 			"type": "string"
 		},
 		"billing_contact": {
-			"type": ["null", "object"]
+			"type": ["null", "string"]
 		},
 		"shipping_contact": {
-			"type": ["null", "object"]
+			"type": ["null", "string"]
 		},
 		"customer_name": {
 			"type": ["null", "string"]
@@ -36,19 +36,19 @@
 			"type": ["null", "string"]
 		},
 		"subtotal": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"invoice_tax": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"invoice_amount": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"paid_amount": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"balance": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"status": {
 			"type": ["null", "string"]
@@ -101,10 +101,10 @@
 			"format": "date"
 		},
 		"unit_price": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"list_price": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"list_price_base": {
 			"type": ["null", "string"]
@@ -113,22 +113,22 @@
 			"type": ["null", "boolean"]
 		},
 		"quantity": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"discount": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"effective_price": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"line_tax": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"tax_lines": {
-			"type": ["null", "array"]
+			"type": ["null", "string"]
 		},
 		"applied_tiers": {
-			"type": ["null", "array"]
+			"type": ["null", "string"]
 		},
         "created_by": {
 			"type": ["null", "string"]
@@ -145,10 +145,10 @@
 			"format": "date-time"
 		},
 		"custom_fields": {
-			"type": ["null", "object"]
+			"type": ["null", "string"]
 		},
 		"line_custom_fields": {
-			"type": ["null", "object"]
+			"type": ["null", "string"]
 		}
 	}
 }

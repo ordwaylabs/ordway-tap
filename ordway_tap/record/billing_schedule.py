@@ -1,4 +1,5 @@
-from ordway_tap.api_sync.utils import get_company_id, convert_to_decimal
+from ordway_tap.api_sync.utils import get_company_id
+import json
 
 
 def map_bs_response(bs_response):
@@ -17,12 +18,12 @@ def map_bs_response(bs_response):
         'charge_timing': bs_response.get('charge_timing'),
         'start_date': bs_response.get('start_date'),
         'end_date': bs_response.get('end_date'),
-        'monthly_recurring_revenue': convert_to_decimal(key_metrics.get('monthly_recurring_revenue')),
-        'annual_contract_revenue': convert_to_decimal(key_metrics.get('annual_contract_revenue')),
-        'total_contract_revenue': convert_to_decimal(key_metrics.get('total_contract_revenue')),
-        'amount_invoiced': convert_to_decimal(key_metrics.get('amount_invoiced')),
+        'monthly_recurring_revenue': key_metrics.get('monthly_recurring_revenue'),
+        'annual_contract_revenue': key_metrics.get('annual_contract_revenue'),
+        'total_contract_revenue': key_metrics.get('total_contract_revenue'),
+        'amount_invoiced': key_metrics.get('amount_invoiced'),
         'currency': bs_response.get('currency'),
-        'schedule_lines': bs_response.get('schedule_lines'),
+        'schedule_lines': json.dumps(bs_response.get('schedule_lines')),
         'created_by': bs_response.get('created_by'),
         'updated_by': bs_response.get('updated_by'),
         'created_date': bs_response.get('created_date'),
