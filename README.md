@@ -54,16 +54,8 @@ The sample config JSON is format is given below:
     "x_company_token": "API Token",
     "x_user_email": "User Email",
     "x_user_token": "User Token",
+    "x_api_key": "API Key",
     "endpoint": "Endpoint URL"
-  },
-  "kafka_credentials": {
-    "topic": "Kafka Topic Name",
-    "bootstrap_servers": "Kafka Broker",
-    "client_id": "Kafka Client ID",
-    "group_id": "Kfka Client Group",
-    "ssl_cafile": "PEM client truststore file path",
-    "username": "Kafka Username",
-    "password": "Kafka User Password"
   }
 }
 ```

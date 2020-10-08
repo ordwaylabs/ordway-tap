@@ -12,9 +12,8 @@ import ordway_tap.kafka_consumer
 from _datetime import datetime
 
 
-REQUIRED_CONFIG_KEYS = ['api_credentials', 'kafka_credentials']
-REQUIRED_API_CREDENTIAL_KEYS = ['x_company', 'x_company_token', 'x_user_email', 'x_user_token', 'endpoint']
-REQUIRED_KAFKA_CREDENTIAL_KEYS = ['topic', 'group_id', 'bootstrap_servers', 'client_id', 'ssl_cafile']
+REQUIRED_CONFIG_KEYS = ['api_credentials']
+REQUIRED_API_CREDENTIAL_KEYS = ['x_company', 'x_api_key', 'x_user_email', 'x_user_token', 'endpoint']
 LOGGER = singer.get_logger()
 
 
@@ -37,7 +36,7 @@ def state_hash():
     state = {}
     for filename in os.listdir(get_abs_path('schemas')):
         file_raw = filename.replace('.json', '')
-        state[file_raw] = { 'synced': False, 'last_synced': '' }
+        state[file_raw] = {'synced': False}
     return state
 
 
@@ -82,15 +81,11 @@ def sync(config, state, catalog):
         )
 
         current_time = datetime.utcnow().isoformat(sep='T', timespec='milliseconds')
-        if not state.get(stream.tap_stream_id, {}).get('synced', False):
-            # Sync records via API if replication method is FULL_TABLE
-            api_sync.sync(stream.tap_stream_id)
-            state[stream.tap_stream_id] = {'synced': True, 'last_synced': current_time}
-            singer.write_state(state)
-
-    # Realtime stream from Kafka
-    kafka_consumer.listen_topic(state)
-    return
+        filter_datetime = state.get(stream.tap_stream_id, {}).get('last_synced', '1970-01-01T00:00:00.000')
+        # Sync records via API
+        api_sync.sync(stream.tap_stream_id, filter_datetime)
+        state[stream.tap_stream_id] = {'synced': True, 'last_synced': current_time}
+        singer.write_state(state)
 
 
 @utils.handle_top_exception(LOGGER)
@@ -99,11 +94,8 @@ def main():
     args = utils.parse_args(REQUIRED_CONFIG_KEYS)
     # Check API credential keys
     utils.check_config(args.config['api_credentials'], REQUIRED_API_CREDENTIAL_KEYS)
-    # Check Kafka credential keys
-    utils.check_config(args.config['kafka_credentials'], REQUIRED_KAFKA_CREDENTIAL_KEYS)
 
     configs.api_credentials = args.config['api_credentials']
-    configs.kafka_credentials = args.config['kafka_credentials']
 
     # If discover flag was passed, run discovery mode and dump output to stdout
     if args.discover:
