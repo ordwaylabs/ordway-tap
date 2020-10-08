@@ -40,11 +40,11 @@ def listen_topic(state):
 
 def process_stream(state, message):
     json_message = json.loads(message.value)
+    LOGGER.info("Message: " + json.dumps(json_message))
     stream_id = inflection.pluralize(inflection.underscore(json_message['object']))
     stream_state = state.get(stream_id, {})
     if stream_state.get('last_synced', '') > json_message['time']:
         LOGGER.info("Skipping message due to previous timestamp: " + json_message['time'])
-        LOGGER.info("Message: " + message.value)
         return False
     stream = ordway_tap.configs.catalog.get_stream(stream_id)
     # Make sure stream is selected for record to print

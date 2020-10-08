@@ -23,7 +23,7 @@ def get_stream_metadata(schema):
     metadata = [{
         'metadata': {
             'inclusion': 'automatic',
-            'selected': 'true'
+            'selected': True
         },
         'breadcrumb': []
     }]

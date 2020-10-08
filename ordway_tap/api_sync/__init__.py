@@ -15,5 +15,5 @@ sync_methods = {
 }
 
 
-def sync(stream):
-    sync_methods[stream]()
+def sync(stream, timestamp):
+    sync_methods[stream](timestamp)
