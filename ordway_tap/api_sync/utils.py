@@ -28,3 +28,9 @@ def format_date_string(value):
 
 def format_array(value):
     return value or None
+
+
+def format_boolean(value):
+    if value == '-':
+        return False
+    return value

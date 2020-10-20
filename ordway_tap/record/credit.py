@@ -1,4 +1,4 @@
-from ordway_tap.api_sync.utils import get_company_id
+from ordway_tap.api_sync.utils import get_company_id, format_boolean
 import json
 
 
@@ -15,7 +15,7 @@ def map_credit_response(credit_response):
         'unapplied_amount': credit_response.get('unapplied_amount'),
         'currency': credit_response.get('currency'),
         'reference_number': credit_response.get('reference_number'),
-        'auto_apply': credit_response.get('auto_apply'),
+        'auto_apply': format_boolean(credit_response.get('auto_apply')),
         'gl_account': credit_response.get('gl_account'),
         'invoices': json.dumps(credit_response.get('invoices')),
         'refunds': json.dumps(credit_response.get('refunds')),
