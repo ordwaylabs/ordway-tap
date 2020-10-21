@@ -930,7 +930,7 @@
         {
           "metadata": {
             "inclusion": "automatic",
-            "selected": false
+            "selected": true
           },
           "breadcrumb": []
         }
@@ -1088,7 +1088,7 @@
         {
           "metadata": {
             "inclusion": "automatic",
-            "selected": false
+            "selected": true
           },
           "breadcrumb": []
         }
