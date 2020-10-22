@@ -6,7 +6,7 @@ def get_index_data(path, params):
     page = 1
     pending_result = True
     while pending_result:
-        results = get(path + '?size=20&page=' + str(page), params)
+        results = get(path + '?sort=id&size=20&page=' + str(page), params)
         if len(results) == 0:
             pending_result = False
         page = page + 1
