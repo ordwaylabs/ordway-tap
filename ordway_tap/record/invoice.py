@@ -51,6 +51,6 @@ def map_invoice_response(invoice_response):
             'updated_by': invoice_response.get('updated_by'),
             'created_date': invoice_response.get('created_date'),
             'updated_date': invoice_response.get('updated_date'),
-            'custom_fields': json.dumps(invoice_line.get('custom_fields')),
+            'custom_fields': json.dumps(invoice_response.get('custom_fields')),
             'line_custom_fields': json.dumps(invoice_line.get('custom_fields'))
         }
