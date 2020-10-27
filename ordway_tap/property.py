@@ -1,3 +1,5 @@
+from singer.metadata import get_standard_metadata, to_map as mdata_to_map, write as mdata_write, to_list as mdata_to_list
+
 KEY_PROPERTIES_MAP = {
     'customers': ['company_id', 'customer_id'],
     'subscriptions': ['company_id', 'subscription_id', 'subscription_line_id'],
@@ -19,20 +21,25 @@ def get_key_properties(stream):
     return key_properties
 
 
-def get_stream_metadata(schema):
-    metadata = [{
-        'metadata': {
-            'inclusion': 'automatic',
-            'selected': True
-        },
-        'breadcrumb': []
-    }]
-    # schema_dict = schema.to_dict()
-    # for column in schema_dict['properties'].keys():
-    #     metadata.append({
-    #       'metadata': {
-    #         'inclusion': 'automatic'
-    #       },
-    #       'breadcrumb': ['properties', column]
-    #     })
-    return metadata
+def get_stream_metadata(tap_stream_id, schema_dict):
+    metadata = get_standard_metadata(
+        schema=schema_dict,
+        key_properties=KEY_PROPERTIES_MAP.get(tap_stream_id),
+        valid_replication_keys=["updated_date"],
+    )
+
+    metadata = mdata_to_map(metadata)
+
+    for field_name in schema_dict['properties'].keys():
+        # selected-by-default doesn't currently work as intended. 
+        # A PR has been made for a fix, but it hasn't been merged yet:
+        # https://github.com/singer-io/singer-python/pull/121
+        # Writing regardless for when PR is merged.
+        metadata = mdata_write(
+            metadata, ("properties", field_name), "selected-by-default", True
+        )
+
+    metadata = mdata_write(metadata, (), "selected", True)
+
+    return mdata_to_list(metadata)
+    
