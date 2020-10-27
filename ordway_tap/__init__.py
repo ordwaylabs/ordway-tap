@@ -45,7 +45,7 @@ def discover():
     streams = []
     for stream_id, schema in raw_schemas.items():
         # TODO: populate any metadata and stream's key properties here..
-        stream_metadata = property.get_stream_metadata(schema)
+        stream_metadata = property.get_stream_metadata(stream_id, schema.to_dict())
         key_properties = property.get_key_properties(stream_id)
         streams.append(
             CatalogEntry(
@@ -83,7 +83,7 @@ def sync(config, state, catalog):
         current_time = datetime.utcnow().isoformat(sep='T', timespec='milliseconds')
         filter_datetime = state.get(stream.tap_stream_id, {}).get('last_synced', '1970-01-01T00:00:00.000')
         # Sync records via API
-        api_sync.sync(stream.tap_stream_id, filter_datetime)
+        api_sync.sync(stream, filter_datetime)
         state[stream.tap_stream_id] = {'synced': True, 'last_synced': current_time}
         singer.write_state(state)
 
