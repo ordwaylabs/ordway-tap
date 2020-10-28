@@ -12,8 +12,14 @@ import ordway_tap.kafka_consumer
 from _datetime import datetime
 
 
-REQUIRED_CONFIG_KEYS = ['api_credentials']
-REQUIRED_API_CREDENTIAL_KEYS = ['x_company', 'x_api_key', 'x_user_email', 'x_user_token', 'endpoint']
+REQUIRED_CONFIG_KEYS = ["api_credentials"]
+REQUIRED_API_CREDENTIAL_KEYS = [
+    "x_company",
+    "x_api_key",
+    "x_user_email",
+    "x_user_token",
+    "endpoint",
+]
 LOGGER = singer.get_logger()
 
 
@@ -24,9 +30,9 @@ def get_abs_path(path):
 def load_schemas():
     """ Load schemas from schemas folder """
     schemas = {}
-    for filename in os.listdir(get_abs_path('schemas')):
-        path = get_abs_path('schemas') + '/' + filename
-        file_raw = filename.replace('.json', '')
+    for filename in os.listdir(get_abs_path("schemas")):
+        path = get_abs_path("schemas") + "/" + filename
+        file_raw = filename.replace(".json", "")
         with open(path) as file:
             schemas[file_raw] = Schema.from_dict(json.load(file))
     return schemas
@@ -34,9 +40,9 @@ def load_schemas():
 
 def state_hash():
     state = {}
-    for filename in os.listdir(get_abs_path('schemas')):
-        file_raw = filename.replace('.json', '')
-        state[file_raw] = {'synced': False}
+    for filename in os.listdir(get_abs_path("schemas")):
+        file_raw = filename.replace(".json", "")
+        state[file_raw] = {"synced": False}
     return state
 
 
@@ -72,7 +78,7 @@ def sync(config, state, catalog):
         state = state_hash()
     # Loop over selected streams in catalog
     for stream in catalog.get_selected_streams(state):
-        LOGGER.info('Syncing stream:' + stream.tap_stream_id)
+        LOGGER.info("Syncing stream:" + stream.tap_stream_id)
 
         singer.write_schema(
             stream_name=stream.tap_stream_id,
@@ -80,11 +86,13 @@ def sync(config, state, catalog):
             key_properties=stream.key_properties,
         )
 
-        current_time = datetime.utcnow().isoformat(sep='T', timespec='milliseconds')
-        filter_datetime = state.get(stream.tap_stream_id, {}).get('last_synced', '1970-01-01T00:00:00.000')
+        current_time = datetime.utcnow().isoformat(sep="T", timespec="milliseconds")
+        filter_datetime = state.get(stream.tap_stream_id, {}).get(
+            "last_synced", "1970-01-01T00:00:00.000"
+        )
         # Sync records via API
         api_sync.sync(stream.tap_stream_id, filter_datetime)
-        state[stream.tap_stream_id] = {'synced': True, 'last_synced': current_time}
+        state[stream.tap_stream_id] = {"synced": True, "last_synced": current_time}
         singer.write_state(state)
 
 
@@ -93,9 +101,9 @@ def main():
     # Parse command line arguments
     args = utils.parse_args(REQUIRED_CONFIG_KEYS)
     # Check API credential keys
-    utils.check_config(args.config['api_credentials'], REQUIRED_API_CREDENTIAL_KEYS)
+    utils.check_config(args.config["api_credentials"], REQUIRED_API_CREDENTIAL_KEYS)
 
-    configs.api_credentials = args.config['api_credentials']
+    configs.api_credentials = args.config["api_credentials"]
 
     # If discover flag was passed, run discovery mode and dump output to stdout
     if args.discover:
@@ -111,5 +119,5 @@ def main():
         sync(args.config, args.state, catalog)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

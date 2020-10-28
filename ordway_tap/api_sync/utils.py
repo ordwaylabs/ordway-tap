@@ -6,7 +6,7 @@ import ordway_tap.configs
 
 def get_company_id():
     api_credentials = ordway_tap.configs.api_credentials
-    return underscore(api_credentials['x_company'])
+    return underscore(api_credentials["x_company"])
 
 
 def print_record(stream, record):
@@ -21,7 +21,7 @@ def convert_to_decimal(value):
 
 
 def format_date_string(value):
-    if value == '-':
+    if value == "-":
         return None
     return value or None
 
@@ -31,6 +31,6 @@ def format_array(value):
 
 
 def format_boolean(value):
-    if value == '-':
+    if value == "-":
         return False
     return value
