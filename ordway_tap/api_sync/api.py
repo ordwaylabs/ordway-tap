@@ -6,7 +6,7 @@ def get_index_data(path, params):
     page = 1
     pending_result = True
     while pending_result:
-        results = get(path + '?sort=id&size=20&page=' + str(page), params)
+        results = get(path + "?sort=id&size=20&page=" + str(page), params)
         if len(results) == 0:
             pending_result = False
         page = page + 1
@@ -25,14 +25,14 @@ def get(path, params):
 def get_headers():
     api_credentials = ordway_tap.configs.api_credentials
     return {
-        'X-Company-Token': api_credentials['x_company_token'],
-        'X-User-Company': api_credentials['x_company'],
-        'X-User-Token': api_credentials['x_user_token'],
-        'X-User-Email': api_credentials['x_user_email'],
-        'X-API-KEY': api_credentials['x_api_key']
+        "X-Company-Token": api_credentials["x_company_token"],
+        "X-User-Company": api_credentials["x_company"],
+        "X-User-Token": api_credentials["x_user_token"],
+        "X-User-Email": api_credentials["x_user_email"],
+        "X-API-KEY": api_credentials["x_api_key"],
     }
 
 
 def get_url(path):
     api_credentials = ordway_tap.configs.api_credentials
-    return api_credentials['endpoint'] + path
+    return api_credentials["endpoint"] + path

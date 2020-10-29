@@ -4,5 +4,7 @@ from ordway_tap.record.product import map_product_response
 
 
 def sync(timestamp):
-    for product_response in get_index_data('/api/v1/products', params={'updated_date>': timestamp}):
-        print_record('products', map_product_response(product_response))
+    for product_response in get_index_data(
+        "/api/v1/products", params={"updated_date>": timestamp}
+    ):
+        print_record("products", map_product_response(product_response))
