@@ -1,0 +1,6 @@
+[MESSAGES CONTROL]
+disable=
+    missing-module-docstring,
+    line-too-long,
+    missing-final-newline,
+    trailing-whitespace
