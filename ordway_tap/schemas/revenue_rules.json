@@ -1,0 +1,109 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "company_id",
+        "revenue_rule_id"
+    ],
+    "properties": {
+        "revenue_rule_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "company_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "name": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "recognition_method": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "recognition_schedule_period": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "posting_day": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "posting_method": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "status": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "recognition_term": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "created_by": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "updated_by": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "created_date": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "updated_date": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "revenue_rules_entries": {
+            "type": [
+                "null",
+                "object"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "period_offset": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "percent_to_recognize": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                }
+            }
+        }
+    }
+}
