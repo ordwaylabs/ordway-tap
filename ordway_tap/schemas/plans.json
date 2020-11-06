@@ -1,0 +1,78 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "company_id",
+        "plan_id"
+    ],
+    "properties": {
+        "company_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "plan_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "name": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "description": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "created_by": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "updated_by": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "created_date": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "updated_date": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "public_url": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "uri"
+        },
+        "status": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "custom_fields": {
+            "type": [
+                "null",
+                "object"
+            ],
+            "additionalProperties": true
+        }
+    }
+}
