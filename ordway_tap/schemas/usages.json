@@ -1,0 +1,115 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "company_id",
+        "usage_id",
+        "subscription_line_id"
+    ],
+    "properties": {
+        "usage_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "company_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "customer_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "quantity": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "date": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "subscription_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "charge_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "unit_of_measure": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "description": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "created_date": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "updated_date": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "created_by": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "updated_by": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "currency": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "invoiced": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "subscription_line_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "custom_fields": {
+            "type": [
+                "null",
+                "object"
+            ],
+            "additionalProperties": true,
+            "properties": {}
+        }
+    }
+}
