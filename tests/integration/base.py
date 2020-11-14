@@ -109,4 +109,10 @@ class BaseOrdwayTestCase(TapIntegrationTestCase):
 
         deselect_all_streams_except(args.catalog, cls.SELECTED_STREAMS)
 
-        return TapExecutor(tap_entrypoint=main, tap_args=args)
+        return TapExecutor(
+            tap_entrypoint=main,
+            tap_args=args,
+            artifacts_dir=Path(
+                environ.get("TEST_WRITE_TAP_ARTIFACTS_DIR", "tap_results"), cls.__name__
+            ),
+        )
