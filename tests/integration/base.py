@@ -85,7 +85,6 @@ class BaseOrdwayTestCase(TapIntegrationTestCase):
             "X-API-KEY",
             "X-User-Company",
             "X-Company-Token",
-            "__cfduid",
             "Set-Cookie",
         )
 
