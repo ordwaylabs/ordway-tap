@@ -6,12 +6,24 @@ from backoff import expo, on_exception as backoff_on_exception
 import requests
 import ordway_tap.configs as TAP_CONFIG
 from ..__version__ import __version__ as VERSION
-from .consts import BASE_API_URL, BASE_STAGING_URL
+from .consts import (
+    BASE_API_URL,
+    BASE_STAGING_URL,
+    DEFAULT_API_VERSION,
+    DEFAULT_TIMEOUT_SECS,
+)
 
 LOGGER = get_logger()
 
 if TYPE_CHECKING:
     from ..base import DataContext
+    from typing_extensions import TypedDict
+
+    _DEFAULT_QUERY_PARAMS = TypedDict(
+        "_DEFAULT_QUERY_PARAMS",
+        {"page": int, "sort": Optional[str], "size": int},
+        total=False,
+    )
 
 
 @backoff_on_exception(expo, requests.exceptions.RequestException, max_tries=3)
@@ -21,7 +33,10 @@ def _get(
     """ Perform a GET request with Ordway-related headers """
 
     response = requests.get(
-        _get_url(path), headers=_get_headers(), params=params, timeout=4
+        _get_url(path),
+        headers=_get_headers(),
+        params=params,
+        timeout=DEFAULT_TIMEOUT_SECS,
     )
 
     if response.status_code != 200:
@@ -57,6 +72,9 @@ def _get_headers() -> Dict[str, str]:
 
 def _get_api_version() -> str:
     """ Gets Ordway API version - formatting if necessary """
+
+    if TAP_CONFIG.api_version is None:
+        return DEFAULT_API_VERSION
 
     return (
         TAP_CONFIG.api_version
@@ -107,7 +125,7 @@ class RequestHandler:
         except KeyError as err:
             raise err
 
-    def resolve_params(self, context: "DataContext") -> Dict[str, str]:
+    def resolve_params(self, context: "DataContext") -> Dict[str, Optional[str]]:
         """ Returns query params to send with the Ordway synchronization request """
 
         params = {}
@@ -125,10 +143,16 @@ class RequestHandler:
         return params
 
     def fetch(self, context: "DataContext") -> Generator[Dict[str, Any], None, None]:
+        """ Fetches all pages constrained by `resolve_params` """
+
         self._exhausted = False
 
-        default_params = {"sort": self.sort, "size": self.page_size, "page": 1}
-        default_params.update(self.resolve_params(context))
+        default_params: "_DEFAULT_QUERY_PARAMS" = {
+            "sort": self.sort,
+            "size": self.page_size,
+            "page": 1,
+        }
+        default_params.update(self.resolve_params(context))  # type: ignore
 
         endpoint = self.resolve_endpoint(context)
 
@@ -144,5 +168,5 @@ class RequestHandler:
 
             if len(results) < self.page_size:
                 self._exhausted = True
-
-            default_params["page"] += 1
+            else:
+                default_params["page"] += 1
