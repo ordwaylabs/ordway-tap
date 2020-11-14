@@ -299,6 +299,13 @@
 				"null",
 				"object"
 			]
+		},
+		"invoice_pdf_url": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "uri"
 		}
 	}
 }
