@@ -36,6 +36,10 @@ def transformer_prehook(data: Any, property_type: str, _) -> Any:
 class RecordTransformer:
     """A wrapper around Singer's Transformer that allows transforming record data
     as a whole.
+
+    It's used in a similar fashion to singer.transformer.Transformer. The
+    transformation as a whole process is handled by RecordTransformer.pre_transform,
+    which is invoked prior to the pre_hook.
     """
 
     def __init__(
