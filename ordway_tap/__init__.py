@@ -190,23 +190,25 @@ def prepare_stream(
 
         for substream_def in stream_def.substreams:
             if not substream_def.is_selected:
+                LOGGER.info('Skipping sub-stream "%s"', substream_def.tap_stream_id)
+
                 continue
 
             # ignored type errors below seem to be caused by same issue as
             # https://github.com/python/mypy/issues/8993
-            stream_defs[substream_def.tap_stream_id] = substream_def  # type: ignore
+            stream_defs[substream_def.tap_stream_id] = substream_def
             substream_version = get_full_table_version()
-            stream_versions[substream_def.tap_stream_id] = substream_version  # type: ignore
+            stream_versions[substream_def.tap_stream_id] = substream_version
 
             write_schema(
-                stream_name=substream_def.tap_stream_id,  # type: ignore
+                stream_name=substream_def.tap_stream_id,
                 schema=substream_def.schema_dict,
                 key_properties=substream_def.key_properties,
             )
 
             # Substreams and their parent stream are all FULL_TABLE, so
             # no need to check substream bookmarks.
-            write_activate_version(substream_def.tap_stream_id, substream_version)  # type: ignore
+            write_activate_version(substream_def.tap_stream_id, substream_version)
 
     write_schema(
         stream_name=stream_def.tap_stream_id,
@@ -277,7 +279,7 @@ def main():
     TAP_CONFIG.api_credentials = args.config["api_credentials"]
     TAP_CONFIG.api_version = args.config.get("api_version", DEFAULT_API_VERSION)
     TAP_CONFIG.staging = args.config.get("staging", False)
-    TAP_CONFIG.api_url = args.config.get("api_url", None)
+    TAP_CONFIG.api_url = args.config.get("api_url")
     TAP_CONFIG.start_date = args.config["start_date"]
 
     # If discover flag was passed, run discovery mode and dump output to stdout
