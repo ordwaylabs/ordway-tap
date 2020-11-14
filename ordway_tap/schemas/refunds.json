@@ -1,7 +1,13 @@
 {
-	"type": ["null", "object"],
+	"type": [
+		"null",
+		"object"
+	],
 	"additionalProperties": false,
-	"required": ["company_id", "refund_id"],
+	"required": [
+		"company_id",
+		"refund_id"
+	],
 	"properties": {
 		"company_id": {
 			"type": "string"
@@ -13,46 +19,85 @@
 			"type": "string"
 		},
 		"refund_date": {
-			"type": ["null", "string"],
+			"type": [
+				"null",
+				"string"
+			],
 			"format": "date"
 		},
 		"refund_amount": {
-			"type": ["null", "number"]
+			"type": [
+				"null",
+				"number"
+			]
 		},
 		"refund_type": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"notes": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"status": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"payment_id": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"currency": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"reference_number": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"created_by": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"updated_by": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"created_date": {
-			"type": ["null", "string"],
+			"type": [
+				"null",
+				"string"
+			],
 			"format": "date-time"
 		},
 		"updated_date": {
-			"type": ["null", "string"],
+			"type": [
+				"null",
+				"string"
+			],
 			"format": "date-time"
 		},
 		"custom_fields": {
-			"type": ["null", "object"]
+			"type": [
+				"null",
+				"object"
+			]
 		}
 	}
 }
