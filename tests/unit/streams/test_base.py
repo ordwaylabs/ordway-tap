@@ -1,5 +1,5 @@
 from unittest import TestCase
-from unittest.mock import MagicMock, patch
+from unittest.mock import Mock, MagicMock, patch
 from ordway_tap.streams.base import (
     Stream,
     Substream,
@@ -18,7 +18,7 @@ class StreamTestCase(TestCase):
 
         class TestStream(Stream):
             tap_stream_id = "test_stream"
-            substreams = [TestSubstream]
+            substream_definitions = [TestSubstream]
             key_properties = []
             request_handler = MagicMock()
             valid_replication_keys = ["updated_date"]
@@ -45,15 +45,17 @@ class StreamTestCase(TestCase):
                 msg=f"instantiate_substreams did not instantiate substream: {sub}",
             )
 
-    def test_sync_substreams_raises_type_error_if_sub_is_not_instantiated(self):
+    def test_sync_substreams_with_non_substream(self):
         """A TypeError should be raised if substreams aren't instantiated yet"""
+
+        self.test_stream.substreams = [Mock()]
 
         with self.assertRaises(TypeError):
             list(self.test_stream.sync_substreams({}, MagicMock()))
 
     def test_has_substreams(self):
         self.assertTrue(self.test_stream.has_substreams)
-        del self.test_stream.substreams[0]
+        del self.test_stream.substream_definitions[0]
         self.assertFalse(self.test_stream.has_substreams)
 
     @patch.object(Stream, "_check_replication_config")

@@ -22,7 +22,7 @@ class Child2Stream(EndpointSubstream):
 
 class ParentStream(Stream):
     tap_stream_id = "parent"
-    substreams = [ChildStream, Child2Stream]
+    substream_definitions = [ChildStream, Child2Stream]
     key_properties = []
     transformer_class = MagicMock()
     request_handler = MagicMock()
