@@ -206,8 +206,6 @@ class OutputTracker:
 
             self.index += 1
 
-        return None
-
     def add_messages(self, messages: Iterable["Message"]) -> None:
         for message in messages:
             self.add_message(message)
@@ -308,7 +306,6 @@ class TapExecutor:
 
     def stop(self) -> None:
         """ Stops `singer.utils.parse_args` patcher """
-
         self.parse_args_patcher.stop()
 
     def write_artifacts(self) -> None:
@@ -333,11 +330,19 @@ class TapIntegrationTestCase(BaseTestCase):
     """ A TestCase that provides common tap-related test assertions, and tap integration """
 
     def assertStreamInOutput(self, tap_stream_id: str):
-        """ Ensure the tap output a message related to `tap_stream_id`. """
+        """ Ensure the tap outputs a message related to `tap_stream_id`. """
         self.assertIn(
             tap_stream_id,
             self.tap_executor.output.streams,
             msg=f'No output captured for stream "{tap_stream_id}". Captured streams: {self.tap_executor.output.streams.keys()}',
+        )
+
+    def assertStreamNotInOutput(self, tap_stream_id: str):
+        """ Ensure the tap DOES NOT output a message related to `tap_stream_id`. """
+        self.assertNotIn(
+            tap_stream_id,
+            self.tap_executor.output.streams,
+            msg=f'Output captured for stream "{tap_stream_id}". Captured streams: {self.tap_executor.output.streams.keys()}',
         )
 
     def assertMessageCountEqual(
