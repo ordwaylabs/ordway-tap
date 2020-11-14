@@ -19,8 +19,10 @@ if TYPE_CHECKING:
 
 LOGGER = get_logger()
 
-
-def listen_topic(state):
+# Not entirely sure how this is intended to be used
+# in the future, but we need the tap's configuration
+# if we do.
+def listen_topic(config, state):
     kafka_credentials = TAP_CONFIG.kafka_credentials
     consumer = KafkaConsumer(
         kafka_credentials["topic"],
@@ -48,7 +50,7 @@ def listen_topic(state):
                 stream_defs,
                 stream_versions,
                 TAP_CONFIG.catalog,
-                {},
+                config,
                 state,
             )
 
