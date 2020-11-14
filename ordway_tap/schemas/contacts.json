@@ -95,6 +95,12 @@
                 "string"
             ]
         },
+        "county": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
         "state": {
             "type": [
                 "null",
