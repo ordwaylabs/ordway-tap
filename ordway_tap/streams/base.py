@@ -4,7 +4,6 @@ from typing import (
     Any,
     List,
     Sequence,
-    Union,
     Type,
     Tuple,
     Generator,
@@ -15,9 +14,7 @@ from abc import ABC, abstractmethod
 from singer import get_logger
 from singer.metadata import to_map as mdata_to_map
 from ..base import DataContext
-from ..utils import (
-    denest,
-)
+from ..utils import denest
 
 if TYPE_CHECKING:
     from datetime import datetime
@@ -83,10 +80,7 @@ class StreamABC(ABC):
         """ Whether the stream is selected """
 
         if self._is_selected is None:
-            selected = self.catalog_entry.is_selected()
-            self._is_selected = selected
-
-            return selected
+            self._is_selected = self.catalog_entry.is_selected()
 
         return self._is_selected
 
@@ -122,16 +116,31 @@ class Substream(StreamABC):
 
 
 class ResponseSubstream(Substream):
-    """ A substream derived from a parent stream's response """
+    """A substream derived from a parent stream's response
+
+    When syncing its records, the parent stream will follow the path
+    defined by this stream and invoke its transformer_class on any
+    "sub records" found.
+    """
 
     @property
     @abstractmethod
     def path(self) -> Tuple[str, ...]:
-        """A tuple of dictionary keys from which the substream records can be found"""
+        """A tuple of dictionary keys from which the substream records can be found
+
+        Example:
+        {
+            "A": {
+                "B": [{"id": "sub_record"}]
+            }
+        }
+
+        A `path` of ("A", "B") would result in {"id": "sub_record"} being synchronized.
+        """
 
 
 class EndpointSubstream(Substream):
-    """ A substream derived from a parent's endpoint """
+    """A substream derived from a parent's endpoint """
 
     @property
     @abstractmethod
@@ -165,7 +174,17 @@ class EndpointSubstream(Substream):
 
 
 class Stream(StreamABC):
-    substreams: List[Union[Substream, Type[Substream]]] = []
+    substream_definitions: List[Type[Substream]] = []
+
+    def __init__(
+        self,
+        catalog: "Catalog",
+        config: Dict[str, Any],
+        filter_hook: Optional[_FILTER_HOOK] = None,
+    ):
+        super().__init__(catalog, config, filter_hook)
+
+        self.substreams: List[Substream] = []
 
     @property
     @abstractmethod
@@ -176,18 +195,17 @@ class Stream(StreamABC):
     def has_substreams(self) -> bool:
         """ Whether the stream has any substreams """
 
-        return len(self.substreams) > 0
+        return len(self.substream_definitions) > 0
 
     def instantiate_substreams(
         self,
         catalog: "Catalog",
         filter_hook: Optional[Callable[[Dict[str, str], DataContext], bool]] = None,
     ) -> None:
-        for i, substream_class in enumerate(self.substreams):
-            if isinstance(substream_class, Substream):
-                continue
-
-            self.substreams[i] = substream_class(catalog, self.config, filter_hook)
+        self.substreams = [
+            substream_class(catalog, self.config, filter_hook)
+            for substream_class in self.substream_definitions
+        ]
 
     def sync(
         self, filter_datetime: "datetime"

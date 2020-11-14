@@ -1,26 +1,22 @@
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Dict, Union, Type, Sequence
 from singer import get_logger
 from .base import Stream, ResponseSubstream, EndpointSubstream
 from ..transformers import (
     RecordTransformer,
     BillingScheduleTransformer,
-    CreditTransformer,
     CustomerTransformer,
     InvoiceTransformer,
     OrderTransformer,
-    PaymentTransformer,
-    StatementTransformer,
     SubscriptionTransformer,
 )
 from ..api import RequestHandler
 
 if TYPE_CHECKING:
     from datetime import datetime
+    from .base import Substream
 
 LOGGER = get_logger()
 
-# TODO pre_hook handles a lot of these transformations
-# remove later
 
 # Was working with filtering, but now isn't?
 class BillingRuns(Stream):
@@ -28,10 +24,10 @@ class BillingRuns(Stream):
 
     tap_stream_id = "billing_runs"
     key_properties = ["billing_run_id"]
-    valid_replication_keys = []
+    valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
-    transformer = RecordTransformer
+    transformer_class = RecordTransformer
     request_handler = RequestHandler("/billing_runs", sort="name")
 
 
@@ -44,7 +40,7 @@ class BillingSchedules(Stream):
 
     tap_stream_id = "billing_schedules"
     key_properties = ["billing_schedule_id"]
-    transformer = BillingScheduleTransformer
+    transformer_class = BillingScheduleTransformer
     request_handler = RequestHandler("/billing_schedules", sort="id")
 
 
@@ -56,7 +52,7 @@ class Credits(Stream):
 
     tap_stream_id = "credits"
     key_properties = ["credit_id"]
-    transformer = CreditTransformer
+    transformer_class = RecordTransformer
     request_handler = RequestHandler("/credits")
 
 
@@ -68,11 +64,11 @@ class Contacts(ResponseSubstream):
 
     tap_stream_id = "contacts"
     key_properties = ["contact_id"]
-    valid_replication_keys = []
+    valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
     path = ("contacts",)
-    transformer = RecordTransformer
+    transformer_class = RecordTransformer
 
 
 class PaymentMethods(EndpointSubstream):
@@ -80,11 +76,11 @@ class PaymentMethods(EndpointSubstream):
 
     tap_stream_id = "payment_methods"
     key_properties = ["payment_method_id"]
-    valid_replication_keys = []
+    valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
     request_handler = RequestHandler("/customers/{id}/payment_methods", sort=None)
-    transformer = RecordTransformer
+    transformer_class = RecordTransformer
 
 
 class CustomerNotes(EndpointSubstream):
@@ -95,10 +91,10 @@ class CustomerNotes(EndpointSubstream):
 
     tap_stream_id = "customer_notes"
     key_properties = ["customer_note_id"]
-    valid_replication_keys = []
+    valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
-    transformer = RecordTransformer
+    transformer_class = RecordTransformer
     request_handler = RequestHandler("/customers/{id}/customer_notes")
 
 
@@ -113,9 +109,9 @@ class Customers(Stream):
     key_properties = ["customer_id"]
     replication_key = None
     replication_method = "FULL_TABLE"
-    transformer = CustomerTransformer
+    transformer_class = CustomerTransformer
     request_handler = RequestHandler("/customers")
-    substreams = [Contacts]
+    substream_definitions = [Contacts, CustomerNotes, PaymentMethods]
 
 
 class Invoices(Stream):
@@ -126,7 +122,7 @@ class Invoices(Stream):
 
     tap_stream_id = "invoices"
     key_properties = ["invoice_id"]
-    transformer = InvoiceTransformer
+    transformer_class = InvoiceTransformer
     request_handler = RequestHandler("/invoices")
 
 
@@ -138,7 +134,7 @@ class Orders(Stream):
 
     tap_stream_id = "orders"
     key_properties = ["order_id"]
-    transformer = OrderTransformer
+    transformer_class = OrderTransformer
     request_handler = RequestHandler("/orders")
 
 
@@ -150,7 +146,7 @@ class Payments(Stream):
 
     tap_stream_id = "payments"
     key_properties = ["payment_id"]
-    transformer = PaymentTransformer
+    transformer_class = RecordTransformer
     request_handler = RequestHandler("/payments")
 
 
@@ -162,7 +158,7 @@ class Products(Stream):
 
     tap_stream_id = "products"
     key_properties = ["product_id"]
-    transformer = RecordTransformer
+    transformer_class = RecordTransformer
     request_handler = RequestHandler("/products")
 
 
@@ -171,7 +167,7 @@ class Refunds(Stream):
 
     tap_stream_id = "refunds"
     key_properties = ["refund_id"]
-    transformer = RecordTransformer
+    transformer_class = RecordTransformer
     request_handler = RequestHandler("/refunds")
 
 
@@ -183,7 +179,7 @@ class RevenueSchedules(Stream):
 
     tap_stream_id = "revenue_schedules"
     key_properties = ["revenue_schedule_id"]
-    transformer = RecordTransformer
+    transformer_class = RecordTransformer
     request_handler = RequestHandler("/revenue_schedules", page_size=500)
 
 
@@ -197,7 +193,7 @@ class Subscriptions(Stream):
     key_properties = [
         "subscription_id",
     ]
-    transformer = SubscriptionTransformer
+    transformer_class = SubscriptionTransformer
     request_handler = RequestHandler("/subscriptions")
 
 
@@ -209,11 +205,11 @@ class Charges(ResponseSubstream):
 
     tap_stream_id = "charges"
     key_properties = ["charge_id"]
-    valid_replication_keys = []
+    valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
     path = ("charges",)
-    transformer = RecordTransformer
+    transformer_class = RecordTransformer
 
 
 class Plans(Stream):
@@ -223,12 +219,12 @@ class Plans(Stream):
     """
 
     tap_stream_id = "plans"
-    substreams = [Charges]
+    substream_definitions = [Charges]
     key_properties = ["plan_id"]
-    valid_replication_keys = []
+    valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
-    transformer = RecordTransformer
+    transformer_class = RecordTransformer
     request_handler = RequestHandler("/plans")
 
 
@@ -240,10 +236,10 @@ class PaymentRuns(Stream):
 
     tap_stream_id = "payment_runs"
     key_properties = ["payment_run_id"]
-    valid_replication_keys = []
+    valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
-    transformer = RecordTransformer
+    transformer_class = RecordTransformer
     request_handler = RequestHandler("/payment_runs")
 
 
@@ -256,10 +252,10 @@ class RevenueRules(Stream):
 
     tap_stream_id = "revenue_rules"
     key_properties = ["revenue_rule_id"]
-    valid_replication_keys = []
+    valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
-    transformer = RecordTransformer
+    transformer_class = RecordTransformer
     request_handler = RequestHandler("/revenue_rules", sort=None)
 
 
@@ -271,10 +267,10 @@ class ChartOfAccounts(Stream):
 
     tap_stream_id = "chart_of_accounts"
     key_properties = ["code"]
-    valid_replication_keys = []
+    valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
-    transformer = RecordTransformer
+    transformer_class = RecordTransformer
     request_handler = RequestHandler("/chart_of_accounts", sort=None)
 
 
@@ -283,10 +279,10 @@ class Webhooks(Stream):
 
     tap_stream_id = "webhooks"
     key_properties = ["name"]
-    valid_replication_keys = []
+    valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
-    transformer = RecordTransformer
+    transformer_class = RecordTransformer
     request_handler = RequestHandler("/webhooks", sort=None)
 
 
@@ -299,7 +295,7 @@ class Statements(Stream):
 
     tap_stream_id = "statements"
     key_properties = ["statement_id"]
-    transformer = StatementTransformer
+    transformer_class = RecordTransformer
     request_handler = RequestHandler("/statements")
 
 
@@ -313,10 +309,10 @@ class Coupons(Stream):
 
     tap_stream_id = "coupons"
     key_properties = ["coupon_id"]
-    valid_replication_keys = []
+    valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
-    transformer = RecordTransformer
+    transformer_class = RecordTransformer
     request_handler = RequestHandler("/coupons")
 
 
@@ -328,11 +324,11 @@ class Usages(Stream):
 
     tap_stream_id = "usages"
     key_properties = ["usage_id"]
-    transformer = RecordTransformer
+    transformer_class = RecordTransformer
     request_handler = RequestHandler("/usages")
 
 
-AVAILABLE_STREAMS = {
+AVAILABLE_STREAMS: Dict[str, Union[Type[Stream], Type["Substream"]]] = {
     "billing_runs": BillingRuns,
     "billing_schedules": BillingSchedules,
     "customers": Customers,
