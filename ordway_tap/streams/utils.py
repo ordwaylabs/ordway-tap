@@ -21,7 +21,7 @@ def check_dependency_conflicts(catalog: "Catalog") -> None:
 
         # It doesn't seem to properly consider is_substream, but
         # perhaps I'm missing something.
-        for substream in stream.substreams:  # type: ignore
+        for substream in stream.substream_definitions:  # type: ignore
             if catalog.get_stream(substream.tap_stream_id).is_selected():
                 raise DependencyConflict(
                     f'Stream "{stream.tap_stream_id}" cannot be deselected when its child stream "{substream.tap_stream_id}" is selected'
