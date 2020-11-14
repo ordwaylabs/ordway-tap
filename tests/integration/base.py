@@ -44,6 +44,7 @@ DEFAULT_MASKED_RESPONSE_FIELDS = {
     "description": StrFormat.RANDOM,
     "website": StrFormat.RANDOM,
     "other_email": StrFormat.EMAIL,
+    "customer_id": StrFormat.RANDOM,
 }
 
 
