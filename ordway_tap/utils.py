@@ -1,7 +1,7 @@
 from typing import TYPE_CHECKING, Dict, Tuple, List, Any, Optional
-import decimal
 from time import time
 from singer.utils import now, strptime_to_utc
+from singer.bookmarks import get_bookmark
 from singer.messages import RecordMessage, ActivateVersionMessage, write_message
 from inflection import underscore
 import ordway_tap.configs
@@ -12,6 +12,8 @@ if TYPE_CHECKING:
 
 
 def get_company_id():
+    """ Gets the configured company ID """
+
     api_credentials = ordway_tap.configs.api_credentials
     return underscore(api_credentials["x_company"])
 
@@ -21,17 +23,26 @@ def print_record(
 ):
     """ Writes record data to stdout """
 
-    write_message(RecordMessage(tap_stream_id, record, version, time_extracted=now()))
+    write_message(
+        RecordMessage(tap_stream_id, record, version, time_extracted=now())
+    )  # pragma: no cover
 
 
 def get_full_table_version() -> int:
+    """ Generates a version for FULL_TABLE streams """
+
     return int(time() * 1000)
 
 
 def get_version(
     stream: "StreamABC", start_date: str, filter_datetime: Optional["datetime"] = None
 ) -> Optional[int]:
-    is_first_run = filter_datetime <= strptime_to_utc(start_date)
+    """ Generates a version for `stream` """
+
+    is_first_run = True
+
+    if filter_datetime is not None:
+        is_first_run = filter_datetime <= strptime_to_utc(start_date)
 
     if stream.is_valid_incremental:
         if is_first_run:
@@ -42,34 +53,32 @@ def get_version(
     return get_full_table_version()
 
 
+def get_filter_datetime(
+    stream: "StreamABC", start_date: str, state: Dict[str, Any]
+) -> "datetime":
+    """Retrieves the filter datetime for a stream based on the
+    configured "start_date" and the state's bookmarks
+    """
+
+    filter_datetime_str = start_date
+
+    if stream.is_valid_incremental:
+        filter_datetime_str = get_bookmark(
+            state, stream.tap_stream_id, stream.replication_key, filter_datetime_str
+        )
+
+    filter_datetime = strptime_to_utc(filter_datetime_str)
+
+    return filter_datetime
+
+
 def write_activate_version(tap_stream_id: str, version: Optional[int]) -> None:
-    write_message(ActivateVersionMessage(tap_stream_id, version))
+    """ Writes an ACTIVATE_VERSION message to stdout """
+
+    write_message(ActivateVersionMessage(tap_stream_id, version))  # pragma: no cover
 
 
-def convert_to_decimal(value):
-    try:
-        return decimal.Decimal(value)
-    except (decimal.InvalidOperation, TypeError):
-        return 0
-
-
-def format_date_string(value):
-    if value == "-":
-        return None
-    return value or None
-
-
-def format_array(value):
-    return value or None
-
-
-def format_boolean(value):
-    if value == "-":
-        return False
-    return value
-
-
-def denest(obj: Dict[str, Any], path: Tuple[str]) -> List[Dict[str, Any]]:
+def denest(obj: Dict[str, Any], path: Tuple[str, ...]) -> List[Dict[str, Any]]:
     """Recursively denest a dictionary
     Example:
         denest({
