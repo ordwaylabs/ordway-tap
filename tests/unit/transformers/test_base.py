@@ -25,8 +25,8 @@ def test_transform_boolean():
     assert _transform_boolean(False) is False
 
 
-@patch("ordway_tap.transformers.base.transform_string")
-@patch("ordway_tap.transformers.base.transform_boolean")
+@patch("ordway_tap.transformers.base._transform_string")
+@patch("ordway_tap.transformers.base._transform_boolean")
 def test_tranform_prehook(mock_transform_boolean, mock_transform_string):
     transformer_prehook("foo", "string", None)
     mock_transform_string.assert_called_with("foo")
