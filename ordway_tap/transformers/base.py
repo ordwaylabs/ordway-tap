@@ -1,4 +1,4 @@
-from typing import TYPE_CHECKING, Callable, Union, Optional, Dict, List, Any, Generator
+from typing import TYPE_CHECKING, Callable, Union, Optional, Dict, Any, Generator
 from inspect import isgeneratorfunction
 from inflection import singularize
 from singer.transform import Transformer, NO_INTEGER_DATETIME_PARSING
@@ -9,25 +9,26 @@ if TYPE_CHECKING:
     from datetime import datetime
 
 
-def transform_string(data: Any) -> Optional[str]:
-    if data == "-":
-        return None
-
+def _transform_string(data: Any) -> Optional[str]:
     if isinstance(data, str) and len(data) == 0:
         return None
 
     return data
 
 
-def transform_boolean(data: Any) -> Optional[bool]:
+def _transform_boolean(data: Any) -> Optional[bool]:
     return data if data != "-" else False
 
 
 def transformer_prehook(data: Any, property_type: str, _) -> Any:
     if property_type == "boolean":
-        return transform_boolean(data)
-    elif property_type == "string":
-        return transform_string(data)
+        return _transform_boolean(data)
+    if property_type == "string":
+        return _transform_string(data)
+    if property_type == "null":
+        # Treat '-' as equivalent to None
+        if data == "-":
+            return None
 
     return data
 
@@ -64,22 +65,24 @@ class RecordTransformer:
         self._schema_transformer.integer_datetime_fmt = integer_datetime_fmt
 
     def __enter__(self):
-        return self
+        return self  # pragma: no cover
 
     def __exit__(self, *args):
         self._schema_transformer.log_warning()
 
     def pre_transform(
         self,
-        data: Union[Dict[str, Any], List[Dict[str, Any]]],
+        data: Dict[str, Any],
         context: DataContext,
     ) -> Union[Dict[str, Any], Generator[Dict[str, Any], None, None]]:
+        """Transforms `data` as a whole - as opposed to a pre_hook"""
+
         data["company_id"] = get_company_id()
 
-        singular_tap_stream_id = singularize(context.tap_stream_id)
+        singular_tap_stream_id = f"{singularize(context.tap_stream_id)}_id"
 
         if singular_tap_stream_id not in data:
-            data[singularize(context.tap_stream_id)] = data.get("id")
+            data[singular_tap_stream_id] = data.get("id")
 
         if "id" in data:
             del data["id"]
@@ -88,12 +91,11 @@ class RecordTransformer:
 
     def transform(
         self,
-        data: Union[Dict[str, Any], List[Dict[str, Any]]],
+        data: Dict[str, Any],
         schema,
         context: DataContext,
         metadata=None,
     ) -> Generator[Dict[str, Any], None, None]:
-        # TODO Check if is iterable instead
         if isgeneratorfunction(self.pre_transform):
             for pretransformed_data in self.pre_transform(data, context):
                 yield self._schema_transformer.transform(
