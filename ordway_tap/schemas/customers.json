@@ -21,12 +21,6 @@
 				"string"
 			]
 		},
-		"customer_type": {
-			"type": [
-				"null",
-				"string"
-			]
-		},
 		"description": {
 			"type": [
 				"null",
