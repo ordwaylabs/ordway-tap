@@ -63,6 +63,8 @@ def write_artifact(
     file_path = Path(now) if file_dir is None else file_dir / Path(now)
     file_path = file_path.with_suffix(suffix)
 
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+
     with open(file_path, "w") as artifact_fp:
         artifact_fp.write(output)
 
