@@ -13,21 +13,27 @@ def get_key_properties(tap_stream_id: str) -> Optional[List[str]]:
 
     key_properties = AVAILABLE_STREAMS[tap_stream_id].key_properties
 
-    if not key_properties:
+    if len(key_properties) == 0:  # type: ignore
         return None
 
-    return key_properties
+    return key_properties  # type: ignore
 
 
 def get_replication_method(tap_stream_id: str) -> Optional[str]:
+    """ Retrieves a stream's default replication method """
+
     return getattr(AVAILABLE_STREAMS[tap_stream_id], "replication_method", None)
 
 
 def get_replication_key(tap_stream_id: str) -> Optional[str]:
+    """ Retrieves a stream's default replication key """
+
     return getattr(AVAILABLE_STREAMS[tap_stream_id], "replication_key", None)
 
 
-def get_stream_metadata(tap_stream_id, schema_dict):
+def get_stream_metadata(tap_stream_id, schema_dict) -> List:
+    """ Generates a stream's default metadata """
+
     stream_def = AVAILABLE_STREAMS[tap_stream_id]
 
     metadata = get_standard_metadata(
