@@ -40,6 +40,9 @@ class BillingSchedules(Stream):
 
     tap_stream_id = "billing_schedules"
     key_properties = ["billing_schedule_id"]
+    valid_replication_keys: Sequence[str] = []
+    replication_key = None
+    replication_method = "FULL_TABLE"
     transformer_class = BillingScheduleTransformer
     request_handler = RequestHandler("/billing_schedules", sort="id")
 
@@ -295,6 +298,9 @@ class Statements(Stream):
 
     tap_stream_id = "statements"
     key_properties = ["statement_id"]
+    valid_replication_keys: Sequence[str] = []
+    replication_key = None
+    replication_method = "FULL_TABLE"
     transformer_class = RecordTransformer
     request_handler = RequestHandler("/statements")
 

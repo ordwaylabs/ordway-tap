@@ -3255,8 +3255,7 @@
     },
     {
       "tap_stream_id": "statements",
-      "replication_key": "updated_date",
-      "replication_method": "INCREMENTAL",
+      "replication_method": "FULL_TABLE",
       "key_properties": [
         "statement_id"
       ],
@@ -3346,9 +3345,7 @@
             "table-key-properties": [
               "statement_id"
             ],
-            "valid-replication-keys": [
-              "updated_date"
-            ],
+            "valid-replication-keys": [],
             "inclusion": "available",
             "selected": true
           }
@@ -6940,8 +6937,7 @@
     },
     {
       "tap_stream_id": "billing_schedules",
-      "replication_key": "updated_date",
-      "replication_method": "INCREMENTAL",
+      "replication_method": "FULL_TABLE",
       "key_properties": [
         "billing_schedule_id"
       ],
@@ -7101,9 +7097,7 @@
             "table-key-properties": [
               "billing_schedule_id"
             ],
-            "valid-replication-keys": [
-              "updated_date"
-            ],
+            "valid-replication-keys": [],
             "inclusion": "available",
             "selected": true
           }
