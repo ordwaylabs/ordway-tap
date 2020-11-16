@@ -112,4 +112,4 @@ Sample JSON:
 ```
 ---
 
-Copyright &copy; 2020 OrdwayLabs
+Copyright &copy; 2020 Stitch
