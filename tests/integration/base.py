@@ -88,6 +88,7 @@ class BaseOrdwayTestCase(TapIntegrationTestCase):
             "X-Company-Token",
             "Set-Cookie",
         )
+        vcr.match_on = ["method", "scheme", "port", "path", "query"]
 
         return vcr
 
