@@ -1,5 +1,6 @@
 from typing import TYPE_CHECKING, Callable, Union, Optional, Dict, Any, Generator
 from inspect import isgeneratorfunction
+from decimal import Decimal
 from inflection import singularize
 from singer.transform import Transformer, NO_INTEGER_DATETIME_PARSING
 from ..utils import get_company_id
@@ -33,6 +34,33 @@ def transformer_prehook(data: Any, property_type: str, _) -> Any:
     return data
 
 
+class PrecisionSafeTransformer(Transformer):
+    """A Transformer that converts number
+    properties to Decimal instances instead of floats
+    """
+
+    # Why is this necessary? Singer converts all
+    # number properties to floats during transformation
+    # causing potential precision loss. Instead,
+    # convert them to Decimal which simplejson
+    # (the package singer uses for serialization) handles.
+    def _transform(self, data, typ, schema, path):
+        if typ == "number":
+            if self.pre_hook:
+                data = self.pre_hook(data, typ, schema)
+
+            if isinstance(data, str):
+                data = data.replace(",", "")
+
+            try:
+                return True, Decimal(data)
+            except:  # pylint: disable=bare-except
+                return False, None
+
+        # pylint: disable=protected-access
+        return super()._transform(data, typ, schema, path)
+
+
 class RecordTransformer:
     """A wrapper around Singer's Transformer that allows transforming record data
     as a whole.
@@ -47,7 +75,9 @@ class RecordTransformer:
         integer_datetime_fmt=NO_INTEGER_DATETIME_PARSING,
         pre_hook=transformer_prehook,
     ):
-        self._schema_transformer = Transformer(integer_datetime_fmt, pre_hook)
+        self._schema_transformer = PrecisionSafeTransformer(
+            integer_datetime_fmt, pre_hook
+        )
         self.removed = self._schema_transformer.removed
         self.filtered = self._schema_transformer.filtered
         self.errors = self._schema_transformer.errors
