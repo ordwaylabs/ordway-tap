@@ -1,40 +1,29 @@
-import inflection
-from kafka import KafkaConsumer
-import ordway_tap.configs
+from typing import TYPE_CHECKING, Dict, Optional, Union, Any
 import json
-import singer
-from ordway_tap.api_sync.utils import print_record
-from ordway_tap.record import (
-    invoice,
-    subscription,
-    customer,
-    payment,
-    credit,
-    refund,
-    billing_schedule,
-    revenue_schedule,
-    product,
-    order,
+from kafka import KafkaConsumer
+from inflection import pluralize, underscore
+from singer import write_state, get_logger
+import ordway_tap.configs as TAP_CONFIG
+from ordway_tap import filter_record, handle_record, prepare_stream
+from ordway_tap.base import DataContext
+from ordway_tap.utils import get_filter_datetime
+from ordway_tap.streams import (
+    Stream,
+    ResponseSubstream,
+    EndpointSubstream,
 )
 
-LOGGER = singer.get_logger()
+if TYPE_CHECKING:
+    from datetime import datetime
+    from singer.catalog import CatalogEntry  # pylint: disable=ungrouped-imports
 
-map_methods = {
-    "customers": {"multi": False, "method": customer.map_customer_response},
-    "subscriptions": {"multi": True, "method": subscription.map_subscription_response},
-    "invoices": {"multi": True, "method": invoice.map_invoice_response},
-    "payments": {"multi": False, "method": payment.map_payment_response},
-    "credits": {"multi": False, "method": credit.map_credit_response},
-    "refunds": {"multi": False, "method": refund.map_refund_response},
-    "billing_schedules": {"multi": False, "method": billing_schedule.map_bs_response},
-    "revenue_schedules": {"multi": False, "method": revenue_schedule.map_rs_response},
-    "products": {"multi": False, "method": product.map_product_response},
-    "orders": {"multi": True, "method": order.map_order_response},
-}
+LOGGER = get_logger()
 
-
-def listen_topic(state):
-    kafka_credentials = ordway_tap.configs.kafka_credentials
+# Not entirely sure how this is intended to be used
+# in the future, but we need the tap's configuration
+# if we do.
+def listen_topic(config, state):
+    kafka_credentials = TAP_CONFIG.kafka_credentials
     consumer = KafkaConsumer(
         kafka_credentials["topic"],
         group_id=kafka_credentials["group_id"],
@@ -47,30 +36,121 @@ def listen_topic(state):
         sasl_plain_username=kafka_credentials["username"],
         sasl_plain_password=kafka_credentials["password"],
     )
+    stream_defs: Dict[str, Union["Stream", "Substream"]] = {}
+    stream_versions: Dict[str, Optional[int]] = {}
+    stream_setup: Dict[str, bool] = {}
+
     for message in consumer:
-        process_stream(state, message)
+        json_message = json.loads(message.value)
+        tap_stream_id = pluralize(underscore(json_message["object"]))
 
+        if not stream_setup.get(tap_stream_id, False):
+            filter_datetime = prepare_stream(
+                tap_stream_id,
+                stream_defs,
+                stream_versions,
+                TAP_CONFIG.catalog,
+                config,
+                state,
+            )
 
-def process_stream(state, message):
-    json_message = json.loads(message.value)
-    LOGGER.info("Message: " + json.dumps(json_message))
-    stream_id = inflection.pluralize(inflection.underscore(json_message["object"]))
-    stream_state = state.get(stream_id, {})
-    if stream_state.get("last_synced", "") > json_message["time"]:
-        LOGGER.info(
-            "Skipping message due to previous timestamp: " + json_message["time"]
-        )
-        return False
-    stream = ordway_tap.configs.catalog.get_stream(stream_id)
-    # Make sure stream is selected for record to print
-    if stream and stream.is_selected():
-        map_method = map_methods[stream_id]
-        if map_method["multi"]:
-            for record in map_method["method"](json_message["record"]):
-                print_record(stream_id, record)
+            LOGGER.info("Syncing stream '%s' since %s", tap_stream_id, filter_datetime)
         else:
-            print_record(stream_id, map_method["method"](json_message["record"]))
-        # Write the state message
-        stream_state["last_synced"] = json_message["time"]
-        state[stream_id] = stream_state
-        singer.write_state(state)
+            filter_datetime = get_filter_datetime(
+                stream_defs[tap_stream_id], TAP_CONFIG.start_date, state
+            )
+
+        process_stream(
+            stream_defs[tap_stream_id],
+            stream_versions[tap_stream_id],
+            state,
+            json_message,
+            filter_datetime,
+        )
+
+
+def process_stream(
+    stream_def: Union[Stream, ResponseSubstream, EndpointSubstream],
+    stream_version: Optional[int],
+    state: Dict[str, Any],
+    json_message: Dict[str, Any],
+    filter_datetime: "datetime",
+) -> None:
+    LOGGER.info("Message: %s", json.dumps(json_message))
+    stream_id = pluralize(underscore(json_message["object"]))
+
+    record = json_message["record"]
+    # Filter based off of the message timestamp or
+    # the replication key?
+    if filter_record(
+        record,
+        DataContext(
+            tap_stream_id=stream_id, stream=stream_def, filter_datetime=filter_datetime
+        ),
+    ):
+        return None
+
+    state = handle_record(stream_id, record, stream_def, stream_version, state)
+
+    # Make sure stream is selected for record to print
+    if stream_def.is_selected:
+        if isinstance(stream_def, Stream):
+            for substream in stream_def.substreams:
+                # Can't handle EndpointSubstream's like this -
+                # I'm assuming the producer is pushing the data
+                # in a similar way to the API?
+                if not substream.is_selected:
+                    continue
+                if not isinstance(substream, ResponseSubstream):
+                    continue
+
+                # .sync_sub_records performs transformations, so not necessary
+                # to invoke ourselves here
+                for tap_substream_id, sub_record in stream_def.sync_sub_records(
+                    substream, record, filter_datetime
+                ):
+                    state = handle_record(
+                        tap_substream_id, sub_record, stream_def, stream_version, state
+                    )
+
+            with stream_def.transformer_class() as transformer:
+                for record in transformer.transform(
+                    record,
+                    stream_def.schema_dict,
+                    context=DataContext(
+                        stream=stream_def,
+                        filter_datetime=filter_datetime,
+                        tap_stream_id=stream_id,
+                    ),
+                    metadata=stream_def.mapped_metadata,
+                ):
+                    state = handle_record(
+                        stream_id, record, stream_def, stream_version, state
+                    )
+
+        elif isinstance(stream_def, EndpointSubstream):
+            # This assumes the data being consumed is akin to
+            # the API. As in - /customer/<id>/notes is separated
+            # into its own individual message
+            context = DataContext(
+                tap_stream_id=stream_def.tap_stream_id,
+                stream=stream_def,
+                filter_datetime=filter_datetime,
+            )
+
+            with stream_def.transformer_class() as transformer:
+                records = transformer.transform(
+                    record,
+                    stream_def.schema_dict,
+                    context=context,
+                    metadata=stream_def.mapped_metadata,
+                )
+
+                for record in records:
+                    state = handle_record(
+                        stream_id, record, stream_def, stream_version, state
+                    )
+
+        write_state(state)
+
+    return None

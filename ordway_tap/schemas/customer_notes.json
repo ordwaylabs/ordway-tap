@@ -1,0 +1,90 @@
+{
+    "type": [
+        "null",
+        "object"
+    ],
+    "additionalProperties": false,
+    "required": [
+        "company_id",
+        "customer_note_id",
+        "title"
+    ],
+    "properties": {
+        "company_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "customer_note_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "description": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "title": {
+            "type": [
+                "string"
+            ]
+        },
+        "file_upload_file_name": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "file_upload_content_type": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "file_upload_file_size": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "file_upload_updated_at": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "has_versions": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "created_at": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "updated_at": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "user_id": {
+            "type": [
+                "integer"
+            ]
+        },
+        "customer_id": {
+            "type": [
+                "integer"
+            ]
+        }
+    }
+}

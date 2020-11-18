@@ -1,90 +1,200 @@
 {
-	"type": ["null", "object"],
+	"type": [
+		"null",
+		"object"
+	],
 	"additionalProperties": false,
-    "required": ["company_id", "customer_id"],
+	"required": [
+		"company_id",
+		"customer_id"
+	],
 	"properties": {
-        "company_id": {
-          "type": "string"
-        },
+		"company_id": {
+			"type": "string"
+		},
 		"customer_id": {
 			"type": "string"
 		},
 		"name": {
-			"type": ["null", "string"]
-		},
-		"customer_type": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"description": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"parent_customer": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"website": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"payment_terms": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"billing_cycle_day": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"billing_contact_id": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"shipping_contact_id": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"status": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"billing_batch": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"tax_exempt": {
-			"type": ["null", "boolean"]
+			"type": [
+				"null",
+				"boolean"
+			]
 		},
 		"balance": {
-			"type": ["null", "number"]
+			"type": [
+				"null",
+				"number"
+			]
 		},
 		"auto_pay": {
-			"type": ["null", "boolean"]
+			"type": [
+				"null",
+				"boolean"
+			]
 		},
 		"currency": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"edit_auto_pay": {
-			"type": ["null", "boolean"]
+			"type": [
+				"null",
+				"boolean"
+			]
 		},
 		"price_book_id": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"cmrr": {
-			"type": ["null", "number"]
+			"type": [
+				"null",
+				"number"
+			]
 		},
 		"discounted_cmrr": {
-			"type": ["null", "number"]
+			"type": [
+				"null",
+				"number"
+			]
 		},
 		"delivery_preferences": {
-			"type": ["null", "object"]
+			"type": [
+				"null",
+				"object"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"print": {
+					"type": [
+						"boolean"
+					]
+				},
+				"email": {
+					"type": [
+						"boolean"
+					]
+				}
+			}
 		},
 		"created_by": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"updated_by": {
-			"type": ["null", "string"]
+			"type": [
+				"null",
+				"string"
+			]
 		},
 		"created_date": {
-			"type": ["null", "string"],
+			"type": [
+				"null",
+				"string"
+			],
 			"format": "date-time"
 		},
 		"updated_date": {
-			"type": ["null", "string"],
+			"type": [
+				"null",
+				"string"
+			],
 			"format": "date-time"
 		},
 		"custom_fields": {
-			"type": ["null", "object"]
+			"additionalProperties": true,
+			"type": [
+				"null",
+				"object"
+			]
+		},
+		"pay_now_url": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "uri"
+		},
+		"update_payment_method_url": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "uri"
+		},
+		"open_invoices_url": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "uri"
 		}
 	}
 }

@@ -16,7 +16,13 @@ INSTALL_REQUIRES = [
 
 EXTRA_REQUIRES = {
     "dev": ["black==20.8b1", "pylint==2.6.0", "tox==3.20.1"],
-    "testing": ["mypy==0.790", "pytest==6.1.1", "pytest-cov==2.10.1"],
+    "testing": [
+        "mypy==0.790",
+        "pytest==6.1.1",
+        "pytest-cov==2.10.1",
+        "pytest-xdist==2.1.0",
+        "vcrpy==4.1.1",
+    ],
 }
 
 with open(join(ROOT_DIR, "README.md"), encoding="utf-8") as readme_file:
@@ -28,7 +34,7 @@ with open(
     VERSION = re_search(r'__version__\s+?=\s+?"(.+)"', version_file.read()).group(1)
 
 setup(
-    name="ordway-tap",
+    name=PACKAGE_NAME,
     version=VERSION,
     description="Singer.io tap for extracting data",
     long_description=README,
