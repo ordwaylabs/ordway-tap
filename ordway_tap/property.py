@@ -36,23 +36,8 @@ def get_stream_metadata(tap_stream_id, schema_dict) -> List:
 
     stream_def = AVAILABLE_STREAMS[tap_stream_id]
 
-    metadata = get_standard_metadata(
+    return get_standard_metadata(
         schema=schema_dict,
         key_properties=get_key_properties(tap_stream_id),
         valid_replication_keys=stream_def.valid_replication_keys,
     )
-
-    metadata = mdata_to_map(metadata)
-
-    for field_name in schema_dict["properties"].keys():
-        # selected-by-default doesn't currently work as intended.
-        # A PR has been made for a fix, but it hasn't been merged yet:
-        # https://github.com/singer-io/singer-python/pull/121
-        # Writing regardless for when PR is merged.
-        metadata = mdata_write(
-            metadata, ("properties", field_name), "selected-by-default", True
-        )
-
-    metadata = mdata_write(metadata, (), "selected", True)
-
-    return mdata_to_list(metadata)
