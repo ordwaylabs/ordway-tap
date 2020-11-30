@@ -166,7 +166,7 @@ class RequestHandler:
             for result in results:
                 yield result
 
-            if len(results) < self.page_size:
+            if len(results) == 0:
                 self._exhausted = True
             else:
                 default_params["page"] += 1
