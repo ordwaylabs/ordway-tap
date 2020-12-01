@@ -47,7 +47,7 @@
 			"type": ["null", "string"]
 		},
 		"unit_price": {
-			"type": ["null", "number"]
+			"type": ["null", "string"]
 		},
 		"quantity": {
 			"type": ["null", "number"]

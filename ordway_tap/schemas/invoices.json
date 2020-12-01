@@ -191,7 +191,7 @@
 		"unit_price": {
 			"type": [
 				"null",
-				"number"
+				"string"
 			]
 		},
 		"list_price": {
