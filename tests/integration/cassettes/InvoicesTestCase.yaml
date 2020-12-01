@@ -2099,4 +2099,74 @@ interactions:
       status:
         code: 200
         message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/json
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - ordway-tap v0.1.0 (https://github.com/ordwaylabs/ordway-tap)
+      method: GET
+      uri: https://api.ordwaylabs.com/api/v1/invoices?sort=updated_date&size=50&page=3&updated_date%3E=2020-11-10T00%3A00%3A00.000000Z
+    response:
+      body:
+        string: "[]"
+      headers:
+        CF-Cache-Status:
+          - DYNAMIC
+        CF-RAY:
+          - 5f098ca089c8efdc-EWR
+        Cache-Control:
+          - max-age=0, private, must-revalidate
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Wed, 11 Nov 2020 16:56:56 GMT
+        Etag:
+          - W/"30de784cb4147ea64c095699fd80452e"
+        Expect-CT:
+          - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+        NEL:
+          - '{"report_to":"cf-nel","max_age":604800}'
+        Report-To:
+          - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=puokitRrV92AXDBogFhNKhNXb135CsY8tzzGeVJcaMZFDUDCWfB6IUW1q8jM40OXK1I%2BQwHYsd3wcTFU%2BSvkcLXPr6ynXp9odh8j6LUnW9z6xEg%3D"}],"group":"cf-nel","max_age":604800}'
+        Strict-Transport-Security:
+          - max-age=31536000
+        Vary:
+          - Accept-Encoding
+        Via:
+          - 1.1 vegur
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - SAMEORIGIN
+        X-Request-Id:
+          - 43932b95-37ea-4d20-82e1-7165a99fb4b1
+        X-Runtime:
+          - "1.393255"
+        X-Xss-Protection:
+          - 1; mode=block
+        cf-request-id:
+          - 0659d638540000efdca4b0f000000001
+        content-length:
+          - "152310"
+        x-amz-apigw-id:
+          - V2ipnHMOIAMF-_w=
+        x-amzn-Remapped-Connection:
+          - keep-alive
+        x-amzn-Remapped-Date:
+          - Wed, 11 Nov 2020 16:56:56 GMT
+        x-amzn-Remapped-Server:
+          - cloudflare
+        x-amzn-RequestId:
+          - 7e67d66f-8856-4146-8f94-0a1ff6472874
+      status:
+        code: 200
+        message: OK
 version: 1

@@ -66,29 +66,6 @@ class GetStreamMetadataTestCase(TestCase):
         {"foo": _TestStream},
         clear=True,
     )
-    def test_stream_selected(self):
-        mdata = get_stream_metadata("foo", load_schema("webhooks.json"))
-
-        self.assertIn("selected", mdata[0]["metadata"])
-        self.assertTrue(mdata[0]["metadata"]["selected"])
-
-    @patch.dict(
-        "ordway_tap.property.AVAILABLE_STREAMS",
-        {"foo": _TestStream},
-        clear=True,
-    )
-    def test_all_properties_selected_by_default(self):
-        mdata = get_stream_metadata("foo", load_schema("webhooks.json"))
-
-        for item in mdata[1:]:
-            self.assertIn("selected-by-default", item["metadata"])
-            self.assertTrue(item["metadata"]["selected-by-default"])
-
-    @patch.dict(
-        "ordway_tap.property.AVAILABLE_STREAMS",
-        {"foo": _TestStream},
-        clear=True,
-    )
     def test_name_in_key_properties(self):
         mdata = get_stream_metadata("foo", load_schema("webhooks.json"))
 
