@@ -23,7 +23,7 @@ class BillingRuns(Stream):
     """Billing Runs stream"""
 
     tap_stream_id = "billing_runs"
-    key_properties = ["billing_run_id"]
+    key_properties = ["billing_run_id", "company_id"]
     valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
@@ -39,7 +39,7 @@ class BillingSchedules(Stream):
     """
 
     tap_stream_id = "billing_schedules"
-    key_properties = ["billing_schedule_id"]
+    key_properties = ["billing_schedule_id", "company_id"]
     valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
@@ -54,9 +54,9 @@ class Credits(Stream):
     """
 
     tap_stream_id = "credits"
-    key_properties = ["credit_id"]
+    key_properties = ["credit_id", "company_id"]
     transformer_class = RecordTransformer
-    request_handler = RequestHandler("/credits")
+    request_handler = RequestHandler("/credits", sort="updated_date,id")
 
 
 class Contacts(ResponseSubstream):
@@ -66,7 +66,7 @@ class Contacts(ResponseSubstream):
     """
 
     tap_stream_id = "contacts"
-    key_properties = ["contact_id"]
+    key_properties = ["contact_id", "company_id"]
     valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
@@ -78,11 +78,11 @@ class PaymentMethods(EndpointSubstream):
     """Payment methods stream"""
 
     tap_stream_id = "payment_methods"
-    key_properties = ["payment_method_id"]
+    key_properties = ["payment_method_id", "company_id"]
     valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
-    request_handler = RequestHandler("/customers/{id}/payment_methods", sort=None)
+    request_handler = RequestHandler("/customers/{id}/payment_methods")
     transformer_class = RecordTransformer
 
 
@@ -93,7 +93,7 @@ class CustomerNotes(EndpointSubstream):
     """
 
     tap_stream_id = "customer_notes"
-    key_properties = ["customer_note_id"]
+    key_properties = ["customer_note_id", "company_id"]
     valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
@@ -109,7 +109,7 @@ class Customers(Stream):
     """
 
     tap_stream_id = "customers"
-    key_properties = ["customer_id"]
+    key_properties = ["customer_id", "company_id"]
     replication_key = None
     replication_method = "FULL_TABLE"
     transformer_class = CustomerTransformer
@@ -124,9 +124,9 @@ class Invoices(Stream):
     """
 
     tap_stream_id = "invoices"
-    key_properties = ["invoice_id"]
+    key_properties = ["invoice_id", "company_id", "invoice_line_no"]
     transformer_class = InvoiceTransformer
-    request_handler = RequestHandler("/invoices")
+    request_handler = RequestHandler("/invoices", sort="updated_date,id")
 
 
 class Orders(Stream):
@@ -136,9 +136,9 @@ class Orders(Stream):
     """
 
     tap_stream_id = "orders"
-    key_properties = ["order_id"]
+    key_properties = ["order_id", "company_id", "order_line_no"]
     transformer_class = OrderTransformer
-    request_handler = RequestHandler("/orders")
+    request_handler = RequestHandler("/orders", sort="updated_date,id")
 
 
 class Payments(Stream):
@@ -148,9 +148,9 @@ class Payments(Stream):
     """
 
     tap_stream_id = "payments"
-    key_properties = ["payment_id"]
+    key_properties = ["payment_id", "company_id"]
     transformer_class = RecordTransformer
-    request_handler = RequestHandler("/payments")
+    request_handler = RequestHandler("/payments", sort="updated_date,id")
 
 
 class Products(Stream):
@@ -160,18 +160,18 @@ class Products(Stream):
     """
 
     tap_stream_id = "products"
-    key_properties = ["product_id"]
+    key_properties = ["product_id", "company_id"]
     transformer_class = RecordTransformer
-    request_handler = RequestHandler("/products")
+    request_handler = RequestHandler("/products", sort="updated_date,id")
 
 
 class Refunds(Stream):
     """Refunds stream"""
 
     tap_stream_id = "refunds"
-    key_properties = ["refund_id"]
+    key_properties = ["refund_id", "company_id"]
     transformer_class = RecordTransformer
-    request_handler = RequestHandler("/refunds")
+    request_handler = RequestHandler("/refunds", sort="updated_date,id")
 
 
 class RevenueSchedules(Stream):
@@ -181,9 +181,11 @@ class RevenueSchedules(Stream):
     """
 
     tap_stream_id = "revenue_schedules"
-    key_properties = ["revenue_schedule_id"]
+    key_properties = ["revenue_schedule_id", "company_id"]
     transformer_class = RecordTransformer
-    request_handler = RequestHandler("/revenue_schedules", page_size=500)
+    request_handler = RequestHandler(
+        "/revenue_schedules", page_size=500, sort="updated_date,id"
+    )
 
 
 class Subscriptions(Stream):
@@ -193,11 +195,10 @@ class Subscriptions(Stream):
     """
 
     tap_stream_id = "subscriptions"
-    key_properties = [
-        "subscription_id",
-    ]
+    key_properties = ["subscription_id", "subscription_line_id", "company_id"]
     transformer_class = SubscriptionTransformer
-    request_handler = RequestHandler("/subscriptions")
+    replication_method = "INCREMENTAL"
+    request_handler = RequestHandler("/subscriptions", sort="updated_date,id")
 
 
 class Charges(ResponseSubstream):
@@ -207,7 +208,7 @@ class Charges(ResponseSubstream):
     """
 
     tap_stream_id = "charges"
-    key_properties = ["charge_id"]
+    key_properties = ["charge_id", "company_id"]
     valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
@@ -223,7 +224,7 @@ class Plans(Stream):
 
     tap_stream_id = "plans"
     substream_definitions = [Charges]
-    key_properties = ["plan_id"]
+    key_properties = ["plan_id", "company_id"]
     valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
@@ -238,7 +239,7 @@ class PaymentRuns(Stream):
     """
 
     tap_stream_id = "payment_runs"
-    key_properties = ["payment_run_id"]
+    key_properties = ["payment_run_id", "company_id"]
     valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
@@ -254,7 +255,7 @@ class RevenueRules(Stream):
     """
 
     tap_stream_id = "revenue_rules"
-    key_properties = ["revenue_rule_id"]
+    key_properties = ["revenue_rule_id", "company_id"]
     valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
@@ -269,7 +270,7 @@ class ChartOfAccounts(Stream):
     """
 
     tap_stream_id = "chart_of_accounts"
-    key_properties = ["code"]
+    key_properties = ["code", "company_id"]
     valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
@@ -281,7 +282,7 @@ class Webhooks(Stream):
     """Webhooks stream """
 
     tap_stream_id = "webhooks"
-    key_properties = ["name"]
+    key_properties = ["name", "company_id"]
     valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
@@ -297,16 +298,11 @@ class Statements(Stream):
     """
 
     tap_stream_id = "statements"
-    key_properties = ["statement_id"]
-    valid_replication_keys: Sequence[str] = []
-    replication_key = None
-    replication_method = "FULL_TABLE"
+    key_properties = ["statement_id", "company_id"]
     transformer_class = RecordTransformer
-    request_handler = RequestHandler("/statements")
+    request_handler = RequestHandler("/statements", sort="updated_date,statement_id")
 
 
-# FIXME Should be capable of running in INCREMENTAL, but
-# can't filter by updated_date for some reason.
 class Coupons(Stream):
     """Coupons stream
 
@@ -314,12 +310,12 @@ class Coupons(Stream):
     """
 
     tap_stream_id = "coupons"
-    key_properties = ["coupon_id"]
+    key_properties = ["coupon_id", "company_id"]
     valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
     transformer_class = RecordTransformer
-    request_handler = RequestHandler("/coupons")
+    request_handler = RequestHandler("/coupons", sort="id")
 
 
 class Usages(Stream):
@@ -329,9 +325,9 @@ class Usages(Stream):
     """
 
     tap_stream_id = "usages"
-    key_properties = ["usage_id"]
+    key_properties = ["usage_id", "company_id"]
     transformer_class = RecordTransformer
-    request_handler = RequestHandler("/usages")
+    request_handler = RequestHandler("/usages", sort="updated_date,id")
 
 
 AVAILABLE_STREAMS: Dict[str, Union[Type[Stream], Type["Substream"]]] = {
