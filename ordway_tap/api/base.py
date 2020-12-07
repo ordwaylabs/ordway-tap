@@ -1,7 +1,7 @@
 from typing import TYPE_CHECKING, Dict, Any, Optional, Generator, Union, List
 from singer import get_logger
 from singer.metrics import http_request_timer
-from singer.utils import strftime
+from singer.utils import strftime, ratelimit
 from backoff import expo, on_exception as backoff_on_exception
 import requests
 import ordway_tap.configs as TAP_CONFIG
@@ -25,7 +25,7 @@ if TYPE_CHECKING:
         total=False,
     )
 
-
+@ratelimit(limit=1, every=0.5)
 @backoff_on_exception(expo, requests.exceptions.RequestException, max_tries=3)
 def _get(
     path: str, params: Dict[str, str]
