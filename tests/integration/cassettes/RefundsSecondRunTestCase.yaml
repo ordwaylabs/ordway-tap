@@ -11,7 +11,7 @@ interactions:
         User-Agent:
           - ordway-tap v0.1.0 (https://github.com/ordwaylabs/ordway-tap)
       method: GET
-      uri: https://api.ordwaylabs.com/api/v1/refunds?sort=updated_date&size=50&page=1&updated_date%3E=2020-11-11T22%3A24%3A58.660000Z
+      uri: https://api.ordwaylabs.com/api/v1/refunds?sort=updated_date,id&size=50&page=1&updated_date%3E=2020-11-11T22%3A24%3A58.660000Z
     response:
       body:
         string:
@@ -87,7 +87,7 @@ interactions:
         User-Agent:
           - ordway-tap v0.1.0 (https://github.com/ordwaylabs/ordway-tap)
       method: GET
-      uri: https://api.ordwaylabs.com/api/v1/refunds?sort=updated_date&size=50&page=2&updated_date%3E=2020-11-11T22%3A24%3A58.660000Z
+      uri: https://api.ordwaylabs.com/api/v1/refunds?sort=updated_date,id&size=50&page=2&updated_date%3E=2020-11-11T22%3A24%3A58.660000Z
     response:
       body:
         string: "[]"
