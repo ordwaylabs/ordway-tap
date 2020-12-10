@@ -268,6 +268,9 @@ def sync(config: Dict[str, Any], state: Dict[str, Any], catalog: Catalog) -> Non
 
         write_state(state)
 
+    state = set_currently_syncing(state, None)
+    write_state(state)
+
 
 @handle_top_exception(LOGGER)
 def main():
