@@ -3,7 +3,6 @@ import os
 import json
 from typing import TYPE_CHECKING, Dict, Any, List, Union, Optional, Tuple
 from _datetime import datetime
-from datetime import timedelta
 from singer import utils, metadata, get_logger
 from singer.utils import (
     handle_top_exception,
