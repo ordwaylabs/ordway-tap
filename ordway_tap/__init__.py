@@ -150,7 +150,7 @@ def handle_record(
 
         return state
 
-    LOGGER.info("Adding bookmark for %s at %s", tap_stream_id, bookmark_date)
+    LOGGER.debug("Adding bookmark for %s at %s", tap_stream_id, bookmark_date)
 
     state = write_bookmark(
         state,
@@ -266,6 +266,9 @@ def sync(config: Dict[str, Any], state: Dict[str, Any], catalog: Catalog) -> Non
             )
 
         write_state(state)
+
+    state = set_currently_syncing(state, None)
+    write_state(state)
 
 
 @handle_top_exception(LOGGER)
