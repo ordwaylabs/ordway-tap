@@ -3,6 +3,7 @@ import os
 import json
 from typing import TYPE_CHECKING, Dict, Any, List, Union, Optional, Tuple
 from _datetime import datetime
+from datetime import timedelta
 from singer import utils, metadata, get_logger
 from singer.utils import (
     handle_top_exception,
@@ -150,7 +151,7 @@ def handle_record(
 
         return state
 
-    LOGGER.info("Adding bookmark for %s at %s", tap_stream_id, bookmark_date)
+    LOGGER.debug("Adding bookmark for %s at %s", tap_stream_id, bookmark_date)
 
     state = write_bookmark(
         state,
