@@ -4,7 +4,8 @@
       "tap_stream_id": "customer_notes",
       "replication_method": "FULL_TABLE",
       "key_properties": [
-        "customer_note_id"
+        "customer_note_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -97,7 +98,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "customer_note_id"
+              "customer_note_id",
+              "company_id"
             ],
             "valid-replication-keys": [],
             "inclusion": "available"
@@ -109,7 +111,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -226,7 +228,8 @@
       "tap_stream_id": "coupons",
       "replication_method": "FULL_TABLE",
       "key_properties": [
-        "coupon_id"
+        "coupon_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -347,7 +350,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "coupon_id"
+              "coupon_id",
+              "company_id"
             ],
             "valid-replication-keys": [],
             "inclusion": "available"
@@ -359,7 +363,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -530,7 +534,8 @@
       "tap_stream_id": "webhooks",
       "replication_method": "FULL_TABLE",
       "key_properties": [
-        "name"
+        "name",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -595,7 +600,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "name"
+              "name",
+              "company_id"
             ],
             "valid-replication-keys": [],
             "inclusion": "available"
@@ -616,7 +622,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -653,7 +659,8 @@
       "replication_key": "updated_date",
       "replication_method": "INCREMENTAL",
       "key_properties": [
-        "credit_id"
+        "credit_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -798,7 +805,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "credit_id"
+              "credit_id",
+              "company_id"
             ],
             "valid-replication-keys": [
               "updated_date"
@@ -812,7 +820,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -993,7 +1001,9 @@
       "replication_key": "updated_date",
       "replication_method": "INCREMENTAL",
       "key_properties": [
-        "invoice_id"
+        "invoice_id",
+        "company_id",
+        "invoice_line_no"
       ],
       "schema": {
         "properties": {
@@ -1307,7 +1317,9 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "invoice_id"
+              "invoice_id",
+              "company_id",
+              "invoice_line_no"
             ],
             "valid-replication-keys": [
               "updated_date"
@@ -1321,7 +1333,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -1339,7 +1351,7 @@
             "invoice_line_no"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -1754,7 +1766,9 @@
       "replication_key": "updated_date",
       "replication_method": "INCREMENTAL",
       "key_properties": [
-        "order_id"
+        "order_id",
+        "company_id",
+        "order_line_no"
       ],
       "schema": {
         "properties": {
@@ -1900,7 +1914,9 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "order_id"
+              "order_id",
+              "company_id",
+              "order_line_no"
             ],
             "valid-replication-keys": [
               "updated_date"
@@ -1914,7 +1930,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -1932,7 +1948,7 @@
             "order_line_no"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -2121,7 +2137,8 @@
       "tap_stream_id": "customers",
       "replication_method": "FULL_TABLE",
       "key_properties": [
-        "customer_id"
+        "customer_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -2325,7 +2342,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "customer_id"
+              "customer_id",
+              "company_id"
             ],
             "valid-replication-keys": [
               "updated_date"
@@ -2339,7 +2357,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -2600,7 +2618,8 @@
       "tap_stream_id": "payment_runs",
       "replication_method": "FULL_TABLE",
       "key_properties": [
-        "payment_run_id"
+        "payment_run_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -2741,7 +2760,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "payment_run_id"
+              "payment_run_id",
+              "company_id"
             ],
             "valid-replication-keys": [],
             "inclusion": "available"
@@ -2753,7 +2773,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -2942,7 +2962,8 @@
       "tap_stream_id": "billing_runs",
       "replication_method": "FULL_TABLE",
       "key_properties": [
-        "billing_run_id"
+        "billing_run_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -3037,7 +3058,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "billing_run_id"
+              "billing_run_id",
+              "company_id"
             ],
             "valid-replication-keys": [],
             "inclusion": "available"
@@ -3058,7 +3080,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -3166,7 +3188,8 @@
       "tap_stream_id": "payment_methods",
       "replication_method": "FULL_TABLE",
       "key_properties": [
-        "payment_method_id"
+        "payment_method_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -3266,7 +3289,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "payment_method_id"
+              "payment_method_id",
+              "company_id"
             ],
             "valid-replication-keys": [],
             "inclusion": "available"
@@ -3287,7 +3311,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -3414,7 +3438,8 @@
       "replication_key": "updated_date",
       "replication_method": "INCREMENTAL",
       "key_properties": [
-        "revenue_schedule_id"
+        "revenue_schedule_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -3565,7 +3590,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "revenue_schedule_id"
+              "revenue_schedule_id",
+              "company_id"
             ],
             "valid-replication-keys": [
               "updated_date"
@@ -3579,7 +3605,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -3777,7 +3803,8 @@
       "tap_stream_id": "billing_schedules",
       "replication_method": "FULL_TABLE",
       "key_properties": [
-        "billing_schedule_id"
+        "billing_schedule_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -3933,7 +3960,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "billing_schedule_id"
+              "billing_schedule_id",
+              "company_id"
             ],
             "valid-replication-keys": [],
             "inclusion": "available"
@@ -3945,7 +3973,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -4153,7 +4181,9 @@
       "replication_key": "updated_date",
       "replication_method": "INCREMENTAL",
       "key_properties": [
-        "subscription_id"
+        "subscription_id",
+        "subscription_line_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -4516,7 +4546,9 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "subscription_id"
+              "subscription_id",
+              "subscription_line_id",
+              "company_id"
             ],
             "valid-replication-keys": [
               "updated_date"
@@ -4530,7 +4562,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -4548,7 +4580,7 @@
             "subscription_line_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -5053,7 +5085,8 @@
       "replication_key": "updated_date",
       "replication_method": "INCREMENTAL",
       "key_properties": [
-        "payment_id"
+        "payment_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -5228,7 +5261,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "payment_id"
+              "payment_id",
+              "company_id"
             ],
             "valid-replication-keys": [
               "updated_date"
@@ -5242,7 +5276,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -5468,7 +5502,8 @@
       "replication_key": "updated_date",
       "replication_method": "INCREMENTAL",
       "key_properties": [
-        "product_id"
+        "product_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -5640,7 +5675,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "product_id"
+              "product_id",
+              "company_id"
             ],
             "valid-replication-keys": [
               "updated_date"
@@ -5654,7 +5690,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -5898,7 +5934,8 @@
       "replication_key": "updated_date",
       "replication_method": "INCREMENTAL",
       "key_properties": [
-        "refund_id"
+        "refund_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -6005,7 +6042,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "refund_id"
+              "refund_id",
+              "company_id"
             ],
             "valid-replication-keys": [
               "updated_date"
@@ -6019,7 +6057,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -6163,7 +6201,8 @@
       "tap_stream_id": "revenue_rules",
       "replication_method": "FULL_TABLE",
       "key_properties": [
-        "revenue_rule_id"
+        "revenue_rule_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -6276,7 +6315,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "revenue_rule_id"
+              "revenue_rule_id",
+              "company_id"
             ],
             "valid-replication-keys": [],
             "inclusion": "available"
@@ -6297,7 +6337,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -6414,7 +6454,8 @@
       "tap_stream_id": "charges",
       "replication_method": "FULL_TABLE",
       "key_properties": [
-        "charge_id"
+        "charge_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -6601,7 +6642,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "charge_id"
+              "charge_id",
+              "company_id"
             ],
             "valid-replication-keys": [],
             "inclusion": "available"
@@ -6613,7 +6655,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -6827,9 +6869,11 @@
     },
     {
       "tap_stream_id": "statements",
-      "replication_method": "FULL_TABLE",
+      "replication_key": "updated_date",
+      "replication_method": "INCREMENTAL",
       "key_properties": [
-        "statement_id"
+        "statement_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -6915,9 +6959,12 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "statement_id"
+              "statement_id",
+              "company_id"
             ],
-            "valid-replication-keys": [],
+            "valid-replication-keys": [
+              "updated_date"
+            ],
             "inclusion": "available"
           }
         },
@@ -6936,7 +6983,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -7035,7 +7082,8 @@
       "tap_stream_id": "plans",
       "replication_method": "FULL_TABLE",
       "key_properties": [
-        "plan_id"
+        "plan_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -7117,7 +7165,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "plan_id"
+              "plan_id",
+              "company_id"
             ],
             "valid-replication-keys": [],
             "inclusion": "available"
@@ -7129,7 +7178,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -7229,7 +7278,8 @@
       "replication_key": "updated_date",
       "replication_method": "INCREMENTAL",
       "key_properties": [
-        "usage_id"
+        "usage_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -7347,7 +7397,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "usage_id"
+              "usage_id",
+              "company_id"
             ],
             "valid-replication-keys": [
               "updated_date"
@@ -7370,7 +7421,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -7514,7 +7565,8 @@
       "tap_stream_id": "contacts",
       "replication_method": "FULL_TABLE",
       "key_properties": [
-        "contact_id"
+        "contact_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -7673,7 +7725,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "contact_id"
+              "contact_id",
+              "company_id"
             ],
             "valid-replication-keys": [],
             "inclusion": "available"
@@ -7694,7 +7747,7 @@
             "company_id"
           ],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "automatic"
           }
         },
         {
@@ -7901,11 +7954,17 @@
       "tap_stream_id": "chart_of_accounts",
       "replication_method": "FULL_TABLE",
       "key_properties": [
-        "code"
+        "code",
+        "company_id"
       ],
       "schema": {
         "properties": {
           "code": {
+            "type": [
+              "string"
+            ]
+          },
+          "company_id": {
             "type": [
               "string"
             ]
@@ -7987,7 +8046,8 @@
           "breadcrumb": [],
           "metadata": {
             "table-key-properties": [
-              "code"
+              "code",
+              "company_id"
             ],
             "valid-replication-keys": [],
             "inclusion": "available"
@@ -7997,6 +8057,15 @@
           "breadcrumb": [
             "properties",
             "code"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
           ],
           "metadata": {
             "inclusion": "automatic"
