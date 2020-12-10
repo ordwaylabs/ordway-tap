@@ -11,6 +11,11 @@
                 "string"
             ]
         },
+        "company_id": {
+            "type": [
+                "string"
+            ]
+        },
         "name": {
             "type": [
                 "null",
