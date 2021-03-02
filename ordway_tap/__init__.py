@@ -39,12 +39,12 @@ if TYPE_CHECKING:
     from .base import DataContext
 
 
-REQUIRED_CONFIG_KEYS = ["api_credentials", "start_date"]
-REQUIRED_API_CREDENTIAL_KEYS = [
-    "x_company",
-    "x_api_key",
-    "x_user_email",
-    "x_user_token",
+REQUIRED_CONFIG_KEYS = [
+    "company",
+    "api_key",
+    "user_email",
+    "user_token",
+    "start_date",
 ]
 LOGGER = get_logger()
 
@@ -275,11 +275,19 @@ def sync(config: Dict[str, Any], state: Dict[str, Any], catalog: Catalog) -> Non
 def main():
     # Parse command line arguments
     args = parse_args(REQUIRED_CONFIG_KEYS)
-    # Check API credential keys
-    check_config(args.config["api_credentials"], REQUIRED_API_CREDENTIAL_KEYS)
 
     # Set global configuration variables
-    TAP_CONFIG.api_credentials = args.config["api_credentials"]
+    TAP_CONFIG.api_credentials = {
+        "company": args.config["company"],
+        "api_key": args.config["api_key"],
+        "user_email": args.config["user_email"],
+        "user_token": args.config["user_token"],
+    }
+
+    company_token = args.config.get("company_token")
+    if company_token is not None:
+        TAP_CONFIG.api_credentials["company_token"] = company_token
+
     TAP_CONFIG.api_version = args.config.get("api_version", DEFAULT_API_VERSION)
     TAP_CONFIG.staging = args.config.get("staging", False)
     TAP_CONFIG.api_url = args.config.get("api_url")
