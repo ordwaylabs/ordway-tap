@@ -1,22 +1,19 @@
 #!/usr/bin/env python3
 import os
 import json
-from typing import TYPE_CHECKING, Dict, Any, List, Union, Optional, Tuple
+from typing import TYPE_CHECKING, Dict, Any, Union, Optional
 from _datetime import datetime
-from singer import utils, metadata, get_logger
+from singer import get_logger
 from singer.utils import (
     handle_top_exception,
     parse_args,
-    check_config,
     strptime_to_utc,
-    strftime,
 )
 from singer.messages import write_state, write_schema, write_message, RecordMessage
 from singer.catalog import Catalog, CatalogEntry
 from singer.schema import Schema
 from singer.bookmarks import write_bookmark, set_currently_syncing
 
-# import ordway_tap.kafka_consumer
 import ordway_tap.configs as TAP_CONFIG
 from .property import (
     get_key_properties,
