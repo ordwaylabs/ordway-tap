@@ -1,10 +1,11 @@
 from typing import TYPE_CHECKING, Dict, Any, Optional, Generator, Union, List
 from singer import get_logger
 from singer.metrics import http_request_timer
-from singer.utils import strftime, ratelimit
+from singer.utils import strftime
 from backoff import expo, on_exception as backoff_on_exception
 import requests
 import ordway_tap.configs as TAP_CONFIG
+from requests import Session
 from ..__version__ import __version__ as VERSION
 from .consts import (
     BASE_API_URL,
@@ -12,6 +13,7 @@ from .consts import (
     DEFAULT_API_VERSION,
     DEFAULT_TIMEOUT_SECS,
 )
+from .utils import ratelimit
 
 LOGGER = get_logger()
 
@@ -25,47 +27,21 @@ if TYPE_CHECKING:
         total=False,
     )
 
-@ratelimit(limit=1, every=0.5)
-@backoff_on_exception(expo, requests.exceptions.RequestException, max_tries=3)
-def _get(
-    path: str, params: Dict[str, str]
-) -> Union[Dict[str, Any], List[Dict[str, Any]]]:
-    """ Perform a GET request with Ordway-related headers """
-
-    response = requests.get(
-        _get_url(path),
-        headers=_get_headers(),
-        params=params,
-        timeout=DEFAULT_TIMEOUT_SECS,
-    )
-
-    if response.status_code != 200:
-        LOGGER.critical(
-            'Ordway responded with status code "%d" and a body of "%s" for request "%s"',
-            response.status_code,
-            response.text,
-            response.request.url,
-        )
-
-        response.raise_for_status()
-
-    return response.json()
-
 
 def _get_headers() -> Dict[str, str]:
     """ Constructs Ordway-related headers """
 
     headers = {
-        "X-User-Company": TAP_CONFIG.api_credentials["x_company"],
-        "X-User-Token": TAP_CONFIG.api_credentials["x_user_token"],
-        "X-User-Email": TAP_CONFIG.api_credentials["x_user_email"],
-        "X-API-KEY": TAP_CONFIG.api_credentials["x_api_key"],
+        "X-User-Company": TAP_CONFIG.api_credentials["company"],
+        "X-User-Token": TAP_CONFIG.api_credentials["user_token"],
+        "X-User-Email": TAP_CONFIG.api_credentials["user_email"],
+        "X-API-KEY": TAP_CONFIG.api_credentials["api_key"],
         "User-Agent": f"ordway-tap v{VERSION} (https://github.com/ordwaylabs/ordway-tap)",
         "Accept": "application/json",
     }
 
-    if "x_company_token" in TAP_CONFIG.api_credentials:
-        headers["X-Company-Token"] = TAP_CONFIG.api_credentials["x_company_token"]
+    if "company_token" in TAP_CONFIG.api_credentials:
+        headers["X-Company-Token"] = TAP_CONFIG.api_credentials["company_token"]
 
     return headers
 
@@ -115,6 +91,33 @@ class RequestHandler:
         self.sort = sort
 
         self._exhausted = False
+        self._session = Session()
+
+    @ratelimit
+    @backoff_on_exception(expo, requests.exceptions.RequestException, max_tries=3)
+    def _get(
+        self, path: str, params: Dict[str, str]
+    ) -> Union[Dict[str, Any], List[Dict[str, Any]]]:
+        """ Perform a GET request with Ordway-related headers """
+
+        response = self._session.get(
+            _get_url(path),
+            headers=_get_headers(),
+            params=params,
+            timeout=DEFAULT_TIMEOUT_SECS,
+        )
+
+        if response.status_code != 200:
+            LOGGER.critical(
+                'Ordway responded with status code "%d" and a body of "%s" for request "%s"',
+                response.status_code,
+                response.text,
+                response.request.url,
+            )
+
+            response.raise_for_status()
+
+        return response.json()
 
     def resolve_endpoint(self, context: "DataContext") -> str:
         if context.parent_record is None:
@@ -158,7 +161,7 @@ class RequestHandler:
 
         while not self._exhausted:
             with http_request_timer(endpoint=endpoint):
-                results = _get(endpoint, default_params)
+                results = self._get(endpoint, default_params)
 
             if isinstance(results, dict):
                 results = [results]
