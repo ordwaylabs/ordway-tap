@@ -7,7 +7,6 @@ from ordway_tap.api.base import (
     _get_headers,
     _get_url,
     _get_api_version,
-    _get,
     RequestHandler,
 )
 
@@ -25,10 +24,10 @@ def test_get_api_version(mocked_tap_config):
 @patch("ordway_tap.api.base.TAP_CONFIG")
 def test_get_headers(mocked_tap_config):
     mocked_tap_config.api_credentials = {
-        "x_company": "AmEx",
-        "x_user_token": "123foo",
-        "x_user_email": "foo@example.com",
-        "x_api_key": "secret123",
+        "company": "AmEx",
+        "user_token": "123foo",
+        "user_email": "foo@example.com",
+        "api_key": "secret123",
     }
     expected_results = {
         "X-User-Company": "AmEx",
@@ -41,8 +40,8 @@ def test_get_headers(mocked_tap_config):
 
     assert _get_headers() == expected_results
 
-    # Test with x_company_token
-    mocked_tap_config.api_credentials["x_company_token"] = "company123"
+    # Test with company_token
+    mocked_tap_config.api_credentials["company_token"] = "company123"
     expected_results["X-Company-Token"] = "company123"
 
     assert _get_headers() == expected_results
@@ -90,7 +89,7 @@ class GetURLTestCase(TestCase):
 
 class RequestHandlerTestCase(TestCase):
     def setUp(self):
-        self.get_patcher = patch("ordway_tap.api.base._get")
+        self.get_patcher = patch("ordway_tap.api.base.RequestHandler._get", autospec=True)
         self.mocked_get = self.get_patcher.start()
         self.request_handler = RequestHandler("/charges", page_size=45)
 
@@ -172,5 +171,5 @@ class RequestHandlerTestCase(TestCase):
             list(self.request_handler.fetch(self.mocked_data_context))
 
             self.mocked_get.assert_called_once_with(
-                "/charges", {"sort": None, "size": 45, "page": 1}
+                self.request_handler, "/charges", {"sort": None, "size": 45, "page": 1}
             )
