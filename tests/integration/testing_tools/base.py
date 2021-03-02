@@ -13,6 +13,7 @@ from .mask import mask_values
 
 if TYPE_CHECKING:
     from .integration import TapExecutor
+    from .mask import StrFormat, Format
 
 
 class TapArgs:
