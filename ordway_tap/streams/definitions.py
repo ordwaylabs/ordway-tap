@@ -18,7 +18,6 @@ if TYPE_CHECKING:
 LOGGER = get_logger()
 
 
-# Was working with filtering, but now isn't?
 class BillingRuns(Stream):
     """Billing Runs stream"""
 
@@ -31,7 +30,6 @@ class BillingRuns(Stream):
     request_handler = RequestHandler("/billing_runs", sort="name")
 
 
-# FIXME Can't sort by updated_date
 class BillingSchedules(Stream):
     """Billing Schedules stream
 
@@ -247,7 +245,6 @@ class PaymentRuns(Stream):
     request_handler = RequestHandler("/payment_runs")
 
 
-# Can't filter by updated_date or sort
 class RevenueRules(Stream):
     """Revenue rules stream
 
@@ -290,7 +287,6 @@ class Webhooks(Stream):
     request_handler = RequestHandler("/webhooks", sort=None)
 
 
-# FIXME Not being sorted in ascending order by Ordway?
 class Statements(Stream):
     """Statements stream
 
