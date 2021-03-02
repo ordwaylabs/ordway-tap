@@ -270,29 +270,37 @@ def sync(config: Dict[str, Any], state: Dict[str, Any], catalog: Catalog) -> Non
     state = set_currently_syncing(state, None)
     write_state(state)
 
+def set_global_config(config: Dict[str, Any]) -> None:
+    """Sets global configuration variables"""
+
+    # Set global configuration variables
+    TAP_CONFIG.api_credentials = {
+        "company": config["company"],
+        "api_key": config["api_key"],
+        "user_email": config["user_email"],
+        "user_token": config["user_token"],
+    }
+
+    company_token = config.get("company_token")
+    if company_token is not None:
+        TAP_CONFIG.api_credentials["company_token"] = company_token
+    
+    TAP_CONFIG.api_version = config.get("api_version", DEFAULT_API_VERSION)
+    TAP_CONFIG.staging = config.get("staging", False)
+    TAP_CONFIG.api_url = config.get("api_url")
+    TAP_CONFIG.start_date = config["start_date"]
+    TAP_CONFIG.rate_limit_rps = config.get("rate_limit_rps")
+
+    if isinstance(TAP_CONFIG.rate_limit_rps, (int, float)) and TAP_CONFIG.rate_limit_rps <= 0:
+        raise ValueError("`rate_limit_rps` must be set to `null` or a number GREATER THAN 0")
 
 @handle_top_exception(LOGGER)
 def main():
     # Parse command line arguments
     args = parse_args(REQUIRED_CONFIG_KEYS)
 
-    # Set global configuration variables
-    TAP_CONFIG.api_credentials = {
-        "company": args.config["company"],
-        "api_key": args.config["api_key"],
-        "user_email": args.config["user_email"],
-        "user_token": args.config["user_token"],
-    }
-
-    company_token = args.config.get("company_token")
-    if company_token is not None:
-        TAP_CONFIG.api_credentials["company_token"] = company_token
-
-    TAP_CONFIG.api_version = args.config.get("api_version", DEFAULT_API_VERSION)
-    TAP_CONFIG.staging = args.config.get("staging", False)
-    TAP_CONFIG.api_url = args.config.get("api_url")
-    TAP_CONFIG.start_date = args.config["start_date"]
-
+    set_global_config(args.config)
+    
     # If discover flag was passed, run discovery mode and dump output to stdout
     if args.discover:
         catalog = discover()
