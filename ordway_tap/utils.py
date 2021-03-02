@@ -15,7 +15,7 @@ def get_company_id():
     """ Gets the configured company ID """
 
     api_credentials = ordway_tap.configs.api_credentials
-    return underscore(api_credentials["x_company"])
+    return underscore(api_credentials["company"])
 
 
 def print_record(
