@@ -1,10 +1,10 @@
-from typing import TYPE_CHECKING, Callable, Union, Optional, Dict, Any, Generator
-from inspect import isgeneratorfunction
+from typing import TYPE_CHECKING, Any, Callable, Dict, Generator, Optional, Union
 from decimal import Decimal
+from inspect import isgeneratorfunction
 from inflection import singularize
-from singer.transform import Transformer, NO_INTEGER_DATETIME_PARSING
-from ..utils import get_company_id
+from singer.transform import NO_INTEGER_DATETIME_PARSING, Transformer
 from ..base import DataContext
+from ..utils import get_company_id
 
 if TYPE_CHECKING:
     from datetime import datetime

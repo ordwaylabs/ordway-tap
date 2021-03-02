@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-from setuptools import setup, find_packages
-from os.path import join, abspath, dirname
+from os.path import abspath, dirname, join
 from re import search as re_search
+from setuptools import find_packages, setup
 
 PACKAGE_NAME = "ordway-tap"
 PACKAGE_DIR = PACKAGE_NAME.replace("-", "_")

@@ -1,4 +1,4 @@
-from typing import Optional, List
+from typing import List, Optional
 from singer.metadata import get_standard_metadata
 from .streams import AVAILABLE_STREAMS
 

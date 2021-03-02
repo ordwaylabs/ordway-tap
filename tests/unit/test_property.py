@@ -1,9 +1,9 @@
 from unittest import TestCase
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
 from ordway_tap.property import (
     get_key_properties,
-    get_replication_method,
     get_replication_key,
+    get_replication_method,
     get_stream_metadata,
 )
 from ..utils import load_schema

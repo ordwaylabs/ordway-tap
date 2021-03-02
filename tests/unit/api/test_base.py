@@ -1,14 +1,9 @@
 from unittest import TestCase
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
 from datetime import datetime
 from pytz import UTC
 from requests.exceptions import RequestException
-from ordway_tap.api.base import (
-    _get_headers,
-    _get_url,
-    _get_api_version,
-    RequestHandler,
-)
+from ordway_tap.api.base import RequestHandler, _get_api_version, _get_headers, _get_url
 
 
 @patch("ordway_tap.api.base.TAP_CONFIG")

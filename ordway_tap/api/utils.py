@@ -1,7 +1,7 @@
 from typing import Callable, Deque
-from time import time, sleep
 from collections import deque
 from functools import wraps
+from time import sleep, time
 import ordway_tap.configs as TAP_CONFIG
 
 

@@ -1,39 +1,34 @@
 #!/usr/bin/env python3
-import os
+from typing import TYPE_CHECKING, Any, Dict, Optional, Union
 import json
-from typing import TYPE_CHECKING, Dict, Any, Union, Optional
+import os
 from _datetime import datetime
 from singer import get_logger
-from singer.utils import (
-    handle_top_exception,
-    parse_args,
-    strptime_to_utc,
-)
-from singer.messages import write_state, write_schema, write_message, RecordMessage
+from singer.bookmarks import set_currently_syncing, write_bookmark
 from singer.catalog import Catalog, CatalogEntry
+from singer.messages import RecordMessage, write_message, write_schema, write_state
 from singer.schema import Schema
-from singer.bookmarks import write_bookmark, set_currently_syncing
-
+from singer.utils import handle_top_exception, parse_args, strptime_to_utc
 import ordway_tap.configs as TAP_CONFIG
+from .api.consts import DEFAULT_API_VERSION
 from .property import (
     get_key_properties,
-    get_stream_metadata,
-    get_replication_method,
     get_replication_key,
+    get_replication_method,
+    get_stream_metadata,
 )
 from .streams import AVAILABLE_STREAMS, check_dependency_conflicts, is_substream
 from .utils import (
-    print_record,
-    get_version,
-    get_full_table_version,
-    write_activate_version,
     get_filter_datetime,
+    get_full_table_version,
+    get_version,
+    print_record,
+    write_activate_version,
 )
-from .api.consts import DEFAULT_API_VERSION
 
 if TYPE_CHECKING:
-    from .streams.base import Stream, Substream
     from .base import DataContext
+    from .streams.base import Stream, Substream
 
 
 REQUIRED_CONFIG_KEYS = [

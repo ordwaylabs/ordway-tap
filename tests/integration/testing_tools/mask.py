@@ -1,11 +1,11 @@
 """ Provides simple masking/anonymizing utilities """
 
-from typing import Optional, Sequence, Dict, Union, Any
+from typing import Any, Dict, Optional, Sequence, Union
+from copy import deepcopy
+from enum import Enum
+from random import choices, randint
 from re import sub as re_sub
 from string import ascii_lowercase, digits
-from random import choices, randint
-from enum import Enum
-from copy import deepcopy
 
 
 class StrFormat(Enum):

@@ -1,8 +1,8 @@
-from typing import TYPE_CHECKING, Union, Dict, Any, List
-from pathlib import Path
+from typing import TYPE_CHECKING, Any, Dict, List, Union
 from json import load as json_load
-from singer.schema import Schema
+from pathlib import Path
 from singer.catalog import Catalog, CatalogEntry
+from singer.schema import Schema
 
 if TYPE_CHECKING:
     from typing_extensions import TypedDict

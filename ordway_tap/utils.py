@@ -1,9 +1,9 @@
-from typing import TYPE_CHECKING, Dict, Tuple, List, Any, Optional
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, Tuple
 from time import time
-from singer.utils import now, strptime_to_utc
-from singer.bookmarks import get_bookmark
-from singer.messages import RecordMessage, ActivateVersionMessage, write_message
 from inflection import underscore
+from singer.bookmarks import get_bookmark
+from singer.messages import ActivateVersionMessage, RecordMessage, write_message
+from singer.utils import now, strptime_to_utc
 import ordway_tap.configs
 
 if TYPE_CHECKING:

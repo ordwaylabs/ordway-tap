@@ -1,14 +1,14 @@
 from typing import (
     TYPE_CHECKING,
-    Dict,
     Any,
-    List,
-    Sequence,
-    Type,
-    Tuple,
-    Generator,
-    Optional,
     Callable,
+    Dict,
+    Generator,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Type,
 )
 from abc import ABC, abstractmethod
 from singer import get_logger
@@ -19,8 +19,8 @@ from ..utils import denest
 if TYPE_CHECKING:
     from datetime import datetime
     from singer.catalog import Catalog, CatalogEntry
-    from ..transformers import RecordTransformer
     from ..api import RequestHandler
+    from ..transformers import RecordTransformer
 
 LOGGER = get_logger()
 

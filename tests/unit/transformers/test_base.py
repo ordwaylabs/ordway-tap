@@ -1,12 +1,12 @@
 from unittest import TestCase
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
 from ordway_tap.transformers.base import (
-    _transform_string,
-    _transform_boolean,
-    transformer_prehook,
-    RecordTransformer,
-    DataContext,
     NO_INTEGER_DATETIME_PARSING,
+    DataContext,
+    RecordTransformer,
+    _transform_boolean,
+    _transform_string,
+    transformer_prehook,
 )
 
 

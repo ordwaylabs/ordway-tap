@@ -1,11 +1,13 @@
-from typing import TYPE_CHECKING, Union, Dict, Any, Optional, Tuple, List, Callable
+from typing import TYPE_CHECKING, Any, Callable, Dict, List, Optional, Tuple, Union
 from unittest import TestCase
 from datetime import datetime, timezone
-from json import loads as json_loads, dumps as json_dumps
-from os import environ, name as SYS_NAME
-from pathlib import Path
 from inspect import getfile
-from os.path import join, dirname, isfile
+from json import dumps as json_dumps
+from json import loads as json_loads
+from os import environ
+from os import name as SYS_NAME
+from os.path import dirname, isfile, join
+from pathlib import Path
 from singer.catalog import Catalog
 from singer.utils import load_json, strftime
 from vcr import VCR
@@ -13,7 +15,7 @@ from .mask import mask_values
 
 if TYPE_CHECKING:
     from .integration import TapExecutor
-    from .mask import StrFormat, Format
+    from .mask import Format, StrFormat
 
 
 class TapArgs:

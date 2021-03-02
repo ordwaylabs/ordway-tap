@@ -1,12 +1,12 @@
-from typing import TYPE_CHECKING, Tuple, Optional, Dict, Any
-from pathlib import Path
+from typing import TYPE_CHECKING, Any, Dict, Optional, Tuple
 from os import environ
-from os.path import dirname, join, abspath
+from os.path import abspath, dirname, join
+from pathlib import Path
 from ordway_tap import main
 from ordway_tap.api.consts import DEFAULT_API_VERSION
 from .testing_tools import TapArgs, TapExecutor, TapIntegrationTestCase
-from .testing_tools.utils import deselect_all_streams_except
 from .testing_tools.mask import StrFormat
+from .testing_tools.utils import deselect_all_streams_except
 
 if TYPE_CHECKING:
     from vcr import VCR

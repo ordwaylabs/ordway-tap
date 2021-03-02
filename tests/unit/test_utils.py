@@ -1,8 +1,8 @@
 from unittest import TestCase
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
 from datetime import datetime
 from pytz import UTC
-from ordway_tap.utils import get_company_id, get_full_table_version, get_version, denest
+from ordway_tap.utils import denest, get_company_id, get_full_table_version, get_version
 
 
 @patch.dict(

@@ -1,15 +1,15 @@
-from typing import TYPE_CHECKING, Dict, Union, Type, Sequence
+from typing import TYPE_CHECKING, Dict, Sequence, Type, Union
 from singer import get_logger
-from .base import Stream, ResponseSubstream, EndpointSubstream
+from ..api import RequestHandler
 from ..transformers import (
-    RecordTransformer,
     BillingScheduleTransformer,
     CustomerTransformer,
     InvoiceTransformer,
     OrderTransformer,
+    RecordTransformer,
     SubscriptionTransformer,
 )
-from ..api import RequestHandler
+from .base import EndpointSubstream, ResponseSubstream, Stream
 
 if TYPE_CHECKING:
     from .base import Substream

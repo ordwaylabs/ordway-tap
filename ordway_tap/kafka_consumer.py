@@ -1,17 +1,13 @@
-from typing import TYPE_CHECKING, Dict, Optional, Union, Any
+from typing import TYPE_CHECKING, Any, Dict, Optional, Union
 import json
-from kafka import KafkaConsumer
 from inflection import pluralize, underscore
-from singer import write_state, get_logger
+from kafka import KafkaConsumer
+from singer import get_logger, write_state
 import ordway_tap.configs as TAP_CONFIG
 from ordway_tap import filter_record, handle_record, prepare_stream
 from ordway_tap.base import DataContext
+from ordway_tap.streams import EndpointSubstream, ResponseSubstream, Stream
 from ordway_tap.utils import get_filter_datetime
-from ordway_tap.streams import (
-    Stream,
-    ResponseSubstream,
-    EndpointSubstream,
-)
 
 if TYPE_CHECKING:
     from datetime import datetime

@@ -1,9 +1,9 @@
 from unittest import TestCase
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
+from tests.utils import generate_catalog
+from ordway_tap.streams import EndpointSubstream, ResponseSubstream, Stream
 from ordway_tap.streams.exceptions import DependencyConflict
 from ordway_tap.streams.utils import check_dependency_conflicts, is_substream
-from ordway_tap.streams import ResponseSubstream, EndpointSubstream, Stream
-from tests.utils import generate_catalog
 
 
 class ChildStream(ResponseSubstream):

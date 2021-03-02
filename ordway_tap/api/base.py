@@ -1,11 +1,12 @@
-from typing import TYPE_CHECKING, Dict, Any, Optional, Generator, Union, List
+from typing import TYPE_CHECKING, Any, Dict, Generator, List, Optional, Union
+import requests
+from backoff import expo
+from backoff import on_exception as backoff_on_exception
+from requests import Session
 from singer import get_logger
 from singer.metrics import http_request_timer
 from singer.utils import strftime
-from backoff import expo, on_exception as backoff_on_exception
-import requests
 import ordway_tap.configs as TAP_CONFIG
-from requests import Session
 from ..__version__ import __version__ as VERSION
 from .consts import (
     BASE_API_URL,
@@ -18,8 +19,8 @@ from .utils import ratelimit
 LOGGER = get_logger()
 
 if TYPE_CHECKING:
-    from ..base import DataContext
     from typing_extensions import TypedDict
+    from ..base import DataContext
 
     _DEFAULT_QUERY_PARAMS = TypedDict(
         "_DEFAULT_QUERY_PARAMS",
