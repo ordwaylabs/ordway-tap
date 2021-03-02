@@ -5,7 +5,7 @@ from requests import RequestException, Session
 from singer import get_logger
 from singer.metrics import http_request_timer
 from singer.utils import strftime
-import ordway_tap.configs as TAP_CONFIG
+import tap_ordway.configs as TAP_CONFIG
 from ..__version__ import __version__ as VERSION
 from .consts import (
     BASE_API_URL,
@@ -36,7 +36,7 @@ def _get_headers() -> Dict[str, str]:
         "X-User-Token": TAP_CONFIG.api_credentials["user_token"],
         "X-User-Email": TAP_CONFIG.api_credentials["user_email"],
         "X-API-KEY": TAP_CONFIG.api_credentials["api_key"],
-        "User-Agent": f"ordway-tap v{VERSION} (https://github.com/ordwaylabs/ordway-tap)",
+        "User-Agent": f"tap-ordway v{VERSION} (https://github.com/ordwaylabs/tap-ordway)",
         "Accept": "application/json",
     }
 

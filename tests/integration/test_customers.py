@@ -41,7 +41,7 @@ class CustomersTestCase(BaseOrdwayTestCase):
 
     @classmethod
     def setUpClass(cls):
-        with patch("ordway_tap.utils.time", return_value=123):
+        with patch("tap_ordway.utils.time", return_value=123):
             super().setUpClass()
 
     def test_records_follow_schema(self):

@@ -4,7 +4,7 @@ from inflection import underscore
 from singer.bookmarks import get_bookmark
 from singer.messages import ActivateVersionMessage, RecordMessage, write_message
 from singer.utils import now, strptime_to_utc
-import ordway_tap.configs
+import tap_ordway.configs
 
 if TYPE_CHECKING:
     from datetime import datetime
@@ -14,7 +14,7 @@ if TYPE_CHECKING:
 def get_company_id():
     """ Gets the configured company ID """
 
-    api_credentials = ordway_tap.configs.api_credentials
+    api_credentials = tap_ordway.configs.api_credentials
     return underscore(api_credentials["company"])
 
 

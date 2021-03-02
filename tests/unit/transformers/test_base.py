@@ -1,6 +1,6 @@
 from unittest import TestCase
 from unittest.mock import MagicMock, patch
-from ordway_tap.transformers.base import (
+from tap_ordway.transformers.base import (
     NO_INTEGER_DATETIME_PARSING,
     DataContext,
     RecordTransformer,
@@ -25,8 +25,8 @@ def test_transform_boolean():
     assert _transform_boolean(False) is False
 
 
-@patch("ordway_tap.transformers.base._transform_string")
-@patch("ordway_tap.transformers.base._transform_boolean")
+@patch("tap_ordway.transformers.base._transform_string")
+@patch("tap_ordway.transformers.base._transform_boolean")
 def test_tranform_prehook(mock_transform_boolean, mock_transform_string):
     transformer_prehook("foo", "string", None)
     mock_transform_string.assert_called_with("foo")
@@ -46,7 +46,7 @@ class RecordTransformerTestCase(TestCase):
         self.transformer = RecordTransformer()
 
         self.get_company_id_patcher = patch(
-            "ordway_tap.transformers.base.get_company_id"
+            "tap_ordway.transformers.base.get_company_id"
         )
         self.mocked_get_company_id = self.get_company_id_patcher.start()
         self.mocked_get_company_id.return_value = "Sirius Cybernetics Corp"

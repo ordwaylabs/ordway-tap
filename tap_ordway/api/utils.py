@@ -2,7 +2,7 @@ from typing import Callable, Deque
 from collections import deque
 from functools import wraps
 from time import sleep, time
-import ordway_tap.configs as TAP_CONFIG
+import tap_ordway.configs as TAP_CONFIG
 
 # Modified from `singer.utils.ratelimit`
 def ratelimit(func) -> Callable:

@@ -3,11 +3,11 @@ import json
 from inflection import pluralize, underscore
 from kafka import KafkaConsumer
 from singer import get_logger, write_state
-import ordway_tap.configs as TAP_CONFIG
-from ordway_tap import filter_record, handle_record, prepare_stream
-from ordway_tap.base import DataContext
-from ordway_tap.streams import EndpointSubstream, ResponseSubstream, Stream
-from ordway_tap.utils import get_filter_datetime
+import tap_ordway.configs as TAP_CONFIG
+from tap_ordway import filter_record, handle_record, prepare_stream
+from tap_ordway.base import DataContext
+from tap_ordway.streams import EndpointSubstream, ResponseSubstream, Stream
+from tap_ordway.utils import get_filter_datetime
 
 if TYPE_CHECKING:
     from datetime import datetime

@@ -9,7 +9,7 @@ from singer.catalog import Catalog, CatalogEntry
 from singer.messages import write_schema, write_state
 from singer.schema import Schema
 from singer.utils import handle_top_exception, parse_args, strptime_to_utc
-import ordway_tap.configs as TAP_CONFIG
+import tap_ordway.configs as TAP_CONFIG
 from .api.consts import DEFAULT_API_VERSION
 from .property import (
     get_key_properties,

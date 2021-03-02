@@ -2,7 +2,7 @@ from unittest import TestCase
 from unittest.mock import MagicMock, patch
 from datetime import datetime
 from pytz import UTC
-from ordway_tap import filter_record, handle_record
+from tap_ordway import filter_record, handle_record
 
 
 class FilterRecordTestCase(TestCase):
@@ -75,7 +75,7 @@ class HandleRecordTestCase(TestCase):
             },
         )
 
-    @patch("ordway_tap.is_substream", return_value=True)
+    @patch("tap_ordway.is_substream", return_value=True)
     def test_with_incremental_substream(self, _):
         """Ensure substreams don't set currently_syncing"""
 

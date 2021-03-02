@@ -1,6 +1,6 @@
 from unittest import TestCase
 from unittest.mock import MagicMock, patch
-from ordway_tap.transformers import (
+from tap_ordway.transformers import (
     BillingScheduleTransformer,
     CustomerTransformer,
     InvoiceTransformer,
@@ -12,7 +12,7 @@ from ordway_tap.transformers import (
 class TransformerBaseTestCase(TestCase):
     def setUp(self):
         self.get_company_id_patcher = patch(
-            "ordway_tap.transformers.base.get_company_id"
+            "tap_ordway.transformers.base.get_company_id"
         )
         self.mock_get_company_id = self.get_company_id_patcher.start()
 

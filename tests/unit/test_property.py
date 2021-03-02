@@ -1,6 +1,6 @@
 from unittest import TestCase
 from unittest.mock import MagicMock, patch
-from ordway_tap.property import (
+from tap_ordway.property import (
     get_key_properties,
     get_replication_key,
     get_replication_method,
@@ -16,7 +16,7 @@ def test_get_key_properties():
     bar_stream.key_properties = []
 
     with patch.dict(
-        "ordway_tap.property.AVAILABLE_STREAMS",
+        "tap_ordway.property.AVAILABLE_STREAMS",
         {"foo": foo_stream, "bar": bar_stream},
         clear=True,
     ):
@@ -31,7 +31,7 @@ def test_get_replication_key():
     bar_stream.replication_key = None
 
     with patch.dict(
-        "ordway_tap.property.AVAILABLE_STREAMS",
+        "tap_ordway.property.AVAILABLE_STREAMS",
         {"foo": foo_stream, "bar": bar_stream},
         clear=True,
     ):
@@ -46,7 +46,7 @@ def test_get_replication_method():
     bar_stream.replication_method = "INCREMENTAL"
 
     with patch.dict(
-        "ordway_tap.property.AVAILABLE_STREAMS",
+        "tap_ordway.property.AVAILABLE_STREAMS",
         {"foo": foo_stream, "bar": bar_stream},
         clear=True,
     ):
@@ -62,7 +62,7 @@ class _TestStream:
 
 class GetStreamMetadataTestCase(TestCase):
     @patch.dict(
-        "ordway_tap.property.AVAILABLE_STREAMS",
+        "tap_ordway.property.AVAILABLE_STREAMS",
         {"foo": _TestStream},
         clear=True,
     )

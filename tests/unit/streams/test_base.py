@@ -1,7 +1,7 @@
 from unittest import TestCase
 from unittest.mock import MagicMock, Mock, patch
 from tests.utils import generate_catalog
-from ordway_tap.streams.base import ResponseSubstream, Stream, Substream
+from tap_ordway.streams.base import ResponseSubstream, Stream, Substream
 
 
 class StreamTestCase(TestCase):

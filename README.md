@@ -1,4 +1,4 @@
-# ordway-tap
+# tap-ordway
 
 This is a [Singer](https://singer.io) tap that produces JSON-formatted data
 following the [Singer
@@ -43,20 +43,20 @@ This tap:
 ### Steps
 Run following commands on terminal from the project directory
 ```bash
-python3 -m venv ~/.virtualenvs/ordway-tap
-source ~/.virtualenvs/ordway-tap/bin/activate
+python3 -m venv ~/.virtualenvs/tap-ordway
+source ~/.virtualenvs/tap-ordway/bin/activate
 pip install -e .
 ```
 
 ### To Run
-`$ source ~/.virtualenvs/ordway-tap/bin/activate`
+`$ source ~/.virtualenvs/tap-ordway/bin/activate`
 
-`$ ordway-tap -c config.json --catalog catalog.json -s state.json`
+`$ tap-ordway -c config.json --catalog catalog.json -s state.json`
 
 
 You can generate the catalog.json by following command:
 
-`$ ordway-tap -c config.json --discover > catalog.json`
+`$ tap-ordway -c config.json --discover > catalog.json`
 
 The sample config JSON is format is given below:
 ```json
@@ -121,7 +121,7 @@ pip install singer-tools
 2. Execute singer-check-tap
 
 ```bash
-singer-check-tap --tap ordway-tap --config config.json
+singer-check-tap --tap tap-ordway --config config.json
 ```
 
 In this mode, singer-check-tap will execute the tap itself, run it in discover mode to generate a catalog, perform a stateless run and a stateful run, and validate the tap's output.
@@ -129,7 +129,7 @@ In this mode, singer-check-tap will execute the tap itself, run it in discover m
 If you need to test with a modified catalog, you can do so by piping the tap's output directly into singer-check-tap like so:
 
 ```bash
-ordway-tap --config config.json --catalog catalog.json | singer-check-tap
+tap-ordway --config config.json --catalog catalog.json | singer-check-tap
 ```
 
 ---
