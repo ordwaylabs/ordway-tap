@@ -12,7 +12,6 @@ from ..transformers import (
 from ..api import RequestHandler
 
 if TYPE_CHECKING:
-    from datetime import datetime
     from .base import Substream
 
 LOGGER = get_logger()
