@@ -89,7 +89,9 @@ class GetURLTestCase(TestCase):
 
 class RequestHandlerTestCase(TestCase):
     def setUp(self):
-        self.get_patcher = patch("ordway_tap.api.base.RequestHandler._get", autospec=True)
+        self.get_patcher = patch(
+            "ordway_tap.api.base.RequestHandler._get", autospec=True
+        )
         self.mocked_get = self.get_patcher.start()
         self.request_handler = RequestHandler("/charges", page_size=45)
 

@@ -4,9 +4,10 @@ from collections import deque
 from functools import wraps
 import ordway_tap.configs as TAP_CONFIG
 
+
 def ratelimit(func) -> Callable:
     """Decorator for rate limiting requests based on the `rate_limit_rps` property in config
-    
+
     Modified from `singer.utils.ratelimit`
     """
     times: Deque[float] = deque()
@@ -21,7 +22,7 @@ def ratelimit(func) -> Callable:
             if len(times) >= limit:
                 tim0 = times.pop()
                 tim = time()
-                
+
                 sleep_time = one_second - (tim - tim0)
 
                 if sleep_time > 0:
