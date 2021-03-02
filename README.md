@@ -75,6 +75,7 @@ The following configuration keys are optional:
 - `staging` - Whether or not to use the staging environment (staging.ordwaylabs.com)
 - `api_version` - Which Ordwaylabs API version to use (e.g. "v1")
 - `api_url` - An alternative URL to which the API requests will be made (e.g. "https://localhost:3000/v1/"). When specified, it will take precendence over `staging` and `api_version`.
+- `rate_limit_rps` - The amount of requests to allow per second (defaults to `null`, disabling rate limiting)
 
 The State JSON should be passed by user. 
 The Tap will be printing the STATE message, the last state message should send when running next time. 
