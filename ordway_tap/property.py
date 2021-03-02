@@ -1,10 +1,5 @@
 from typing import Optional, List
-from singer.metadata import (
-    get_standard_metadata,
-    to_map as mdata_to_map,
-    write as mdata_write,
-    to_list as mdata_to_list,
-)
+from singer.metadata import get_standard_metadata
 from .streams import AVAILABLE_STREAMS
 
 
