@@ -1,0 +1,2172 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/json
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - tap-ordway v0.1.0 (https://github.com/ordwaylabs/tap-ordway)
+      method: GET
+      uri: https://api.ordwaylabs.com/api/v1/invoices?sort=updated_date,id&size=50&page=1&updated_date%3E=2020-11-10T00%3A00%3A00.000000Z
+    response:
+      body:
+        string:
+          '[{"id": "INV-06011", "customer_id": "Tf4lCBZLFQwJJHM", "billing_contact":
+          {"zip": "mohcr4c15u7zn30tji", "city": "6czu4", "email": "qvbjgdte@example.com",
+          "phone": "", "state": "46tnbhnz8tmhgklvv2hhkyzikd48nt9qsxsjy18yrdcsw0", "county":
+          "", "mobile": "", "country": "yoluvps6febu2cuhrbsy3do2ksdwp9ya5l", "address1":
+          "xyq68200cstjd2kwgf3rjiads8bglnvtjqglr", "address2": "", "job_title": "",
+          "last_name": "4c4cmwdb6c3udqf786frq", "department": "", "first_name": "sndp3b0ybap6bcp7aosamw3bxp",
+          "display_name": "hjuvr8zntv6e2qjbznkckgvtnb0k5f1jp9qkax3"}, "shipping_contact":
+          {"zip": "y0qbdsu94rjlueqq72", "city": "96ljgtobqwz3th69dlcmzhd6gakpbu4", "email":
+          "hzyu1aj7@example.com", "phone": "", "state": "kqdhyo52fulkr5friktj0958k7wqt93usfcf",
+          "county": "", "mobile": "", "country": "g0xc6ft3zfkwfxq0lea3opw5lp4eps3di00se57gm4",
+          "address1": "p7g6bmd7dwp2qefkyteuctitila5qdxg04t34w6ldxs", "address2": "",
+          "job_title": "", "last_name": "mzjkz5tihgqrez8fh935", "department": "", "first_name":
+          "gx85kbtndretb5zd6t3qo3rww", "display_name": "umrp56mbkenwopve9fu5c4vnymgviw7vbv4gdt"},
+          "customer_name": "c6n02hig9ttf", "invoice_date": "2020-11-06", "due_date":
+          "2020-11-06", "start_date": "2020-10-20", "end_date": "2020-11-19", "billing_run_id":
+          "BR-02340", "subtotal": "22160.0", "invoice_tax": "70856.0", "invoice_amount":
+          "44735.0", "paid_amount": "46311.0", "balance": "19552.0", "status": "Partially
+          paid", "notes": "", "invoice_pdf_url": "zyu6hwpznfcr8c3c", "currency": "USD",
+          "payment_terms": "0", "created_date": "2020-11-06T08:01:30.410Z", "updated_date":
+          "2020-11-10T21:27:26.955Z", "created_by": "heeyeg5i@example.com", "updated_by":
+          "s1rkw1w4@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-01245", "customer_id": "Tf4lCBZLFQwJJHM", "customer_name": "4", "product_id":
+          "P-00005", "product_name": "hgaac9t09crpais2k8", "plan_id": "PLN-00013", "plan_name":
+          "1z40xx8tjasz8wzu1k4boxa8amedj0ivrk", "charge_id": "CHG-00013", "subscription_line_id":
+          "SCHG-01", "charge_name": "n2agax0y1u39t3r25acn0euzfultx", "charge_type":
+          "recurring", "description": "b85rjlkgpypzupw14vsxb9do515deo", "start_date":
+          "2020-10-20", "end_date": "2020-11-19", "unit_price": "1521.0", "list_price":
+          "31562.0", "list_price_base": "Billing Period", "taxable": false, "quantity":
+          11116.0, "discount": "0.0", "effective_price": "97861.0", "line_tax": "21599.0",
+          "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [], "credits": [{"id": "CR-00175", "customer_id": "Tf4lCBZLFQwJJHM",
+          "credit_date": "2020-11-10", "notes": "7podqrhzkdg5d98d1tedxny60wrubd7l99x3kgl942kbyrzqv",
+          "status": "Processed", "credit_amount": "50.00", "applied_amount": "13484.0",
+          "unapplied_amount": "67885.0", "currency": "USD", "reference_number": "",
+          "auto_apply": true, "gl_account": "", "created_by": "bi7yhl93@example.com",
+          "updated_by": "lkwgipy6@example.com", "created_date": "2020-11-10T21:26:55.946Z",
+          "updated_date": "2020-11-10T21:27:21.763Z", "refunds": [], "custom_fields":
+          {}, "credit_type": "COURTESY"}], "refunds": [], "custom_fields":
+          {}, "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-04720",
+          "customer_id": "uiPfZCmRf6YcmM3", "billing_contact": {"zip": "", "city": "", "email":
+          "8ssykjcp@example.com", "phone": "", "state": "", "county": "", "mobile":
+          "", "country": "", "address1": "", "address2": "", "job_title": "", "last_name":
+          "pfegs42j8xhpa4117h4r8qxsjjic4k3ul17somsltgr", "department": "", "first_name":
+          "ch2zjx66v6dknyv9t05k", "display_name": "ctlysi39w3p6ftohbsfftxg07ioij"},
+          "shipping_contact": {"zip": "", "city": "", "email": "9i4tcjcj@example.com",
+          "phone": "", "state": "", "county": "", "mobile": "", "country": "", "address1":
+          "", "address2": "", "job_title": "", "last_name": "zcwgenue175in2kuoftq9beiqn6m1phxlmhe27qycibg9",
+          "department": "", "first_name": "v97c6gbz3oq35v95gopca99eqb4r83dus8nd4cq3ez5jtwfzk",
+          "display_name": "adjlxfp1uf1dwbo0g2wyrbj355znt9l91zrrydxvgcrsqzb3mr"}, "customer_name":
+          "ccfr5daarxvyg3kuo776gcl1wfvxdfdl9gpgcu6hx", "invoice_date": "2020-10-18",
+          "due_date": "2020-10-18", "start_date": "2020-10-18", "end_date": "2021-01-17",
+          "billing_run_id": "BR-02010", "subtotal": "26170.0", "invoice_tax": "31694.0",
+          "invoice_amount": "74369.0", "paid_amount": "83388.0", "balance": "61611.0",
+          "status": "Paid", "notes": "", "invoice_pdf_url": "uw5xrchb88qce1gha7lyx4i2x7czd28dat",
+          "currency": "USD", "payment_terms": "0", "created_date": "2020-10-18T08:06:03.598Z",
+          "updated_date": "2020-11-10T21:46:36.606Z", "created_by": "73tr1lsh@example.com",
+          "updated_by": "022pl4kr@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-01748", "customer_id": "uiPfZCmRf6YcmM3", "customer_name": "3au980x27yepxxqvowiqvcnc5xp1n6",
+          "product_id": "P-00122", "product_name": "uh40oj4etcnmbhcb99q9esnsy7r3khwv",
+          "plan_id": "PLN-00022", "plan_name": "0bl72pu8mca0vez6be3o", "charge_id":
+          "CHG-00022", "subscription_line_id": "SCHG-02", "charge_name": "82eif3fzu4vvsj7ehowubc360jb88xpgpnuf9h49kuay",
+          "charge_type": "recurring", "description": "6oz2e05gx3dizne28b20x9h5sv3lafzs9v0jxpru1",
+          "start_date": "2020-10-18", "end_date": "2020-11-17", "unit_price": "37774.0",
+          "list_price": "93161.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 79808.0, "discount": "0.0", "effective_price": "77944.0", "line_tax":
+          "74460.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}, {"line_no":
+          "2", "subscription_id": "S-01748", "customer_id": "uiPfZCmRf6YcmM3", "customer_name":
+          "xiqwi", "product_id": "P-00005", "product_name": "tzgzblnfsna0ic8", "plan_id":
+          "PLN-00013", "plan_name": "exg6mf67o5vcw37hga299rl0ticxe0zxxnvq", "charge_id":
+          "CHG-00013", "subscription_line_id": "SCHG-01", "charge_name": "wmgqwbqlma52fzgzzasl4ympoxcwjbiw6j6k0",
+          "charge_type": "recurring", "description": "xv4higzl", "start_date": "2020-10-18",
+          "end_date": "2021-01-17", "unit_price": "19906.0", "list_price": "5535.0",
+          "list_price_base": "Billing Period", "taxable": false, "quantity": 3264.0,
+          "discount": "0.0", "effective_price": "33077.0", "line_tax": "80632.0", "tax_lines":
+          [], "applied_tiers": "", "custom_fields": {}}], "subtotals": [], "payments":
+          [{"id": "PMT-04275", "customer_id": "uiPfZCmRf6YcmM3", "payment_date": "2020-10-18",
+          "notes": "m8lajkdqe1do0ogfp", "status": "Pending", "payment_amount": "89050.0",
+          "fee_amount": "44526.0", "applied_amount": "4675.0", "unapplied_amount": "54000.0",
+          "refunded_amount": "35432.0", "payment_type": "Electronic", "payment_method":
+          "m8dktdayknbfh62hmy94ydsc8j8bx8nwyjc58lothgawi", "currency": "USD", "reference_number":
+          "x1vt3gwg9ouhocgim4luu6z9gmf1v5fsui99vpar", "auto_apply": true, "created_by":
+          "5l76cpau@example.com", "updated_by": "suulsxr6@example.com", "created_date":
+          "2020-10-18T08:17:26.660Z", "updated_date": "2020-11-10T21:46:20.141Z", "failed_attempt":
+          61000, "refunds": [], "retried_attempts": 23489, "gl_account": "", "gateway_name":
+          "Stripe", "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [{"id": "CR-00074", "customer_id": "uiPfZCmRf6YcmM3", "credit_date": "2020-09-21",
+          "notes": "", "status": "Processed", "credit_amount": "250.00", "applied_amount":
+          "27572.0", "unapplied_amount": "66373.0", "currency": "USD", "reference_number":
+          "", "auto_apply": true, "gl_account": "", "created_by": "ixsrotwp@example.com",
+          "updated_by": "rkxp9gvz@example.com", "created_date": "2020-09-21T15:09:56.634Z",
+          "updated_date": "2020-09-21T15:09:56.634Z", "refunds": [], "custom_fields":
+          {}, "credit_type": "REFERRAL"}], "refunds": [], "custom_fields":
+          {}, "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-05147",
+          "customer_id": "9E6CBIuooe6l2Ej", "billing_contact": {"zip": "pw", "city": "0rmj3igqufd93tpufcwu1yk",
+          "email": "n5xaolli@example.com", "phone": "", "state": "6mg2q03w4515nmqbdht5pycysqkdby26pvhgaecayjx1g",
+          "county": "", "mobile": "", "country": "o5iyw3xcfe8ptjpzzlsn3qh5fd4y6", "address1":
+          "gwnzy8rc1u6t1", "address2": "", "job_title": "", "last_name": "p7k9wj0b0tro71anglq7fhzxx1",
+          "department": "", "first_name": "9u3z3bmo74lkiq1rfj1a56cb2xh711", "display_name":
+          "t7xgy7"}, "shipping_contact": {"zip": "stidi7rc2xfnr3yfkz7f48ma880bk3h8thsdctun9u3",
+          "city": "a89w4o7doc0vtv1", "email": "41k26wul@example.com", "phone": "", "state":
+          "ezuevtxkhbbct34xkzvmiwavzbvy", "county": "", "mobile": "", "country": "fnphvl8zukhr5is9gzzqh4igyoze4m1fiyt0hknpeuif7cy99",
+          "address1": "znubabaa438oni4b6hrw8klzsh6", "address2": "", "job_title": "",
+          "last_name": "vbnzpue4m4jps", "department": "", "first_name": "rplcuva3z3qmlj10b2f9nr042acdeiezxsuynnjgz0tk6",
+          "display_name": "c7u"}, "customer_name": "4o84q9gfjh42wheyonyydn0r", "invoice_date":
+          "2020-10-27", "due_date": "2020-10-27", "start_date": "2020-10-25", "end_date":
+          "2020-11-24", "billing_run_id": "BR-02139", "subtotal": "-79982.0", "invoice_tax":
+          "98569.0", "invoice_amount": "-1011.0", "paid_amount": "-66341.0", "balance":
+          "36308.0", "status": "Reversed", "notes": "", "invoice_pdf_url": "jtdpf9rjjqt7o21fg3lca8ufnp4rv3a96o69zf3yiuw",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-10-27T08:04:05.506Z",
+          "updated_date": "2020-11-10T00:37:03.713Z", "created_by": "fqk74rq5@example.com",
+          "updated_by": "dchg2seb@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00402", "customer_id": "9E6CBIuooe6l2Ej", "customer_name": "u", "product_id":
+          "P-00001", "product_name": "b4g1tlq8j0wmj", "plan_id": "PLN-00001", "plan_name":
+          "zbkhffdlytwmoi7", "charge_id": "CHG-00001", "subscription_line_id": "SCHG-01",
+          "charge_name": "tprs", "charge_type": "recurring", "description": "hxabem6jx60ztttimn4e4q0lwiygf05",
+          "start_date": "2020-10-25", "end_date": "2020-11-24", "unit_price": "61612.0",
+          "list_price": "37529.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": -61821.0, "discount": "0.0", "effective_price": "-23784.0", "line_tax":
+          "13294.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [], "credits": [], "refunds": [], "reversed_on": "2020-11-09",
+          "custom_fields": {}, "quickbooks_id": "", "stripe_invoice_id":
+          ""}, {"id": "INV-06144", "customer_id": "1wC78TYXfhGmC63", "billing_contact":
+          {"zip": "", "city": "", "email": "anuvwqld@example.com", "phone": "", "state":
+          "", "county": "", "mobile": "", "country": "", "address1": "", "address2":
+          "", "job_title": "", "last_name": "sw", "department": "", "first_name": "qab",
+          "display_name": "o03dkeb474zwak"}, "shipping_contact": {"zip": "", "city":
+          "", "email": "fq9yfq33@example.com", "phone": "", "state": "", "county": "",
+          "mobile": "", "country": "", "address1": "", "address2": "", "job_title":
+          "", "last_name": "ohk25z8z67i27m9tsrr7ke9l", "department": "", "first_name":
+          "x23lrhs2nrxeguvyxgub2", "display_name": "jebia28w2s0s1in805f05g52k6cy92fsp"},
+          "customer_name": "j0", "invoice_date": "2020-11-09", "due_date": "2020-11-09",
+          "start_date": "2020-11-09", "end_date": "2020-12-08", "billing_run_id": "BR-02357",
+          "subtotal": "47012.0", "invoice_tax": "60505.0", "invoice_amount": "58013.0",
+          "paid_amount": "92234.0", "balance": "96565.0", "status": "Paid", "notes":
+          "", "invoice_pdf_url": "w2e240lqf4m3", "currency": "USD", "payment_terms":
+          "Due on Receipt", "created_date": "2020-11-10T00:40:20.180Z", "updated_date":
+          "2020-11-10T00:40:20.593Z", "created_by": "rkzi5b8y@example.com", "updated_by":
+          "pr1i6tck@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-02645", "customer_id": "1wC78TYXfhGmC63", "customer_name": "6vtrql2o5j4h",
+          "product_id": "P-00005", "product_name": "6zjhbcesk7i", "plan_id": "PLN-00013",
+          "plan_name": "6o", "charge_id": "CHG-00013", "subscription_line_id": "a0f5w00000GBqSZAA1",
+          "charge_name": "20rqcf8l6rfw8h5wmybdvuei", "charge_type": "recurring", "description":
+          "qhru4", "start_date": "2020-11-09", "end_date": "2020-12-08", "unit_price":
+          "52241.0", "list_price": "34494.0", "list_price_base": "Billing Period", "taxable":
+          false, "quantity": 59050.0, "discount": "100.0", "effective_price": "72655.0",
+          "line_tax": "57969.0", "tax_lines": [], "applied_tiers": "", "custom_fields":
+          {}}], "subtotals": [], "payments": [], "credits": [], "refunds": [], "custom_fields":
+          {}, "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-05044",
+          "customer_id": "9E6CBIuooe6l2Ej", "billing_contact": {"zip": "s1tl4jhfik3tc9r7hfxe",
+          "city": "xzpjpa4", "email": "rcjj32et@example.com", "phone": "", "state":
+          "m0yr9", "county": "", "mobile": "", "country": "bq4vm3mwjsmrwyaap1lipf4zaacre5iyua16njaxhayz",
+          "address1": "a5v04mlmi2inzfhksu606ex06aiyupksj15n6fgkza", "address2": "",
+          "job_title": "", "last_name": "g9rjhti2g4g8drdguf8u3as4kn31uitk5vbmi8g191ov8g",
+          "department": "", "first_name": "0cfv0a3xwlz4", "display_name": "2ab71din72x4z9ek9ypo17p6p8oqsytkbnaqs500gz"},
+          "shipping_contact": {"zip": "ff5j", "city": "5p1b6np0vo91tmt4apgb", "email":
+          "d76bdnnw@example.com", "phone": "", "state": "y4jb0kd42je01c6gtba6jv1l5ieyzyc",
+          "county": "", "mobile": "", "country": "uyjuz0oxjrcnq8odfqogy05w6o05cmxdg3491j1wowgz",
+          "address1": "h1fxs69d4nscw7q", "address2": "", "job_title": "", "last_name":
+          "d1va3m0p5", "department": "", "first_name": "o1mrtvn", "display_name": "prbevoynz57"},
+          "customer_name": "58obc3tf05iw6n20t91oe0ie4hqsbh8q3eq8k06b", "invoice_date":
+          "2020-10-25", "due_date": "2020-10-25", "start_date": "2020-10-25", "end_date":
+          "2020-11-24", "billing_run_id": "BR-02112", "subtotal": "15179.0", "invoice_tax":
+          "21289.0", "invoice_amount": "56032.0", "paid_amount": "10898.0", "balance":
+          "2667.0", "status": "Paid", "notes": "", "invoice_pdf_url": "dtv58tu3odt6u6",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-10-25T08:02:36.644Z",
+          "updated_date": "2020-11-10T00:38:08.998Z", "created_by": "61rtkv4t@example.com",
+          "updated_by": "p16fk60d@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00402", "customer_id": "9E6CBIuooe6l2Ej", "customer_name": "3721ow2s3kn", "product_id":
+          "P-00001", "product_name": "lxcvz2axrxikol7pa3i23a5xwe0z28xq0bl0", "plan_id":
+          "PLN-00001", "plan_name": "ycnokjwvvt8kgyg3hb", "charge_id": "CHG-00001",
+          "subscription_line_id": "SCHG-01", "charge_name": "61kggokbopo3q6ng6yt00f4zcxxrgo4z",
+          "charge_type": "recurring", "description": "yirbw4oae0y1xdemryv3pro5", "start_date":
+          "2020-10-25", "end_date": "2020-11-24", "unit_price": "15642.0", "list_price":
+          "65708.0", "list_price_base": "Billing Period", "taxable": false, "quantity":
+          92542.0, "discount": "0.0", "effective_price": "72331.0", "line_tax": "53999.0",
+          "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [], "credits": [{"id": "CR-00173", "customer_id": "9E6CBIuooe6l2Ej",
+          "credit_date": "2020-11-09", "notes": "f7vqsnv2oneceryluudp6q9s9v2rnizt08pnp",
+          "status": "Processed", "credit_amount": "245.00", "applied_amount": "86630.0",
+          "unapplied_amount": "42884.0", "currency": "USD", "reference_number": "",
+          "auto_apply": true, "gl_account": "", "created_by": "qwqpmjuw@example.com",
+          "updated_by": "ajtxqb5s@example.com", "created_date": "2020-11-10T00:38:05.399Z",
+          "updated_date": "2020-11-10T00:38:05.399Z", "refunds": [], "custom_fields":
+          {}, "credit_type": "REFUND"}], "refunds": [], "custom_fields":
+          {}, "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06143",
+          "customer_id": "qY5oMLQj7I3mQw9", "billing_contact": {"zip": "", "city": "", "email":
+          "", "phone": "", "state": "", "county": "", "mobile": "", "country": "aqcqgi6lzh6mowlhgati4q79ecjl14",
+          "address1": "", "address2": "", "job_title": "", "last_name": "", "department":
+          "", "first_name": "", "display_name": "jwjbsjlwplz9qe7q0c"}, "shipping_contact":
+          {"zip": "", "city": "", "email": "", "phone": "", "state": "", "county": "",
+          "mobile": "", "country": "jvy6g8l96l01mnynrs0dtszm", "address1": "", "address2":
+          "", "job_title": "", "last_name": "", "department": "", "first_name": "",
+          "display_name": "1g39rl0xlfnkuv3buw"}, "customer_name": "es1mnhdweeodraa4eac",
+          "invoice_date": "2020-11-09", "due_date": "2020-11-09", "start_date": "2020-11-09",
+          "end_date": "2020-12-08", "billing_run_id": "BR-02356", "subtotal": "65753.0",
+          "invoice_tax": "18566.0", "invoice_amount": "32160.0", "paid_amount": "81092.0",
+          "balance": "50372.0", "status": "Paid", "notes": "", "invoice_pdf_url": "afvllrgg8qnwa4ao67l1ltdr309n79gzql6w8t47tvzlfbqm",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T00:37:20.312Z",
+          "updated_date": "2020-11-10T00:37:20.661Z", "created_by": "8a21xws8@example.com",
+          "updated_by": "6yzb03og@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-02644", "customer_id": "qY5oMLQj7I3mQw9", "customer_name": "i", "product_id":
+          "P-00035", "product_name": "d38q1vlup72ppwqagcv9ua66d9z3i3qcfuvn2ca24597k",
+          "plan_id": "PLN-00046", "plan_name": "u23vt5wb5wfvgw9bz05nyrp4npvxxn9xztj5syd1ll",
+          "charge_id": "CHG-00046", "subscription_line_id": "a0f5w00000GBqSUAA1", "charge_name":
+          "d4ef8chf4kg9zp0r", "charge_type": "recurring", "description": "kt7i25gcnnt66j2uudz4l19tnkudnanfzt4mgyx4vdhfp9a1h",
+          "start_date": "2020-11-09", "end_date": "2020-12-08", "unit_price": "40322.0",
+          "list_price": "59299.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 58093.0, "discount": "0.0", "effective_price": "45353.0", "line_tax":
+          "71653.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05686", "customer_id": "qY5oMLQj7I3mQw9", "payment_date":
+          "2020-11-10", "notes": "19c2ouhx8yn2ckahlo9ge23tscdwfdknd9o", "status": "Processed",
+          "payment_amount": "81349.0", "fee_amount": "66368.0", "applied_amount": "63030.0",
+          "unapplied_amount": "744.0", "refunded_amount": "89145.0", "payment_type":
+          "Electronic", "payment_method": "c9wf0zkjguzrzdvknhklnkrlypwa31f", "currency":
+          "USD", "reference_number": "ko95pt22s6txdq6qffim0fz1fr7cd2sujiww4ec07787u2",
+          "auto_apply": true, "created_by": "rqeflbkn@example.com", "updated_by": "yit97atf@example.com",
+          "created_date": "2020-11-10T00:37:24.860Z", "updated_date": "2020-11-10T00:37:24.860Z",
+          "failed_attempt": 88327, "refunds": [], "retried_attempts": 35698, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06145",
+          "customer_id": "CcQ7HroNpzgXOqJ", "billing_contact": {"zip": "", "city": "", "email":
+          "", "phone": "", "state": "", "county": "", "mobile": "", "country": "iq7tl4i6kl60nbc9djdunwjjxa71yzwaowvcioy33o",
+          "address1": "", "address2": "", "job_title": "", "last_name": "", "department":
+          "", "first_name": "", "display_name": "xqelin3434jum01mmty6v6cttlp9vrbljp"},
+          "shipping_contact": {"zip": "", "city": "", "email": "", "phone": "", "state":
+          "", "county": "", "mobile": "", "country": "ibw4l6", "address1": "", "address2":
+          "", "job_title": "", "last_name": "", "department": "", "first_name": "",
+          "display_name": "e4rdwhrpjdi"}, "customer_name": "kd9kln4vlok269ebykrfzsc1x0399u",
+          "invoice_date": "2020-11-09", "due_date": "2020-11-09", "start_date": "2020-11-09",
+          "end_date": "2021-11-08", "billing_run_id": "BR-02358", "subtotal": "69956.0",
+          "invoice_tax": "2367.0", "invoice_amount": "99789.0", "paid_amount": "37063.0",
+          "balance": "67317.0", "status": "Paid", "notes": "", "invoice_pdf_url": "0du4jtq92i7va7frob2k7vlvoilpntcbdbzkmook0yp955qm00",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T00:45:27.086Z",
+          "updated_date": "2020-11-10T00:45:27.498Z", "created_by": "jbrjge3j@example.com",
+          "updated_by": "8wzfvl5q@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-02646", "customer_id": "CcQ7HroNpzgXOqJ", "customer_name": "q", "product_id":
+          "P-00001", "product_name": "x2r20zuq", "plan_id": "PLN-00001", "plan_name":
+          "6kwx3ie8", "charge_id": "CHG-00001", "subscription_line_id": "a0f5w00000GBqSeAAL",
+          "charge_name": "ndwo4x7ev5a5kbtx", "charge_type": "recurring", "description":
+          "zwa3bm5", "start_date": "2020-11-09", "end_date": "2021-11-08", "unit_price":
+          "90402.0", "list_price": "49250.0", "list_price_base": "Billing Period", "taxable":
+          false, "quantity": 93210.0, "discount": "0.0", "effective_price": "95971.0",
+          "line_tax": "2930.0", "tax_lines": [], "applied_tiers": "", "custom_fields":
+          {}}], "subtotals": [], "payments": [{"id": "PMT-05687", "customer_id": "CcQ7HroNpzgXOqJ",
+          "payment_date": "2020-11-10", "notes": "s", "status": "Processed", "payment_amount":
+          "5631.0", "fee_amount": "91021.0", "applied_amount": "45225.0", "unapplied_amount":
+          "41336.0", "refunded_amount": "49204.0", "payment_type": "Electronic", "payment_method":
+          "ozy7psrrgrpr50jx6nv4jwdmin1olrmuh48mwn8", "currency": "USD", "reference_number":
+          "bhwfh20uygqdjk85gok8x55lc226xuqar81qk9ck8", "auto_apply": true, "created_by":
+          "f1hso28g@example.com", "updated_by": "hqfk6ipl@example.com", "created_date":
+          "2020-11-10T00:45:31.992Z", "updated_date": "2020-11-10T00:45:31.992Z", "failed_attempt":
+          72447, "refunds": [], "retried_attempts": 73054, "gl_account": "", "gateway_name":
+          "Stripe", "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-06146", "customer_id": "yg7Lyu3eTAq7hf7",
+          "billing_contact": {"zip": "", "city": "", "email": "", "phone": "", "state":
+          "", "county": "", "mobile": "", "country": "2xztisz7r3p8wxjywh2a39n2g79fb7153v6zvktpfxa0",
+          "address1": "", "address2": "", "job_title": "", "last_name": "", "department":
+          "", "first_name": "", "display_name": "skvwaxtq62v28todm982r1mnd7y62ad37hl3aeogb6p6a2"},
+          "shipping_contact": {"zip": "", "city": "", "email": "", "phone": "", "state":
+          "", "county": "", "mobile": "", "country": "tt", "address1": "", "address2":
+          "", "job_title": "", "last_name": "", "department": "", "first_name": "",
+          "display_name": "ghfn6vdfvz3xuc"}, "customer_name": "h3tekbrs4i22n27chnyjow6xk1qufn3wthoeom3yb3ah3",
+          "invoice_date": "2020-11-09", "due_date": "2020-11-09", "start_date": "2020-11-09",
+          "end_date": "2020-12-08", "billing_run_id": "BR-02359", "subtotal": "49069.0",
+          "invoice_tax": "22492.0", "invoice_amount": "10436.0", "paid_amount": "22800.0",
+          "balance": "83373.0", "status": "Paid", "notes": "", "invoice_pdf_url": "c07ltban7s8coiu4awocgoyvqd2a3ut5xa",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T00:50:46.078Z",
+          "updated_date": "2020-11-10T00:50:46.398Z", "created_by": "ep8ovskp@example.com",
+          "updated_by": "2uchq4x0@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-02647", "customer_id": "yg7Lyu3eTAq7hf7", "customer_name": "gu663lrmu6pfe5sy556gvr61vg6",
+          "product_id": "P-00001", "product_name": "suuu932", "plan_id": "PLN-00001",
+          "plan_name": "33lpdo78", "charge_id": "CHG-00001", "subscription_line_id":
+          "a0f5w00000GBqSfAAL", "charge_name": "wr2t0lh7uz1aok6a7tq2cyj6ichxrycqnu9w8jkrv",
+          "charge_type": "recurring", "description": "c1wthhmx4kao9dqvpc0ys1syhd5pm44hlew07cou",
+          "start_date": "2020-11-09", "end_date": "2020-12-08", "unit_price": "22896.0",
+          "list_price": "72680.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 10980.0, "discount": "0.0", "effective_price": "40488.0", "line_tax":
+          "17403.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05688", "customer_id": "yg7Lyu3eTAq7hf7", "payment_date":
+          "2020-11-10", "notes": "vfy1up7kei32kmfg78wn3kl5edzh2c5", "status": "Processed",
+          "payment_amount": "4897.0", "fee_amount": "9079.0", "applied_amount": "15514.0",
+          "unapplied_amount": "20930.0", "refunded_amount": "46419.0", "payment_type":
+          "Electronic", "payment_method": "z2zcaurm4aogm190tis9fr", "currency": "USD",
+          "reference_number": "0myw64z2hrekns0j10w109eezg6zi3ofijwmmhxdzk", "auto_apply":
+          true, "created_by": "xhxhc3px@example.com", "updated_by": "zwaidmf5@example.com",
+          "created_date": "2020-11-10T00:50:50.770Z", "updated_date": "2020-11-10T00:50:50.770Z",
+          "failed_attempt": 3315, "refunds": [], "retried_attempts": 29574, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06147",
+          "customer_id": "51tVRrQxWgGOXGp", "billing_contact": {"zip": "btraiu7daj2bj4r66f7m9xsbix8dtgf1f2480or",
+          "city": "0t5di3y953ur2eqk4btex2ahdewnj7dbqqv1nzlx3kqy75tmb", "email": "0tn5vl00@example.com",
+          "phone": "", "state": "3o1slgyigmwh1na4od04py", "county": "", "mobile": "",
+          "country": "g5zy7g7j6cd2udj2iyvge", "address1": "03iqznit5c83jga3glsbw", "address2":
+          "", "job_title": "", "last_name": "2ux0pkdz7keqtg46is0fd33nx", "department":
+          "", "first_name": "oiuuxu3dcrrdcyzf5c27", "display_name": "glz4f80x4amorg7oizliw7lthryz6d7w23epe4gmt"},
+          "shipping_contact": {"zip": "cwu3sd714lh1uk9yb", "city": "n0b2m47hu13v0wvszi3u",
+          "email": "rrbjhynn@example.com", "phone": "", "state": "ulnqourirf83tbxy37ut90novbyshe8wjmwg9gj0r",
+          "county": "", "mobile": "", "country": "3xgk3dah6nnvekioklfmyrlfy8mvzn4qre73tc28m",
+          "address1": "h", "address2": "", "job_title": "", "last_name": "a8e95hkj40wb3n1dkxjc5mccyln8w4dwvepxahey6xhihu",
+          "department": "", "first_name": "u1x91ryfb1ck8pyozzhbo6ifkdlk8qluxx0n5ytfxrc9o",
+          "display_name": "4k1b"}, "customer_name": "h9ncihx65u", "invoice_date": "2020-11-09",
+          "due_date": "2020-11-09", "start_date": "2020-11-09", "end_date": "2021-02-08",
+          "billing_run_id": "BR-02360", "subtotal": "99526.0", "invoice_tax": "97139.0",
+          "invoice_amount": "76739.0", "paid_amount": "15894.0", "balance": "39566.0",
+          "status": "Paid", "notes": "", "invoice_pdf_url": "3bkqfv60wagp8ylr6klj2hx83iq68jrvlnli7fttwnp3tadz6",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T00:54:20.292Z",
+          "updated_date": "2020-11-10T00:54:31.356Z", "created_by": "5ar6dx4l@example.com",
+          "updated_by": "9ndizj6v@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-02648", "customer_id": "51tVRrQxWgGOXGp", "customer_name": "ci3e1u0nmtiyq9bcgl",
+          "product_id": "P-00005", "product_name": "9bv2kb7ouo1olsvn9nsh36meed", "plan_id":
+          "PLN-00013", "plan_name": "35cembibbvdxi7y03p6fv72ezgdx6vrjf", "charge_id":
+          "CHG-00013", "subscription_line_id": "a0f5w00000GBqSjAAL", "charge_name":
+          "gd24tqwz832mn23", "charge_type": "recurring", "description": "ha30ezblbm818apt8pxykwy3d9nwz5ukcine5a3",
+          "start_date": "2020-11-09", "end_date": "2021-02-08", "unit_price": "4981.0",
+          "list_price": "34238.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 94190.0, "discount": "0.0", "effective_price": "11659.0", "line_tax":
+          "99301.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05689", "customer_id": "51tVRrQxWgGOXGp", "payment_date":
+          "2020-11-10", "notes": "2ooq6drqtvskgnkejv663twr", "status": "Processed",
+          "payment_amount": "45938.0", "fee_amount": "60721.0", "applied_amount": "11167.0",
+          "unapplied_amount": "87550.0", "refunded_amount": "19035.0", "payment_type":
+          "Electronic", "payment_method": "uz7ws30lh27xvxxdnto2w3ue9vfy5or9b5oc4xi9",
+          "currency": "USD", "reference_number": "3ehzzsp0qnxa8r6k2osei5htf01t91bu62n7kal9ch",
+          "auto_apply": true, "created_by": "lxc85d9u@example.com", "updated_by": "x87gl3mr@example.com",
+          "created_date": "2020-11-10T00:54:27.405Z", "updated_date": "2020-11-10T00:54:27.405Z",
+          "failed_attempt": 54737, "refunds": [], "retried_attempts": 16895, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06167",
+          "customer_id": "Zs5S48LDfrBksWU", "billing_contact": {"zip": "", "city": "", "email":
+          "9hw4b0l2@example.com", "phone": "", "state": "", "county": "", "mobile":
+          "", "country": "", "address1": "", "address2": "", "job_title": "", "last_name":
+          "9i1sdfcwtovit3j7b5zdul3rvbw0", "department": "", "first_name": "31odqxnp6bwb5gw4r0rqp4khu0k",
+          "display_name": "6culs0qbeo3nvnj8h5g1ai543wvr"}, "shipping_contact": {"zip":
+          "", "city": "", "email": "q143w3yr@example.com", "phone": "", "state": "",
+          "county": "", "mobile": "", "country": "", "address1": "", "address2": "",
+          "job_title": "", "last_name": "whcrz8v3b0jco7vr5fqgt89dc6vtyn1dguvkjw31k5m1nr",
+          "department": "", "first_name": "xqww2mnkkw7fdkfzm6f2utbcd", "display_name":
+          "ulaog7op5w9luct5a99pg5thm41ri"}, "customer_name": "z4ekw4iyg8jarvvfdj6zpcl7u5c20h3tt2v9ern8qdcj",
+          "invoice_date": "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "12284.0",
+          "invoice_tax": "29899.0", "invoice_amount": "89358.0", "paid_amount": "87365.0",
+          "balance": "67815.0", "status": "Posted", "notes": "", "invoice_pdf_url":
+          "gpajeo7qlcp0p9t12vrlvthukz3efrtwc0fxdy3hc3x", "currency": "USD", "payment_terms":
+          "Due on Receipt", "created_date": "2020-11-10T08:03:24.481Z", "updated_date":
+          "2020-11-10T08:04:19.322Z", "created_by": "ws5afnyf@example.com", "updated_by":
+          "7ycr5soe@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00642", "customer_id": "Zs5S48LDfrBksWU", "customer_name": "3ohcn2s9no1hdmh5rybxa9nzu47czjr14bquul7q",
+          "product_id": "P-00001", "product_name": "mleco5pk1rff91q", "plan_id": "PLN-00001",
+          "plan_name": "w5jqle77pxv75t36vggir6uv08qt389", "charge_id": "CHG-00001",
+          "subscription_line_id": "SCHG-01", "charge_name": "e8kikanlgw8te575kyywuuy5tpxdr9qxhqne3pzn8y",
+          "charge_type": "recurring", "description": "99", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "unit_price": "18287.0", "list_price": "47833.0",
+          "list_price_base": "Billing Period", "taxable": false, "quantity": 26499.0,
+          "discount": "0.0", "effective_price": "63744.0", "line_tax": "93074.0", "tax_lines":
+          [], "applied_tiers": "", "custom_fields": {}}], "subtotals": [], "payments":
+          [], "credits": [], "refunds": [], "custom_fields": {}, "quickbooks_id":
+          "", "stripe_invoice_id": ""}, {"id": "INV-06148", "customer_id": "Zs5S48LDfrBksWU",
+          "billing_contact": {"zip": "j29jcda8r0z8inlxi7x8pez5k5i1seb0f7bezy", "city":
+          "o3y1az6bkho1ue", "email": "w0w9vz41@example.com", "phone": "", "state": "sknfx94vrib",
+          "county": "", "mobile": "", "country": "r8qh470epnrfyqxpeswak22ihl0eoixa5wuv1oyyhsdfmiovo2",
+          "address1": "1sv4v9x3mutbcmxuq15y4xf", "address2": "", "job_title": "", "last_name":
+          "twg254xu65bojedff1uekq4evf72", "department": "", "first_name": "kxh640slis0wurzzghmkrpszcsafkuvtlbz00kstgexc9",
+          "display_name": "aapytkecem0cjitjhswczsjrkyya101"}, "shipping_contact": {"zip":
+          "q68yywy7t197dr1y8x7l24t", "city": "nsyxcmp64cbzjlzdfbqu41bmp3t5nmtjlztuk0d24lfr",
+          "email": "4jmci6ib@example.com", "phone": "", "state": "ss0au7p7s1himube0a0zg7gh0o40rnt0",
+          "county": "", "mobile": "", "country": "s4jysj985a1h96cjrnxca80bz9zco", "address1":
+          "n9t1ruo9v59a180ujom6zinsaidvsxywmhwptze", "address2": "", "job_title": "",
+          "last_name": "7uf2oejgnjvxbn249ilmnz7kws6cwn", "department": "", "first_name":
+          "kimz6tujqlxqvr2odw5xb7", "display_name": "5dt"}, "customer_name": "ft828ib72z7kf3xmo5ouus",
+          "invoice_date": "2020-11-09", "due_date": "2020-11-09", "start_date": "2020-11-09",
+          "end_date": "2020-11-09", "billing_run_id": "BR-02362", "subtotal": "37049.0",
+          "invoice_tax": "57454.0", "invoice_amount": "31163.0", "paid_amount": "95820.0",
+          "balance": "94782.0", "status": "Paid", "notes": "", "invoice_pdf_url": "v7fpnwhfpt3",
+          "currency": "USD", "payment_terms": "0", "created_date": "2020-11-10T01:10:31.811Z",
+          "updated_date": "2020-11-10T01:10:39.216Z", "created_by": "wqjp68zw@example.com",
+          "updated_by": "78ahoj3g@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-02651", "customer_id": "Zs5S48LDfrBksWU", "customer_name": "nz2wwfxbiujot70fjptqf8tgogdbes85rhaa22mwlm",
+          "product_id": "P-00195", "product_name": "8qsgo", "plan_id": "PLN-00112",
+          "plan_name": "fbi391q1ereduv2p9sle73bv", "charge_id": "CHG-00112", "subscription_line_id":
+          "a0f5w00000GBqSyAAL", "charge_name": "zphj6wgmmjaq78wxlxc5heu37ntrzx0so7gek6nns8xrdi",
+          "charge_type": "one_time", "description": "frqvrhrrqdukjrfhrzwmvvw25yzxfjjz68jpr1uwdr6dzz94p",
+          "start_date": "2020-11-09", "end_date": "-", "unit_price": "2378.0", "list_price":
+          "76498.0", "list_price_base": "500.0", "taxable": false, "quantity": 6872.0,
+          "discount": "0.0", "effective_price": "15537.0", "line_tax": "93906.0", "tax_lines":
+          [], "applied_tiers": "", "custom_fields": {}}], "subtotals": [], "payments":
+          [{"id": "PMT-05690", "customer_id": "Zs5S48LDfrBksWU", "payment_date": "2020-11-10",
+          "notes": "ujegcibnpisx68xoe7vf15jk7cdpnaybn7", "status": "Processed", "payment_amount":
+          "62637.0", "fee_amount": "48142.0", "applied_amount": "17458.0", "unapplied_amount":
+          "13520.0", "refunded_amount": "20151.0", "payment_type": "Electronic", "payment_method":
+          "2sz6ncqb8ttcaa9fwu", "currency": "USD", "reference_number": "y7bd1hnf3jbakxfn7yss41pyy29g",
+          "auto_apply": true, "created_by": "2ce5h4f6@example.com", "updated_by": "niahyx5j@example.com",
+          "created_date": "2020-11-10T01:10:36.733Z", "updated_date": "2020-11-10T01:10:36.733Z",
+          "failed_attempt": 49521, "refunds": [], "retried_attempts": 90408, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-05093",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "c11rsr4cciohcdj5gfb1rt6tdamdixkv4m2oepl37my9",
+          "city": "h9g9pbt4kot0ypef6lm5euwe6nviuxgijbg", "email": "akrs8hci@example.com",
+          "phone": "", "state": "3snrtyg9b6uvmjsg75mmcc7g6lprpi1k8f", "county": "",
+          "mobile": "", "country": "jmmoq2y0hv52xino3vi", "address1": "ce2qlybr9gr4yz1prn60s2f59qcmfne",
+          "address2": "", "job_title": "", "last_name": "jxvz68s9kq", "department":
+          "", "first_name": "yuklsykhfxdj428x6i4d21zrxh8op159fjzmkk0p", "display_name":
+          "r6u1zu4xy3cjpzgdvr7d"}, "shipping_contact": {"zip": "tzxult9plwyi9djr9k9remuy2165xew",
+          "city": "8xrgrw4me3gba7xsy9d3obmiaz", "email": "e4zpgwuo@example.com", "phone":
+          "", "state": "2iwpdqcdhdekb77iu", "county": "", "mobile": "", "country": "9rmdkmhsues5bukdxm2f5jsjzxmks12xr",
+          "address1": "jtmrn3jvrejm16t8n", "address2": "", "job_title": "", "last_name":
+          "b8rv4x53z", "department": "", "first_name": "kvr8cg7s7ltmhkykz3qbvti87e21yq",
+          "display_name": "70lsblyaubdiszgpngdk"}, "customer_name": "7ybu16rb5vk8nu2psb2jhism6p8csag6o09layso6kjbpo",
+          "invoice_date": "2020-10-26", "due_date": "2020-10-26", "start_date": "2020-10-26",
+          "end_date": "2020-11-25", "billing_run_id": "BR-02113", "subtotal": "75927.0",
+          "invoice_tax": "53049.0", "invoice_amount": "96749.0", "paid_amount": "39531.0",
+          "balance": "78994.0", "status": "Paid", "notes": "", "invoice_pdf_url": "67kbla24penvd6r5t8pqklvfgettef27e6lgkjlj0",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-10-26T08:02:37.164Z",
+          "updated_date": "2020-11-02T12:01:35.772Z", "created_by": "u8x2kfsh@example.com",
+          "updated_by": "y3ntr66l@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00415", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "dlkt0uax53iu8cwd0c46r4e83u65zqfqhkcv70ye",
+          "product_id": "P-00005", "product_name": "ry7x0v8xi3bg9vu5wwnby5ucho8yb",
+          "plan_id": "PLN-00013", "plan_name": "7go40usshya9lh52kkyy3krow31lh5pc2aad4z76",
+          "charge_id": "CHG-00013", "subscription_line_id": "SCHG-01", "charge_name":
+          "zwxrp7ukebu12z98s7", "charge_type": "recurring", "description": "mlagdjyxogspbn4e20",
+          "start_date": "2020-10-26", "end_date": "2020-11-25", "unit_price": "5941.0",
+          "list_price": "12302.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 35680.0, "discount": "0.0", "effective_price": "11421.0", "line_tax":
+          "84428.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05742", "customer_id": "utXE7bL7Ovmj18h", "payment_date":
+          "2020-11-10", "notes": "a", "status": "Processed", "payment_amount": "32509.0",
+          "fee_amount": "44845.0", "applied_amount": "39971.0", "unapplied_amount":
+          "13427.0", "refunded_amount": "43119.0", "payment_type": "Electronic", "payment_method":
+          "dep5w199paezi", "currency": "USD", "reference_number": "m8le00i86ucusfv",
+          "auto_apply": true, "created_by": "ellxikkq@example.com", "updated_by": "a9c5syv1@example.com",
+          "created_date": "2020-11-10T14:39:36.620Z", "updated_date": "2020-11-10T14:39:36.620Z",
+          "failed_attempt": 12451, "refunds": [], "retried_attempts": 23045, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-04737",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "", "city": "", "email":
+          "el6i3y2o@example.com", "phone": "", "state": "", "county": "", "mobile":
+          "", "country": "", "address1": "", "address2": "", "job_title": "", "last_name":
+          "ql3sre7jblrprg5", "department": "", "first_name": "6m99k6jr3rsby0ico", "display_name":
+          "uf1f90"}, "shipping_contact": {"zip": "", "city": "", "email": "9rwby0j3@example.com",
+          "phone": "", "state": "", "county": "", "mobile": "", "country": "", "address1":
+          "", "address2": "", "job_title": "", "last_name": "uty41c4nh0uvftach555kmdtrlxki",
+          "department": "", "first_name": "hc8xo32izz1t0ts", "display_name": "sasrv2767rl7kzyb46k1mm79hw40yc66m0ioed8ho0owmdqcd"},
+          "customer_name": "qxqronj1jizbh0btw5m2e3uiqbduidxsvd4qt", "invoice_date":
+          "2020-10-19", "due_date": "2020-10-19", "start_date": "2020-10-19", "end_date":
+          "2020-11-18", "billing_run_id": "BR-02011", "subtotal": "98775.0", "invoice_tax":
+          "48738.0", "invoice_amount": "84628.0", "paid_amount": "25504.0", "balance":
+          "54332.0", "status": "Paid", "notes": "", "invoice_pdf_url": "2", "currency":
+          "USD", "payment_terms": "0", "created_date": "2020-10-19T08:02:56.955Z", "updated_date":
+          "2020-11-10T18:13:32.963Z", "created_by": "2mkc3xcr@example.com", "updated_by":
+          "ep3vics4@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00318", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "2pewqpvil4hzzp7kp7uq0535d1j8gylv1zutrhgdtdsv",
+          "product_id": "P-00005", "product_name": "tkv51faw7gcqw7du5jhnzrd2c", "plan_id":
+          "PLN-00013", "plan_name": "5d52sd9yz", "charge_id": "CHG-00013", "subscription_line_id":
+          "SCHG-01", "charge_name": "ew6era0", "charge_type": "recurring", "description":
+          "roc2x3epqky28joks7rptw", "start_date": "2020-10-19", "end_date": "2020-11-18",
+          "unit_price": "63114.0", "list_price": "35127.0", "list_price_base": "Billing
+          Period", "taxable": false, "quantity": 74678.0, "discount": "0.0", "effective_price":
+          "3693.0", "line_tax": "44413.0", "tax_lines": [], "applied_tiers": "", "custom_fields":
+          {}}], "subtotals": [], "payments": [{"id": "PMT-05745", "customer_id": "utXE7bL7Ovmj18h",
+          "payment_date": "2020-11-10", "notes": "", "status": "Processed", "payment_amount":
+          "29262.0", "fee_amount": "87855.0", "applied_amount": "65231.0", "unapplied_amount":
+          "98849.0", "refunded_amount": "88928.0", "payment_type": "External", "payment_method":
+          "gas", "currency": "USD", "reference_number": "b2wbi", "auto_apply": true,
+          "created_by": "283nilny@example.com", "updated_by": "ovq994ug@example.com",
+          "created_date": "2020-11-10T18:13:29.936Z", "updated_date": "2020-11-10T18:13:29.936Z",
+          "failed_attempt": 41199, "refunds": [], "retried_attempts": 47776, "gl_account":
+          "", "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-05881", "customer_id": "utXE7bL7Ovmj18h",
+          "billing_contact": {"zip": "lrk19wharpfael1wxhquv2wl1yltlodv", "city": "ruomwyh",
+          "email": "p9m88ds2@example.com", "phone": "", "state": "vufbi79saxjoojiu4yw6e0tmmj2ipm036tq2chiynu",
+          "county": "", "mobile": "", "country": "724xuyf4xx65jnvrp110jri64m7h56848ln2h0z0",
+          "address1": "kikgkjnlgdy443esfn12mvjnrysl45ih3pwis6eigz8yne", "address2":
+          "", "job_title": "", "last_name": "976sjpqp1pn6lu8nn4g4neo7llk25t4uaj5x",
+          "department": "", "first_name": "iu", "display_name": "jd7bikqpqp7fueuhs9zfme3hz4n5dfefxnxeptqoag1lzx"},
+          "shipping_contact": {"zip": "1zc1qshmjl4p2s7w0xw57sh3vn74zxagh", "city": "nka7e2amnyn497kn7y4d2pj4hu023czpdcyv1wvaeop4on1",
+          "email": "jezzhg88@example.com", "phone": "", "state": "l9xq6tgtdewq80tx7g9",
+          "county": "", "mobile": "", "country": "3esvpbug7t9kqn1uabn8", "address1":
+          "2p00gtxky9m3co5rafnn5yrakylzvvsv", "address2": "", "job_title": "", "last_name":
+          "hg67aazz3ebnlpqvaaiyoen46t7mb42j7u54aju66b8a", "department": "", "first_name":
+          "on2l2m16331tkfi", "display_name": "crj"}, "customer_name": "qhs0t7sbww0y8j10s68yqunckqoel",
+          "invoice_date": "2020-11-03", "due_date": "2020-11-03", "start_date": "2020-11-03",
+          "end_date": "2020-12-02", "billing_run_id": "BR-02298", "subtotal": "9216.0",
+          "invoice_tax": "74764.0", "invoice_amount": "24161.0", "paid_amount": "75443.0",
+          "balance": "93220.0", "status": "Posted", "notes": "", "invoice_pdf_url":
+          "838gjdgme01w82isslndmmniclqkzm9ooku7ls98v3feeg", "currency": "USD", "payment_terms":
+          "Due on Receipt", "created_date": "2020-11-03T08:03:10.315Z", "updated_date":
+          "2020-11-10T12:02:08.741Z", "created_by": "8vh8apa3@example.com", "updated_by":
+          "dek1y0du@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00121", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "38ri9rsc9w4wjkl2mwduwip1y9vk3auo1zktg5",
+          "product_id": "P-00001", "product_name": "dh", "plan_id": "PLN-00001", "plan_name":
+          "y0q7", "charge_id": "CHG-00001", "subscription_line_id": "SCHG-01", "charge_name":
+          "x9ww", "charge_type": "recurring", "description": "jc9qhza7zd1mtgvms8x3zh3v7hv7z8cijzapgs3k9v4",
+          "start_date": "2020-11-03", "end_date": "2020-12-02", "unit_price": "87202.0",
+          "list_price": "31272.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 50992.0, "discount": "0.0", "effective_price": "67937.0", "line_tax":
+          "57914.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [], "credits": [], "refunds": [], "custom_fields": {}, "Notes":
+          "", "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-05933", "customer_id":
+          "utXE7bL7Ovmj18h", "billing_contact": {"zip": "3dzi2ooq4ca5t4125z1w3i19d7r65hj4k70okwgx2hw",
+          "city": "2z51q1hksyqoo0zmys71swb1ce22bbcq42ltrmj2", "email": "tymfvcun@example.com",
+          "phone": "", "state": "ldzs8ildx7gkr3", "county": "", "mobile": "", "country":
+          "d9ke8950ijt0cfweg6crk5g8beylxyxlk24lo2i4", "address1": "gkc489m3vn7yu2fnm94i01bxa1fd1ii96irwmwilc",
+          "address2": "", "job_title": "", "last_name": "setm3a2lyep8sx34hg0o43ozsfr1p75za5wpub",
+          "department": "", "first_name": "w7rxnvf5u5iexbrvwjpqn7ic5kfxyjgb9", "display_name":
+          "gqdaff7flezl790450nqyrhz459y5iwwgvf8inkw5ed7ncz"}, "shipping_contact": {"zip":
+          "hl2c36w7bpwdl1qs7", "city": "fa30l8bznu5wez8ha7m", "email": "8lxuz4rc@example.com",
+          "phone": "", "state": "c7fwvmnj3lpdifjs8lym8vz5c4xo64qppr3if65kqirhm", "county":
+          "", "mobile": "", "country": "2krx7fm5u5uwpdc37jgwxa01011zhbnz8ii785dgg85n7ny6j",
+          "address1": "7npz7dxpakem06k5sa2ys5ahed2sdhfzsil5t", "address2": "", "job_title":
+          "", "last_name": "j7n9ttdjvt6k1", "department": "", "first_name": "jxluxn18na1ymxhje1rafoes6a9z0uu8k7iitfgxicj4",
+          "display_name": "vz3aod0x67fgbk6q"}, "customer_name": "6268x612yk49i", "invoice_date":
+          "2020-11-03", "due_date": "2020-11-03", "start_date": "2020-11-03", "end_date":
+          "2020-11-03", "billing_run_id": "BR-02320", "subtotal": "96958.0", "invoice_tax":
+          "99736.0", "invoice_amount": "9227.0", "paid_amount": "93534.0", "balance":
+          "46711.0", "status": "Partially paid", "notes": "", "invoice_pdf_url": "qexix96a",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-03T21:34:32.591Z",
+          "updated_date": "2020-11-10T12:02:06.046Z", "created_by": "tp2l4fva@example.com",
+          "updated_by": "ecqbih9n@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-02592", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "setukz134xttko3sw41siz4",
+          "product_id": "P-00194", "product_name": "3", "plan_id": "PLN-00111", "plan_name":
+          "veduwfp3nt2hhrghqnj71vh99f9jiyk4pd4", "charge_id": "a0f5w00000GBnKAAA1",
+          "subscription_line_id": "a0f5w00000GBnKAAA1", "charge_name": "zb2bs2uyb2y04",
+          "charge_type": "one_time", "description": "ns", "start_date": "2020-11-03",
+          "end_date": "-", "unit_price": "59387.0", "list_price": "32242.0", "list_price_base":
+          "260.0", "taxable": false, "quantity": 64311.0, "discount": "0.0", "effective_price":
+          "36379.0", "line_tax": "31638.0", "tax_lines": [], "applied_tiers": "", "custom_fields":
+          {}}, {"line_no": "2", "subscription_id": "S-02592", "customer_id": "utXE7bL7Ovmj18h",
+          "customer_name": "auwrewj9rwecbs3xmb5yk444u6ca0o2q", "product_id": "P-00194",
+          "product_name": "501l52", "plan_id": "PLN-00111", "plan_name": "fqz5i19ky6dz7s263hxc244dwh1b5cmrbbkfh48zf",
+          "charge_id": "a0f5w00000GBnKAAA1", "subscription_line_id": "a0f5w00000GBnKAAA1",
+          "charge_name": "wj2jmk7mkor1xrrf3tod", "charge_type": "one_time", "description":
+          "5hmj1kn0ilinjegcjmp18r6376nw", "start_date": "2020-11-03", "end_date": "-",
+          "unit_price": "6968.0", "list_price": "2215.0", "list_price_base": "300.0",
+          "taxable": false, "quantity": 68251.0, "discount": "0.0", "effective_price":
+          "29903.0", "line_tax": "92977.0", "tax_lines": [], "applied_tiers": "", "custom_fields":
+          {}}], "subtotals": [], "payments": [{"id": "PMT-05460", "customer_id": "utXE7bL7Ovmj18h",
+          "payment_date": "2020-11-03", "notes": "lm6h5pt0dl2jw1aagbyxotesvqmozs1nxbv94f",
+          "status": "Partially refunded", "payment_amount": "29827.0", "fee_amount":
+          "16979.0", "applied_amount": "38358.0", "unapplied_amount": "34579.0", "refunded_amount":
+          "53306.0", "payment_type": "Electronic", "payment_method": "pbhlu9vcu4z5",
+          "currency": "USD", "reference_number": "se2m4kq5vhbgwu2pcqyr0fffv9ognttp81jv",
+          "auto_apply": true, "created_by": "g5pprtad@example.com", "updated_by": "ji78vu8k@example.com",
+          "created_date": "2020-11-03T21:34:37.972Z", "updated_date": "2020-11-03T21:34:37.972Z",
+          "failed_attempt": 63479, "refunds": [{"id": "REF-00124", "refund_amount":
+          "300.00", "refund_date": "2020-11-03", "created_by": "j8ywhel2@example.com",
+          "updated_by": "wlotgxd1@example.com", "created_date": "2020-11-03", "updated_date":
+          "2020-11-03"}], "retried_attempts": 44350, "gl_account": "", "gateway_name":
+          "Stripe", "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-05884", "customer_id": "utXE7bL7Ovmj18h",
+          "billing_contact": {"zip": "5cj0q39fq27t351zt8c", "city": "w9yx2e7bstr94czn6timaxv1k1usy",
+          "email": "vsxl2kzf@example.com", "phone": "", "state": "jccekf9wjri0pnij4rz1pn5mh4ycvvwwphovl6iqqb9ng",
+          "county": "", "mobile": "", "country": "gqzqxtdkn4z", "address1": "aa4sx78bj6wfy2u1mfozcer67aiujzpglpfxdvgh7grs7ops",
+          "address2": "", "job_title": "", "last_name": "6", "department": "", "first_name":
+          "gs12lniy3qz0qrezmk17b0f", "display_name": "wjds6cwxai1bk46hh93uv7g8vg1bd"},
+          "shipping_contact": {"zip": "sdxqvqb2r5ar0t66s5lks1xskqtvs44kmr3g8ldlau6",
+          "city": "6ybet67ahro8", "email": "oik11szs@example.com", "phone": "", "state":
+          "ckjb5ebeu1397sji4v", "county": "", "mobile": "", "country": "x50zv", "address1":
+          "jshzyoixx89c4dwzsf23o53", "address2": "", "job_title": "", "last_name": "nwa9qi",
+          "department": "", "first_name": "45l68xbm9wfeq2ebgzuu5o7ejk9fft3oaks2qy947m0jvv18h",
+          "display_name": "u01oynp"}, "customer_name": "zcuewq", "invoice_date": "2020-11-03",
+          "due_date": "2020-11-03", "start_date": "2020-11-03", "end_date": "2020-12-02",
+          "billing_run_id": "BR-02298", "subtotal": "20099.0", "invoice_tax": "1219.0",
+          "invoice_amount": "4414.0", "paid_amount": "42993.0", "balance": "18882.0",
+          "status": "Posted", "notes": "", "invoice_pdf_url": "iw8b89q8l", "currency":
+          "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-03T08:03:12.824Z",
+          "updated_date": "2020-11-10T12:02:06.581Z", "created_by": "fvwj3wqi@example.com",
+          "updated_by": "hrc9clh2@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00112", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "2tfy459qlz0doa0uehhmt3quj",
+          "product_id": "P-00005", "product_name": "ofcw9i4gcgfe3hhy3bo6po20tkcybvcztkqt",
+          "plan_id": "PLN-00013", "plan_name": "l080bcvptgx81aymte5x4k5atvzkk1chx",
+          "charge_id": "CHG-00013", "subscription_line_id": "SCHG-01", "charge_name":
+          "cr038tqbx68o5", "charge_type": "recurring", "description": "w0c7y", "start_date":
+          "2020-11-03", "end_date": "2020-12-02", "unit_price": "66393.0", "list_price":
+          "38891.0", "list_price_base": "Billing Period", "taxable": false, "quantity":
+          69640.0, "discount": "0.0", "effective_price": "86181.0", "line_tax": "43034.0",
+          "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [], "credits": [], "refunds": [], "custom_fields": {}, "Notes":
+          "", "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-03743", "customer_id":
+          "utXE7bL7Ovmj18h", "billing_contact": {"id": 511054, "zip": "vl5tnk7pc", "city":
+          "t4u20krar11h7iu0a9xpv8frr9nozkyrth3ve4lfl", "email": "fjy0uq66@example.com",
+          "notes": "", "phone": "", "state": "o633pm3mogvrlp6ohv2061py578ukrfisc14bv08csbvp",
+          "county": "", "mobile": "", "country": "ttw96q4wpdtcbjkhoxfnlmzs", "address1":
+          "tah4nzqueuchvnu", "address2": "", "job_title": "", "last_name": "8xope69rzrslzof55wz2vtpoerhrcpkxpeu",
+          "company_id": 127, "contact_id": "CT-64795", "department": "", "first_name":
+          "952", "customer_id": 220659, "created_date": "2020-07-03T18:28:20.028Z",
+          "display_name": "guzti18fm49ifk540m4t4dtbgg323ebm6wy9ibhyet0j5z1p", "updated_date":
+          "2020-09-29T17:27:52.573Z", "created_by_id": 817, "custom_fields": {}, "updated_by_id": 817}, "shipping_contact": {"id": 511054,
+          "zip": "btiolobyyuqmqoo9uez128lw35lg62", "city": "v0rs5gtkzehg2mkzfxu697",
+          "email": "q6c5wd53@example.com", "notes": "", "phone": "", "state": "xwzn303ft2oes3lz5uv4r6jgk",
+          "county": "", "mobile": "", "country": "u74sbr4g9z10arhvq2vzvk6jjtvo", "address1":
+          "f1vsv9zwlk43frce73pgsrkk7btz1wn6", "address2": "", "job_title": "", "last_name":
+          "zkp0xfd4dg4gj", "company_id": 127, "contact_id": "CT-64795", "department":
+          "", "first_name": "9lr8j", "customer_id": 220659, "created_date": "2020-07-03T18:28:20.028Z",
+          "display_name": "res3jnxjfvk9csjkf6mid7p88dlfgklow80icu08bfknvr", "updated_date":
+          "2020-09-29T17:27:52.573Z", "created_by_id": 817, "custom_fields": {}, "updated_by_id": 817}, "customer_name": "sz0f35iz",
+          "invoice_date": "2020-09-30", "due_date": "2020-10-30", "start_date": "2020-09-30",
+          "end_date": "2020-10-30", "billing_run_id": "BR-01770", "subtotal": "67900.0",
+          "invoice_tax": "15763.0", "invoice_amount": "43315.0", "paid_amount": "79075.0",
+          "balance": "85448.0", "status": "Paid", "notes": "", "invoice_pdf_url": "6yfq64bghnw9o9oye4tvhaiogrg52i89hbel",
+          "currency": "USD", "payment_terms": "30", "created_date": "2020-09-30T08:03:24.748Z",
+          "updated_date": "2020-11-10T17:46:50.012Z", "created_by": "c126d904@example.com",
+          "updated_by": "88d2ruua@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00582", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "33zbcul4dq17azpoy08lsu8jjzo5p60ysfsjrh1eojy9zu9km",
+          "product_id": "P-00001", "product_name": "r3zkkrzmb00jcspkt0", "plan_id":
+          "PLN-00001", "plan_name": "54f6psbx4rdhyegiaaulu0uw0cpu06fw7zjt9h2oqfp", "charge_id":
+          "CHG-00001", "subscription_line_id": "SCHG-01", "charge_name": "3yiukq0fld9mxx",
+          "charge_type": "recurring", "description": "18a5nzrkhiua5feli8v907s3tt3jqqaj269f0fj8weux",
+          "start_date": "2020-09-30", "end_date": "2020-10-30", "unit_price": "28710.0",
+          "list_price": "6420.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 61107.0, "discount": "0.0", "effective_price": "50834.0", "line_tax":
+          "89359.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05743", "customer_id": "utXE7bL7Ovmj18h", "payment_date":
+          "2020-11-10", "notes": "", "status": "Processed", "payment_amount": "50524.0",
+          "fee_amount": "30765.0", "applied_amount": "22772.0", "unapplied_amount":
+          "69116.0", "refunded_amount": "94731.0", "payment_type": "External", "payment_method":
+          "75f0bqvg8er3b35", "currency": "USD", "reference_number": "as1zkce2vpa2mmclw77b41vjec6w9due0qdhftqxmywhebfr",
+          "auto_apply": true, "created_by": "hmk6ddsl@example.com", "updated_by": "fptwyg9e@example.com",
+          "created_date": "2020-11-10T17:46:46.686Z", "updated_date": "2020-11-10T17:46:46.686Z",
+          "failed_attempt": 48856, "refunds": [], "retried_attempts": 77030, "gl_account":
+          "", "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-06149", "customer_id": "utXE7bL7Ovmj18h",
+          "billing_contact": {"zip": "", "city": "", "email": "hkr4b9us@example.com",
+          "phone": "", "state": "", "county": "", "mobile": "", "country": "", "address1":
+          "", "address2": "", "job_title": "", "last_name": "fsna2c85bu8si5m3j6a937wj8sfo4qxqqnvc8105h2",
+          "department": "", "first_name": "giv5r605cphc5hvmtnp6du9e0hyyv0tp8", "display_name":
+          "i6p7yn6y9h3vq2no367igfopxq"}, "shipping_contact": {"zip": "", "city": "",
+          "email": "v1qcuwut@example.com", "phone": "", "state": "", "county": "", "mobile":
+          "", "country": "", "address1": "", "address2": "", "job_title": "", "last_name":
+          "sd8xa4a74ifi56kt3kd8fez3brvbqogamxo0vs", "department": "", "first_name":
+          "782963c29gqcigpjvlznx75kh3kjxl0", "display_name": "k7kqzwvvli74z0opn2ol6pcs2czqixtx5x3f4abp0k3oigq"},
+          "customer_name": "jx1b345clec1h4pi9uqk7e3gqtxuqhfx9wy0rc6l23r8kguh", "invoice_date":
+          "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10", "end_date":
+          "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "24957.0", "invoice_tax":
+          "31884.0", "invoice_amount": "25886.0", "paid_amount": "43036.0", "balance":
+          "88079.0", "status": "Paid", "notes": "", "invoice_pdf_url": "z5hgx06s", "currency":
+          "USD", "payment_terms": "0", "created_date": "2020-11-10T08:03:07.648Z", "updated_date":
+          "2020-11-10T08:19:08.801Z", "created_by": "qnxvokfx@example.com", "updated_by":
+          "0z7zx238@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-02510", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "0cmvdd308scouwk596yj708hyhito7jk1arhsh",
+          "product_id": "P-00001", "product_name": "9vg0q3v0hddra71ilfwi7acf0", "plan_id":
+          "PLN-00001", "plan_name": "a32jke6im985wsbznxrdo2jmft38y69a2xfldg1o9gs3uc4b",
+          "charge_id": "CHG-00001", "subscription_line_id": "SCHG-01", "charge_name":
+          "pxi4n1bq8jatc6e74xw", "charge_type": "recurring", "description": "ov41xn6yi3ynmwi78sk52ujxfpz14k15jcu1uz2w",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "unit_price": "92691.0",
+          "list_price": "34887.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 66314.0, "discount": "31.42857142857143", "effective_price": "23644.0",
+          "line_tax": "21963.0", "tax_lines": [], "applied_tiers": "", "custom_fields":
+          {}}, {"line_no": "2", "subscription_id": "S-00024", "customer_id": "utXE7bL7Ovmj18h",
+          "customer_name": "oe00jl2clyj200m3iomnl6ojil3uki7g2b", "product_id": "P-00122",
+          "product_name": "jd", "plan_id": "PLN-00022", "plan_name": "0a8lenb9sb9tsjy6btpfhm5qb4n",
+          "charge_id": "SCHG-01", "subscription_line_id": "SCHG-01", "charge_name":
+          "8c4z4tmh5h9wgftbbak6nv02mcfmw3op48pu0re1", "charge_type": "recurring", "description":
+          "qa921rtm9ljegno4fmpuihnyg1u", "start_date": "2020-11-28", "end_date": "2020-12-09",
+          "unit_price": "75427.0", "list_price": "12561.0", "list_price_base": "Billing
+          Period", "taxable": false, "quantity": 17734.0, "discount": "0.0", "effective_price":
+          "24443.0", "line_tax": "35540.0", "tax_lines": [], "applied_tiers": "", "custom_fields":
+          {}}], "subtotals": [], "payments": [{"id": "PMT-05694", "customer_id": "utXE7bL7Ovmj18h",
+          "payment_date": "2020-11-10", "notes": "paea41vsoe8l7e2qc9o2h9w1", "status":
+          "Processed", "payment_amount": "47976.0", "fee_amount": "97462.0", "applied_amount":
+          "87534.0", "unapplied_amount": "86274.0", "refunded_amount": "88907.0", "payment_type":
+          "Electronic", "payment_method": "2t45k49yw", "currency": "USD", "reference_number":
+          "b7l3qvl73br4f8e7a", "auto_apply": true, "created_by": "m1dgf3oy@example.com",
+          "updated_by": "cfp5qvov@example.com", "created_date": "2020-11-10T08:17:00.497Z",
+          "updated_date": "2020-11-10T08:17:00.497Z", "failed_attempt": 94727, "refunds":
+          [], "retried_attempts": 40915, "gl_account": "", "gateway_name": "Stripe",
+          "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-06155", "customer_id": "utXE7bL7Ovmj18h",
+          "billing_contact": {"zip": "", "city": "", "email": "", "phone": "", "state":
+          "", "county": "", "mobile": "", "country": "hzassk6ir7nnkyvohikvczvwja", "address1":
+          "", "address2": "", "job_title": "", "last_name": "", "department": "", "first_name":
+          "", "display_name": "q058ooc747orycxzzl7b"}, "shipping_contact": {"zip": "",
+          "city": "", "email": "", "phone": "", "state": "", "county": "", "mobile":
+          "", "country": "5wv9t2prlmycrk8httjpivkf35rc1ma3ijzoc", "address1": "", "address2":
+          "", "job_title": "", "last_name": "", "department": "", "first_name": "",
+          "display_name": "0235uioxk5rl597hrhil7raowg6wy90g31eb"}, "customer_name":
+          "0hpmulr7uijmiyct7isetc71l2ldc2owllqonw26wnu5ir11e", "invoice_date": "2020-11-10",
+          "due_date": "2020-11-10", "start_date": "2020-11-10", "end_date": "2020-12-09",
+          "billing_run_id": "BR-02363", "subtotal": "63186.0", "invoice_tax": "31128.0",
+          "invoice_amount": "72584.0", "paid_amount": "56055.0", "balance": "8290.0",
+          "status": "Paid", "notes": "", "invoice_pdf_url": "nrxq5kh2k9jjvgcv", "currency":
+          "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:13.432Z",
+          "updated_date": "2020-11-10T08:05:01.470Z", "created_by": "s9nl28mk@example.com",
+          "updated_by": "ps1t4jvw@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00206", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "84nbsn6jiacmjov4hbtkock9mqtzjpfpqsrdrlf03j1",
+          "product_id": "P-00001", "product_name": "4dnzhkgr34u", "plan_id": "PLN-00001",
+          "plan_name": "p7l1ssvkwlkx6cqza4qbbxdnzm4ttnnr8cdauot0u0", "charge_id": "CHG-00001",
+          "subscription_line_id": "SCHG-01", "charge_name": "mr86ea8sy3j8jxk", "charge_type":
+          "recurring", "description": "c9a6wn105rmire4uv68q", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "unit_price": "51934.0", "list_price": "18814.0",
+          "list_price_base": "Billing Period", "taxable": false, "quantity": 29965.0,
+          "discount": "0.0", "effective_price": "37513.0", "line_tax": "70409.0", "tax_lines":
+          [], "applied_tiers": "", "custom_fields": {}}], "subtotals": [], "payments":
+          [{"id": "PMT-05700", "customer_id": "utXE7bL7Ovmj18h", "payment_date": "2020-11-10",
+          "notes": "5r72d04qgogbsa4pcswr2g9vesbpz", "status": "Processed", "payment_amount":
+          "20720.0", "fee_amount": "10769.0", "applied_amount": "59160.0", "unapplied_amount":
+          "15862.0", "refunded_amount": "72298.0", "payment_type": "Electronic", "payment_method":
+          "lmr1gkq4tuhp58sgemumptvocmuq12mr4q6iy36oy7wjk8", "currency": "USD", "reference_number":
+          "dyunyar4qjwnyfv5lvnk2ioqkkw82ovki8u", "auto_apply": true, "created_by": "f08futb9@example.com",
+          "updated_by": "venqo9la@example.com", "created_date": "2020-11-10T08:17:08.221Z",
+          "updated_date": "2020-11-10T08:17:08.221Z", "failed_attempt": 37162, "refunds":
+          [], "retried_attempts": 8988, "gl_account": "", "gateway_name": "Stripe",
+          "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-06157", "customer_id": "utXE7bL7Ovmj18h",
+          "billing_contact": {"zip": "d1dsb10dfs907jet0r7z5woyfkojsvabya8e", "city":
+          "wxxgxt5xvi", "email": "cewis70h@example.com", "phone": "", "state": "gb",
+          "county": "", "mobile": "", "country": "iv3scw31a37jcpespra4fjye79j", "address1":
+          "r24c8q4enm67z7opvqncj5iamqhbkv84w", "address2": "", "job_title": "", "last_name":
+          "iphyfqk24o69qhg1jzwk3svef9f87ph0xean08umnm4ay", "department": "", "first_name":
+          "n1manbt", "display_name": "5atmknzfhntrtsvnyqm"}, "shipping_contact": {"zip":
+          "a3fi50x6r6n644793wmjvig", "city": "qp6fm65ri", "email": "3x1dpqig@example.com",
+          "phone": "", "state": "qt6f9cyd5yl", "county": "", "mobile": "", "country":
+          "fg4up6w6qq1piyd3cvorsye5g4oazymwyvih6", "address1": "5a4w1unr82nmmxig7sqp9armv2v2ijtho14r9qpp1",
+          "address2": "", "job_title": "", "last_name": "mmb3l", "department": "", "first_name":
+          "zdi5hls70bxxsor1duf20hbtkck1he894rj4esr3392qh9t5v", "display_name": "lq09yf"},
+          "customer_name": "x7037akexp1e0", "invoice_date": "2020-11-10", "due_date":
+          "2020-11-10", "start_date": "2020-11-10", "end_date": "2020-12-09", "billing_run_id":
+          "BR-02363", "subtotal": "25804.0", "invoice_tax": "51186.0", "invoice_amount":
+          "16638.0", "paid_amount": "33245.0", "balance": "76451.0", "status": "Paid",
+          "notes": "", "invoice_pdf_url": "9mh4ckgfzd5tvdrgz33mf6hoyffdt2gd", "currency":
+          "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:15.193Z",
+          "updated_date": "2020-11-10T08:17:14.721Z", "created_by": "d2csokd0@example.com",
+          "updated_by": "3fbbygtw@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00209", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "wo8k5zx7jwprzls5hw5ces87q4yy8eskr4lm",
+          "product_id": "P-00001", "product_name": "r6py7e3mf4f4znik", "plan_id": "PLN-00001",
+          "plan_name": "ogz71f2lf8v37mr3ygahopjabgowppxkrdqzpc04", "charge_id": "CHG-00001",
+          "subscription_line_id": "SCHG-01", "charge_name": "fmbyt3fo4gl6o82p1rooua9e7a",
+          "charge_type": "recurring", "description": "8zhddvgzedl8", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "unit_price": "72659.0", "list_price": "46165.0",
+          "list_price_base": "Billing Period", "taxable": false, "quantity": 51947.0,
+          "discount": "0.0", "effective_price": "84394.0", "line_tax": "46669.0", "tax_lines":
+          [], "applied_tiers": "", "custom_fields": {}}], "subtotals": [], "payments":
+          [{"id": "PMT-05703", "customer_id": "utXE7bL7Ovmj18h", "payment_date": "2020-11-10",
+          "notes": "76l9jk0d", "status": "Processed", "payment_amount": "96906.0", "fee_amount":
+          "18894.0", "applied_amount": "22013.0", "unapplied_amount": "24854.0", "refunded_amount":
+          "13684.0", "payment_type": "Electronic", "payment_method": "8juiy3ld9tf685vxwbvql07j0bi",
+          "currency": "USD", "reference_number": "33tjou7crjdu2yolrbvtdb663h3rykqw1",
+          "auto_apply": true, "created_by": "3xs1uirv@example.com", "updated_by": "ds5p1w09@example.com",
+          "created_date": "2020-11-10T08:17:10.828Z", "updated_date": "2020-11-10T08:17:10.828Z",
+          "failed_attempt": 58918, "refunds": [], "retried_attempts": 79038, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06158",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "", "city": "", "email":
+          "", "phone": "", "state": "", "county": "", "mobile": "", "country": "5mw6w",
+          "address1": "", "address2": "", "job_title": "", "last_name": "", "department":
+          "", "first_name": "", "display_name": "1fykdv511mdlhffe77xvyw1vwk2gn11pv7kyfnglpyd09oc3nz"},
+          "shipping_contact": {"zip": "", "city": "", "email": "", "phone": "", "state":
+          "", "county": "", "mobile": "", "country": "qgmgmbt9fe2x", "address1": "",
+          "address2": "", "job_title": "", "last_name": "", "department": "", "first_name":
+          "", "display_name": "vniuv"}, "customer_name": "394p1u13nl5e0hll4xuh6gmk3",
+          "invoice_date": "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "80771.0",
+          "invoice_tax": "72545.0", "invoice_amount": "72546.0", "paid_amount": "23141.0",
+          "balance": "60593.0", "status": "Paid", "notes": "", "invoice_pdf_url": "vx60kj6icpdh08ndbr5lypf6lh3c0b6pkrw",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:16.205Z",
+          "updated_date": "2020-11-10T08:04:09.766Z", "created_by": "td07084y@example.com",
+          "updated_by": "o8qf8ash@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00210", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "fe4bi7wdrrlunhcc15y0hu85d3yjl8d038lm9bk8yjnr",
+          "product_id": "P-00122", "product_name": "ydc5nf2n0", "plan_id": "PLN-00022",
+          "plan_name": "lie5hkl0b0fy14k7cypahvsd5bspz8x07wahuwcpggv", "charge_id": "CHG-00022",
+          "subscription_line_id": "SCHG-01", "charge_name": "u3s09acjfomlaltyjhivrwnti627mnbh4qeftd8qseq7d3thqt",
+          "charge_type": "recurring", "description": "wwqxac7zeeupkhkcmdgg5seun", "start_date":
+          "2020-11-10", "end_date": "2020-12-09", "unit_price": "80036.0", "list_price":
+          "43521.0", "list_price_base": "Billing Period", "taxable": false, "quantity":
+          80161.0, "discount": "0.0", "effective_price": "99908.0", "line_tax": "81462.0",
+          "tax_lines": [], "applied_tiers": "", "custom_fields": {}}, {"line_no": "2",
+          "subscription_id": "S-00210", "customer_id": "utXE7bL7Ovmj18h", "customer_name":
+          "81y7px7kfck34p0ioerwfqoz8ii4bfgz5o85e7e9i1n5sw", "product_id": "P-00005",
+          "product_name": "92sz1qkcy1vr5d3tk79mmcglw880e07pzpgr72qkj", "plan_id": "PLN-00013",
+          "plan_name": "8a5muyrpmk", "charge_id": "CHG-00013", "subscription_line_id":
+          "SCHG-03", "charge_name": "jgfirbnbf0zqd8xlrdvw3j2hw71hicb0b03qwn", "charge_type":
+          "recurring", "description": "dl39k7xqk5k8u3q5q5lmn71", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "unit_price": "99937.0", "list_price": "88025.0",
+          "list_price_base": "Billing Period", "taxable": false, "quantity": 16160.0,
+          "discount": "0.0", "effective_price": "2470.0", "line_tax": "3219.0", "tax_lines":
+          [], "applied_tiers": "", "custom_fields": {}}], "subtotals": [], "payments":
+          [{"id": "PMT-05702", "customer_id": "utXE7bL7Ovmj18h", "payment_date": "2020-11-10",
+          "notes": "f16sx08xiqcr3d99f8mrr4k5zk74f", "status": "Processed", "payment_amount":
+          "3623.0", "fee_amount": "12945.0", "applied_amount": "2410.0", "unapplied_amount":
+          "46066.0", "refunded_amount": "33448.0", "payment_type": "Electronic", "payment_method":
+          "83w", "currency": "USD", "reference_number": "370m0p75aj56amqdmrcx8yxa2xqwcppaembzip6o0z",
+          "auto_apply": true, "created_by": "ui84gl64@example.com", "updated_by": "wf11zipo@example.com",
+          "created_date": "2020-11-10T08:17:10.490Z", "updated_date": "2020-11-10T08:17:10.490Z",
+          "failed_attempt": 51700, "refunds": [], "retried_attempts": 87422, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06159",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "labeq0vwixsp8f4qgvjax",
+          "city": "z23k2bgndauzfqoxcxqduvki", "email": "bv1xmrmd@example.com", "phone":
+          "", "state": "5w4mjd7pvo66fkjwq8g9deuisr26fi9usm7", "county": "", "mobile":
+          "", "country": "3ed2ht1lxhm5o03yc800gqyg6gjmozf4vay2l3iv0buc3", "address1":
+          "4oh6txjd664o3h388rxrwpktzyyaw5z1d6vannhmh1k5eykx1", "address2": "", "job_title":
+          "", "last_name": "jwqixuf3m6imp0qds79uyp3cauvjoa", "department": "", "first_name":
+          "i2ygwtqchy3u8hczaq5wq9z83k7x3ecwu2sw88sakpsf4", "display_name": "rsk8ds7cwc5iu4xs3k2s98ekdo196olq1s5zz6aar28fnyb"},
+          "shipping_contact": {"zip": "km2k0r6iegg3pkqj3c37d1sm3e0fnieqlkaa", "city":
+          "x52zu32z6e2o08nupo5w96ilbivvjbnk", "email": "fbtm9fp8@example.com", "phone":
+          "", "state": "ta", "county": "", "mobile": "", "country": "q5jd8njbdhy67qwz2k3hovug632mi9h0hhz1kgqsvuluj0ek16",
+          "address1": "ruv8b8n6s5n66gzlfht681mtq6oqsmq", "address2": "", "job_title":
+          "", "last_name": "5t", "department": "", "first_name": "kfowvhftht7xvo07gq2zsyin3k59ip3oaq34s8h89v2l0dpy3m",
+          "display_name": "ifihuwj06gqvdbzt1"}, "customer_name": "pdz5xnyej161ra2c10q8m63q5uri0qs5m2by74yu443zimcrr2",
+          "invoice_date": "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "67401.0",
+          "invoice_tax": "30673.0", "invoice_amount": "86421.0", "paid_amount": "96678.0",
+          "balance": "80648.0", "status": "Paid", "notes": "", "invoice_pdf_url": "y9fcyvzgd0i4nitrql81ipt9c2cixnknh7l36x6fxaacxfqx5v",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:17.325Z",
+          "updated_date": "2020-11-10T08:17:18.801Z", "created_by": "nkdr297u@example.com",
+          "updated_by": "bfa5a01k@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00416", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "i3h7", "product_id":
+          "P-00005", "product_name": "t0v9qzu5o3fhnlppnfo", "plan_id": "PLN-00013",
+          "plan_name": "52uto1yby1fm4b4we43az1", "charge_id": "CHG-00013", "subscription_line_id":
+          "SCHG-01", "charge_name": "mblorv67qwj1gmywrn9ln9sn5jme4azczrbzsr5yd2", "charge_type":
+          "recurring", "description": "7wq948mck4cnf", "start_date": "2020-11-10", "end_date":
+          "2020-12-09", "unit_price": "30744.0", "list_price": "72750.0", "list_price_base":
+          "Billing Period", "taxable": false, "quantity": 75838.0, "discount": "0.0",
+          "effective_price": "17163.0", "line_tax": "2007.0", "tax_lines": [], "applied_tiers":
+          "", "custom_fields": {}}], "subtotals": [], "payments": [{"id": "PMT-05704",
+          "customer_id": "utXE7bL7Ovmj18h", "payment_date": "2020-11-10", "notes": "dze0vbrdlgogmg",
+          "status": "Processed", "payment_amount": "68175.0", "fee_amount": "88672.0",
+          "applied_amount": "7724.0", "unapplied_amount": "53250.0", "refunded_amount":
+          "85938.0", "payment_type": "Electronic", "payment_method": "0d9fz6shhexh3klfyaldp9se24jbjyhnxlmqrrvt0lxigh",
+          "currency": "USD", "reference_number": "gmrpzf37k30vlqtxe0716ocs1qnt4tlmgyw25n",
+          "auto_apply": true, "created_by": "jfcmu54c@example.com", "updated_by": "4fqsa7ow@example.com",
+          "created_date": "2020-11-10T08:17:15.465Z", "updated_date": "2020-11-10T08:17:15.465Z",
+          "failed_attempt": 49578, "refunds": [], "retried_attempts": 20185, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06160",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "", "city": "", "email":
+          "", "phone": "", "state": "", "county": "", "mobile": "", "country": "etpt3sfv1om7dhewoff",
+          "address1": "", "address2": "", "job_title": "", "last_name": "", "department":
+          "", "first_name": "", "display_name": "msnf3aloy74mecrr8i2inl"}, "shipping_contact":
+          {"zip": "", "city": "", "email": "", "phone": "", "state": "", "county": "",
+          "mobile": "", "country": "oshiowqdre6ehfdl", "address1": "", "address2": "",
+          "job_title": "", "last_name": "", "department": "", "first_name": "", "display_name":
+          "fnmr6u"}, "customer_name": "hxtlmt56vt1nl2q30k7m3yx414t0p9erc8yyljx1xfp7efpke",
+          "invoice_date": "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "30605.0",
+          "invoice_tax": "29162.0", "invoice_amount": "80771.0", "paid_amount": "17169.0",
+          "balance": "43633.0", "status": "Paid", "notes": "", "invoice_pdf_url": "rzen0ni",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:18.159Z",
+          "updated_date": "2020-11-10T08:04:58.060Z", "created_by": "tnm5xknv@example.com",
+          "updated_by": "6vqvkqvq@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00631", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "fx1wtxac851oan5fthng93",
+          "product_id": "P-00005", "product_name": "9", "plan_id": "PLN-00013", "plan_name":
+          "2ucqt", "charge_id": "CHG-00013", "subscription_line_id": "SCHG-01", "charge_name":
+          "h9v8in3wktx7j", "charge_type": "recurring", "description": "gcse54ewcrsg32gl7ut2rerzh0o1yqvr",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "unit_price": "85998.0",
+          "list_price": "76753.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 80603.0, "discount": "0.0", "effective_price": "14766.0", "line_tax":
+          "55336.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05705", "customer_id": "utXE7bL7Ovmj18h", "payment_date":
+          "2020-11-10", "notes": "ptfbg", "status": "Processed", "payment_amount": "10894.0",
+          "fee_amount": "60433.0", "applied_amount": "67909.0", "unapplied_amount":
+          "58773.0", "refunded_amount": "99513.0", "payment_type": "Electronic", "payment_method":
+          "34ln6hqy8wmgoa9gsuesu7b68jhkt6b2dm", "currency": "USD", "reference_number":
+          "giasddy5a4pcdci3n8ei2v4epqovk17acu8hndygrij", "auto_apply": true, "created_by":
+          "ekdzwhq9@example.com", "updated_by": "lxht2p0w@example.com", "created_date":
+          "2020-11-10T08:17:15.642Z", "updated_date": "2020-11-10T08:17:15.642Z", "failed_attempt":
+          51302, "refunds": [], "retried_attempts": 65524, "gl_account": "", "gateway_name":
+          "Stripe", "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-06161", "customer_id": "utXE7bL7Ovmj18h",
+          "billing_contact": {"zip": "", "city": "", "email": "", "phone": "", "state":
+          "", "county": "", "mobile": "", "country": "uovusy7djnu796bxqx7hp9upyhgemcu5ra0s88j",
+          "address1": "", "address2": "", "job_title": "", "last_name": "", "department":
+          "", "first_name": "", "display_name": "hq3jfx"}, "shipping_contact": {"zip":
+          "", "city": "", "email": "", "phone": "", "state": "", "county": "", "mobile":
+          "", "country": "q", "address1": "", "address2": "", "job_title": "", "last_name":
+          "", "department": "", "first_name": "", "display_name": "lkzd4whml5twpwj7b8hv"},
+          "customer_name": "ynrlckgk4uny6qvrxvwfbvl0n7divs44kn6hlkumb", "invoice_date":
+          "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10", "end_date":
+          "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "65126.0", "invoice_tax":
+          "51695.0", "invoice_amount": "15471.0", "paid_amount": "58771.0", "balance":
+          "7770.0", "status": "Paid", "notes": "", "invoice_pdf_url": "lkwqixo9fvj4ay24xv6lx0t45jdpr55l9ikpcn7",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:19.154Z",
+          "updated_date": "2020-11-10T08:04:56.831Z", "created_by": "ylu2l0gs@example.com",
+          "updated_by": "0z4qz3sd@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00632", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "k141zln5c1b37p3qimvcpg4vt",
+          "product_id": "P-00005", "product_name": "ponaq31g", "plan_id": "PLN-00013",
+          "plan_name": "2r9un2mjzbdrl", "charge_id": "CHG-00013", "subscription_line_id":
+          "SCHG-01", "charge_name": "t2pn3mgefw4gt2lwzv0nhk8gvnnadffegy53aw8tms341iwnl",
+          "charge_type": "recurring", "description": "tf5nc0d70i1yxeym85o5tmu7xgs01n28xi66w8jd7p8",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "unit_price": "45237.0",
+          "list_price": "4751.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 40413.0, "discount": "0.0", "effective_price": "92916.0", "line_tax":
+          "57056.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05706", "customer_id": "utXE7bL7Ovmj18h", "payment_date":
+          "2020-11-10", "notes": "3940ruwehnxu8ukkz5hhp2p5ooedizyena7yxulbb2n73dv",
+          "status": "Processed", "payment_amount": "69921.0", "fee_amount": "7303.0",
+          "applied_amount": "26675.0", "unapplied_amount": "14675.0", "refunded_amount":
+          "40015.0", "payment_type": "Electronic", "payment_method": "n", "currency":
+          "USD", "reference_number": "btq74aupqgtbg42wgoxgzyhv9usk7o9rkga4fnj0ynomzp",
+          "auto_apply": true, "created_by": "l1uqnpxx@example.com", "updated_by": "bena13m3@example.com",
+          "created_date": "2020-11-10T08:17:16.779Z", "updated_date": "2020-11-10T08:17:16.779Z",
+          "failed_attempt": 14384, "refunds": [], "retried_attempts": 93909, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06162",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "iu6becm2xblhw5z1mg5arsz1i7pdcccwfzu",
+          "city": "ad3", "email": "3rrpjgpx@example.com", "phone": "", "state": "q9282j0t4zq8hvx9jm9rwsr6",
+          "county": "", "mobile": "", "country": "sgjml5umm3hvtrhghf85ni66vm4zkp5xjqek5tddkb",
+          "address1": "s2gwjjy95p9jg621vaad2g8htipzjjm1sod5csy57jbsarhc", "address2":
+          "", "job_title": "", "last_name": "z4bdfb0j5in55n02entc", "department": "",
+          "first_name": "9c975ssa0qluzq4x6klqay4q7tb43vpu16f", "display_name": "vbks506zuk4jnojb4zug9bdocj69qa3"},
+          "shipping_contact": {"zip": "o65yssj9no", "city": "idbgr15d4d", "email": "72bobyyh@example.com",
+          "phone": "", "state": "uo02v2oavif33d981pgft2ru3qzharvr2sw7nxo36zp1vf", "county":
+          "", "mobile": "", "country": "cho2koj0jl1qdezh0oywxosrv5rluv3zowijn95ksq0ehdt5l",
+          "address1": "xcwk7njii7wp6t9ru6g8", "address2": "", "job_title": "", "last_name":
+          "09ekc1fz9pxw2481dvw9u6b40ctlort3s2sj", "department": "", "first_name": "kvozjeylt1s03",
+          "display_name": "ty4q3rdtdfbwdhiu43lrrkiniyu4jqgcd99b9l82"}, "customer_name":
+          "i23kv92kjdxsx4", "invoice_date": "2020-11-10", "due_date": "2020-11-10",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "billing_run_id": "BR-02363",
+          "subtotal": "71923.0", "invoice_tax": "80886.0", "invoice_amount": "68551.0",
+          "paid_amount": "76625.0", "balance": "20284.0", "status": "Paid", "notes":
+          "", "invoice_pdf_url": "vzueze7hvmnvxq7r7tynxlt17oxc5u9977u8ap8hm5u", "currency":
+          "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:20.058Z",
+          "updated_date": "2020-11-10T08:17:21.700Z", "created_by": "njmgzhu5@example.com",
+          "updated_by": "l2lt8nci@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00633", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "20uaa1n5qjl9pxihyi",
+          "product_id": "P-00005", "product_name": "q7qfzve2wa0mo6dwpwo0hkze1hfquzitbf5huw0mnj",
+          "plan_id": "PLN-00013", "plan_name": "58ptgmaibbnzdr40fsg80m5ejuhg8s7hxogu",
+          "charge_id": "CHG-00013", "subscription_line_id": "SCHG-01", "charge_name":
+          "5c2fg0859zcmd6umo3tz4ehbjx0kyvunv4gvj3gcd43yikwjl", "charge_type": "recurring",
+          "description": "1dtk5xlxb2fsv7qf94tfvm5utn4qi1", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "unit_price": "24076.0", "list_price": "62824.0",
+          "list_price_base": "Billing Period", "taxable": false, "quantity": 71965.0,
+          "discount": "0.0", "effective_price": "89740.0", "line_tax": "65715.0", "tax_lines":
+          [], "applied_tiers": "", "custom_fields": {}}], "subtotals": [], "payments":
+          [{"id": "PMT-05707", "customer_id": "utXE7bL7Ovmj18h", "payment_date": "2020-11-10",
+          "notes": "hnzjwq8q9ktfhrc2ats", "status": "Processed", "payment_amount": "98148.0",
+          "fee_amount": "28884.0", "applied_amount": "40219.0", "unapplied_amount":
+          "71744.0", "refunded_amount": "47145.0", "payment_type": "Electronic", "payment_method":
+          "dy1ndj2v600", "currency": "USD", "reference_number": "r891nul2an4jodgmhppxdk1vvv3ufrvokjv0dk8bquv3k4mmqk",
+          "auto_apply": true, "created_by": "2n9jebqk@example.com", "updated_by": "03s8uukg@example.com",
+          "created_date": "2020-11-10T08:17:16.734Z", "updated_date": "2020-11-10T08:17:16.734Z",
+          "failed_attempt": 27789, "refunds": [], "retried_attempts": 87188, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06163",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "0t6ubcuv02w4d56lc1qqug1h6u7coylwmz4cx",
+          "city": "0nnef2nt3gyyg5mxmyzk33a6ag17absokxe3szf79h4", "email": "bvspca6f@example.com",
+          "phone": "", "state": "qo", "county": "", "mobile": "", "country": "32gu2cbqd679a1roaoiduyqow8kz1fnhx3ctz77",
+          "address1": "kqy0nqax6dfkj4iuktuxelrrn8ee00coa6aa3cbtg3can3s8", "address2":
+          "", "job_title": "", "last_name": "xbpap", "department": "", "first_name":
+          "d3vun89c63zrfq5rrb", "display_name": "ge8k7yqjnb0"}, "shipping_contact":
+          {"zip": "jts2bh90lt6qzahj09o48g4706ude90rxfo7shzw92eosh2ty", "city": "fc2hnchvnji5shcy1ho6ixvrr",
+          "email": "ol77kvwk@example.com", "phone": "", "state": "50fi7cujvdbxo7uoezmhb5x5popf5i6hx0o",
+          "county": "", "mobile": "", "country": "n1pcgxkkw2hjl9s9oz5d6el91fdia3o4rijuq",
+          "address1": "5aev5oofyf0s57ikc7d8kj8epeyqq43qp", "address2": "", "job_title":
+          "", "last_name": "63fl4l7dbmj0gw67zh26l77j0nncjt58", "department": "", "first_name":
+          "8vshyf5ed6atzpr", "display_name": "lbwcuzh63d9tilvcqgm33awq"}, "customer_name":
+          "lw53e35qfpk4", "invoice_date": "2020-11-10", "due_date": "2020-11-10", "start_date":
+          "2020-11-10", "end_date": "2020-12-09", "billing_run_id": "BR-02363", "subtotal":
+          "6518.0", "invoice_tax": "10660.0", "invoice_amount": "66827.0", "paid_amount":
+          "44151.0", "balance": "42168.0", "status": "Paid", "notes": "", "invoice_pdf_url":
+          "bqnd6m4ihy5ktpqsu8c5", "currency": "USD", "payment_terms": "Due on Receipt",
+          "created_date": "2020-11-10T08:03:20.867Z", "updated_date": "2020-11-10T08:17:22.286Z",
+          "created_by": "h3zo7doy@example.com", "updated_by": "ertr6ogr@example.com",
+          "line_items": [{"line_no": "1", "subscription_id": "S-00634", "customer_id":
+          "utXE7bL7Ovmj18h", "customer_name": "6oele4pat1ave84dv9z6hjvpgpspcr", "product_id":
+          "P-00005", "product_name": "fnm", "plan_id": "PLN-00013", "plan_name": "0b",
+          "charge_id": "CHG-00013", "subscription_line_id": "SCHG-01", "charge_name":
+          "qcw9xfvez", "charge_type": "recurring", "description": "el4f4u3f5f4qbwv6wkk04y9seqk773fma",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "unit_price": "36823.0",
+          "list_price": "35614.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 22341.0, "discount": "0.0", "effective_price": "36605.0", "line_tax":
+          "48694.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05708", "customer_id": "utXE7bL7Ovmj18h", "payment_date":
+          "2020-11-10", "notes": "n7mkwmzx2hy27qfz6m1qultp0dr", "status": "Processed",
+          "payment_amount": "38643.0", "fee_amount": "3534.0", "applied_amount": "49856.0",
+          "unapplied_amount": "25535.0", "refunded_amount": "51129.0", "payment_type":
+          "Electronic", "payment_method": "a3gyoe296869409g", "currency": "USD", "reference_number":
+          "0u0p390nl2jszgn29tnp9bb4w0jylqrue6x0k9m562u2jc5", "auto_apply": true, "created_by":
+          "5yfxbeit@example.com", "updated_by": "ykrk0bsa@example.com", "created_date":
+          "2020-11-10T08:17:18.981Z", "updated_date": "2020-11-10T08:17:18.981Z", "failed_attempt":
+          3177, "refunds": [], "retried_attempts": 47672, "gl_account": "", "gateway_name":
+          "Stripe", "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-06154", "customer_id": "utXE7bL7Ovmj18h",
+          "billing_contact": {"zip": "", "city": "", "email": "5kyd4yw5@example.com",
+          "phone": "", "state": "", "county": "", "mobile": "", "country": "", "address1":
+          "", "address2": "", "job_title": "", "last_name": "ze", "department": "",
+          "first_name": "ghnaz5tdgm", "display_name": "098ckly46n183jh75lapaxwcgqtfpenjtv6k644x5b9lfg421"},
+          "shipping_contact": {"zip": "", "city": "", "email": "dong6ewg@example.com",
+          "phone": "", "state": "", "county": "", "mobile": "", "country": "", "address1":
+          "", "address2": "", "job_title": "", "last_name": "xhewwity9be26769h", "department":
+          "", "first_name": "itylpk6yl", "display_name": "qt7yc83hfum372t01wiry6hsbcc"},
+          "customer_name": "kdplv8d1ilzv49gykrrqo", "invoice_date": "2020-11-10", "due_date":
+          "2020-11-10", "start_date": "2020-11-10", "end_date": "2020-12-09", "billing_run_id":
+          "BR-02363", "subtotal": "4702.0", "invoice_tax": "96509.0", "invoice_amount":
+          "99843.0", "paid_amount": "38229.0", "balance": "35787.0", "status": "Paid",
+          "notes": "", "invoice_pdf_url": "wyghtp252r2orkbh62f3i0qwf0e", "currency":
+          "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:12.502Z",
+          "updated_date": "2020-11-10T08:17:11.631Z", "created_by": "irpjb76z@example.com",
+          "updated_by": "n7qy9vsb@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00205", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "t8veutxq59ykg9",
+          "product_id": "P-00005", "product_name": "3np52qpnixtsxndk0rju0xhz99nl27fl1lh0d8gdxr7a8",
+          "plan_id": "PLN-00013", "plan_name": "ai", "charge_id": "CHG-00013", "subscription_line_id":
+          "SCHG-01", "charge_name": "mnklvba8znd0412evvemtr8pjoww65chjwvd3a", "charge_type":
+          "recurring", "description": "08hjz6m6k2o", "start_date": "2020-11-10", "end_date":
+          "2020-12-09", "unit_price": "14230.0", "list_price": "78642.0", "list_price_base":
+          "Billing Period", "taxable": false, "quantity": 8151.0, "discount": "0.0",
+          "effective_price": "402.0", "line_tax": "4771.0", "tax_lines": [], "applied_tiers":
+          "", "custom_fields": {}}], "subtotals": [], "payments": [{"id": "PMT-05699",
+          "customer_id": "utXE7bL7Ovmj18h", "payment_date": "2020-11-10", "notes": "tg911ixo3ijaadiss9suc7dcyk1ppce",
+          "status": "Processed", "payment_amount": "96895.0", "fee_amount": "98289.0",
+          "applied_amount": "7125.0", "unapplied_amount": "59316.0", "refunded_amount":
+          "67825.0", "payment_type": "Electronic", "payment_method": "dex3e", "currency":
+          "USD", "reference_number": "og6i5gsf2f66lse2e0g2z166f", "auto_apply": true,
+          "created_by": "3l8c8jjt@example.com", "updated_by": "s9nxbs88@example.com",
+          "created_date": "2020-11-10T08:17:08.020Z", "updated_date": "2020-11-10T08:17:08.020Z",
+          "failed_attempt": 6873, "refunds": [], "retried_attempts": 98786, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06153",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "", "city": "", "email":
+          "", "phone": "", "state": "", "county": "", "mobile": "", "country": "rx2jhm16660r0cd0fhdwji39akhi236oc",
+          "address1": "", "address2": "", "job_title": "", "last_name": "", "department":
+          "", "first_name": "", "display_name": "nm8lj7awrvgufm3361jl5hqdqrr3ohsqlo632bud4"},
+          "shipping_contact": {"zip": "", "city": "", "email": "", "phone": "", "state":
+          "", "county": "", "mobile": "", "country": "lzucyc5lh2y", "address1": "",
+          "address2": "", "job_title": "", "last_name": "", "department": "", "first_name":
+          "", "display_name": "2k36yapbvynbptnhzuk4g4q20"}, "customer_name": "w8m0kxu",
+          "invoice_date": "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "53190.0",
+          "invoice_tax": "62913.0", "invoice_amount": "63444.0", "paid_amount": "32276.0",
+          "balance": "74130.0", "status": "Paid", "notes": "", "invoice_pdf_url": "ftvkehx0jmn",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:11.544Z",
+          "updated_date": "2020-11-10T08:04:30.644Z", "created_by": "a7fqhqe5@example.com",
+          "updated_by": "w3ro9l18@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00204", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "7hvv7ic4fk93onboju5r",
+          "product_id": "P-00001", "product_name": "rc64lysah", "plan_id": "PLN-00001",
+          "plan_name": "mx8iv04v0b8h3nd2rhth7o", "charge_id": "CHG-00001", "subscription_line_id":
+          "SCHG-01", "charge_name": "mphpqj4ntsjriznnq176wbhihqftcxv7b7hexjzoh7f554rn6",
+          "charge_type": "recurring", "description": "432fxbl5e6u", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "unit_price": "38930.0", "list_price": "80983.0",
+          "list_price_base": "Billing Period", "taxable": false, "quantity": 74489.0,
+          "discount": "0.0", "effective_price": "14511.0", "line_tax": "88463.0", "tax_lines":
+          [], "applied_tiers": "", "custom_fields": {}}], "subtotals": [], "payments":
+          [{"id": "PMT-05698", "customer_id": "utXE7bL7Ovmj18h", "payment_date": "2020-11-10",
+          "notes": "3zb7f3196t58dwt6zgqz86wm41r", "status": "Processed", "payment_amount":
+          "4596.0", "fee_amount": "61280.0", "applied_amount": "67965.0", "unapplied_amount":
+          "29163.0", "refunded_amount": "2303.0", "payment_type": "Electronic", "payment_method":
+          "sohsamfaog3tr1fev4mxyz9jr58puhgr8gt427qnv1c", "currency": "USD", "reference_number":
+          "s9cjoewm4p7plg1", "auto_apply": true, "created_by": "h9gflfpi@example.com",
+          "updated_by": "efv0hbir@example.com", "created_date": "2020-11-10T08:17:01.717Z",
+          "updated_date": "2020-11-10T08:17:01.717Z", "failed_attempt": 37550, "refunds":
+          [], "retried_attempts": 57131, "gl_account": "", "gateway_name": "Stripe",
+          "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-06156", "customer_id": "utXE7bL7Ovmj18h",
+          "billing_contact": {"zip": "axnkpt050k26fi9ulzlrucapoxgoc9yvs45wljf1", "city":
+          "umz1i4pc9do1lnm2w6j69fk0f5pz7qyhzujg1", "email": "ur996pbe@example.com",
+          "phone": "", "state": "73g5om9", "county": "", "mobile": "", "country": "5neua57hng6vv0aaom7uwqo3y7h779rk8or",
+          "address1": "7zhgnolq6oeau6ns6o9tkstpfqjoqmmqwt81dit9kpcjszg", "address2":
+          "", "job_title": "", "last_name": "dsa0yg0iwd847crma9yjdwegjtglcy1y4tec25",
+          "department": "", "first_name": "lzhcspdit3krdsfiycz3e62clsu286yrsyo", "display_name":
+          "uhl1yra0"}, "shipping_contact": {"zip": "xwy1crzc", "city": "vxts0schud0gschavxacqxmp9v5c30d",
+          "email": "ww6aux1m@example.com", "phone": "", "state": "jwsb98ttjzt77clsa419zhsym2qdmxdtvfpz4hhvtwp",
+          "county": "", "mobile": "", "country": "u2salcgn0o9s4le2npxma5xreyjbhcn1rdqm5vw98",
+          "address1": "ic9n5ovxu5vr91q7h2wc8", "address2": "", "job_title": "", "last_name":
+          "3autv4g28vm2f5ja2wv06be3", "department": "", "first_name": "hubgyf3n4n7l0eg0fgucuavlidj8ck1oj",
+          "display_name": "54"}, "customer_name": "c1ku1plmlp0lxzyehu1w0zhpsb7uumrflfkuqudafd",
+          "invoice_date": "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "13691.0",
+          "invoice_tax": "20965.0", "invoice_amount": "95048.0", "paid_amount": "50548.0",
+          "balance": "17544.0", "status": "Paid", "notes": "", "invoice_pdf_url": "xbpl5liby8gcuxla28xzo47c456r40y6x3qj9uqn30p5e",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:14.378Z",
+          "updated_date": "2020-11-10T08:17:12.803Z", "created_by": "6nniisbg@example.com",
+          "updated_by": "z8lv43la@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00208", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "zygru48gqez9oca0x7ij70jjr80sumym6p7a",
+          "product_id": "P-00005", "product_name": "s5n74yklv8s29shh1tx55yjcnl", "plan_id":
+          "PLN-00013", "plan_name": "wdin6htk1arux9e8key5wy9o52h6", "charge_id": "CHG-00013",
+          "subscription_line_id": "SCHG-01", "charge_name": "crw6dq27z5it95ebgo4mrh7emsungwd6gzcg20xwha76q8tn6f",
+          "charge_type": "recurring", "description": "p0cfx90", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "unit_price": "76184.0", "list_price": "87668.0",
+          "list_price_base": "Billing Period", "taxable": false, "quantity": 2500.0,
+          "discount": "0.0", "effective_price": "7717.0", "line_tax": "62677.0", "tax_lines":
+          [], "applied_tiers": "", "custom_fields": {}}], "subtotals": [], "payments":
+          [{"id": "PMT-05701", "customer_id": "utXE7bL7Ovmj18h", "payment_date": "2020-11-10",
+          "notes": "wfw", "status": "Processed", "payment_amount": "44720.0", "fee_amount":
+          "61723.0", "applied_amount": "36090.0", "unapplied_amount": "89234.0", "refunded_amount":
+          "76465.0", "payment_type": "Electronic", "payment_method": "y5gzuhwj3brxeu3mgf7164m2amj2h538e",
+          "currency": "USD", "reference_number": "wf4w0c2cfe64t4cnhwrj6inn26a0nex98iufvthcjfcf4",
+          "auto_apply": true, "created_by": "u9uuh527@example.com", "updated_by": "18hu446f@example.com",
+          "created_date": "2020-11-10T08:17:08.770Z", "updated_date": "2020-11-10T08:17:08.770Z",
+          "failed_attempt": 41583, "refunds": [], "retried_attempts": 79424, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06151",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "", "city": "", "email":
+          "", "phone": "", "state": "", "county": "", "mobile": "", "country": "81hwt69vh6adrnr4xtju626hud1gi",
+          "address1": "", "address2": "", "job_title": "", "last_name": "", "department":
+          "", "first_name": "", "display_name": "oat7zer2ow7am0gjfy4vi5ud25vads3r1no8onnwusaqq3em"},
+          "shipping_contact": {"zip": "", "city": "", "email": "", "phone": "", "state":
+          "", "county": "", "mobile": "", "country": "7j7b0hg9fl", "address1": "", "address2":
+          "", "job_title": "", "last_name": "", "department": "", "first_name": "",
+          "display_name": "u"}, "customer_name": "r", "invoice_date": "2020-11-10",
+          "due_date": "2020-11-10", "start_date": "2020-11-10", "end_date": "2020-12-09",
+          "billing_run_id": "BR-02363", "subtotal": "15852.0", "invoice_tax": "53824.0",
+          "invoice_amount": "4337.0", "paid_amount": "96256.0", "balance": "35485.0",
+          "status": "Paid", "notes": "", "invoice_pdf_url": "l7b5f6w1h4z6ku2cbktvrzsbnb6esku19xcf6",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:09.644Z",
+          "updated_date": "2020-11-10T08:04:29.575Z", "created_by": "ocgrrxhp@example.com",
+          "updated_by": "kgsayx82@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00202", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "7rhbpvriw34eqyh3mq3zw1kanlz7ouk6cq5cat5l2jn0wcioo",
+          "product_id": "P-00005", "product_name": "69yyae69rnr2ac3pqxm81j6n5cpjrpc5t6rknthdi7y8md2ks",
+          "plan_id": "PLN-00013", "plan_name": "idy5ttk5x2plkbotpj", "charge_id": "CHG-00013",
+          "subscription_line_id": "SCHG-01", "charge_name": "3llf6cuzui34k", "charge_type":
+          "recurring", "description": "qaxmhm8ax7x669h6xppzj", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "unit_price": "99144.0", "list_price": "9911.0",
+          "list_price_base": "Billing Period", "taxable": false, "quantity": 42505.0,
+          "discount": "0.0", "effective_price": "27025.0", "line_tax": "8220.0", "tax_lines":
+          [], "applied_tiers": "", "custom_fields": {}}], "subtotals": [], "payments":
+          [{"id": "PMT-05695", "customer_id": "utXE7bL7Ovmj18h", "payment_date": "2020-11-10",
+          "notes": "zoxl25lmner8imkq", "status": "Processed", "payment_amount": "100000.0",
+          "fee_amount": "2868.0", "applied_amount": "71468.0", "unapplied_amount": "16907.0",
+          "refunded_amount": "24935.0", "payment_type": "Electronic", "payment_method":
+          "fabrnuzomc", "currency": "USD", "reference_number": "rf8y", "auto_apply":
+          true, "created_by": "pya8w06v@example.com", "updated_by": "7wamstyb@example.com",
+          "created_date": "2020-11-10T08:17:00.786Z", "updated_date": "2020-11-10T08:17:00.786Z",
+          "failed_attempt": 23275, "refunds": [], "retried_attempts": 41359, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06152",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "", "city": "", "email":
+          "", "phone": "", "state": "", "county": "", "mobile": "", "country": "v5ywh0hc9iiblkmw959wofqjaw",
+          "address1": "", "address2": "", "job_title": "", "last_name": "", "department":
+          "", "first_name": "", "display_name": "3wl4bih54kw5p7kalbg4xulosfkhv6a3irmv"},
+          "shipping_contact": {"zip": "", "city": "", "email": "", "phone": "", "state":
+          "", "county": "", "mobile": "", "country": "6wl0qqh3ok42ezt1n8z3t7sro2u6siez88q07q5ynyo1rfr",
+          "address1": "", "address2": "", "job_title": "", "last_name": "", "department":
+          "", "first_name": "", "display_name": "jl0dn1a4189ahul8cqificrzd6p0my5f1gg9y"},
+          "customer_name": "ojpu6vfkvhb5l2siabxsfk9c9s7z55ml", "invoice_date": "2020-11-10",
+          "due_date": "2020-11-10", "start_date": "2020-11-10", "end_date": "2020-12-09",
+          "billing_run_id": "BR-02363", "subtotal": "41102.0", "invoice_tax": "15833.0",
+          "invoice_amount": "48699.0", "paid_amount": "60380.0", "balance": "57911.0",
+          "status": "Paid", "notes": "", "invoice_pdf_url": "o", "currency": "USD",
+          "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:10.787Z",
+          "updated_date": "2020-11-10T08:05:02.787Z", "created_by": "7ogzryx6@example.com",
+          "updated_by": "z7oew69t@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00203", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "oy7p3c1067o", "product_id":
+          "P-00005", "product_name": "wmf", "plan_id": "PLN-00013", "plan_name": "0g1i10ehj2jhpixxap9",
+          "charge_id": "CHG-00013", "subscription_line_id": "SCHG-01", "charge_name":
+          "sf8ekkl8zui9tpst", "charge_type": "recurring", "description": "pxanerl84kmc9fq55xw5ry2u6v",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "unit_price": "41342.0",
+          "list_price": "16631.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 73533.0, "discount": "0.0", "effective_price": "23147.0", "line_tax":
+          "91880.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05696", "customer_id": "utXE7bL7Ovmj18h", "payment_date":
+          "2020-11-10", "notes": "2bt8qa1j5uoeshlpcm9gpvg79uwqal2z", "status": "Processed",
+          "payment_amount": "10732.0", "fee_amount": "97752.0", "applied_amount": "99703.0",
+          "unapplied_amount": "1290.0", "refunded_amount": "50475.0", "payment_type":
+          "Electronic", "payment_method": "f8fhwc54ilapv1iuvs4y", "currency": "USD",
+          "reference_number": "1ughmxiktwe3ksy6", "auto_apply": true, "created_by":
+          "sxcf5k34@example.com", "updated_by": "k40y9gfc@example.com", "created_date":
+          "2020-11-10T08:17:01.155Z", "updated_date": "2020-11-10T08:17:01.155Z", "failed_attempt":
+          60868, "refunds": [], "retried_attempts": 36676, "gl_account": "", "gateway_name":
+          "Stripe", "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-06150", "customer_id": "utXE7bL7Ovmj18h",
+          "billing_contact": {"zip": "", "city": "", "email": "w6akw7yy@example.com",
+          "phone": "", "state": "", "county": "", "mobile": "", "country": "", "address1":
+          "", "address2": "", "job_title": "", "last_name": "33ao4qcxra91ikq", "department":
+          "", "first_name": "392nw3ew03wqo2tt8", "display_name": "a03qui1qz2ub9xe3hpa5u8mf05c51o6tl8l"},
+          "shipping_contact": {"zip": "", "city": "", "email": "7ksw9xsx@example.com",
+          "phone": "", "state": "", "county": "", "mobile": "", "country": "", "address1":
+          "", "address2": "", "job_title": "", "last_name": "qsbu8nvdgih9ymp4rnb3ipd",
+          "department": "", "first_name": "22kla0j25war147hrvmew61328z3jbuk63mrhls9dz2ck6z4",
+          "display_name": "txzdoqserfqb7bwysz7nnu466cr3fv0"}, "customer_name": "c1e6dppthbvjnpws3bw7wo0s6sm",
+          "invoice_date": "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "72037.0",
+          "invoice_tax": "63264.0", "invoice_amount": "57682.0", "paid_amount": "72574.0",
+          "balance": "25165.0", "status": "Paid", "notes": "", "invoice_pdf_url": "jb7kg92ddy4mytskmbf105nlgtunf88ntrimh5ztwevmh",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:08.753Z",
+          "updated_date": "2020-11-10T08:17:06.397Z", "created_by": "zhxblu3d@example.com",
+          "updated_by": "zmj1kxwv@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00193", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "ybofnglqyqgygee6abh4zk55cmh1c7kz3gm1212",
+          "product_id": "P-00001", "product_name": "emmrf7mpjz0oi", "plan_id": "PLN-00001",
+          "plan_name": "9oen4rn2bhurpwddzz0ioawv9lq4gu62", "charge_id": "CHG-00001",
+          "subscription_line_id": "SCHG-01", "charge_name": "eips1agxgrybtus53bigchjggsr7llh8os75m1rq",
+          "charge_type": "recurring", "description": "h4rawho2xxgfxnvpfi5i3ngwwg91u11gf2vz4ho",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "unit_price": "37546.0",
+          "list_price": "47089.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 46796.0, "discount": "0.0", "effective_price": "15900.0", "line_tax":
+          "68816.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05697", "customer_id": "utXE7bL7Ovmj18h", "payment_date":
+          "2020-11-10", "notes": "6q5lxspvfjdeqkexlcq2ypvg1utji3", "status": "Processed",
+          "payment_amount": "56620.0", "fee_amount": "70753.0", "applied_amount": "54859.0",
+          "unapplied_amount": "88716.0", "refunded_amount": "89980.0", "payment_type":
+          "Electronic", "payment_method": "vt9colpy36ig70zggv09bcwjd8wxd9wng955incscq9iix",
+          "currency": "USD", "reference_number": "p2060w3xzbsha2i6sl27z9f1senxbrenfqa4im",
+          "auto_apply": true, "created_by": "g606w50t@example.com", "updated_by": "6hw9d69j@example.com",
+          "created_date": "2020-11-10T08:17:01.472Z", "updated_date": "2020-11-10T08:17:01.472Z",
+          "failed_attempt": 59204, "refunds": [], "retried_attempts": 33103, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06164",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "", "city": "", "email":
+          "0bts6zmt@example.com", "phone": "", "state": "", "county": "", "mobile":
+          "", "country": "", "address1": "", "address2": "", "job_title": "", "last_name":
+          "yzp7xcr", "department": "", "first_name": "n3omxysd4ep0o9deshhu", "display_name":
+          "qvfd4pxhaj4mi47tx5gj3n4d33vee70kc6k9ax"}, "shipping_contact": {"zip": "",
+          "city": "", "email": "g6hag2iw@example.com", "phone": "", "state": "", "county":
+          "", "mobile": "", "country": "", "address1": "", "address2": "", "job_title":
+          "", "last_name": "uhnyyzfbihil7k7bmqx", "department": "", "first_name": "dij2xp7wi7svdyi7anskd1nd",
+          "display_name": "odkn54h0i38qouzd"}, "customer_name": "8", "invoice_date":
+          "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10", "end_date":
+          "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "31093.0", "invoice_tax":
+          "35776.0", "invoice_amount": "2231.0", "paid_amount": "1376.0", "balance":
+          "4771.0", "status": "Paid", "notes": "", "invoice_pdf_url": "kd6o59fqcd9hiwqucz5rjq92hlkmmbgzonnnl9",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:21.620Z",
+          "updated_date": "2020-11-10T08:17:25.130Z", "created_by": "7k5gvswj@example.com",
+          "updated_by": "16o4zmxf@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00636", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "8u27qlxrq3ndi2vm0hahlj1m52chcgz9xyc5",
+          "product_id": "P-00005", "product_name": "39j16lp8dct89skiz1prey9h054xlp3s5vt",
+          "plan_id": "PLN-00013", "plan_name": "renk7e6kcz7f2syyzocdnxh7u78misdzqgchj1z6c",
+          "charge_id": "CHG-00013", "subscription_line_id": "SCHG-01", "charge_name":
+          "vkurzi5vfstwmo4vkgit8ab8guydjckrqy77vch4ycay8", "charge_type": "recurring",
+          "description": "mh", "start_date": "2020-11-10", "end_date": "2020-12-09",
+          "unit_price": "43533.0", "list_price": "2015.0", "list_price_base": "Billing
+          Period", "taxable": false, "quantity": 18683.0, "discount": "0.0", "effective_price":
+          "94902.0", "line_tax": "99305.0", "tax_lines": [], "applied_tiers": "", "custom_fields":
+          {}}], "subtotals": [], "payments": [{"id": "PMT-05709", "customer_id": "utXE7bL7Ovmj18h",
+          "payment_date": "2020-11-10", "notes": "rdaa4d6cmge6nv81751k", "status": "Processed",
+          "payment_amount": "11141.0", "fee_amount": "59114.0", "applied_amount": "25409.0",
+          "unapplied_amount": "56439.0", "refunded_amount": "57226.0", "payment_type":
+          "Electronic", "payment_method": "8w7rloc0o49qgpfljgkp8ltl7ydk", "currency":
+          "USD", "reference_number": "tf549dcxxsu77ivm8u63582r26oa56ab1pgj1km8h", "auto_apply":
+          true, "created_by": "q2nex2bd@example.com", "updated_by": "ye5qxk7v@example.com",
+          "created_date": "2020-11-10T08:17:22.097Z", "updated_date": "2020-11-10T08:17:22.097Z",
+          "failed_attempt": 40816, "refunds": [], "retried_attempts": 39889, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06166",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "24q9599zzbkxgw6rne",
+          "city": "l8mweoxjts2bnjvgd0foh1bn8b", "email": "ns1lscsq@example.com", "phone":
+          "", "state": "cwccouygag2zf5l1gc5hwc7xdaag1jmi3riszbenj6tdu74r46", "county":
+          "", "mobile": "", "country": "7dha56hre9qfh9qme26yok6tk228nfp2g6opsaa3eww3xy8c",
+          "address1": "busle83ytfgvt7jx3tnlqoy6yss6q1io5a0qu", "address2": "", "job_title":
+          "", "last_name": "s1r31cm0spbmpgy77yllrqfadqgohj", "department": "", "first_name":
+          "et1t2kfhcm4h4nk82fc7amge6linlew4phppb", "display_name": "rid6bmcaaiaa"},
+          "shipping_contact": {"zip": "nmoadby0m1rlx90nfm5e8zdhjb9bqvs2qsq5uatqmjwrk2x9",
+          "city": "fkq43z5llf2m0veo6thk3m4m9hb266nhk", "email": "z80kgas0@example.com",
+          "phone": "", "state": "og90q10a83duofjs4960a", "county": "", "mobile": "",
+          "country": "x9ylv97rdf9tsc0wcgfg3wpy9qojr9lc19l4wa6fn3", "address1": "zx5a4oegyfulskrpp8cuaeh4o3ypj348gt",
+          "address2": "", "job_title": "", "last_name": "1aavldqd8s2p28ac9d6erdbvf5xtps7buerz06a84i0",
+          "department": "", "first_name": "82hzlhnq702krv61d7j925fz8god166txal45jvr2wqf9px",
+          "display_name": "1d3920biiffys3zy1rtljc7utsflnfn3f8bq8byj"}, "customer_name":
+          "r4vkclggo1bfp6aqyhs4dl", "invoice_date": "2020-11-10", "due_date": "2020-11-10",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "billing_run_id": "BR-02363",
+          "subtotal": "53138.0", "invoice_tax": "9914.0", "invoice_amount": "72335.0",
+          "paid_amount": "42125.0", "balance": "20607.0", "status": "Paid", "notes":
+          "", "invoice_pdf_url": "bvv1r1tahtk", "currency": "USD", "payment_terms":
+          "Due on Receipt", "created_date": "2020-11-10T08:03:23.632Z", "updated_date":
+          "2020-11-10T08:17:26.670Z", "created_by": "lgmtfhle@example.com", "updated_by":
+          "4lh2ifkg@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00638", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "0atuvi4lv83qokug60wo6mfrddevm7wxc4hlwqdl403wg33i",
+          "product_id": "P-00001", "product_name": "7g3pnhejtiuyv0gxu63me", "plan_id":
+          "PLN-00001", "plan_name": "mfmxm6h05292rpzh53jtvq7ar8wcpnmmn7ic7341qvlx",
+          "charge_id": "CHG-00001", "subscription_line_id": "SCHG-01", "charge_name":
+          "3owqh8f8vzynf2himl7m", "charge_type": "recurring", "description": "75u9j97z18838m3ecc3kgcji0x3p0r3h",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "unit_price": "28591.0",
+          "list_price": "55041.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 3531.0, "discount": "0.0", "effective_price": "33141.0", "line_tax":
+          "50096.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05710", "customer_id": "utXE7bL7Ovmj18h", "payment_date":
+          "2020-11-10", "notes": "8ju0hdddm1l1v1ngrnsuzeic6xo44zsut0ba2dmm814a7", "status":
+          "Processed", "payment_amount": "24112.0", "fee_amount": "17216.0", "applied_amount":
+          "43896.0", "unapplied_amount": "29010.0", "refunded_amount": "31983.0", "payment_type":
+          "Electronic", "payment_method": "j182ouec203smkaalv3s", "currency": "USD",
+          "reference_number": "nzoa9waq5fdl3", "auto_apply": true, "created_by": "gq2g1k81@example.com",
+          "updated_by": "92rsu902@example.com", "created_date": "2020-11-10T08:17:23.049Z",
+          "updated_date": "2020-11-10T08:17:23.049Z", "failed_attempt": 33898, "refunds":
+          [], "retried_attempts": 39922, "gl_account": "", "gateway_name": "Stripe",
+          "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-06165", "customer_id": "utXE7bL7Ovmj18h",
+          "billing_contact": {"zip": "", "city": "", "email": "", "phone": "", "state":
+          "", "county": "", "mobile": "", "country": "sfx2", "address1": "", "address2":
+          "", "job_title": "", "last_name": "", "department": "", "first_name": "",
+          "display_name": "j8apejxaua4u4rk23n0cvf9h"}, "shipping_contact": {"zip": "",
+          "city": "", "email": "", "phone": "", "state": "", "county": "", "mobile":
+          "", "country": "4", "address1": "", "address2": "", "job_title": "", "last_name":
+          "", "department": "", "first_name": "", "display_name": "dqu6qfni011p4d51sib0j90i5d4y"},
+          "customer_name": "tvyj3lu1qrvak7wu", "invoice_date": "2020-11-10", "due_date":
+          "2020-11-10", "start_date": "2020-11-10", "end_date": "2020-12-09", "billing_run_id":
+          "BR-02363", "subtotal": "6106.0", "invoice_tax": "86780.0", "invoice_amount":
+          "77741.0", "paid_amount": "79011.0", "balance": "72418.0", "status": "Paid",
+          "notes": "", "invoice_pdf_url": "4cdert04i50i45ia", "currency": "USD", "payment_terms":
+          "Due on Receipt", "created_date": "2020-11-10T08:03:22.676Z", "updated_date":
+          "2020-11-10T08:04:14.566Z", "created_by": "1ixpg11r@example.com", "updated_by":
+          "2r0hfngv@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-00637", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "s47ikggzl41wr3b82qgkjnbm2xbvs1bruqyvc30g2",
+          "product_id": "P-00005", "product_name": "8huvjvco8ioqy4kvq8lbo8y5l6ec1a0v9qqf8xz5glcg",
+          "plan_id": "PLN-00013", "plan_name": "uuiuwq", "charge_id": "CHG-00013", "subscription_line_id":
+          "SCHG-01", "charge_name": "l74", "charge_type": "recurring", "description":
+          "9keqduzlxmozds", "start_date": "2020-11-10", "end_date": "2020-12-09", "unit_price":
+          "17229.0", "list_price": "82825.0", "list_price_base": "Billing Period", "taxable":
+          false, "quantity": 73019.0, "discount": "0.0", "effective_price": "74463.0",
+          "line_tax": "8996.0", "tax_lines": [], "applied_tiers": "", "custom_fields":
+          {}}], "subtotals": [], "payments": [{"id": "PMT-05711", "customer_id": "utXE7bL7Ovmj18h",
+          "payment_date": "2020-11-10", "notes": "fejng3csyloha5kz5zcrdx4rocr0j7qtwucz3v0zxyf13gb3",
+          "status": "Processed", "payment_amount": "70178.0", "fee_amount": "26962.0",
+          "applied_amount": "41884.0", "unapplied_amount": "55297.0", "refunded_amount":
+          "76059.0", "payment_type": "Electronic", "payment_method": "hvtg6u9u63qqb92wbx55s28ts1wusvvkpgu7q5owi8a3668el",
+          "currency": "USD", "reference_number": "47ndl0cl106d", "auto_apply": true,
+          "created_by": "j33mdsj9@example.com", "updated_by": "5jzdhq5n@example.com",
+          "created_date": "2020-11-10T08:17:23.066Z", "updated_date": "2020-11-10T08:17:23.066Z",
+          "failed_attempt": 93644, "refunds": [], "retried_attempts": 14597, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06181",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "hg8lw4om0y0ywyyz2vwt912c5hapic99uihggyyc",
+          "city": "ixpfwqrmlydb0y8rtz22v2ap", "email": "9938e1eu@example.com", "phone":
+          "", "state": "iof6wn02q5128llgzyetcuu14w3yaw", "county": "", "mobile": "",
+          "country": "31imfr75", "address1": "psm39qa1clj5g4xkeiabkf", "address2": "",
+          "job_title": "", "last_name": "32upbbro27gswfq5onex6hijw1x9qe8n0r", "department":
+          "", "first_name": "vngkvvd3", "display_name": "vbrrn8ey5mu7"}, "shipping_contact":
+          {"zip": "z5mcmhscakc04vrpmfqe0vi8w7dce60yvkroibq8rsh8ky2", "city": "9ok2l1vq7zr3nu9",
+          "email": "c7pgbpc5@example.com", "phone": "", "state": "pk8tm5fi", "county":
+          "", "mobile": "", "country": "av", "address1": "2e5lc840mmnghu4fhh8hjurgs",
+          "address2": "", "job_title": "", "last_name": "1d9rjhbndail78r2", "department":
+          "", "first_name": "m00vmcfv4rmy7lvoe9k2uxysmjuj9xcy", "display_name": "gb4slypurhy2t7lzxc6m60cvev1flu35mf9y6h2udw"},
+          "customer_name": "724upggvs6ll9u6hux", "invoice_date": "2020-11-10", "due_date":
+          "2020-11-10", "start_date": "2020-11-10", "end_date": "2020-12-09", "billing_run_id":
+          "BR-02363", "subtotal": "91537.0", "invoice_tax": "93597.0", "invoice_amount":
+          "21539.0", "paid_amount": "16433.0", "balance": "74144.0", "status": "Paid",
+          "notes": "", "invoice_pdf_url": "acadio7ntuz87de8xfb0305y8a2smqujlx37ng",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:35.540Z",
+          "updated_date": "2020-11-10T08:17:51.846Z", "created_by": "6m7an6k9@example.com",
+          "updated_by": "n4d1mmm6@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-01110", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "dhrdqn9symhdfyjjhqylkdqfj3vu0z651pupw",
+          "product_id": "P-00005", "product_name": "o7jebvkbzqc01mr47mk3nskbi7dq6lu2zgdquivw64",
+          "plan_id": "PLN-00013", "plan_name": "y7e15u8iwwykz8b26ge7sws6e5c77uj5vvty6",
+          "charge_id": "CHG-00013", "subscription_line_id": "SCHG-01", "charge_name":
+          "x41tkbvf4bjwqknz048g5c1gf4", "charge_type": "recurring", "description": "i5t8tc70h18y",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "unit_price": "28061.0",
+          "list_price": "4265.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 52305.0, "discount": "0.0", "effective_price": "8594.0", "line_tax":
+          "7937.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05727", "customer_id": "utXE7bL7Ovmj18h", "payment_date":
+          "2020-11-10", "notes": "q5owe7bw2vt57m4qp9udzlkr9lk4ul0137hpzfuv", "status":
+          "Processed", "payment_amount": "17472.0", "fee_amount": "68636.0", "applied_amount":
+          "95491.0", "unapplied_amount": "89405.0", "refunded_amount": "7674.0", "payment_type":
+          "Electronic", "payment_method": "pcug6homgrvh73exyu6zh397woqx", "currency":
+          "USD", "reference_number": "ju5r0qmyq8ci7v9u3itk41ydhs0i9mqxr6wrxkeph3e91n",
+          "auto_apply": true, "created_by": "41ilgl4o@example.com", "updated_by": "i8zb0i26@example.com",
+          "created_date": "2020-11-10T08:17:47.534Z", "updated_date": "2020-11-10T08:17:47.534Z",
+          "failed_attempt": 57817, "refunds": [], "retried_attempts": 38752, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06195",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "", "city": "", "email":
+          "", "phone": "", "state": "", "county": "", "mobile": "", "country": "pt02b8on8l607wpq",
+          "address1": "", "address2": "", "job_title": "", "last_name": "", "department":
+          "", "first_name": "", "display_name": "oz1ts1ilwqtvafgrbtzdq"}, "shipping_contact":
+          {"zip": "", "city": "", "email": "", "phone": "", "state": "", "county": "",
+          "mobile": "", "country": "xtyu5ub3ebd29ozrfipl9clb", "address1": "", "address2":
+          "", "job_title": "", "last_name": "", "department": "", "first_name": "",
+          "display_name": "mfruc2cyr1hh8wiut9fuaxsppt4mjuv8bl"}, "customer_name": "d8t7pwy6v0mwmmeklypj8ts145fq5u9pxwkbw",
+          "invoice_date": "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "53001.0",
+          "invoice_tax": "58672.0", "invoice_amount": "31149.0", "paid_amount": "75952.0",
+          "balance": "57716.0", "status": "Paid", "notes": "", "invoice_pdf_url": "g3s10yf0sstg5kengyns058drcrb35rttnkqfyx7y",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:46.636Z",
+          "updated_date": "2020-11-10T08:04:38.969Z", "created_by": "yhtzyzy3@example.com",
+          "updated_by": "2t5u1scd@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-01604", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "d9h85ylidh838x68fx185sofx",
+          "product_id": "P-00005", "product_name": "wdsb39nii5", "plan_id": "PLN-00013",
+          "plan_name": "v4n8vuly4rl3yda6fak", "charge_id": "CHG-00013", "subscription_line_id":
+          "SCHG-01", "charge_name": "7yp2a44oqvh0839cmo1dsltuqko9", "charge_type": "recurring",
+          "description": "mmflcwjg1s3o6uzj347ysgjrj1rrn4", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "unit_price": "76897.0", "list_price": "47756.0",
+          "list_price_base": "Billing Period", "taxable": false, "quantity": 42763.0,
+          "discount": "0.0", "effective_price": "44278.0", "line_tax": "4789.0", "tax_lines":
+          [], "applied_tiers": "", "custom_fields": {}}], "subtotals": [], "payments":
+          [{"id": "PMT-05728", "customer_id": "utXE7bL7Ovmj18h", "payment_date": "2020-11-10",
+          "notes": "5fi1qdjcxbwhlwpu", "status": "Processed", "payment_amount": "73544.0",
+          "fee_amount": "95605.0", "applied_amount": "27449.0", "unapplied_amount":
+          "2426.0", "refunded_amount": "91328.0", "payment_type": "Electronic", "payment_method":
+          "wlotcpq4d098ohe3x1if7i1ffjtnpdsyj2wqt1np65", "currency": "USD", "reference_number":
+          "ajonakmk", "auto_apply": true, "created_by": "8swhdqn3@example.com", "updated_by":
+          "1ue5c58t@example.com", "created_date": "2020-11-10T08:17:49.352Z", "updated_date":
+          "2020-11-10T08:17:49.352Z", "failed_attempt": 14114, "refunds": [], "retried_attempts":
+          81146, "gl_account": "", "gateway_name": "Stripe", "custom_fields": {}, "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields":
+          {}, "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06182",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "xku8hx7tujbuxyhpvtafbsvp2eo1z1qpmflzurf9qgt8wy",
+          "city": "knoqsnjfnaod20jr", "email": "r6mlpmso@example.com", "phone": "",
+          "state": "2u68eco4l26vunp5jlb2k3w0i0hcy74v", "county": "", "mobile": "", "country":
+          "uq", "address1": "qtck3wqm2sfez09rm5d801ysx", "address2": "", "job_title":
+          "", "last_name": "5uhfr2tlnxt0io4di8f56b6b0lfjpi3twnaw0emva65oq", "department":
+          "", "first_name": "1gqlr3c7hig7531nyz5y2rrbt786sqoj9hylszhy0rgd", "display_name":
+          "a1f9sreo1w7ktpfn3h8wmnmnm9xt7be89kix55dw"}, "shipping_contact": {"zip": "a1wlcz7zlfuphiuqbnslyqszrefyv2hz1169o9766k74p",
+          "city": "s64qyo915ijbobvptxoxkomqo3ryzmr", "email": "b57fnzu4@example.com",
+          "phone": "", "state": "oo182myz79zbcy9r32l3dcnqv80f04w", "county": "", "mobile":
+          "", "country": "6p0ql55g0", "address1": "wnrrod2y2x", "address2": "", "job_title":
+          "", "last_name": "v", "department": "", "first_name": "e7cwfina0jvpros351m1aawqwiar",
+          "display_name": "dpym7ibfurq3o26"}, "customer_name": "vc7541093yjdd8hox",
+          "invoice_date": "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "51045.0",
+          "invoice_tax": "90871.0", "invoice_amount": "21035.0", "paid_amount": "38323.0",
+          "balance": "29744.0", "status": "Paid", "notes": "", "invoice_pdf_url": "snxrg4u86pg25rf2l51uk1062zx9d7l9",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:36.345Z",
+          "updated_date": "2020-11-10T08:17:56.255Z", "created_by": "8ziw41zl@example.com",
+          "updated_by": "9gji065v@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-01601", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "xl52ppg4bxkne4l9xd28wdwfh5w3",
+          "product_id": "P-00005", "product_name": "6", "plan_id": "PLN-00013", "plan_name":
+          "q357sipot", "charge_id": "CHG-00013", "subscription_line_id": "SCHG-01",
+          "charge_name": "w", "charge_type": "recurring", "description": "19ehsy3wmuljzmievqptwlb8q20izk6",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "unit_price": "74839.0",
+          "list_price": "5639.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 50730.0, "discount": "0.0", "effective_price": "29715.0", "line_tax":
+          "68985.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05729", "customer_id": "utXE7bL7Ovmj18h", "payment_date":
+          "2020-11-10", "notes": "sn077rsv0", "status": "Processed", "payment_amount":
+          "59927.0", "fee_amount": "51651.0", "applied_amount": "79248.0", "unapplied_amount":
+          "59598.0", "refunded_amount": "70802.0", "payment_type": "Electronic", "payment_method":
+          "n8hqput3x65bz1qmcv6kr9v5y5sb", "currency": "USD", "reference_number": "ncclotr9gta04yeh8hy3fn5e7oun210",
+          "auto_apply": true, "created_by": "cox6jr30@example.com", "updated_by": "0xodmgb7@example.com",
+          "created_date": "2020-11-10T08:17:53.287Z", "updated_date": "2020-11-10T08:17:53.287Z",
+          "failed_attempt": 81706, "refunds": [], "retried_attempts": 92958, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06183",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "i4t7c6i1txlxmr6vn",
+          "city": "73l5oso", "email": "qtfuaikv@example.com", "phone": "", "state":
+          "35do9o8cklak3u", "county": "", "mobile": "", "country": "nmbs34", "address1":
+          "wfkre39sw9co9xpqrw8b5xzwz98wgup85a3y", "address2": "", "job_title": "", "last_name":
+          "zz", "department": "", "first_name": "cptdu78u2y0eanza529i0hxs3evjl8j6",
+          "display_name": "v"}, "shipping_contact": {"zip": "hded8m3xo8bzw108i9jmd339dklmmbdeeymhj",
+          "city": "tu91i66sxo0zyxy", "email": "x3cmhyhs@example.com", "phone": "", "state":
+          "2szyb45ws7zcq266eyh9qgidxe8pz630bs7l8856r", "county": "", "mobile": "", "country":
+          "gdm0l9ua6fq0l9wosbrvn5ebtohmabdmxq7tdapbuppglyj", "address1": "8l3u0q6i3p24n7vfjyibfw39elmuofy5kdw9r",
+          "address2": "", "job_title": "", "last_name": "ntyf2bm6dgt7a3v5kjovsm44zh8aojun2esui0u7daqdl6",
+          "department": "", "first_name": "z3rhq95", "display_name": "t4myf8cjvbxvm9bhlmwtvgerc5xjsaa27z7"},
+          "customer_name": "7yoyr6ttwdbyjdj8my8dyfjxrkw4tms4xhuec0duod49y8q", "invoice_date":
+          "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10", "end_date":
+          "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "29011.0", "invoice_tax":
+          "82803.0", "invoice_amount": "97084.0", "paid_amount": "47701.0", "balance":
+          "85136.0", "status": "Paid", "notes": "", "invoice_pdf_url": "fr1xsotns9eo1g2on64jk86czivmlzhijvg",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:37.176Z",
+          "updated_date": "2020-11-10T08:17:57.865Z", "created_by": "xmoj6i4h@example.com",
+          "updated_by": "9v7rvhqr@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-01606", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "xmg8w5", "product_id":
+          "P-00005", "product_name": "za38bd0cy97k16rig00", "plan_id": "PLN-00013",
+          "plan_name": "8digq60nux5thhed04pskwwxbegdoxwfenwz3eobzlj7", "charge_id":
+          "CHG-00013", "subscription_line_id": "SCHG-01", "charge_name": "octqpvyn6vbw84z7ql3tj",
+          "charge_type": "recurring", "description": "1yfxl1x35", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "unit_price": "44725.0", "list_price": "86564.0",
+          "list_price_base": "Billing Period", "taxable": false, "quantity": 96976.0,
+          "discount": "0.0", "effective_price": "99169.0", "line_tax": "44824.0", "tax_lines":
+          [], "applied_tiers": "", "custom_fields": {}}], "subtotals": [], "payments":
+          [{"id": "PMT-05730", "customer_id": "utXE7bL7Ovmj18h", "payment_date": "2020-11-10",
+          "notes": "ddsycq0q3z9bumiemcm2fkb25n6emskgho74chera536qcgzp", "status": "Processed",
+          "payment_amount": "97199.0", "fee_amount": "76262.0", "applied_amount": "23256.0",
+          "unapplied_amount": "88295.0", "refunded_amount": "2778.0", "payment_type":
+          "Electronic", "payment_method": "e5xoqzn511jyr5s0ikcohd5nx58c0qxn5", "currency":
+          "USD", "reference_number": "xkixegpr4am", "auto_apply": true, "created_by":
+          "zb9qk5ne@example.com", "updated_by": "81c429ir@example.com", "created_date":
+          "2020-11-10T08:17:54.411Z", "updated_date": "2020-11-10T08:17:54.411Z", "failed_attempt":
+          98235, "refunds": [], "retried_attempts": 76333, "gl_account": "", "gateway_name":
+          "Stripe", "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-06170", "customer_id": "utXE7bL7Ovmj18h",
+          "billing_contact": {"zip": "6j7fkiwphxezckoa3duskkgbwoziuu", "city": "1n9t0ltl004lf8hkmhr30orb52ee1m07",
+          "email": "hi9w14vt@example.com", "phone": "", "state": "aa6ql9s", "county":
+          "", "mobile": "", "country": "hau7udvwx8a769ctpcxo5xhhiqvuph", "address1":
+          "s5afaq6c8xclvpoqeis73t6nwrzm1fkqvald40id", "address2": "", "job_title": "",
+          "last_name": "ro7easi30a7hwr0xuxyml85h7ekqy6bs96jwmewqg", "department": "",
+          "first_name": "4uhynz4yz6ijh9yfivhj2l7vyyr2e4l", "display_name": "4z4248c4nw9eisgsx27dbazhomwla"},
+          "shipping_contact": {"zip": "93hrzlavb8jr73d8isubqsx2fjqrh2252di0y044ah5y",
+          "city": "pmlmvofiybahsjlo5s0u0sqhlujkif", "email": "53oq313z@example.com",
+          "phone": "", "state": "dtgv5j4c6v3ml0wen948ykmudmt3nddhcja72hwgeinyfi4u6q",
+          "county": "", "mobile": "", "country": "r9kkjxftu0btql12h5gp", "address1":
+          "y8wil", "address2": "", "job_title": "", "last_name": "lhptjmiagxtyuu273o6nu09jxwmv4tw2t79cqut8v",
+          "department": "", "first_name": "xk6z", "display_name": "nqvra23cchyrf0gxqlp"},
+          "customer_name": "6nwn5dpu7ay45vvza", "invoice_date": "2020-11-10", "due_date":
+          "2020-11-10", "start_date": "2020-11-10", "end_date": "2020-12-09", "billing_run_id":
+          "BR-02363", "subtotal": "99929.0", "invoice_tax": "29177.0", "invoice_amount":
+          "55104.0", "paid_amount": "71439.0", "balance": "14656.0", "status": "Paid",
+          "notes": "", "invoice_pdf_url": "5v8q8ooi98c4rwdxcz3jpoc7w11hp806pava7deyr1",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:26.841Z",
+          "updated_date": "2020-11-10T08:17:34.574Z", "created_by": "mxeh30hn@example.com",
+          "updated_by": "k3auokwp@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-01092", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "jvaadip59sceh384o4ljao8h",
+          "product_id": "P-00005", "product_name": "8sjfct91zu7gtk97lc", "plan_id":
+          "PLN-00013", "plan_name": "cgrsmi5jj0j1wntxygw3z", "charge_id": "CHG-00013",
+          "subscription_line_id": "SCHG-01", "charge_name": "mibeg3fc4eggz5bm2x1ebv",
+          "charge_type": "recurring", "description": "pds3v1sll3lr9j8wy53ggbgyni", "start_date":
+          "2020-11-10", "end_date": "2020-12-09", "unit_price": "62009.0", "list_price":
+          "20429.0", "list_price_base": "Billing Period", "taxable": false, "quantity":
+          55269.0, "discount": "0.0", "effective_price": "99691.0", "line_tax": "28025.0",
+          "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05716", "customer_id": "utXE7bL7Ovmj18h", "payment_date":
+          "2020-11-10", "notes": "vleitkylo", "status": "Processed", "payment_amount":
+          "63765.0", "fee_amount": "19219.0", "applied_amount": "2348.0", "unapplied_amount":
+          "32045.0", "refunded_amount": "78089.0", "payment_type": "Electronic", "payment_method":
+          "9cfcnf32w00hai990pgkcz8858vq0hrw3qxuuke4rnu", "currency": "USD", "reference_number":
+          "ii9lsusosrwbbc1bed72hczlkenir0wwybr2buiiv1hibkat", "auto_apply": true, "created_by":
+          "vge0bgzk@example.com", "updated_by": "kczxcqdv@example.com", "created_date":
+          "2020-11-10T08:17:29.941Z", "updated_date": "2020-11-10T08:17:29.941Z", "failed_attempt":
+          32648, "refunds": [], "retried_attempts": 40839, "gl_account": "", "gateway_name":
+          "Stripe", "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-06171", "customer_id": "utXE7bL7Ovmj18h",
+          "billing_contact": {"zip": "", "city": "", "email": "97l2pgmb@example.com",
+          "phone": "", "state": "", "county": "", "mobile": "", "country": "", "address1":
+          "", "address2": "", "job_title": "", "last_name": "am6im0ircvp0v152vdq05nktqoq",
+          "department": "", "first_name": "0jdj8thbpswj7m4ll4zngtto5tqtcgao8tn6putnsy",
+          "display_name": "n0lld3a7oma7z855ga0oub4p0"}, "shipping_contact": {"zip":
+          "", "city": "", "email": "023p50sp@example.com", "phone": "", "state": "",
+          "county": "", "mobile": "", "country": "", "address1": "", "address2": "",
+          "job_title": "", "last_name": "hw39u51xidmw0976v8jh50blneeq05jr2ply9vk7i4",
+          "department": "", "first_name": "tisncphjei84sqv", "display_name": "1svti"},
+          "customer_name": "xxi7x0", "invoice_date": "2020-11-10", "due_date": "2020-11-10",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "billing_run_id": "BR-02363",
+          "subtotal": "5851.0", "invoice_tax": "52409.0", "invoice_amount": "87380.0",
+          "paid_amount": "24124.0", "balance": "45062.0", "status": "Paid", "notes":
+          "", "invoice_pdf_url": "0etbckj9ct48bm0edwf7dc3b6p4vasbbzexa", "currency":
+          "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:27.602Z",
+          "updated_date": "2020-11-10T08:17:35.243Z", "created_by": "qkamfx7i@example.com",
+          "updated_by": "qfp1h0tl@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-01093", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "2erfsekzrf4q7",
+          "product_id": "P-00005", "product_name": "sogcmgk0aj69bshb6wq2gip9lm5hy",
+          "plan_id": "PLN-00013", "plan_name": "ii64w7p9snne8y10dzg27tjevonn", "charge_id":
+          "CHG-00013", "subscription_line_id": "SCHG-01", "charge_name": "gj", "charge_type":
+          "recurring", "description": "7vu8uoen4f28phc1bwd8", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "unit_price": "4255.0", "list_price": "28305.0",
+          "list_price_base": "Billing Period", "taxable": false, "quantity": 50716.0,
+          "discount": "0.0", "effective_price": "93500.0", "line_tax": "5976.0", "tax_lines":
+          [], "applied_tiers": "", "custom_fields": {}}], "subtotals": [], "payments":
+          [{"id": "PMT-05717", "customer_id": "utXE7bL7Ovmj18h", "payment_date": "2020-11-10",
+          "notes": "xo9sknt2yfcx7mleiziawnvnqwl0687slw0qwrdh", "status": "Processed",
+          "payment_amount": "62110.0", "fee_amount": "77882.0", "applied_amount": "43758.0",
+          "unapplied_amount": "39108.0", "refunded_amount": "36772.0", "payment_type":
+          "Electronic", "payment_method": "jxv0csvon", "currency": "USD", "reference_number":
+          "ywmkw97v6e3t9r8hkkkox5idb07hjy29", "auto_apply": true, "created_by": "bprct6ip@example.com",
+          "updated_by": "cq1zaye2@example.com", "created_date": "2020-11-10T08:17:30.980Z",
+          "updated_date": "2020-11-10T08:17:30.980Z", "failed_attempt": 44555, "refunds":
+          [], "retried_attempts": 57793, "gl_account": "", "gateway_name": "Stripe",
+          "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-06173", "customer_id": "utXE7bL7Ovmj18h",
+          "billing_contact": {"zip": "8sc4m6hnqr5klk4ehbq07k1k54ffgep5h56ykikwd5h31c4bu",
+          "city": "bsd7jlglsik5gzqq1f0gr83384bcoepy", "email": "s9jxxvhn@example.com",
+          "phone": "", "state": "78xsc1s047jpbxw2j5yri2a2nn085697x", "county": "", "mobile":
+          "", "country": "q2zl", "address1": "noejtq9d92ow6l4r9qllym3b2t1s17ykjmw3wbwlxp7fuqezi",
+          "address2": "", "job_title": "", "last_name": "y1n569jdco3qb9ei36yrb", "department":
+          "", "first_name": "u3", "display_name": "bfpcnfpj2g"}, "shipping_contact":
+          {"zip": "x481l8b7as488dkiwjl0lg43jur0va1cr1w", "city": "2hsaa4rkovfoz2uj47b81kmg8nwpn9j3y1cp",
+          "email": "t6wk64h2@example.com", "phone": "", "state": "7u5eac9zm6ucgx875a3cx7",
+          "county": "", "mobile": "", "country": "fkidh29qb6zh", "address1": "p", "address2":
+          "", "job_title": "", "last_name": "a3c7nxunv2d11zh7fc48q99pkrrnrgzkoxexnikxr1h75gorx",
+          "department": "", "first_name": "q9caycbi9pevnfqtew27i13nesu1050r6pvm0uzj",
+          "display_name": "ob9g8ts8r644nvh02hedq7u34tsmqqdb39x22"}, "customer_name":
+          "tur9ldy22b2d275uxdnc6x4br2", "invoice_date": "2020-11-10", "due_date": "2020-11-10",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "billing_run_id": "BR-02363",
+          "subtotal": "50141.0", "invoice_tax": "87717.0", "invoice_amount": "14798.0",
+          "paid_amount": "59983.0", "balance": "99300.0", "status": "Paid", "notes":
+          "", "invoice_pdf_url": "71", "currency": "USD", "payment_terms": "Due on Receipt",
+          "created_date": "2020-11-10T08:03:29.534Z", "updated_date": "2020-11-10T08:17:41.180Z",
+          "created_by": "y9ryaz5m@example.com", "updated_by": "25t0fr99@example.com",
+          "line_items": [{"line_no": "1", "subscription_id": "S-01095", "customer_id":
+          "utXE7bL7Ovmj18h", "customer_name": "wwtuxz1leovppnjfij5bik4oj", "product_id":
+          "P-00001", "product_name": "2dzzuqlysnff8euoo2o1sbo4jd1srqr4m4tbi6e53", "plan_id":
+          "PLN-00001", "plan_name": "mxs61umyuthd0ou861cx1ak94nwbgff5ezhv28", "charge_id":
+          "CHG-00001", "subscription_line_id": "SCHG-01", "charge_name": "rz9xer1lxd2b3c",
+          "charge_type": "recurring", "description": "1ih31ioagfyob6xs173gy73qhno5rgzonutkd3sip91",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "unit_price": "36688.0",
+          "list_price": "7274.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 57074.0, "discount": "0.0", "effective_price": "15187.0", "line_tax":
+          "15641.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05719", "customer_id": "utXE7bL7Ovmj18h", "payment_date":
+          "2020-11-10", "notes": "cov84mqpohuazr5vv2n6rwcwd5", "status": "Processed",
+          "payment_amount": "39514.0", "fee_amount": "14473.0", "applied_amount": "69829.0",
+          "unapplied_amount": "61816.0", "refunded_amount": "83986.0", "payment_type":
+          "Electronic", "payment_method": "hqpxj1i61upovyf3vplbz9aq39untcozgi6nhj4",
+          "currency": "USD", "reference_number": "rk0d8n9z58tztnvaa7a5pl49k5gy94lbzi7tloz3l6ns1h",
+          "auto_apply": true, "created_by": "sun3uxmv@example.com", "updated_by": "04lc57jq@example.com",
+          "created_date": "2020-11-10T08:17:37.689Z", "updated_date": "2020-11-10T08:17:37.689Z",
+          "failed_attempt": 71033, "refunds": [], "retried_attempts": 93343, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06172",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "9sk23v88fddoks2qcrnwkx4bj6h4",
+          "city": "ib72l5xj9dgkwy2rhu9c", "email": "p02rr639@example.com", "phone":
+          "", "state": "d39b8bsvq4ujheswz21whgwgxou1rxb5mg7ec16h7", "county": "", "mobile":
+          "", "country": "jk6hkvz5xbmrir787e3", "address1": "3w", "address2": "", "job_title":
+          "", "last_name": "xnukivf", "department": "", "first_name": "qm9j0ytxzzr6b8itvwth1iu",
+          "display_name": "ifvzk0vub5asjd39vw49oz5x2o"}, "shipping_contact": {"zip":
+          "nxljo9bnqbu6ypukm94lz85xzzz", "city": "ggdmg1q", "email": "5ilsvslf@example.com",
+          "phone": "", "state": "p4dj", "county": "", "mobile": "", "country": "zqlq2v9tfx9j1ov6sej41f69ddb4zigpzrjijkswn4chn6",
+          "address1": "bfrb7o2x36ld4i47j2tbymo8i1c41fo5i", "address2": "", "job_title":
+          "", "last_name": "fbii6if2", "department": "", "first_name": "1z90x25vpiu06eo5jjpn1fyaopa8cr8k0clo46rj6o",
+          "display_name": "ut49s3gyanpxuc8lm4ogpn634"}, "customer_name": "bqwslf4h2w5v531vw9h1mdkl2pg5",
+          "invoice_date": "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-10-12",
+          "end_date": "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "1785.0",
+          "invoice_tax": "19475.0", "invoice_amount": "10104.0", "paid_amount": "79373.0",
+          "balance": "23346.0", "status": "Paid", "notes": "", "invoice_pdf_url": "4i05duljcqtnndtjwmdffbvm85bf7dosztq54m53apcf9a",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:28.352Z",
+          "updated_date": "2020-11-10T08:17:36.922Z", "created_by": "yjee21ra@example.com",
+          "updated_by": "w7m78i9n@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-02162", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "9b53jcgqz1j1ugggszn7hi27khadgei5t8wmmqodp4vzc68",
+          "product_id": "P-00122", "product_name": "a6u0hjzcn37ydapc4p", "plan_id":
+          "PLN-00022", "plan_name": "sn88oyl6wiewkiqugdj7ph682f", "charge_id": "CHG-00022",
+          "subscription_line_id": "a0f5w00000GBZnGAAX", "charge_name": "lalhlh2z6l6osoiarhouqhosi09v",
+          "charge_type": "recurring", "description": "vwkaonnrixq3mbdjj40td2d54r9t59iacud2rp84muj32uvthx",
+          "start_date": "2020-10-12", "end_date": "2020-11-09", "unit_price": "16090.0",
+          "list_price": "17954.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 74084.0, "discount": "0.0", "effective_price": "11258.0", "line_tax":
+          "64543.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}, {"line_no":
+          "2", "subscription_id": "S-02162", "customer_id": "utXE7bL7Ovmj18h", "customer_name":
+          "4sogam0c8s5jkmn07djzes5hv9ku", "product_id": "P-00122", "product_name": "45vgq0i48d7zi",
+          "plan_id": "PLN-00022", "plan_name": "jwmxp40btm", "charge_id": "CHG-00022",
+          "subscription_line_id": "a0f5w00000GBZnGAAX", "charge_name": "hcmugir10oureoe",
+          "charge_type": "recurring", "description": "0g5jbjngpquzubn7cpdi3t7e7k15s9ycx",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "unit_price": "13358.0",
+          "list_price": "40800.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 65492.0, "discount": "0.0", "effective_price": "58473.0", "line_tax":
+          "15107.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}, {"line_no":
+          "3", "subscription_id": "S-01094", "customer_id": "utXE7bL7Ovmj18h", "customer_name":
+          "v6tgp8nwvwj8bjr87on", "product_id": "P-00035", "product_name": "3fwt", "plan_id":
+          "PLN-00046", "plan_name": "ug2r7x2jrj8344", "charge_id": "CHG-00046", "subscription_line_id":
+          "SCHG-01", "charge_name": "7hcs2pn1dcuqudy6d3ck6eymn90imieg710tfu6xbrfgezyu0",
+          "charge_type": "recurring", "description": "w5rsge2lwb5ibkbjgylztv7udth7ljim5q6z9j5s77fs0",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "unit_price": "92283.0",
+          "list_price": "28281.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 70720.0, "discount": "0.0", "effective_price": "23741.0", "line_tax":
+          "47060.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05718", "customer_id": "utXE7bL7Ovmj18h", "payment_date":
+          "2020-11-10", "notes": "gpcx73blu21iqhs8qtemm53s4qf4u2wilz995rfjkh887xl",
+          "status": "Processed", "payment_amount": "28504.0", "fee_amount": "96627.0",
+          "applied_amount": "35328.0", "unapplied_amount": "81433.0", "refunded_amount":
+          "6851.0", "payment_type": "Electronic", "payment_method": "zfb4u843s5jw5ul67c9mdyy09o84l35m1y4ezlj0pp",
+          "currency": "USD", "reference_number": "zha85j0zf6qp9lamjlah1561g3l", "auto_apply":
+          true, "created_by": "tqa5s83j@example.com", "updated_by": "e1y1slk6@example.com",
+          "created_date": "2020-11-10T08:17:33.331Z", "updated_date": "2020-11-10T08:17:33.331Z",
+          "failed_attempt": 46561, "refunds": [], "retried_attempts": 89242, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06190",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "f4uexx82eyafc8t8qq3nyevhlvw9we8uumcsd4we5wls737ub",
+          "city": "a3cynma61550dmx31reyy", "email": "arbooyf0@example.com", "phone":
+          "", "state": "5tara8mzpoxxjbx0vsrbhl7w34r6", "county": "", "mobile": "", "country":
+          "l2y5xu80dtg86", "address1": "jcxdbofwyqmbfpmzqixr1qvmoum58x5yhw6y", "address2":
+          "", "job_title": "", "last_name": "ng0l3nm3ehldi0fc2sd537a1lxeszbljhgsktzxvslf1eov",
+          "department": "", "first_name": "7th33uoc0udzsvjhlz5ggotjp", "display_name":
+          "ti6n6ul3tj1vpeyb48o0kpky9g"}, "shipping_contact": {"zip": "f9mremprx3d3s3nop4q3bs6lygn5lr8t74o903ksmkmu",
+          "city": "c0lxmagl1tio4g42kfn1zi1rld", "email": "6zg5n0gn@example.com", "phone":
+          "", "state": "7q", "county": "", "mobile": "", "country": "pl2u10pe8n1pkrrsyxeegznflh1izqkufii5ckhjypukg",
+          "address1": "551vswo5s8lb", "address2": "", "job_title": "", "last_name":
+          "wycrd5ieteec7cg9ee1d", "department": "", "first_name": "9", "display_name":
+          "xthmbnsgnuyxvo4buy4rsarhy781pki8"}, "customer_name": "lculgbq22d", "invoice_date":
+          "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10", "end_date":
+          "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "65442.0", "invoice_tax":
+          "5627.0", "invoice_amount": "98007.0", "paid_amount": "60738.0", "balance":
+          "40013.0", "status": "Paid", "notes": "", "invoice_pdf_url": "wwhhzpjdll6z4gxqyjh5i2ntrnrtgsmok8eajv8n",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:42.866Z",
+          "updated_date": "2020-11-10T08:18:07.814Z", "created_by": "xka9ycap@example.com",
+          "updated_by": "trelktme@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-01615", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "kd3xx8js6pq97zwgbn22a0d40sf",
+          "product_id": "P-00005", "product_name": "xeec1c1b51dzyyg6w8tggj40udak3i",
+          "plan_id": "PLN-00013", "plan_name": "ttagncvtkw89xp2h4jy9u02s9a19glp8m169mkr7duqmrh",
+          "charge_id": "CHG-00013", "subscription_line_id": "SCHG-01", "charge_name":
+          "4ifvm9tqw4wv42f", "charge_type": "recurring", "description": "1cemad26t3kll6garxnxzhgrkbamx4xcvaaw0set1luv676",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "unit_price": "71642.0",
+          "list_price": "22877.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 70874.0, "discount": "0.0", "effective_price": "51057.0", "line_tax":
+          "84598.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05737", "customer_id": "utXE7bL7Ovmj18h", "payment_date":
+          "2020-11-10", "notes": "3doiflc1rnvz8blcuw2knk0kbaf2yiccmqae9elmb5r", "status":
+          "Processed", "payment_amount": "10812.0", "fee_amount": "79620.0", "applied_amount":
+          "18525.0", "unapplied_amount": "16509.0", "refunded_amount": "57619.0", "payment_type":
+          "Electronic", "payment_method": "cog8fule0sza6pi8", "currency": "USD", "reference_number":
+          "91957vvt", "auto_apply": true, "created_by": "b78pcr19@example.com", "updated_by":
+          "embg1atl@example.com", "created_date": "2020-11-10T08:18:04.595Z", "updated_date":
+          "2020-11-10T08:18:04.595Z", "failed_attempt": 93888, "refunds": [], "retried_attempts":
+          45157, "gl_account": "", "gateway_name": "Stripe", "custom_fields": {}, "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields":
+          {}, "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06191",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "2uivytejgecss9o5jyn6sqotpv0aizdugyhdfa1k",
+          "city": "6a09opbvf", "email": "t71ye96i@example.com", "phone": "", "state":
+          "edxeert94owncstgdh2nhwfpufwzk7emd2y5", "county": "", "mobile": "", "country":
+          "9mcj29od2eflmmy96vq3vxssanqr1r1n", "address1": "3ugiv886e7a9z1ml9rz0fvkj29b3huq",
+          "address2": "", "job_title": "", "last_name": "u7cyist50mnxui9yuh8ch0e8",
+          "department": "", "first_name": "poazi02q046nxcp69m4h6mzvaw9gsf2bjoa9ej57av",
+          "display_name": "btln6pcsnalxf9h2vj8oh8wnvxf7ma"}, "shipping_contact": {"zip":
+          "ygxiwim7ra2ttvobxlrcap6apgw", "city": "kj6xvmntl2mc1yaa1ig", "email": "r61nks9l@example.com",
+          "phone": "", "state": "d9nht600k7a6", "county": "", "mobile": "", "country":
+          "2nynjxfcbccgqj6n1b85kjw91lt", "address1": "3tzf7pelhlm11gv65f2rpvzg45f4ovw",
+          "address2": "", "job_title": "", "last_name": "jsey7mr1wqzm4nt04co2raj23gdxljlk5orozc",
+          "department": "", "first_name": "64cdace91zdrbvz4ljzmuk4cfxa2pa29hluznlt8wa48u802m",
+          "display_name": "htmy5psegqh8icy"}, "customer_name": "umcdbjbu20dpqf7zfrfm9ztp31b1zna2cklcabavj24",
+          "invoice_date": "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "68875.0",
+          "invoice_tax": "18560.0", "invoice_amount": "66018.0", "paid_amount": "26505.0",
+          "balance": "36832.0", "status": "Paid", "notes": "", "invoice_pdf_url": "b6tckv2e0inpvl1w",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:43.607Z",
+          "updated_date": "2020-11-10T08:18:09.217Z", "created_by": "2adz0jqv@example.com",
+          "updated_by": "ko6j7yer@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-01643", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "e2kje04g9553cq00p4adcnchwrc6y6v0",
+          "product_id": "P-00005", "product_name": "w1vb1gxl26", "plan_id": "PLN-00013",
+          "plan_name": "icz6fqu55ibms4jixl2ehilun6xu", "charge_id": "CHG-00013", "subscription_line_id":
+          "SCHG-01", "charge_name": "2h9r6g", "charge_type": "recurring", "description":
+          "mgfhbiwlysfkzy1zeb2p77oywzqlp5yns", "start_date": "2020-11-10", "end_date":
+          "2020-12-09", "unit_price": "73822.0", "list_price": "40529.0", "list_price_base":
+          "Billing Period", "taxable": false, "quantity": 26386.0, "discount": "0.0",
+          "effective_price": "12531.0", "line_tax": "67889.0", "tax_lines": [], "applied_tiers":
+          "", "custom_fields": {}}], "subtotals": [], "payments": [{"id": "PMT-05738",
+          "customer_id": "utXE7bL7Ovmj18h", "payment_date": "2020-11-10", "notes": "cnxwx4l6cdchlrxk18oy",
+          "status": "Processed", "payment_amount": "29875.0", "fee_amount": "49599.0",
+          "applied_amount": "6386.0", "unapplied_amount": "52241.0", "refunded_amount":
+          "36451.0", "payment_type": "Electronic", "payment_method": "tslzi85c97k",
+          "currency": "USD", "reference_number": "g4peczl2hy9t8ebuscev6og98j8kffdt2g5p8ofnc0ni9qk",
+          "auto_apply": true, "created_by": "h6riwivx@example.com", "updated_by": "336ang68@example.com",
+          "created_date": "2020-11-10T08:18:05.744Z", "updated_date": "2020-11-10T08:18:05.744Z",
+          "failed_attempt": 82674, "refunds": [], "retried_attempts": 76185, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06192",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "", "city": "", "email":
+          "28t1mzup@example.com", "phone": "", "state": "", "county": "", "mobile":
+          "", "country": "", "address1": "", "address2": "", "job_title": "", "last_name":
+          "wm1vn148827pmnx1gwdmkhk5glsvlqylc1aa3c", "department": "", "first_name":
+          "s5koyl6sja", "display_name": "292jmif24sjws3rj614t3i6nak9ie0896"}, "shipping_contact":
+          {"zip": "", "city": "", "email": "s5ezhaq6@example.com", "phone": "", "state":
+          "", "county": "", "mobile": "", "country": "", "address1": "", "address2":
+          "", "job_title": "", "last_name": "4kt6ymr3zkwell24oo36", "department": "",
+          "first_name": "667q5systrp7ny0o", "display_name": "gak"}, "customer_name":
+          "p7", "invoice_date": "2020-11-10", "due_date": "2020-11-10", "start_date":
+          "2020-11-10", "end_date": "2020-12-09", "billing_run_id": "BR-02363", "subtotal":
+          "39333.0", "invoice_tax": "10544.0", "invoice_amount": "19325.0", "paid_amount":
+          "23732.0", "balance": "26770.0", "status": "Paid", "notes": "", "invoice_pdf_url":
+          "g4t7zci0med3r9j1javionliku4fshematn73k", "currency": "USD", "payment_terms":
+          "Due on Receipt", "created_date": "2020-11-10T08:03:44.389Z", "updated_date":
+          "2020-11-10T08:18:11.658Z", "created_by": "1kqi1e2k@example.com", "updated_by":
+          "1xqpfsqa@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-01644", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "0i8di3jdqyhp1u48lfbo9a3j",
+          "product_id": "P-00001", "product_name": "k8", "plan_id": "PLN-00001", "plan_name":
+          "boa4ore", "charge_id": "CHG-00001", "subscription_line_id": "SCHG-01", "charge_name":
+          "wckgi3r6wn3rzy9xp1dl8cq0abwy", "charge_type": "recurring", "description":
+          "oa86x8grgja6slx4e5c96ki2j1n3di", "start_date": "2020-11-10", "end_date":
+          "2020-12-09", "unit_price": "50379.0", "list_price": "31200.0", "list_price_base":
+          "Billing Period", "taxable": false, "quantity": 97307.0, "discount": "0.0",
+          "effective_price": "88552.0", "line_tax": "8009.0", "tax_lines": [], "applied_tiers":
+          "", "custom_fields": {}}], "subtotals": [], "payments": [{"id": "PMT-05739",
+          "customer_id": "utXE7bL7Ovmj18h", "payment_date": "2020-11-10", "notes": "e3bstsodrc2nwfgwx7qvr1h63gi6236son",
+          "status": "Processed", "payment_amount": "93985.0", "fee_amount": "62261.0",
+          "applied_amount": "10615.0", "unapplied_amount": "77890.0", "refunded_amount":
+          "11059.0", "payment_type": "Electronic", "payment_method": "qmqz08t3mzv80m7bszd592zf0ta0fgo537xokb0reac0wqn",
+          "currency": "USD", "reference_number": "6mc", "auto_apply": true, "created_by":
+          "wq2a1fc0@example.com", "updated_by": "wr8x0ciw@example.com", "created_date":
+          "2020-11-10T08:18:08.673Z", "updated_date": "2020-11-10T08:18:08.673Z", "failed_attempt":
+          81251, "refunds": [], "retried_attempts": 54300, "gl_account": "", "gateway_name":
+          "Stripe", "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-06193", "customer_id": "utXE7bL7Ovmj18h",
+          "billing_contact": {"zip": "p7gbbm", "city": "cohib41izg4ybu4a54nqu52ly43zw95r20i2f8s4i8w3qui",
+          "email": "l3yvh3ba@example.com", "phone": "", "state": "2eqey99dd5zglzhmg1xdi5n7xnq90qvnp",
+          "county": "", "mobile": "", "country": "dcegni5ves6dq3ewmkay8ved64bh9rjiuqu6l0zmjmdl9",
+          "address1": "gjmao5qfk2k3n", "address2": "", "job_title": "", "last_name":
+          "08h7nsstfa5rrlctm9q", "department": "", "first_name": "qvtp9", "display_name":
+          "h9z5jmm84ak55aqkjhs46myfje3fa26ima"}, "shipping_contact": {"zip": "xu7z302utczk9ocfvuhhup63m97gsjcx",
+          "city": "0ik5lxgabajq8spa5foj0vw8pvnabn25q1n8vhpk1", "email": "90arj2qj@example.com",
+          "phone": "", "state": "w22s9aei3rympm5lusec", "county": "", "mobile": "",
+          "country": "vxb00b3t0zpwkrn7r", "address1": "llrhjpzfik2rxpnrw9hn017fj75ler4h1uoa1auf0l4n65k9",
+          "address2": "", "job_title": "", "last_name": "l6p9274e0dvdat10o7cs2ugn8u21agmvj7q17m1kwhmthu0",
+          "department": "", "first_name": "dho4dte5ogsyryatakqo", "display_name": "r2s7bp37i6pht5cbqw"},
+          "customer_name": "ujjzxm", "invoice_date": "2020-11-10", "due_date": "2020-11-10",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "billing_run_id": "BR-02363",
+          "subtotal": "36517.0", "invoice_tax": "52415.0", "invoice_amount": "572.0",
+          "paid_amount": "96361.0", "balance": "8778.0", "status": "Paid", "notes":
+          "", "invoice_pdf_url": "78xrxl5fapba3j79r1geo7rspcj0yqy65usmll88wij60", "currency":
+          "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:45.189Z",
+          "updated_date": "2020-11-10T08:18:13.648Z", "created_by": "yxb6i0nd@example.com",
+          "updated_by": "5c0nxk5i@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-01645", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "xw7s", "product_id":
+          "P-00005", "product_name": "tjvcmsq1", "plan_id": "PLN-00013", "plan_name":
+          "ht3uuzde9cbbsnb6i58vsr6jdmdx", "charge_id": "SCHG-01", "subscription_line_id":
+          "SCHG-01", "charge_name": "sefjsv04qt7ofd91j1n8y5r88", "charge_type": "recurring",
+          "description": "rdyaypgzvsrbe7nu0gnlzc9kb7366an", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "unit_price": "82619.0", "list_price": "48061.0",
+          "list_price_base": "Billing Period", "taxable": false, "quantity": 17071.0,
+          "discount": "0.0", "effective_price": "13507.0", "line_tax": "6344.0", "tax_lines":
+          [], "applied_tiers": "", "custom_fields": {}}], "subtotals": [], "payments":
+          [{"id": "PMT-05740", "customer_id": "utXE7bL7Ovmj18h", "payment_date": "2020-11-10",
+          "notes": "ql1t7zvwgt6dgyzytm1l", "status": "Processed", "payment_amount":
+          "64225.0", "fee_amount": "24209.0", "applied_amount": "34353.0", "unapplied_amount":
+          "95485.0", "refunded_amount": "47676.0", "payment_type": "Electronic", "payment_method":
+          "0z7mgf1ri", "currency": "USD", "reference_number": "s28vdzmufb9xx", "auto_apply":
+          true, "created_by": "sw516ebg@example.com", "updated_by": "h80enb7z@example.com",
+          "created_date": "2020-11-10T08:18:10.529Z", "updated_date": "2020-11-10T08:18:10.529Z",
+          "failed_attempt": 33182, "refunds": [], "retried_attempts": 5977, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}, {"id": "INV-06174",
+          "customer_id": "utXE7bL7Ovmj18h", "billing_contact": {"zip": "", "city": "", "email":
+          "d26t17pm@example.com", "phone": "", "state": "", "county": "", "mobile":
+          "", "country": "", "address1": "", "address2": "", "job_title": "", "last_name":
+          "xfnedastjnwjosc", "department": "", "first_name": "4kbpad82y436uiwj", "display_name":
+          "1ehfdabrx7hgxixebes0qzncqh6c204og2s4zux7ooj"}, "shipping_contact": {"zip":
+          "", "city": "", "email": "lmsy69tq@example.com", "phone": "", "state": "",
+          "county": "", "mobile": "", "country": "", "address1": "", "address2": "",
+          "job_title": "", "last_name": "7xh00ebhvbof8ec7s45f8551h36k4j3w", "department":
+          "", "first_name": "mkoidsk3eyc87hg5n17wbzym1", "display_name": "m03kfls1"},
+          "customer_name": "yl1trv0njdvw696nkrqb0jng80owi3mm0c9j", "invoice_date": "2020-11-10",
+          "due_date": "2020-11-10", "start_date": "2020-11-10", "end_date": "2020-12-09",
+          "billing_run_id": "BR-02363", "subtotal": "1118.0", "invoice_tax": "35171.0",
+          "invoice_amount": "6553.0", "paid_amount": "11352.0", "balance": "49803.0",
+          "status": "Paid", "notes": "", "invoice_pdf_url": "mh37v3ud9ftv2d31728rfscttvwbhi7m8z0zq1v",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:30.247Z",
+          "updated_date": "2020-11-10T08:17:42.082Z", "created_by": "4iqevax0@example.com",
+          "updated_by": "lh9dng2c@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-01096", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "3tz17vry2w8d7nxn0xuk3fx6pjzz4vopufjz5xyvgery7wgat",
+          "product_id": "P-00001", "product_name": "6abh4wponcvr17ddluld8hf534yvqaljj",
+          "plan_id": "PLN-00001", "plan_name": "c77jb4cuxt5rps9r7oan6zvf1o8asztc3n054hx53oy",
+          "charge_id": "CHG-00001", "subscription_line_id": "SCHG-01", "charge_name":
+          "ybwydufmcapwwgy67nbg0t1py5q3o8tjqa9iqkiwlg", "charge_type": "recurring",
+          "description": "ognum8b4hzueg2wvfrg875mo3q3gp", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "unit_price": "16667.0", "list_price": "45781.0",
+          "list_price_base": "Billing Period", "taxable": false, "quantity": 30386.0,
+          "discount": "0.0", "effective_price": "16794.0", "line_tax": "45933.0", "tax_lines":
+          [], "applied_tiers": "", "custom_fields": {}}], "subtotals": [], "payments":
+          [{"id": "PMT-05720", "customer_id": "utXE7bL7Ovmj18h", "payment_date": "2020-11-10",
+          "notes": "8jls22pwppdo3rvqdu6", "status": "Processed", "payment_amount": "42345.0",
+          "fee_amount": "28901.0", "applied_amount": "54092.0", "unapplied_amount":
+          "67943.0", "refunded_amount": "17747.0", "payment_type": "Electronic", "payment_method":
+          "5wf0g37gby4xn7yge33u42cyfnlbm8wf0ayvvt", "currency": "USD", "reference_number":
+          "vxshnehfszyyys8offi529q", "auto_apply": true, "created_by": "h127a63x@example.com",
+          "updated_by": "82f8i2ie@example.com", "created_date": "2020-11-10T08:17:38.174Z",
+          "updated_date": "2020-11-10T08:17:38.174Z", "failed_attempt": 12910, "refunds":
+          [], "retried_attempts": 65818, "gl_account": "", "gateway_name": "Stripe",
+          "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-06175", "customer_id": "utXE7bL7Ovmj18h",
+          "billing_contact": {"zip": "cx1g", "city": "4u8f283258qj22sahlblpe2hro96pm",
+          "email": "1n0z81qy@example.com", "phone": "", "state": "djm17o1nxm16u06ih2k6bc6in7x8o5dtcph",
+          "county": "", "mobile": "", "country": "nvf09rr23v0y2fubjzk153fp5vmj5jv6vhnhxpu",
+          "address1": "enjxpuy4jc6n3xo59y1vcgqxi9bsb9j5drxw45kcei", "address2": "",
+          "job_title": "", "last_name": "6jm3j6ioid8o5sakovc2oi81oat53l4j5j", "department":
+          "", "first_name": "to1nejjw28eyc9hw139kp9", "display_name": "feb8tjencrnqbdqe13mpu5grdnpp7ex3kqx45g3q6xx"},
+          "shipping_contact": {"zip": "mwehuvv8ig7hm0z741jws", "city": "u9wa9kf14ngsfscs9js057nq5",
+          "email": "d4ewgj0r@example.com", "phone": "", "state": "4rzxhw2bip5991vqk5oug4qs6ryp",
+          "county": "", "mobile": "", "country": "0mpz16tidb4ums65ajz8", "address1":
+          "ouurecymxpy", "address2": "", "job_title": "", "last_name": "ylqwix5y41vd2bj6q8uxde41z5mfl3oizvmg",
+          "department": "", "first_name": "h8wj62r7akdgtkueq49cjj9n44cdlisl3", "display_name":
+          "9qzdajdeknqafc5ovq1w0ol7twsa3vhvqwfliplgau1mz4x"}, "customer_name": "5ivdh2vq47zrz97tov7gtp1f",
+          "invoice_date": "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10",
+          "end_date": "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "8734.0",
+          "invoice_tax": "76530.0", "invoice_amount": "22749.0", "paid_amount": "59793.0",
+          "balance": "13343.0", "status": "Paid", "notes": "", "invoice_pdf_url": "wen1s0lz3qlmjcfsx",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:30.994Z",
+          "updated_date": "2020-11-10T08:17:42.683Z", "created_by": "eu0mf177@example.com",
+          "updated_by": "wq2f5me2@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-01097", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "mw0p689yl4ki",
+          "product_id": "P-00005", "product_name": "xm9wu", "plan_id": "PLN-00013",
+          "plan_name": "nootwx", "charge_id": "CHG-00013", "subscription_line_id": "SCHG-01",
+          "charge_name": "dy93sp2p7i", "charge_type": "recurring", "description": "3am09ino2pqtqp5ld",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "unit_price": "90843.0",
+          "list_price": "95267.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 60834.0, "discount": "0.0", "effective_price": "62000.0", "line_tax":
+          "38122.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05721", "customer_id": "utXE7bL7Ovmj18h", "payment_date":
+          "2020-11-10", "notes": "nswv7ieucvjij2jyqikm4a", "status": "Processed", "payment_amount":
+          "34437.0", "fee_amount": "24989.0", "applied_amount": "36159.0", "unapplied_amount":
+          "59400.0", "refunded_amount": "50098.0", "payment_type": "Electronic", "payment_method":
+          "6rduk1cufofnls7n5422s884s18mfpelvzm2v0", "currency": "USD", "reference_number":
+          "brugcnp3eovmf94g9xwo4b9dpudwp7aixqt", "auto_apply": true, "created_by": "4to64x12@example.com",
+          "updated_by": "f86mcqms@example.com", "created_date": "2020-11-10T08:17:38.329Z",
+          "updated_date": "2020-11-10T08:17:38.329Z", "failed_attempt": 79783, "refunds":
+          [], "retried_attempts": 25651, "gl_account": "", "gateway_name": "Stripe",
+          "custom_fields": {}, "quickbooks_id": ""}], "credits":
+          [], "refunds": [], "custom_fields": {}, "quickbooks_id": "",
+          "stripe_invoice_id": ""}, {"id": "INV-06176", "customer_id": "utXE7bL7Ovmj18h",
+          "billing_contact": {"zip": "", "city": "", "email": "5zqh12vc@example.com",
+          "phone": "", "state": "", "county": "", "mobile": "", "country": "ibv5", "address1":
+          "", "address2": "", "job_title": "", "last_name": "al07bhfc8wpfrwvx29yuojx7oy2o8og4wdi08a7wqalna",
+          "department": "", "first_name": "pdh0g7iccx0mr6xtmby2s6qagta5qnd4", "display_name":
+          "826tvrllf334tq372jx8wkegl"}, "shipping_contact": {"zip": "", "city": "",
+          "email": "b2f3q7ni@example.com", "phone": "", "state": "", "county": "", "mobile":
+          "", "country": "b3p7r0wid6gunkngoz68rkbzxf7e5fel8m1gyp7tf63d", "address1":
+          "", "address2": "", "job_title": "", "last_name": "6kl9shiej48ai2g6eqfnj9a171gofhkct5cr4hz75og",
+          "department": "", "first_name": "4wubsi6ad790ahndd36m4lofei6rd", "display_name":
+          "c8osrq"}, "customer_name": "fsydru89h8s9qe2fu9fiaea1pk0co2r0bs", "invoice_date":
+          "2020-11-10", "due_date": "2020-11-10", "start_date": "2020-11-10", "end_date":
+          "2020-12-09", "billing_run_id": "BR-02363", "subtotal": "46001.0", "invoice_tax":
+          "60119.0", "invoice_amount": "27209.0", "paid_amount": "37584.0", "balance":
+          "20955.0", "status": "Paid", "notes": "", "invoice_pdf_url": "u2whweymnx665zd4c6jz5i1k9",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:31.765Z",
+          "updated_date": "2020-11-10T08:17:43.808Z", "created_by": "mrfiqz63@example.com",
+          "updated_by": "68ut8iat@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-01102", "customer_id": "utXE7bL7Ovmj18h", "customer_name": "uydmq4ig42cv35m3bi6",
+          "product_id": "P-00001", "product_name": "mmx4jz32qr10jxk2cibzxcsokzw", "plan_id":
+          "PLN-00001", "plan_name": "roa", "charge_id": "CHG-00001", "subscription_line_id":
+          "SCHG-01", "charge_name": "o7xvh", "charge_type": "recurring", "description":
+          "mvbtob2a0tapjkqyfdyro1rfkigl", "start_date": "2020-11-10", "end_date": "2020-12-09",
+          "unit_price": "88862.0", "list_price": "68248.0", "list_price_base": "Billing
+          Period", "taxable": false, "quantity": 22242.0, "discount": "0.0", "effective_price":
+          "33429.0", "line_tax": "97701.0", "tax_lines": [], "applied_tiers": "", "custom_fields":
+          {}}], "subtotals": [], "payments": [{"id": "PMT-05722", "customer_id": "utXE7bL7Ovmj18h",
+          "payment_date": "2020-11-10", "notes": "3dk7ekkjypeks86acvedadtlvpo", "status":
+          "Processed", "payment_amount": "11325.0", "fee_amount": "63328.0", "applied_amount":
+          "31417.0", "unapplied_amount": "21933.0", "refunded_amount": "54328.0", "payment_type":
+          "Electronic", "payment_method": "xu6ehh5o7xlmlhr4v9n", "currency": "USD",
+          "reference_number": "t60fw5ndr883x673rqzww68g5vd6ip0a", "auto_apply": true,
+          "created_by": "bj7vngct@example.com", "updated_by": "x5bxpqhf@example.com",
+          "created_date": "2020-11-10T08:17:39.331Z", "updated_date": "2020-11-10T08:17:39.331Z",
+          "failed_attempt": 16976, "refunds": [], "retried_attempts": 36176, "gl_account":
+          "", "gateway_name": "Stripe", "custom_fields": {},
+          "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields": {},
+          "quickbooks_id": "", "stripe_invoice_id": ""}]'
+      headers:
+        CF-Cache-Status:
+          - DYNAMIC
+        CF-RAY:
+          - 5f098c941e5f157b-EWR
+        Cache-Control:
+          - max-age=0, private, must-revalidate
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Wed, 11 Nov 2020 16:56:54 GMT
+        Etag:
+          - W/"3e60eb305b3463e4c9b25d297bf3052d"
+        Expect-CT:
+          - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+        NEL:
+          - '{"report_to":"cf-nel","max_age":604800}'
+        Report-To:
+          - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=6LClnaFhu8%2FFvVBzxbm2ri1ZQsRMg5gc3JTEZXq%2FmpCb3RIeRiRX4myf5fSYELjm8q3XLJ6aWQF5Jc70K8TJiSjVvLoPC3r4suEBIA%2FMC7K4ofk%3D"}],"group":"cf-nel","max_age":604800}'
+        Strict-Transport-Security:
+          - max-age=31536000
+        Vary:
+          - Accept-Encoding
+        Via:
+          - 1.1 vegur
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - SAMEORIGIN
+        X-Request-Id:
+          - ba9a171c-7f05-40c9-8998-a2009298c097
+        X-Runtime:
+          - "1.471878"
+        X-Xss-Protection:
+          - 1; mode=block
+        cf-request-id:
+          - 0659d630920000157b7281c000000001
+        content-length:
+          - "150266"
+        x-amz-apigw-id:
+          - V2ipUHfDoAMFdnQ=
+        x-amzn-Remapped-Connection:
+          - keep-alive
+        x-amzn-Remapped-Date:
+          - Wed, 11 Nov 2020 16:56:54 GMT
+        x-amzn-Remapped-Server:
+          - cloudflare
+        x-amzn-RequestId:
+          - 334e9593-c9aa-44e0-a70e-4a153ba0f211
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/json
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - tap-ordway v0.1.0 (https://github.com/ordwaylabs/tap-ordway)
+      method: GET
+      uri: https://api.ordwaylabs.com/api/v1/invoices?sort=updated_date,id&size=50&page=2&updated_date%3E=2020-11-10T00%3A00%3A00.000000Z
+    response:
+      body:
+        string:
+          '[{"id": "INV-06184", "customer_id": "mvlm8gBHhTf1mB6", "billing_contact":
+          {"zip": "b66g6uqmtjpyiwf5wt", "city": "3mxzraht", "email": "0b8wh7zg@example.com",
+          "phone": "", "state": "xrtu82a8011ppk58xogx5ai7c94w8m3435q5siufwcn5d0sm",
+          "county": "", "mobile": "", "country": "jskchmcjyp", "address1": "8rka", "address2":
+          "", "job_title": "", "last_name": "riljonfa7ckiqd18gh2mg5c7y4h3earoboah9e0nq8p9lcaqe",
+          "department": "", "first_name": "oqhgoewao8me1h1135dq07", "display_name":
+          "kz7mxvjf1waogamblajvxr2f"}, "shipping_contact": {"zip": "0wuawdo", "city":
+          "3maxesensw64dnz70uqp8796y", "email": "58d7stml@example.com", "phone": "",
+          "state": "5t7hnk0dshallnm8ap59ey9q3154q5hxz0q", "county": "", "mobile": "",
+          "country": "0st69usdzeto74a2s8qpeh580p2kdz", "address1": "lj", "address2":
+          "", "job_title": "", "last_name": "9fc252s3stkqx2qa36iiml23nw12fwa0i22vjiq661459wdyz",
+          "department": "", "first_name": "ej", "display_name": "yfas0zucjobtws2rq3rzdx1ecv1z1jo2"},
+          "customer_name": "6ht3arffdok81b0mh1oc7721jjdang6i8pn4", "invoice_date": "2020-11-10",
+          "due_date": "2020-11-10", "start_date": "2020-11-10", "end_date": "2020-12-09",
+          "billing_run_id": "BR-02363", "subtotal": "57006.0", "invoice_tax": "88965.0",
+          "invoice_amount": "49136.0", "paid_amount": "59809.0", "balance": "14074.0",
+          "status": "Paid", "notes": "", "invoice_pdf_url": "6pr7xk09fd7x4a3z7211cwrycq3vbxdbk8pm2r1jz64",
+          "currency": "USD", "payment_terms": "Due on Receipt", "created_date": "2020-11-10T08:03:37.974Z",
+          "updated_date": "2020-11-10T08:17:59.594Z", "created_by": "wx8626qy@example.com",
+          "updated_by": "lxkxssmk@example.com", "line_items": [{"line_no": "1", "subscription_id":
+          "S-01607", "customer_id": "mvlm8gBHhTf1mB6", "customer_name": "ysvxvza0otzb73qmdomlsaa7sf5isdco6kq1oza",
+          "product_id": "P-00005", "product_name": "kz3kn03qcw7v0a2ceg", "plan_id":
+          "PLN-00013", "plan_name": "10hjst75p1ls0ckhado0xpno2h101fqgulb1y8zal", "charge_id":
+          "CHG-00013", "subscription_line_id": "SCHG-01", "charge_name": "7xi4xztofgn9r6z90r1crq",
+          "charge_type": "recurring", "description": "s6vryanbun9x2ynpbbd7vf5h9pqzsn",
+          "start_date": "2020-11-10", "end_date": "2020-12-09", "unit_price": "27153.0",
+          "list_price": "86154.0", "list_price_base": "Billing Period", "taxable": false,
+          "quantity": 11941.0, "discount": "0.0", "effective_price": "56298.0", "line_tax":
+          "55107.0", "tax_lines": [], "applied_tiers": "", "custom_fields": {}}], "subtotals":
+          [], "payments": [{"id": "PMT-05731", "customer_id": "mvlm8gBHhTf1mB6", "payment_date":
+          "2020-11-10", "notes": "r", "status": "Processed", "payment_amount": "54531.0",
+          "fee_amount": "77487.0", "applied_amount": "98657.0", "unapplied_amount":
+          "64618.0", "refunded_amount": "82084.0", "payment_type": "Electronic", "payment_method":
+          "2r7358jkefr6t8s2pvd7zdgimro3soqr78k3r94wrkbwe", "currency": "USD", "reference_number":
+          "m4vke9vp", "auto_apply": true, "created_by": "c4n1ahik@example.com", "updated_by":
+          "iu5a8vhk@example.com", "created_date": "2020-11-10T08:17:55.600Z", "updated_date":
+          "2020-11-10T08:17:55.600Z", "failed_attempt": 62339, "refunds": [], "retried_attempts":
+          19871, "gl_account": "", "gateway_name": "Stripe", "custom_fields": {}, "quickbooks_id": ""}], "credits": [], "refunds": [], "custom_fields":
+          {}, "quickbooks_id": "", "stripe_invoice_id": ""}]'
+      headers:
+        CF-Cache-Status:
+          - DYNAMIC
+        CF-RAY:
+          - 5f098ca089c8efdc-EWR
+        Cache-Control:
+          - max-age=0, private, must-revalidate
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Wed, 11 Nov 2020 16:56:56 GMT
+        Etag:
+          - W/"30de784cb4147ea64c095699fd80452e"
+        Expect-CT:
+          - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+        NEL:
+          - '{"report_to":"cf-nel","max_age":604800}'
+        Report-To:
+          - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=puokitRrV92AXDBogFhNKhNXb135CsY8tzzGeVJcaMZFDUDCWfB6IUW1q8jM40OXK1I%2BQwHYsd3wcTFU%2BSvkcLXPr6ynXp9odh8j6LUnW9z6xEg%3D"}],"group":"cf-nel","max_age":604800}'
+        Strict-Transport-Security:
+          - max-age=31536000
+        Vary:
+          - Accept-Encoding
+        Via:
+          - 1.1 vegur
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - SAMEORIGIN
+        X-Request-Id:
+          - 43932b95-37ea-4d20-82e1-7165a99fb4b1
+        X-Runtime:
+          - "1.393255"
+        X-Xss-Protection:
+          - 1; mode=block
+        cf-request-id:
+          - 0659d638540000efdca4b0f000000001
+        content-length:
+          - "152310"
+        x-amz-apigw-id:
+          - V2ipnHMOIAMF-_w=
+        x-amzn-Remapped-Connection:
+          - keep-alive
+        x-amzn-Remapped-Date:
+          - Wed, 11 Nov 2020 16:56:56 GMT
+        x-amzn-Remapped-Server:
+          - cloudflare
+        x-amzn-RequestId:
+          - 7e67d66f-8856-4146-8f94-0a1ff6472874
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/json
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - tap-ordway v0.1.0 (https://github.com/ordwaylabs/tap-ordway)
+      method: GET
+      uri: https://api.ordwaylabs.com/api/v1/invoices?sort=updated_date,id&size=50&page=3&updated_date%3E=2020-11-10T00%3A00%3A00.000000Z
+    response:
+      body:
+        string: "[]"
+      headers:
+        CF-Cache-Status:
+          - DYNAMIC
+        CF-RAY:
+          - 5f098ca089c8efdc-EWR
+        Cache-Control:
+          - max-age=0, private, must-revalidate
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Wed, 11 Nov 2020 16:56:56 GMT
+        Etag:
+          - W/"30de784cb4147ea64c095699fd80452e"
+        Expect-CT:
+          - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+        NEL:
+          - '{"report_to":"cf-nel","max_age":604800}'
+        Report-To:
+          - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=puokitRrV92AXDBogFhNKhNXb135CsY8tzzGeVJcaMZFDUDCWfB6IUW1q8jM40OXK1I%2BQwHYsd3wcTFU%2BSvkcLXPr6ynXp9odh8j6LUnW9z6xEg%3D"}],"group":"cf-nel","max_age":604800}'
+        Strict-Transport-Security:
+          - max-age=31536000
+        Vary:
+          - Accept-Encoding
+        Via:
+          - 1.1 vegur
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - SAMEORIGIN
+        X-Request-Id:
+          - 43932b95-37ea-4d20-82e1-7165a99fb4b1
+        X-Runtime:
+          - "1.393255"
+        X-Xss-Protection:
+          - 1; mode=block
+        cf-request-id:
+          - 0659d638540000efdca4b0f000000001
+        content-length:
+          - "152310"
+        x-amz-apigw-id:
+          - V2ipnHMOIAMF-_w=
+        x-amzn-Remapped-Connection:
+          - keep-alive
+        x-amzn-Remapped-Date:
+          - Wed, 11 Nov 2020 16:56:56 GMT
+        x-amzn-Remapped-Server:
+          - cloudflare
+        x-amzn-RequestId:
+          - 7e67d66f-8856-4146-8f94-0a1ff6472874
+      status:
+        code: 200
+        message: OK
+version: 1

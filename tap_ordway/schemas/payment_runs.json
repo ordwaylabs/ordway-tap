@@ -1,0 +1,137 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "payment_run_id",
+        "company_id"
+    ],
+    "properties": {
+        "company_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "payment_run_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "status": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "target_date": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "success_count": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "failure_count": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "currency": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "payments_total_value": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "payments_success_value": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "payments_failed_value": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "refunds_total_value": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "refunds_success_value": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "refunds_failed_value": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "created_by": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "updated_by": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "filter_options": {
+            "type": [
+                "null",
+                "object"
+            ],
+            "additionalProperties": true
+        },
+        "target_invoice_due_date": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "payment_per_customer": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "refunds_for_negative_invoices": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "send_email_on_payments_success": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "send_email_on_payment_fail": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        }
+    }
+}

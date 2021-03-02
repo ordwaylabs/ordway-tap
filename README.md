@@ -1,4 +1,4 @@
-# ordway-tap
+# tap-ordway
 
 This is a [Singer](https://singer.io) tap that produces JSON-formatted data
 following the [Singer
@@ -8,108 +8,130 @@ This tap:
 
 - Pulls raw data from [OrdwayLabs](https://www.ordwaylabs.com/)
 - Extracts the following resources:
+  - billing_runs
   - billing_schedules
+  - charges
+  - chart_of_accounts
+  - contacts
+  - coupons
   - credits
+  - customer_notes
   - customers
   - invoices
   - orders
+  - payment_methods
+  - payment_runs
   - payments
+  - plans
   - products
   - refunds
+  - revenue_rules
   - revenue_schedules
+  - statements
   - subscriptions
+  - usages
+  - webhooks
 - Outputs the schema for each resource
 - Incrementally pulls data based on the input state
 
-### Installation
-##### Requirements:
+## Installation
+### Requirements
 - Python 3.6+
 - mkvirtualenv
 - pip
 
-##### Steps:
+### Steps
 Run following commands on terminal from the project directory
+```bash
+python3 -m venv ~/.virtualenvs/tap-ordway
+source ~/.virtualenvs/tap-ordway/bin/activate
+pip install -e .
+```
 
-`$ python3 -m venv ~/.virtualenvs/ordway-tap`
+### To Run
+`$ source ~/.virtualenvs/tap-ordway/bin/activate`
 
-`$ source ~/.virtualenvs/ordway-tap/bin/activate`
-
-`$ pip install -e .`
-
-##### To Run
-`$ source ~/.virtualenvs/ordway-tap/bin/activate`
-
-`$ ordway-tap -c config.json --catalog catalog.json -s state.json`
+`$ tap-ordway -c config.json --catalog catalog.json -s state.json`
 
 
 You can generate the catalog.json by following command:
 
-`$ ordway-tap -c config.json --discover > catalog.json`
+`$ tap-ordway -c config.json --discover > catalog.json`
 
 The sample config JSON is format is given below:
-```
+```json
 {
-  "api_credentials": {
-    "x_company": "X-Company",
-    "x_company_token": "API Token",
-    "x_user_email": "User Email",
-    "x_user_token": "User Token",
-    "x_api_key": "API Key",
-    "endpoint": "Endpoint URL"
-  }
+  "company": "Rocky",
+  "user_email": "me@example.com",
+  "user_token": "123usertoken",
+  "api_key": "123secret",
+  "start_date": "2019-12-01"
 }
 ```
+
+The `start_date` indicates the data at which the tap should start syncing data when no bookmark exists in the state for that particular stream.
+
+The following configuration keys are optional:
+- `staging` - Whether or not to use the staging environment (staging.ordwaylabs.com)
+- `api_version` - Which Ordwaylabs API version to use (e.g. "v1")
+- `api_url` - An alternative URL to which the API requests will be made (e.g. "https://localhost:3000/v1/"). When specified, it will take precendence over `staging` and `api_version`.
+- `rate_limit_rps` - The amount of requests to allow per second (defaults to `null`, disabling rate limiting)
 
 The State JSON should be passed by user. 
 The Tap will be printing the STATE message, the last state message should send when running next time. 
 
 Sample JSON:
 
-```
+```json
 {
-	"credits": {
-		"synced": true,
-		"last_synced": "2020-10-01T15:38:38.589"
-	},
-	"invoices": {
-		"synced": true,
-		"last_synced": "2020-10-01T15:38:38.835"
-	},
-	"orders": {
-		"synced": true,
-		"last_synced": "2020-10-01T15:38:39.026"
-	},
-	"customers": {
-		"synced": true,
-		"last_synced": "2020-10-01T15:38:39.275"
-	},
-	"revenue_schedules": {
-		"synced": true,
-		"last_synced": "2020-10-01T15:38:39.523"
-	},
-	"billing_schedules": {
-		"synced": true,
-		"last_synced": "2020-10-01T15:38:41.218"
-	},
-	"subscriptions": {
-		"synced": true,
-		"last_synced": "2020-10-01T15:38:42.578"
-	},
-	"payments": {
-		"synced": true,
-		"last_synced": "2020-10-01T15:38:43.018"
-	},
-	"products": {
-		"synced": true,
-		"last_synced": "2020-10-01T15:38:43.813"
-	},
-	"refunds": {
-		"synced": true,
-		"last_synced": "2020-10-01T15:38:44.141"
-	}
+    "currently_syncing": "credits",
+    "bookmarks": {
+      "credits": {
+        "updated_date": "2020-11-14T05:59:48.842000Z"
+      }
+    }
 }
-
 ```
+
+## Testing
+1. Install the dev extra requirements
+```bash
+pip install .[dev]
+```
+2. Execute tox with the default environments: `py36`, `py37`, `py38`, and `type` (for static type checking via mypy)
+```bash
+tox
+```
+
+Additionally, you can generate a [Coverage](https://coverage.readthedocs.io/en/coverage-5.3/]) report by using the `coverage` environment:
+```bash
+tox -e coverage
+```
+
+For more information on tox, please refer to its [documentation](https://tox.readthedocs.io/en/latest/index.html).
+
+### Testing with singer-check-tap
+
+*singer-check-tap* is a tool for testing whether or not a tap adheres to the Singer specification. For more information, please review its [documentation](https://github.com/singer-io/singer-tools#singer-check-tap).
+
+1. Install the [singer-tools](https://github.com/singer-io/singer-tools) package
+```bash
+pip install singer-tools
+```
+2. Execute singer-check-tap
+
+```bash
+singer-check-tap --tap tap-ordway --config config.json
+```
+
+In this mode, singer-check-tap will execute the tap itself, run it in discover mode to generate a catalog, perform a stateless run and a stateful run, and validate the tap's output.
+
+If you need to test with a modified catalog, you can do so by piping the tap's output directly into singer-check-tap like so:
+
+```bash
+tap-ordway --config config.json --catalog catalog.json | singer-check-tap
+```
+
 ---
 
 Copyright &copy; 2020 Stitch

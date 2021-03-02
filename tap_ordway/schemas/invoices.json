@@ -1,0 +1,311 @@
+{
+	"type": [
+		"null",
+		"object"
+	],
+	"additionalProperties": false,
+	"required": [
+		"company_id",
+		"invoice_id",
+		"invoice_line_no"
+	],
+	"properties": {
+		"company_id": {
+			"type": "string"
+		},
+		"invoice_id": {
+			"type": "string"
+		},
+		"invoice_line_no": {
+			"type": "string"
+		},
+		"customer_id": {
+			"type": "string"
+		},
+		"billing_contact": {
+			"type": [
+				"null",
+				"object"
+			]
+		},
+		"shipping_contact": {
+			"type": [
+				"null",
+				"object"
+			]
+		},
+		"customer_name": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"invoice_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date"
+		},
+		"due_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date"
+		},
+		"billing_run_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"subtotal": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"invoice_tax": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"invoice_amount": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"paid_amount": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"balance": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"status": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"notes": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"currency": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"payment_terms": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"subscription_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"product_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"product_name": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"plan_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"plan_name": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"charge_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"subscription_line_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"charge_name": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"charge_type": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"description": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"start_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date"
+		},
+		"end_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date"
+		},
+		"unit_price": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"list_price": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"list_price_base": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"taxable": {
+			"type": [
+				"null",
+				"boolean"
+			]
+		},
+		"quantity": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"discount": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"effective_price": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"line_tax": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"tax_lines": {
+			"type": [
+				"null",
+				"array"
+			],
+			"items": {
+				"type": [
+					"null",
+					"object"
+				],
+				"additionalProperties": true
+			}
+		},
+		"applied_tiers": {
+			"type": [
+				"null",
+				"array"
+			],
+			"items": {
+				"type": [
+					"null",
+					"object"
+				],
+				"additionalProperties": true
+			}
+		},
+		"created_by": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"updated_by": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"created_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date-time"
+		},
+		"updated_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date-time"
+		},
+		"custom_fields": {
+			"type": [
+				"null",
+				"object"
+			]
+		},
+		"line_custom_fields": {
+			"type": [
+				"null",
+				"object"
+			]
+		},
+		"invoice_pdf_url": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "uri"
+		}
+	}
+}

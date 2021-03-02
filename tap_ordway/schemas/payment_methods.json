@@ -1,0 +1,99 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "company_id",
+        "payment_method_id",
+        "customer_id",
+        "payment_type",
+        "account_number"
+    ],
+    "properties": {
+        "payment_method_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "company_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "customer_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "customer_payment_gateway_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "payment_type": {
+            "type": [
+                "string"
+            ]
+        },
+        "type": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "account_number": {
+            "type": [
+                "string"
+            ]
+        },
+        "routing_number": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "account_holder_name": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "account_holder_type": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "country": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "expiry": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "status": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "default": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "cvc": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}

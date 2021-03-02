@@ -1,0 +1,141 @@
+{
+	"type": [
+		"null",
+		"object"
+	],
+	"additionalProperties": false,
+	"required": [
+		"company_id",
+		"credit_id"
+	],
+	"properties": {
+		"company_id": {
+			"type": "string"
+		},
+		"credit_id": {
+			"type": "string"
+		},
+		"customer_id": {
+			"type": "string"
+		},
+		"credit_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date"
+		},
+		"notes": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"status": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"credit_amount": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"applied_amount": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"unapplied_amount": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"currency": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"reference_number": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"auto_apply": {
+			"type": [
+				"null",
+				"boolean"
+			]
+		},
+		"gl_account": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"invoices": {
+			"type": [
+				"null",
+				"array"
+			],
+			"items": {
+				"type": [
+					"null",
+					"object"
+				],
+				"additionalProperties": true
+			}
+		},
+		"refunds": {
+			"type": [
+				"null",
+				"array"
+			],
+			"items": {
+				"type": [
+					"null",
+					"object"
+				],
+				"additionalProperties": true
+			}
+		},
+		"created_by": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"updated_by": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"created_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date-time"
+		},
+		"updated_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date-time"
+		},
+		"custom_fields": {
+			"type": [
+				"null",
+				"object"
+			]
+		}
+	}
+}

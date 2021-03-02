@@ -1,0 +1,148 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/json
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - tap-ordway v0.1.0 (https://github.com/ordwaylabs/tap-ordway)
+      method: GET
+      uri: https://api.ordwaylabs.com/api/v1/refunds?sort=updated_date,id&size=50&page=1&updated_date%3E=2020-11-11T22%3A24%3A58.660000Z
+    response:
+      body:
+        string:
+          '[{"id": "REF-00132", "customer_id": "S7udb9HK23hgQK2", "refund_date": "2020-11-11",
+          "refund_amount": "50304.0", "refund_type": "Electronic", "payment_id": "PMT-05793",
+          "refund_status": "Succeeded", "notes": "", "currency": "USD", "reference_number":
+          "h1ofzjx7c3d", "conversion_rate": 96124.0, "created_by": "nbh4lxt5@example.com",
+          "updated_by": "pi5he0ta@example.com", "created_date": "2020-11-11T22:24:57.000Z",
+          "updated_date": "2020-11-11T22:24:58.660Z"}]'
+      headers:
+        CF-Cache-Status:
+          - DYNAMIC
+        CF-RAY:
+          - 5f1233dac855efcc-EWR
+        Cache-Control:
+          - max-age=0, private, must-revalidate
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Thu, 12 Nov 2020 18:09:11 GMT
+        Etag:
+          - W/"05a997c94dc32a4547fb8de09651f951"
+        Expect-CT:
+          - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+        NEL:
+          - '{"report_to":"cf-nel","max_age":604800}'
+        Report-To:
+          - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=oy1j100fN9DuALWwxmOr7tRDlaYHz9ZQa64B444k6Qewctpizkx7ULhOicbVXhh9BET%2Bp2AlHqUtWG7hTeeRU9JMijaDz5ooBktoULF8%2BCOCoNo%3D"}],"group":"cf-nel","max_age":604800}'
+        Strict-Transport-Security:
+          - max-age=31536000
+        Vary:
+          - Accept-Encoding
+        Via:
+          - 1.1 vegur
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - SAMEORIGIN
+        X-Request-Id:
+          - 9e2e5a9c-331e-4013-90a1-83aeb1d8f6ff
+        X-Runtime:
+          - "0.059140"
+        X-Xss-Protection:
+          - 1; mode=block
+        cf-request-id:
+          - 065f3ebcbb0000efcc8a13a000000001
+        content-length:
+          - "428"
+        x-amz-apigw-id:
+          - V6ALFGU9IAMFuhA=
+        x-amzn-Remapped-Connection:
+          - keep-alive
+        x-amzn-Remapped-Date:
+          - Thu, 12 Nov 2020 18:09:11 GMT
+        x-amzn-Remapped-Server:
+          - cloudflare
+        x-amzn-RequestId:
+          - 510df0a6-126c-4878-a470-7211a9108a06
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/json
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - tap-ordway v0.1.0 (https://github.com/ordwaylabs/tap-ordway)
+      method: GET
+      uri: https://api.ordwaylabs.com/api/v1/refunds?sort=updated_date,id&size=50&page=2&updated_date%3E=2020-11-11T22%3A24%3A58.660000Z
+    response:
+      body:
+        string: "[]"
+      headers:
+        CF-Cache-Status:
+          - DYNAMIC
+        CF-RAY:
+          - 5f1233dac855efcc-EWR
+        Cache-Control:
+          - max-age=0, private, must-revalidate
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Thu, 12 Nov 2020 18:09:11 GMT
+        Etag:
+          - W/"05a997c94dc32a4547fb8de09651f951"
+        Expect-CT:
+          - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+        NEL:
+          - '{"report_to":"cf-nel","max_age":604800}'
+        Report-To:
+          - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=oy1j100fN9DuALWwxmOr7tRDlaYHz9ZQa64B444k6Qewctpizkx7ULhOicbVXhh9BET%2Bp2AlHqUtWG7hTeeRU9JMijaDz5ooBktoULF8%2BCOCoNo%3D"}],"group":"cf-nel","max_age":604800}'
+        Strict-Transport-Security:
+          - max-age=31536000
+        Vary:
+          - Accept-Encoding
+        Via:
+          - 1.1 vegur
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - SAMEORIGIN
+        X-Request-Id:
+          - 9e2e5a9c-331e-4013-90a1-83aeb1d8f6ff
+        X-Runtime:
+          - "0.059140"
+        X-Xss-Protection:
+          - 1; mode=block
+        cf-request-id:
+          - 065f3ebcbb0000efcc8a13a000000001
+        content-length:
+          - "428"
+        x-amz-apigw-id:
+          - V6ALFGU9IAMFuhA=
+        x-amzn-Remapped-Connection:
+          - keep-alive
+        x-amzn-Remapped-Date:
+          - Thu, 12 Nov 2020 18:09:11 GMT
+        x-amzn-Remapped-Server:
+          - cloudflare
+        x-amzn-RequestId:
+          - 510df0a6-126c-4878-a470-7211a9108a06
+      status:
+        code: 200
+        message: OK
+version: 1

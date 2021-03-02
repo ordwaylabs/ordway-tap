@@ -1,10 +1,9 @@
 {
-  "api_credentials": {
-    "x_company": "Rocky",
-    "x_company_token": "oy4ipF-zEq-PWMBBF4eG",
-    "x_user_email": "mubarak.kollaru-kandiyil@ordwaylabs.com",
-    "x_user_token": "Qz-kabJxrtAjCKRnzHnK",
-    "x_api_key": "",
-    "endpoint": "http://localhost:3000"
-  }
+  "company": "Rocky",
+  "user_email": "me@example.com",
+  "user_token": "123usertoken",
+  "api_key": "123secret",
+  "api_url": "https://localhost:3000/v1/",
+  "staging": false,
+  "start_date": "2019-12-01"
 }

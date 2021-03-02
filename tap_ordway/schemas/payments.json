@@ -1,0 +1,171 @@
+{
+	"type": [
+		"null",
+		"object"
+	],
+	"additionalProperties": false,
+	"required": [
+		"company_id",
+		"payment_id"
+	],
+	"properties": {
+		"company_id": {
+			"type": "string"
+		},
+		"payment_id": {
+			"type": "string"
+		},
+		"customer_id": {
+			"type": "string"
+		},
+		"payment_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date"
+		},
+		"notes": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"status": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"payment_amount": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"fee_amount": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"applied_amount": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"unapplied_amount": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"refunded_amount": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"payment_type": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"payment_method": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"currency": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"reference_number": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"auto_apply": {
+			"type": [
+				"null",
+				"boolean"
+			]
+		},
+		"retried_attempts": {
+			"type": [
+				"null",
+				"integer"
+			]
+		},
+		"invoices": {
+			"type": [
+				"null",
+				"array"
+			],
+			"items": {
+				"type": [
+					"null",
+					"object"
+				],
+				"additionalProperties": true
+			}
+		},
+		"refunds": {
+			"type": [
+				"null",
+				"array"
+			],
+			"items": {
+				"type": [
+					"null",
+					"object"
+				],
+				"additionalProperties": true
+			}
+		},
+		"gl_account": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"created_by": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"updated_by": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"created_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date-time"
+		},
+		"updated_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date-time"
+		},
+		"custom_fields": {
+			"type": [
+				"null",
+				"object"
+			]
+		}
+	}
+}

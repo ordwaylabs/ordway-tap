@@ -1,0 +1,87 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "company_id",
+        "code"
+    ],
+    "properties": {
+        "code": {
+            "type": [
+                "string"
+            ]
+        },
+        "company_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "name": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "account_type": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "sub_type": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "parent_account": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "status": {
+            "type": [
+                "string"
+            ]
+        },
+        "description": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "created_by": {
+            "type": [
+                "string"
+            ],
+            "format": "email"
+        },
+        "updated_by": {
+            "type": [
+                "string"
+            ],
+            "format": "email"
+        },
+        "created_date": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "updated_date": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "custom_fields": {
+            "type": [
+                "null",
+                "object"
+            ]
+        }
+    }
+}

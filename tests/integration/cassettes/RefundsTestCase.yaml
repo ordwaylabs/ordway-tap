@@ -1,0 +1,220 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/json
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - tap-ordway v0.1.0 (https://github.com/ordwaylabs/tap-ordway)
+      method: GET
+      uri: https://api.ordwaylabs.com/api/v1/refunds?sort=updated_date,id&size=50&page=1&updated_date%3E=2020-11-01T00%3A00%3A00.000000Z
+    response:
+      body:
+        string:
+          '[{"id": "REF-00120", "customer_id": "rLk3NloE8Cn1Pvo", "refund_date": "2020-11-02",
+          "refund_amount": "33198.0", "refund_type": "Electronic", "payment_id": "PMT-05318",
+          "refund_status": "Succeeded", "notes": "m661adkvdc0d7u3em2ky", "currency":
+          "USD", "reference_number": "x7b6zlj21702xdxc0jyy30i85wd5l", "conversion_rate":
+          94067.0, "created_by": "50qkpn6g@example.com", "updated_by": "01rrvf6z@example.com",
+          "created_date": "2020-11-02T18:02:37.250Z", "updated_date": "2020-11-02T18:02:38.317Z"},
+          {"id": "REF-00121", "customer_id": "XFhLE2GY6eNcSQl", "refund_date": "2020-11-02",
+          "refund_amount": "96069.0", "refund_type": "Electronic", "payment_id": "PMT-05353",
+          "refund_status": "Succeeded", "notes": "6727rxtwkksv80g92x6sh34", "currency":
+          "USD", "reference_number": "f87vqnewvdcjpqp5jlspvvo77d6hsp9qsdfzgoe1213vwx4g4",
+          "conversion_rate": 83467.0, "created_by": "zxdifhe4@example.com", "updated_by":
+          "et051qsv@example.com", "created_date": "2020-11-02T18:44:46.172Z", "updated_date":
+          "2020-11-02T18:44:47.532Z"}, {"id": "REF-00122", "customer_id": "NBMaZz9VZejISz0",
+          "refund_date": "2020-11-02", "refund_amount": "22353.0", "refund_type": "Electronic",
+          "payment_id": "PMT-05305", "refund_status": "Succeeded", "notes": "pp7zbsk4wottfz7745sly00b9pa",
+          "currency": "USD", "reference_number": "xhigeq7graa5l2qdhnij3t", "conversion_rate":
+          96029.0, "created_by": "kpgzw1t1@example.com", "updated_by": "43q8ld85@example.com",
+          "created_date": "2020-11-03T07:40:47.001Z", "updated_date": "2020-11-03T07:40:48.222Z"},
+          {"id": "REF-00123", "customer_id": "OpTOMk5Bnldm90l", "refund_date": "2020-11-03",
+          "refund_amount": "93036.0", "refund_type": "Electronic", "payment_id": "PMT-05224",
+          "refund_status": "Succeeded", "notes": "697wqio6su1230ysjloi7tmkc73na00wm8p",
+          "currency": "USD", "reference_number": "7o", "conversion_rate": 18203.0, "created_by":
+          "avcu0ygn@example.com", "updated_by": "zq2cgiat@example.com", "created_date":
+          "2020-11-03T21:22:36.086Z", "updated_date": "2020-11-03T21:22:37.379Z"}, {"id":
+          "REF-00124", "customer_id": "I5ua2DznX0jeiu5", "refund_date": "2020-11-03", "refund_amount":
+          "23352.0", "refund_type": "Electronic", "payment_id": "PMT-05460", "refund_status":
+          "Succeeded", "notes": "zjm4298a2tv08k4a1m", "currency": "USD", "reference_number":
+          "fvm1iwbxkkykt44lo", "conversion_rate": 13715.0, "created_by": "7ayp4uhm@example.com",
+          "updated_by": "dzbfj0dj@example.com", "created_date": "2020-11-03T21:35:44.074Z",
+          "updated_date": "2020-11-03T21:35:45.094Z"}, {"id": "REF-00125", "customer_id":
+          "e6gaZw2HsV9M5TR", "refund_date": "2020-11-04", "refund_amount": "84977.0", "refund_type":
+          "Electronic", "payment_id": "PMT-05161", "refund_status": "Succeeded", "notes":
+          "0wbcwls41776wkrnvlt3yx8g80960i28wp", "currency": "USD", "reference_number":
+          "atj30msi28dpjiouyyspkww5rohb6bcv7gwxcmw0seehqy10", "conversion_rate": 39664.0,
+          "created_by": "ragyx7cf@example.com", "updated_by": "a4b8ps7j@example.com",
+          "created_date": "2020-11-04T08:26:12.608Z", "updated_date": "2020-11-04T08:26:13.795Z"},
+          {"id": "REF-00126", "customer_id": "SgbWCFaLYInhsqa", "refund_date": "2020-11-04",
+          "refund_amount": "67010.0", "refund_type": "Electronic", "payment_id": "PMT-05293",
+          "refund_status": "Succeeded", "notes": "bprajayo42m4n5kk1nf5j3l69u3q8mqjd7cb",
+          "currency": "USD", "reference_number": "t9pp3w5qdilzczvbpz7j5ub2qwkqgin7pt",
+          "conversion_rate": 50317.0, "created_by": "1w6r98w2@example.com", "updated_by":
+          "jrcvugk1@example.com", "created_date": "2020-11-04T18:43:19.270Z", "updated_date":
+          "2020-11-04T18:43:20.465Z"}, {"id": "REF-00127", "customer_id": "YZlbdzMvfl9hYTg",
+          "refund_date": "2020-11-04", "refund_amount": "17773.0", "refund_type": "Electronic",
+          "payment_id": "PMT-05494", "refund_status": "Succeeded", "notes": "2iz2h2e9lzxv559vyy3npdfzvnztv41a16fzghv6qqlio95i",
+          "currency": "USD", "reference_number": "hkqt5fkij0upfj89zul0v8ti00kvvdeecbiq",
+          "conversion_rate": 16621.0, "created_by": "82hhjjfw@example.com", "updated_by":
+          "y53uythu@example.com", "created_date": "2020-11-04T18:48:17.493Z", "updated_date":
+          "2020-11-04T18:48:18.752Z"}, {"id": "REF-00128", "customer_id": "8y8gjxE7GjlDiBr",
+          "refund_date": "2020-11-05", "refund_amount": "57352.0", "refund_type": "Electronic",
+          "payment_id": "PMT-05535", "refund_status": "Succeeded", "notes": "nk3vemjjclerka5zzqxs7a20i5pkkmd7xi8sufa1a",
+          "currency": "USD", "reference_number": "bfisi20usj07ia37u6apd9lzmo130nmxq1o2lj",
+          "conversion_rate": 93945.0, "created_by": "9k2ozmoe@example.com", "updated_by":
+          "ri6skjrl@example.com", "created_date": "2020-11-06T02:20:18.810Z", "updated_date":
+          "2020-11-06T02:20:20.182Z"}, {"id": "REF-00129", "customer_id": "pe4LiPUNZnz9FZv",
+          "refund_date": "2020-11-10", "refund_amount": "63133.0", "refund_type": "Electronic",
+          "payment_id": "PMT-05726", "refund_status": "Succeeded", "notes": "y26o2hsoa5bhf1lkcr9il13geh701zk8ylm",
+          "currency": "USD", "reference_number": "m9ds6mo7cy6bngyopjrcl", "conversion_rate":
+          10532.0, "created_by": "vgke41gm@example.com", "updated_by": "wp3alozp@example.com",
+          "created_date": "2020-11-10T17:28:27.680Z", "updated_date": "2020-11-10T17:28:30.736Z"},
+          {"id": "REF-00130", "customer_id": "kOR9WGPnR1KSt5I", "refund_date": "2020-11-11",
+          "refund_amount": "71864.0", "refund_type": "Electronic", "payment_id": "PMT-05514",
+          "refund_status": "Succeeded", "notes": "afjhm202xrhzdk3sj3ndyuwuyaqb6qpwkxhgr6",
+          "currency": "USD", "reference_number": "em39h71s4iz9jkchexvghs62lhef9ot0x4odcl",
+          "conversion_rate": 445.0, "created_by": "6wldqeom@example.com", "updated_by":
+          "xizaqorr@example.com", "created_date": "2020-11-11T17:51:07.300Z", "updated_date":
+          "2020-11-11T17:51:08.589Z"}, {"id": "REF-00131", "customer_id": "Gj2bYtxgmlJKDTW",
+          "refund_date": "2020-11-11", "refund_amount": "77829.0", "refund_type": "Electronic",
+          "payment_id": "PMT-03859", "refund_status": "Succeeded", "notes": "capwlc8yyni4nnblm",
+          "currency": "USD", "reference_number": "vx4p7nz9v4tivnobcb4j9p1g5iykottqn2o8ztia08rn5zzjk",
+          "conversion_rate": 44159.0, "created_by": "t5knct62@example.com", "updated_by":
+          "7qyph4wo@example.com", "created_date": "2020-11-11T18:35:50.911Z", "updated_date":
+          "2020-11-11T18:35:52.362Z"}, {"id": "REF-00132", "customer_id": "GfBKFh2C5NkNIBw",
+          "refund_date": "2020-11-11", "refund_amount": "31708.0", "refund_type": "Electronic",
+          "payment_id": "PMT-05793", "refund_status": "Succeeded", "notes": "", "currency":
+          "USD", "reference_number": "u28h5", "conversion_rate": 84774.0, "created_by":
+          "eiisg05q@example.com", "updated_by": "6dkm0sl9@example.com", "created_date":
+          "2020-11-11T22:24:57.000Z", "updated_date": "2020-11-11T22:24:58.660Z"}]'
+      headers:
+        CF-Cache-Status:
+          - DYNAMIC
+        CF-RAY:
+          - 5f12252988e1e76c-EWR
+        Cache-Control:
+          - max-age=0, private, must-revalidate
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Thu, 12 Nov 2020 17:59:09 GMT
+        Etag:
+          - W/"71d29cd5b41c123b1b79d8b9cb80227c"
+        Expect-CT:
+          - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+        NEL:
+          - '{"report_to":"cf-nel","max_age":604800}'
+        Report-To:
+          - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=DVZbtej8AnfGXV5gnvjLjGn%2BeG4a0UxHxaYo3ITmpwKi0ktGL8u1y0bgBMhdoFpa%2FnXExSaLDMlMx1ZMJZGzwdBV3CA2OhI99%2B4wW38Lff7HmGA%3D"}],"group":"cf-nel","max_age":604800}'
+        Strict-Transport-Security:
+          - max-age=31536000
+        Vary:
+          - Accept-Encoding
+        Via:
+          - 1.1 vegur
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - SAMEORIGIN
+        X-Request-Id:
+          - a88947b4-1fa4-4f41-8117-8541072ff814
+        X-Runtime:
+          - "0.146969"
+        X-Xss-Protection:
+          - 1; mode=block
+        cf-request-id:
+          - 065f358df40000e76c57035000000001
+        content-length:
+          - "5981"
+        x-amz-apigw-id:
+          - V5-tCGaBoAMFXfw=
+        x-amzn-Remapped-Connection:
+          - keep-alive
+        x-amzn-Remapped-Date:
+          - Thu, 12 Nov 2020 17:59:09 GMT
+        x-amzn-Remapped-Server:
+          - cloudflare
+        x-amzn-RequestId:
+          - d3e75a6f-cc4b-47d2-ae95-2f1a8f28d948
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/json
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - tap-ordway v0.1.0 (https://github.com/ordwaylabs/tap-ordway)
+      method: GET
+      uri: https://api.ordwaylabs.com/api/v1/refunds?sort=updated_date,id&size=50&page=2&updated_date%3E=2020-11-01T00%3A00%3A00.000000Z
+    response:
+      body:
+        string: "[]"
+      headers:
+        CF-Cache-Status:
+          - DYNAMIC
+        CF-RAY:
+          - 5f12252988e1e76c-EWR
+        Cache-Control:
+          - max-age=0, private, must-revalidate
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Thu, 12 Nov 2020 17:59:09 GMT
+        Etag:
+          - W/"71d29cd5b41c123b1b79d8b9cb80227c"
+        Expect-CT:
+          - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+        NEL:
+          - '{"report_to":"cf-nel","max_age":604800}'
+        Report-To:
+          - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=DVZbtej8AnfGXV5gnvjLjGn%2BeG4a0UxHxaYo3ITmpwKi0ktGL8u1y0bgBMhdoFpa%2FnXExSaLDMlMx1ZMJZGzwdBV3CA2OhI99%2B4wW38Lff7HmGA%3D"}],"group":"cf-nel","max_age":604800}'
+        Strict-Transport-Security:
+          - max-age=31536000
+        Vary:
+          - Accept-Encoding
+        Via:
+          - 1.1 vegur
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - SAMEORIGIN
+        X-Request-Id:
+          - a88947b4-1fa4-4f41-8117-8541072ff814
+        X-Runtime:
+          - "0.146969"
+        X-Xss-Protection:
+          - 1; mode=block
+        cf-request-id:
+          - 065f358df40000e76c57035000000001
+        content-length:
+          - "5981"
+        x-amz-apigw-id:
+          - V5-tCGaBoAMFXfw=
+        x-amzn-Remapped-Connection:
+          - keep-alive
+        x-amzn-Remapped-Date:
+          - Thu, 12 Nov 2020 17:59:09 GMT
+        x-amzn-Remapped-Server:
+          - cloudflare
+        x-amzn-RequestId:
+          - d3e75a6f-cc4b-47d2-ae95-2f1a8f28d948
+      status:
+        code: 200
+        message: OK
+version: 1

@@ -1,10 +1,666 @@
 {
   "streams": [
     {
-      "tap_stream_id": "credits",
+      "tap_stream_id": "customer_notes",
+      "replication_method": "FULL_TABLE",
       "key_properties": [
-        "company_id",
-        "credit_id"
+        "customer_note_id",
+        "company_id"
+      ],
+      "schema": {
+        "properties": {
+          "company_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "customer_note_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "title": {
+            "type": [
+              "string"
+            ]
+          },
+          "file_upload_file_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "file_upload_content_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "file_upload_file_size": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "file_upload_updated_at": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "has_versions": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_at": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_at": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "user_id": {
+            "type": [
+              "integer"
+            ]
+          },
+          "customer_id": {
+            "type": [
+              "integer"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "customer_notes",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "customer_note_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_note_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "description"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "title"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "file_upload_file_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "file_upload_content_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "file_upload_file_size"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "file_upload_updated_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "has_versions"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "user_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "coupons",
+      "replication_method": "FULL_TABLE",
+      "key_properties": [
+        "coupon_id",
+        "company_id"
+      ],
+      "schema": {
+        "properties": {
+          "company_id": {
+            "type": "string"
+          },
+          "coupon_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "code": {
+            "type": [
+              "string"
+            ]
+          },
+          "display_text": {
+            "type": [
+              "string"
+            ]
+          },
+          "status": {
+            "type": [
+              "string"
+            ]
+          },
+          "discount_type": {
+            "type": [
+              "string"
+            ]
+          },
+          "discount_value": {
+            "type": [
+              "integer"
+            ]
+          },
+          "duration_period": {
+            "type": [
+              "integer"
+            ]
+          },
+          "trial_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "trial_value": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "discount_criteria": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "criteria_value": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "expiration_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "usage_limit": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "usage_count": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "created_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_by": {
+            "format": "email",
+            "type": [
+              "string"
+            ]
+          },
+          "updated_by": {
+            "format": "email",
+            "type": [
+              "string"
+            ]
+          }
+        },
+        "type": "object",
+        "additionalProperties": false
+      },
+      "stream": "coupons",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "coupon_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "coupon_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "code"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "display_text"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "discount_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "discount_value"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "duration_period"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "trial_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "trial_value"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "discount_criteria"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "criteria_value"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "expiration_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "usage_limit"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "usage_count"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "webhooks",
+      "replication_method": "FULL_TABLE",
+      "key_properties": [
+        "name",
+        "company_id"
+      ],
+      "schema": {
+        "properties": {
+          "name": {
+            "type": [
+              "string"
+            ]
+          },
+          "company_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "url": {
+            "format": "uri",
+            "type": [
+              "string"
+            ]
+          },
+          "events": {
+            "properties": {},
+            "type": [
+              "null",
+              "object"
+            ],
+            "additionalProperties": true
+          },
+          "headers": {
+            "items": {
+              "properties": {
+                "key": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              },
+              "type": [
+                "null",
+                "object"
+              ],
+              "additionalProperties": false
+            },
+            "type": [
+              "null",
+              "array"
+            ]
+          }
+        },
+        "type": "object",
+        "additionalProperties": false
+      },
+      "stream": "webhooks",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "name",
+              "company_id"
+            ],
+            "valid-replication-keys": [],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "url"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "events"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "headers"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "credits",
+      "replication_key": "updated_date",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "credit_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -79,12 +735,26 @@
             ]
           },
           "invoices": {
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "type": [
               "null",
               "array"
             ]
           },
           "refunds": {
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "type": [
               "null",
               "array"
@@ -132,19 +802,207 @@
       "stream": "credits",
       "metadata": [
         {
+          "breadcrumb": [],
           "metadata": {
-            "inclusion": "automatic",
-            "selected": true
-          },
-          "breadcrumb": []
+            "table-key-properties": [
+              "credit_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [
+              "updated_date"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "credit_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "credit_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "notes"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "credit_amount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "applied_amount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "unapplied_amount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "reference_number"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "auto_apply"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "gl_account"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoices"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refunds"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
         }
       ]
     },
     {
       "tap_stream_id": "invoices",
+      "replication_key": "updated_date",
+      "replication_method": "INCREMENTAL",
       "key_properties": [
-        "company_id",
         "invoice_id",
+        "company_id",
         "invoice_line_no"
       ],
       "schema": {
@@ -330,7 +1188,7 @@
           "unit_price": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "list_price": {
@@ -376,12 +1234,26 @@
             ]
           },
           "tax_lines": {
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "type": [
               "null",
               "array"
             ]
           },
           "applied_tiers": {
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "type": [
               "null",
               "array"
@@ -424,6 +1296,13 @@
               "null",
               "object"
             ]
+          },
+          "invoice_pdf_url": {
+            "format": "uri",
+            "type": [
+              "null",
+              "string"
+            ]
           }
         },
         "type": [
@@ -435,19 +1314,460 @@
       "stream": "invoices",
       "metadata": [
         {
+          "breadcrumb": [],
           "metadata": {
-            "inclusion": "automatic",
-            "selected": true
-          },
-          "breadcrumb": []
+            "table-key-properties": [
+              "invoice_id",
+              "company_id",
+              "invoice_line_no"
+            ],
+            "valid-replication-keys": [
+              "updated_date"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoice_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoice_line_no"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_contact"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "shipping_contact"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoice_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "due_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_run_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "subtotal"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoice_tax"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoice_amount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "paid_amount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "balance"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "notes"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_terms"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "subscription_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "product_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "product_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "plan_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "plan_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "subscription_line_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "description"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "start_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "end_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "unit_price"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "list_price"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "list_price_base"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "taxable"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "quantity"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "discount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "effective_price"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "line_tax"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tax_lines"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "applied_tiers"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "line_custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoice_pdf_url"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
         }
       ]
     },
     {
       "tap_stream_id": "orders",
+      "replication_key": "updated_date",
+      "replication_method": "INCREMENTAL",
       "key_properties": [
-        "company_id",
         "order_id",
+        "company_id",
         "order_line_no"
       ],
       "schema": {
@@ -528,7 +1848,7 @@
           "unit_price": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "quantity": {
@@ -591,19 +1911,234 @@
       "stream": "orders",
       "metadata": [
         {
+          "breadcrumb": [],
           "metadata": {
-            "inclusion": "automatic",
-            "selected": true
-          },
-          "breadcrumb": []
+            "table-key-properties": [
+              "order_id",
+              "company_id",
+              "order_line_no"
+            ],
+            "valid-replication-keys": [
+              "updated_date"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "order_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "order_line_no"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoice_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "order_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "order_amount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "separate_invoice"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "notes"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "product_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "product_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "description"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "unit_price"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "quantity"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "discount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "effective_price"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
         }
       ]
     },
     {
       "tap_stream_id": "customers",
+      "replication_method": "FULL_TABLE",
       "key_properties": [
-        "company_id",
-        "customer_id"
+        "customer_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -614,12 +2149,6 @@
             "type": "string"
           },
           "name": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "customer_type": {
             "type": [
               "null",
               "string"
@@ -728,10 +2257,23 @@
             ]
           },
           "delivery_preferences": {
+            "properties": {
+              "print": {
+                "type": [
+                  "boolean"
+                ]
+              },
+              "email": {
+                "type": [
+                  "boolean"
+                ]
+              }
+            },
             "type": [
               "null",
               "object"
-            ]
+            ],
+            "additionalProperties": false
           },
           "created_by": {
             "type": [
@@ -763,6 +2305,28 @@
             "type": [
               "null",
               "object"
+            ],
+            "additionalProperties": true
+          },
+          "pay_now_url": {
+            "format": "uri",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "update_payment_method_url": {
+            "format": "uri",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "open_invoices_url": {
+            "format": "uri",
+            "type": [
+              "null",
+              "string"
             ]
           }
         },
@@ -775,19 +2339,1107 @@
       "stream": "customers",
       "metadata": [
         {
+          "breadcrumb": [],
           "metadata": {
-            "inclusion": "automatic",
-            "selected": true
+            "table-key-properties": [
+              "customer_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [
+              "updated_date"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "description"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "parent_customer"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "website"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_terms"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_cycle_day"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_contact_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "shipping_contact_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_batch"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tax_exempt"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "balance"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "auto_pay"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "edit_auto_pay"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "price_book_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "cmrr"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "discounted_cmrr"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "delivery_preferences"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "pay_now_url"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "update_payment_method_url"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "open_invoices_url"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "payment_runs",
+      "replication_method": "FULL_TABLE",
+      "key_properties": [
+        "payment_run_id",
+        "company_id"
+      ],
+      "schema": {
+        "properties": {
+          "company_id": {
+            "type": [
+              "string"
+            ]
           },
-          "breadcrumb": []
+          "payment_run_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "target_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "success_count": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "failure_count": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "currency": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "payments_total_value": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "payments_success_value": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "payments_failed_value": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "refunds_total_value": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "refunds_success_value": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "refunds_failed_value": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "created_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "filter_options": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "additionalProperties": true
+          },
+          "target_invoice_due_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "payment_per_customer": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "refunds_for_negative_invoices": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "send_email_on_payments_success": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "send_email_on_payment_fail": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          }
+        },
+        "type": "object",
+        "additionalProperties": false
+      },
+      "stream": "payment_runs",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "payment_run_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_run_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "target_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "success_count"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "failure_count"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payments_total_value"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payments_success_value"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payments_failed_value"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refunds_total_value"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refunds_success_value"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refunds_failed_value"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "filter_options"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "target_invoice_due_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_per_customer"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refunds_for_negative_invoices"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "send_email_on_payments_success"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "send_email_on_payment_fail"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "billing_runs",
+      "replication_method": "FULL_TABLE",
+      "key_properties": [
+        "billing_run_id",
+        "company_id"
+      ],
+      "schema": {
+        "properties": {
+          "billing_run_id": {
+            "type": "string"
+          },
+          "company_id": {
+            "type": "string"
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "target_date": {
+            "format": "date",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "invoice_date": {
+            "format": "date",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "invoices_total": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "invoices_count": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "currency": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "filter_options": {
+            "properties": {},
+            "type": [
+              "null",
+              "object"
+            ],
+            "additionalProperties": true
+          },
+          "created_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "billing_runs",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "billing_run_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_run_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "target_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoice_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoices_total"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoices_count"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "filter_options"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "payment_methods",
+      "replication_method": "FULL_TABLE",
+      "key_properties": [
+        "payment_method_id",
+        "company_id"
+      ],
+      "schema": {
+        "properties": {
+          "payment_method_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "company_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "customer_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "customer_payment_gateway_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "payment_type": {
+            "type": [
+              "string"
+            ]
+          },
+          "type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "account_number": {
+            "type": [
+              "string"
+            ]
+          },
+          "routing_number": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "account_holder_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "account_holder_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "country": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "expiry": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "default": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "cvc": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": "object",
+        "additionalProperties": false
+      },
+      "stream": "payment_methods",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "payment_method_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_method_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_payment_gateway_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "account_number"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "routing_number"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "account_holder_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "account_holder_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "country"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "expiry"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "default"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "cvc"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
         }
       ]
     },
     {
       "tap_stream_id": "revenue_schedules",
+      "replication_key": "updated_date",
+      "replication_method": "INCREMENTAL",
       "key_properties": [
-        "company_id",
-        "revenue_schedule_id"
+        "revenue_schedule_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -887,6 +3539,13 @@
             ]
           },
           "schedule_lines": {
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "type": [
               "null",
               "array"
@@ -928,19 +3587,224 @@
       "stream": "revenue_schedules",
       "metadata": [
         {
+          "breadcrumb": [],
           "metadata": {
-            "inclusion": "automatic",
-            "selected": true
-          },
-          "breadcrumb": []
+            "table-key-properties": [
+              "revenue_schedule_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [
+              "updated_date"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "revenue_schedule_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "source_transaction"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "product_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "product_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "plan_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "plan_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_timing"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "total_revenue"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "recognized_revenue"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "unrecognized_revenue"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "start_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "end_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "schedule_lines"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
         }
       ]
     },
     {
       "tap_stream_id": "billing_schedules",
+      "replication_method": "FULL_TABLE",
       "key_properties": [
-        "company_id",
-        "billing_schedule_id"
+        "billing_schedule_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -1045,6 +3909,13 @@
             ]
           },
           "schedule_lines": {
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "type": [
               "null",
               "array"
@@ -1086,20 +3957,233 @@
       "stream": "billing_schedules",
       "metadata": [
         {
+          "breadcrumb": [],
           "metadata": {
-            "inclusion": "automatic",
-            "selected": true
-          },
-          "breadcrumb": []
+            "table-key-properties": [
+              "billing_schedule_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_schedule_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "subscription_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "product_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "product_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_timing"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "start_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "end_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "monthly_recurring_revenue"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "annual_contract_revenue"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "total_contract_revenue"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "amount_invoiced"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "schedule_lines"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
         }
       ]
     },
     {
       "tap_stream_id": "subscriptions",
+      "replication_key": "updated_date",
+      "replication_method": "INCREMENTAL",
       "key_properties": [
-        "company_id",
         "subscription_id",
-        "subscription_line_id"
+        "subscription_line_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -1459,19 +4543,550 @@
       "stream": "subscriptions",
       "metadata": [
         {
+          "breadcrumb": [],
           "metadata": {
-            "inclusion": "automatic",
-            "selected": true
-          },
-          "breadcrumb": []
+            "table-key-properties": [
+              "subscription_id",
+              "subscription_line_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [
+              "updated_date"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "subscription_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "subscription_line_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "bill_contact_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "shipping_contact_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_start_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "service_start_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "order_placed_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "contract_effective_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "cancellation_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "auto_renew"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_terms"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "cmrr"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "discounted_cmrr"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "separate_invoice"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "notes"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "version"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "version_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "contract_term"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "renewal_term"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tcv"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "product_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "product_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "plan_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "pricing_model"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "list_price"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "price_base"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "quantity"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "included_units"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "discount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "effective_price"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_period"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "unit_of_measure"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "current_period_start_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "current_period_end_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_schedule_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "revenue_schedule_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_timing"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_period_start_alignment"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_day"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "prorate_partial_periods"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "backcharge_current_period"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "prepayment_periods"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "renewal_increment_percent"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "override_renewal_increment_percent"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_end_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
         }
       ]
     },
     {
       "tap_stream_id": "payments",
+      "replication_key": "updated_date",
+      "replication_method": "INCREMENTAL",
       "key_properties": [
-        "company_id",
-        "payment_id"
+        "payment_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -1570,12 +5185,26 @@
             ]
           },
           "invoices": {
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "type": [
               "null",
               "array"
             ]
           },
           "refunds": {
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "type": [
               "null",
               "array"
@@ -1629,19 +5258,252 @@
       "stream": "payments",
       "metadata": [
         {
+          "breadcrumb": [],
           "metadata": {
-            "inclusion": "automatic",
-            "selected": true
-          },
-          "breadcrumb": []
+            "table-key-properties": [
+              "payment_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [
+              "updated_date"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "notes"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_amount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "fee_amount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "applied_amount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "unapplied_amount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refunded_amount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_method"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "reference_number"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "auto_apply"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "retried_attempts"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoices"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refunds"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "gl_account"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
         }
       ]
     },
     {
       "tap_stream_id": "products",
+      "replication_key": "updated_date",
+      "replication_method": "INCREMENTAL",
       "key_properties": [
-        "company_id",
-        "product_id"
+        "product_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -1810,19 +5672,270 @@
       "stream": "products",
       "metadata": [
         {
+          "breadcrumb": [],
           "metadata": {
-            "inclusion": "automatic",
-            "selected": true
-          },
-          "breadcrumb": []
+            "table-key-properties": [
+              "product_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [
+              "updated_date"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "product_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "sku"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "taxable"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "description"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "price"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "income_account"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "deferred_revenue_enabled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "revenue_rule_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "recognition_start_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "order_journal_entry_enabled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "order_debit_account"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "order_credit_account"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoice_journal_entry_enabled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoice_debit_account"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoice_credit_account"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "revenue_journal_entry_enabled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "revenue_debit_account"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "revenue_credit_account"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
         }
       ]
     },
     {
       "tap_stream_id": "refunds",
+      "replication_key": "updated_date",
+      "replication_method": "INCREMENTAL",
       "key_properties": [
-        "company_id",
-        "refund_id"
+        "refund_id",
+        "company_id"
       ],
       "schema": {
         "properties": {
@@ -1926,11 +6039,2136 @@
       "stream": "refunds",
       "metadata": [
         {
+          "breadcrumb": [],
           "metadata": {
-            "inclusion": "automatic",
-            "selected": true
+            "table-key-properties": [
+              "refund_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [
+              "updated_date"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refund_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refund_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refund_amount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refund_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "notes"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "reference_number"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "revenue_rules",
+      "replication_method": "FULL_TABLE",
+      "key_properties": [
+        "revenue_rule_id",
+        "company_id"
+      ],
+      "schema": {
+        "properties": {
+          "revenue_rule_id": {
+            "type": [
+              "string"
+            ]
           },
-          "breadcrumb": []
+          "company_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "recognition_method": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "recognition_schedule_period": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "posting_day": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "posting_method": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "recognition_term": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "revenue_rules_entries": {
+            "properties": {
+              "period_offset": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "percent_to_recognize": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "type": "object",
+        "additionalProperties": false
+      },
+      "stream": "revenue_rules",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "revenue_rule_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "revenue_rule_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "recognition_method"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "recognition_schedule_period"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "posting_day"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "posting_method"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "recognition_term"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "revenue_rules_entries"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "charges",
+      "replication_method": "FULL_TABLE",
+      "key_properties": [
+        "charge_id",
+        "company_id"
+      ],
+      "schema": {
+        "properties": {
+          "company_id": {
+            "type": "string"
+          },
+          "charge_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "product_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "timing": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "effective_date": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "billing_date": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "pricing_model": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "list_price": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "charge_timing": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "list_price_base": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "billing_period": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "billing_day": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "billing_period_start_alignment": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "prorate_partial_periods": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "prepayment_periods": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "prepayment_amount": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "unit_of_measure": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "plan": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "included_units": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "unused_prepayment_units": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "tiers": {
+            "properties": {
+              "tier": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "starting_unit": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ending_unit": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "price": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "type": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "type": "object",
+        "additionalProperties": false
+      },
+      "stream": "charges",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "charge_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "product_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "description"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "timing"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "effective_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "pricing_model"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "list_price"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_timing"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "list_price_base"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_period"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_day"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_period_start_alignment"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "prorate_partial_periods"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "prepayment_periods"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "prepayment_amount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "unit_of_measure"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "plan"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "included_units"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "unused_prepayment_units"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tiers"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "statements",
+      "replication_key": "updated_date",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "statement_id",
+        "company_id"
+      ],
+      "schema": {
+        "properties": {
+          "statement_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "company_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "statement_date": {
+            "format": "date-time",
+            "type": [
+              "string"
+            ]
+          },
+          "start_date": {
+            "format": "date-time",
+            "type": [
+              "string"
+            ]
+          },
+          "end_date": {
+            "format": "date-time",
+            "type": [
+              "string"
+            ]
+          },
+          "customer_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "template_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "url": {
+            "format": "uri",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": "object",
+        "additionalProperties": false
+      },
+      "stream": "statements",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "statement_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [
+              "updated_date"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "statement_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "statement_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "start_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "end_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "template_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "url"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "plans",
+      "replication_method": "FULL_TABLE",
+      "key_properties": [
+        "plan_id",
+        "company_id"
+      ],
+      "schema": {
+        "properties": {
+          "company_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "plan_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "public_url": {
+            "format": "uri",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "custom_fields": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "type": "object",
+        "additionalProperties": false
+      },
+      "stream": "plans",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "plan_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "plan_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "description"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "public_url"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "usages",
+      "replication_key": "updated_date",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "usage_id",
+        "company_id"
+      ],
+      "schema": {
+        "properties": {
+          "usage_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "company_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "customer_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "quantity": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "subscription_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "charge_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "unit_of_measure": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_by": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "currency": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "invoiced": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "subscription_line_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "custom_fields": {
+            "properties": {},
+            "type": [
+              "null",
+              "object"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "type": "object",
+        "additionalProperties": false
+      },
+      "stream": "usages",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "usage_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [
+              "updated_date"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "usage_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "quantity"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "subscription_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "unit_of_measure"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "description"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoiced"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "subscription_line_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "contacts",
+      "replication_method": "FULL_TABLE",
+      "key_properties": [
+        "contact_id",
+        "company_id"
+      ],
+      "schema": {
+        "properties": {
+          "contact_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "company_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "customer_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "display_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "first_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "last_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "email": {
+            "format": "email",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "phone": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "mobile": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "job_title": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "department": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "notes": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "address1": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "address2": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "city": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "county": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "state": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "zip": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "country": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_by": {
+            "format": "email",
+            "type": [
+              "string"
+            ]
+          },
+          "updated_by": {
+            "format": "email",
+            "type": [
+              "string"
+            ]
+          },
+          "created_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "custom_fields": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "type": "object",
+        "additionalProperties": false
+      },
+      "stream": "contacts",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "contact_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "contact_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "display_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "first_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "last_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "email"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "phone"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "mobile"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "job_title"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "department"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "notes"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "address1"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "address2"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "city"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "county"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "state"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "zip"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "country"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "chart_of_accounts",
+      "replication_method": "FULL_TABLE",
+      "key_properties": [
+        "code",
+        "company_id"
+      ],
+      "schema": {
+        "properties": {
+          "code": {
+            "type": [
+              "string"
+            ]
+          },
+          "company_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "account_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "sub_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "parent_account": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "status": {
+            "type": [
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_by": {
+            "format": "email",
+            "type": [
+              "string"
+            ]
+          },
+          "updated_by": {
+            "format": "email",
+            "type": [
+              "string"
+            ]
+          },
+          "created_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_date": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "custom_fields": {
+            "type": [
+              "null",
+              "object"
+            ]
+          }
+        },
+        "type": "object",
+        "additionalProperties": false
+      },
+      "stream": "chart_of_accounts",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "code",
+              "company_id"
+            ],
+            "valid-replication-keys": [],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "code"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "company_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "account_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "sub_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "parent_account"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "description"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
         }
       ]
     }

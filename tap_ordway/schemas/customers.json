@@ -1,0 +1,200 @@
+{
+	"type": [
+		"null",
+		"object"
+	],
+	"additionalProperties": false,
+	"required": [
+		"company_id",
+		"customer_id"
+	],
+	"properties": {
+		"company_id": {
+			"type": "string"
+		},
+		"customer_id": {
+			"type": "string"
+		},
+		"name": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"description": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"parent_customer": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"website": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"payment_terms": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"billing_cycle_day": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"billing_contact_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"shipping_contact_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"status": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"billing_batch": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"tax_exempt": {
+			"type": [
+				"null",
+				"boolean"
+			]
+		},
+		"balance": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"auto_pay": {
+			"type": [
+				"null",
+				"boolean"
+			]
+		},
+		"currency": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"edit_auto_pay": {
+			"type": [
+				"null",
+				"boolean"
+			]
+		},
+		"price_book_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"cmrr": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"discounted_cmrr": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"delivery_preferences": {
+			"type": [
+				"null",
+				"object"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"print": {
+					"type": [
+						"boolean"
+					]
+				},
+				"email": {
+					"type": [
+						"boolean"
+					]
+				}
+			}
+		},
+		"created_by": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"updated_by": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"created_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date-time"
+		},
+		"updated_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date-time"
+		},
+		"custom_fields": {
+			"additionalProperties": true,
+			"type": [
+				"null",
+				"object"
+			]
+		},
+		"pay_now_url": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "uri"
+		},
+		"update_payment_method_url": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "uri"
+		},
+		"open_invoices_url": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "uri"
+		}
+	}
+}

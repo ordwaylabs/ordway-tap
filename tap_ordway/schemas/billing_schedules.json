@@ -1,0 +1,152 @@
+{
+	"type": [
+		"null",
+		"object"
+	],
+	"additionalProperties": false,
+	"required": [
+		"company_id",
+		"billing_schedule_id"
+	],
+	"properties": {
+		"company_id": {
+			"type": "string"
+		},
+		"billing_schedule_id": {
+			"type": "string"
+		},
+		"customer_id": {
+			"type": "string"
+		},
+		"customer_name": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"subscription_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"product_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"product_name": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"charge_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"charge_name": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"charge_type": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"charge_timing": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"start_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date"
+		},
+		"end_date": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"monthly_recurring_revenue": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"annual_contract_revenue": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"total_contract_revenue": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"amount_invoiced": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"currency": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"schedule_lines": {
+			"type": [
+				"null",
+				"array"
+			],
+			"items": {
+				"type": [
+					"null",
+					"object"
+				],
+				"additionalProperties": true
+			}
+		},
+		"created_by": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"updated_by": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"created_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date-time"
+		},
+		"updated_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date-time"
+		}
+	}
+}

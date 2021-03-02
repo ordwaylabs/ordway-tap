@@ -1,0 +1,147 @@
+{
+	"type": [
+		"null",
+		"object"
+	],
+	"additionalProperties": false,
+	"required": [
+		"company_id",
+		"revenue_schedule_id"
+	],
+	"properties": {
+		"company_id": {
+			"type": "string"
+		},
+		"revenue_schedule_id": {
+			"type": "string"
+		},
+		"customer_id": {
+			"type": "string"
+		},
+		"source_transaction": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"product_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"product_name": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"plan_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"plan_name": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"charge_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"charge_name": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"charge_type": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"charge_timing": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"total_revenue": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"recognized_revenue": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"unrecognized_revenue": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"start_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date"
+		},
+		"end_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date"
+		},
+		"schedule_lines": {
+			"type": [
+				"null",
+				"array"
+			],
+			"items": {
+				"type": [
+					"null",
+					"object"
+				],
+				"additionalProperties": true
+			}
+		},
+		"created_by": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"updated_by": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"created_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date-time"
+		},
+		"updated_date": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date-time"
+		}
+	}
+}

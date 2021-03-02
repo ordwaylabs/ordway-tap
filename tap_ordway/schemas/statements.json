@@ -1,0 +1,83 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "company_id",
+        "statement_id",
+        "customer_id"
+    ],
+    "properties": {
+        "statement_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "company_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "statement_date": {
+            "type": [
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "start_date": {
+            "type": [
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "end_date": {
+            "type": [
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "customer_id": {
+            "type": [
+                "string"
+            ]
+        },
+        "template_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "url": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "uri"
+        },
+        "created_date": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "updated_date": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "created_by": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "updated_by": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}
