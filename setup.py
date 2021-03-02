@@ -50,7 +50,7 @@ setup(
     install_requires=INSTALL_REQUIRES,
     entry_points="""
     [console_scripts]
-    ordway-tap=ordway_tap:main
+    tap-ordway=ordway_tap:main
     """,
     packages=find_packages(exclude=["tests", "tests.*"]),
     package_data={"schemas": ["ordway_tap/schemas/*.json"]},
