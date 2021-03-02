@@ -6,7 +6,7 @@ from _datetime import datetime
 from singer import get_logger
 from singer.bookmarks import set_currently_syncing, write_bookmark
 from singer.catalog import Catalog, CatalogEntry
-from singer.messages import RecordMessage, write_message, write_schema, write_state
+from singer.messages import write_schema, write_state
 from singer.schema import Schema
 from singer.utils import handle_top_exception, parse_args, strptime_to_utc
 import ordway_tap.configs as TAP_CONFIG
