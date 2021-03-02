@@ -1,8 +1,8 @@
 from unittest.mock import patch
-from singer.messages import RecordMessage, ActivateVersionMessage, SchemaMessage
-from .testing_tools.mask import StrFormat
+from singer.messages import ActivateVersionMessage, RecordMessage, SchemaMessage
 from .base import BaseOrdwayTestCase
 from .test_customers import MASKED_RESPONSE_FIELDS, _remove_custom_fields
+from .testing_tools.mask import StrFormat
 
 
 class ContactsTestCase(BaseOrdwayTestCase):
@@ -15,7 +15,7 @@ class ContactsTestCase(BaseOrdwayTestCase):
 
     @classmethod
     def setUpClass(cls):
-        with patch("ordway_tap.utils.time", return_value=123):
+        with patch("tap_ordway.utils.time", return_value=123):
             super().setUpClass()
 
     def test_records_follow_schema(self):

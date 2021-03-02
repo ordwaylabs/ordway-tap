@@ -1,24 +1,24 @@
 # pylint: disable=invalid-name
 from typing import (
     TYPE_CHECKING,
-    Dict,
-    List,
     Callable,
-    Optional,
-    Union,
-    Type,
-    NamedTuple,
+    Dict,
     Iterable,
+    List,
+    NamedTuple,
+    Optional,
+    Type,
+    Union,
 )
-from contextlib import redirect_stdout, redirect_stderr
+from unittest.mock import patch
+from contextlib import redirect_stderr, redirect_stdout
 from io import StringIO
 from itertools import chain
-from unittest.mock import patch
 from singer.messages import (
-    SchemaMessage,
-    RecordMessage,
-    StateMessage,
     ActivateVersionMessage,
+    RecordMessage,
+    SchemaMessage,
+    StateMessage,
     parse_message,
 )
 from .base import BaseTestCase, write_artifact
@@ -26,8 +26,8 @@ from .utils import dict_subset
 
 if TYPE_CHECKING:
     from pathlib import Path
-    from .base import TapArgs
     from singer.messages import Message
+    from .base import TapArgs
 
 
 class MessageElement(NamedTuple):

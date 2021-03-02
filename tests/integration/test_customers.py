@@ -1,8 +1,8 @@
 from unittest.mock import patch
-from singer.messages import RecordMessage, ActivateVersionMessage, SchemaMessage
-from .testing_tools.mask import StrFormat, Format
+from singer.messages import ActivateVersionMessage, RecordMessage, SchemaMessage
+from .base import DEFAULT_MASKED_RESPONSE_FIELDS, BaseOrdwayTestCase
+from .testing_tools.mask import Format, StrFormat
 from .testing_tools.utils import alter_nested_value
-from .base import BaseOrdwayTestCase, DEFAULT_MASKED_RESPONSE_FIELDS
 
 MASKED_RESPONSE_FIELDS = {
     "balance": Format.AUTO,
@@ -41,7 +41,7 @@ class CustomersTestCase(BaseOrdwayTestCase):
 
     @classmethod
     def setUpClass(cls):
-        with patch("ordway_tap.utils.time", return_value=123):
+        with patch("tap_ordway.utils.time", return_value=123):
             super().setUpClass()
 
     def test_records_follow_schema(self):

@@ -1,20 +1,20 @@
 from unittest import TestCase
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
 from datetime import datetime
 from pytz import UTC
-from ordway_tap.utils import get_company_id, get_full_table_version, get_version, denest
+from tap_ordway.utils import denest, get_company_id, get_full_table_version, get_version
 
 
 @patch.dict(
-    "ordway_tap.configs.api_credentials",
-    {"x_company": "foo-bar"},
+    "tap_ordway.configs.api_credentials",
+    {"company": "foo-bar"},
     clear=True,
 )
 def test_get_company_id():
     assert get_company_id() == "foo_bar"
 
 
-@patch("ordway_tap.utils.time", return_value=1337)
+@patch("tap_ordway.utils.time", return_value=1337)
 def test_get_full_table_version(mocked_time):
     """ Ensure get_full_table_version is based off of time.time converted to ms """
 
@@ -23,7 +23,7 @@ def test_get_full_table_version(mocked_time):
 
 
 class GetVersionTestCase(TestCase):
-    @patch("ordway_tap.utils.get_full_table_version")
+    @patch("tap_ordway.utils.get_full_table_version")
     def test_full_table_stream(self, mocked_get_full_table_version):
         """ Ensure get_full_table_version is invoked on FULL_TABLE streams """
 

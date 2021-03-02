@@ -1,12 +1,12 @@
-from typing import TYPE_CHECKING, Tuple, Optional, Dict, Any
-from pathlib import Path
+from typing import TYPE_CHECKING, Any, Dict, Optional, Tuple
 from os import environ
-from os.path import dirname, join, abspath
-from ordway_tap import main
-from ordway_tap.api.consts import DEFAULT_API_VERSION
+from os.path import abspath, dirname, join
+from pathlib import Path
+from tap_ordway import main
+from tap_ordway.api.consts import DEFAULT_API_VERSION
 from .testing_tools import TapArgs, TapExecutor, TapIntegrationTestCase
-from .testing_tools.utils import deselect_all_streams_except
 from .testing_tools.mask import StrFormat
+from .testing_tools.utils import deselect_all_streams_except
 
 if TYPE_CHECKING:
     from vcr import VCR
@@ -57,14 +57,12 @@ def get_tap_config():
         staging = staging == "1"
 
     return {
-        "api_credentials": {
-            "x_company": environ.get("TEST_CONFIG_X_COMPANY", "TEST_COMPANY"),
-            "x_user_email": environ.get(
-                "TEST_CONFIG_X_USER_EMAIL", "TEST_USER_EMAIL@example.com"
-            ),
-            "x_user_token": environ.get("TEST_CONFIG_X_USER_TOKEN", "TEST_USER_TOKEN"),
-            "x_api_key": environ.get("TEST_CONFIG_X_API_KEY", "TEST_API_KEY"),
-        },
+        "company": environ.get("TEST_CONFIG_COMPANY", "TEST_COMPANY"),
+        "user_email": environ.get(
+            "TEST_CONFIG_USER_EMAIL", "TEST_USER_EMAIL@example.com"
+        ),
+        "user_token": environ.get("TEST_CONFIG_USER_TOKEN", "TEST_USER_TOKEN"),
+        "api_key": environ.get("TEST_CONFIG_API_KEY", "TEST_API_KEY"),
         "api_version": environ.get("TEST_CONFIG_API_VERSION", DEFAULT_API_VERSION),
         "staging": staging,
         "start_date": DEFAULT_START_DATE,

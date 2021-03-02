@@ -1,4 +1,4 @@
-from typing import TYPE_CHECKING, Iterable, Hashable, Tuple, Any, Dict
+from typing import TYPE_CHECKING, Any, Dict, Hashable, Iterable, Tuple
 
 if TYPE_CHECKING:
     from singer.catalog import Catalog

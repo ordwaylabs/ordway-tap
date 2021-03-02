@@ -1,4 +1,4 @@
-from typing import TYPE_CHECKING, Union, Optional, Dict, Any, NamedTuple
+from typing import TYPE_CHECKING, Any, Dict, NamedTuple, Optional, Union
 
 if TYPE_CHECKING:
     from datetime import datetime

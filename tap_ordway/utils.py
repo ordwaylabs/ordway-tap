@@ -1,10 +1,10 @@
-from typing import TYPE_CHECKING, Dict, Tuple, List, Any, Optional
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, Tuple
 from time import time
-from singer.utils import now, strptime_to_utc
-from singer.bookmarks import get_bookmark
-from singer.messages import RecordMessage, ActivateVersionMessage, write_message
 from inflection import underscore
-import ordway_tap.configs
+from singer.bookmarks import get_bookmark
+from singer.messages import ActivateVersionMessage, RecordMessage, write_message
+from singer.utils import now, strptime_to_utc
+import tap_ordway.configs
 
 if TYPE_CHECKING:
     from datetime import datetime
@@ -14,8 +14,8 @@ if TYPE_CHECKING:
 def get_company_id():
     """ Gets the configured company ID """
 
-    api_credentials = ordway_tap.configs.api_credentials
-    return underscore(api_credentials["x_company"])
+    api_credentials = tap_ordway.configs.api_credentials
+    return underscore(api_credentials["company"])
 
 
 def print_record(

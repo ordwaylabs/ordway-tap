@@ -1,4 +1,4 @@
-# ordway-tap
+# tap-ordway
 
 This is a [Singer](https://singer.io) tap that produces JSON-formatted data
 following the [Singer
@@ -43,30 +43,28 @@ This tap:
 ### Steps
 Run following commands on terminal from the project directory
 ```bash
-python3 -m venv ~/.virtualenvs/ordway-tap
-source ~/.virtualenvs/ordway-tap/bin/activate
+python3 -m venv ~/.virtualenvs/tap-ordway
+source ~/.virtualenvs/tap-ordway/bin/activate
 pip install -e .
 ```
 
 ### To Run
-`$ source ~/.virtualenvs/ordway-tap/bin/activate`
+`$ source ~/.virtualenvs/tap-ordway/bin/activate`
 
-`$ ordway-tap -c config.json --catalog catalog.json -s state.json`
+`$ tap-ordway -c config.json --catalog catalog.json -s state.json`
 
 
 You can generate the catalog.json by following command:
 
-`$ ordway-tap -c config.json --discover > catalog.json`
+`$ tap-ordway -c config.json --discover > catalog.json`
 
 The sample config JSON is format is given below:
 ```json
 {
-  "api_credentials": {
-    "x_company": "Rocky",
-    "x_user_email": "me@example.com",
-    "x_user_token": "123usertoken",
-    "x_api_key": "123secret"
-  },
+  "company": "Rocky",
+  "user_email": "me@example.com",
+  "user_token": "123usertoken",
+  "api_key": "123secret",
   "start_date": "2019-12-01"
 }
 ```
@@ -77,6 +75,7 @@ The following configuration keys are optional:
 - `staging` - Whether or not to use the staging environment (staging.ordwaylabs.com)
 - `api_version` - Which Ordwaylabs API version to use (e.g. "v1")
 - `api_url` - An alternative URL to which the API requests will be made (e.g. "https://localhost:3000/v1/"). When specified, it will take precendence over `staging` and `api_version`.
+- `rate_limit_rps` - The amount of requests to allow per second (defaults to `null`, disabling rate limiting)
 
 The State JSON should be passed by user. 
 The Tap will be printing the STATE message, the last state message should send when running next time. 
@@ -122,7 +121,7 @@ pip install singer-tools
 2. Execute singer-check-tap
 
 ```bash
-singer-check-tap --tap ordway-tap --config config.json
+singer-check-tap --tap tap-ordway --config config.json
 ```
 
 In this mode, singer-check-tap will execute the tap itself, run it in discover mode to generate a catalog, perform a stateless run and a stateful run, and validate the tap's output.
@@ -130,7 +129,7 @@ In this mode, singer-check-tap will execute the tap itself, run it in discover m
 If you need to test with a modified catalog, you can do so by piping the tap's output directly into singer-check-tap like so:
 
 ```bash
-ordway-tap --config config.json --catalog catalog.json | singer-check-tap
+tap-ordway --config config.json --catalog catalog.json | singer-check-tap
 ```
 
 ---

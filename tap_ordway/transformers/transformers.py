@@ -1,6 +1,6 @@
-from typing import Dict, Any
-from .base import RecordTransformer
+from typing import Any, Dict
 from ..base import DataContext
+from .base import RecordTransformer
 
 
 class BillingScheduleTransformer(RecordTransformer):

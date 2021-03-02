@@ -1,9 +1,9 @@
 from unittest import TestCase
-from unittest.mock import patch, MagicMock
-from ordway_tap.streams.exceptions import DependencyConflict
-from ordway_tap.streams.utils import check_dependency_conflicts, is_substream
-from ordway_tap.streams import ResponseSubstream, EndpointSubstream, Stream
+from unittest.mock import MagicMock, patch
 from tests.utils import generate_catalog
+from tap_ordway.streams import EndpointSubstream, ResponseSubstream, Stream
+from tap_ordway.streams.exceptions import DependencyConflict
+from tap_ordway.streams.utils import check_dependency_conflicts, is_substream
 
 
 class ChildStream(ResponseSubstream):
@@ -30,7 +30,7 @@ class ParentStream(Stream):
 
 class CheckDependencyConflictsTestCase(TestCase):
     @patch.dict(
-        "ordway_tap.streams.utils.AVAILABLE_STREAMS",
+        "tap_ordway.streams.utils.AVAILABLE_STREAMS",
         {"parent": ParentStream, "child": ChildStream},
         clear=True,
     )
@@ -46,7 +46,7 @@ class CheckDependencyConflictsTestCase(TestCase):
             check_dependency_conflicts(test_catalog)
 
     @patch.dict(
-        "ordway_tap.streams.utils.AVAILABLE_STREAMS",
+        "tap_ordway.streams.utils.AVAILABLE_STREAMS",
         {"parent": ParentStream, "child": ChildStream},
         clear=True,
     )

@@ -9,7 +9,7 @@ interactions:
         Connection:
           - keep-alive
         User-Agent:
-          - ordway-tap v0.1.0 (https://github.com/ordwaylabs/ordway-tap)
+          - tap-ordway v0.1.0 (https://github.com/ordwaylabs/tap-ordway)
       method: GET
       uri: https://api.ordwaylabs.com/api/v1/invoices?sort=updated_date,id&size=50&page=1&updated_date%3E=2020-11-10T00%3A00%3A00.000000Z
     response:
@@ -2000,7 +2000,7 @@ interactions:
         Connection:
           - keep-alive
         User-Agent:
-          - ordway-tap v0.1.0 (https://github.com/ordwaylabs/ordway-tap)
+          - tap-ordway v0.1.0 (https://github.com/ordwaylabs/tap-ordway)
       method: GET
       uri: https://api.ordwaylabs.com/api/v1/invoices?sort=updated_date,id&size=50&page=2&updated_date%3E=2020-11-10T00%3A00%3A00.000000Z
     response:
@@ -2109,7 +2109,7 @@ interactions:
         Connection:
           - keep-alive
         User-Agent:
-          - ordway-tap v0.1.0 (https://github.com/ordwaylabs/ordway-tap)
+          - tap-ordway v0.1.0 (https://github.com/ordwaylabs/tap-ordway)
       method: GET
       uri: https://api.ordwaylabs.com/api/v1/invoices?sort=updated_date,id&size=50&page=3&updated_date%3E=2020-11-10T00%3A00%3A00.000000Z
     response:

@@ -1,50 +1,42 @@
 #!/usr/bin/env python3
-import os
+from typing import TYPE_CHECKING, Any, Dict, Optional, Union
 import json
-from typing import TYPE_CHECKING, Dict, Any, List, Union, Optional, Tuple
+import os
 from _datetime import datetime
-from singer import utils, metadata, get_logger
-from singer.utils import (
-    handle_top_exception,
-    parse_args,
-    check_config,
-    strptime_to_utc,
-    strftime,
-)
-from singer.messages import write_state, write_schema, write_message, RecordMessage
+from singer import get_logger
+from singer.bookmarks import set_currently_syncing, write_bookmark
 from singer.catalog import Catalog, CatalogEntry
+from singer.messages import write_schema, write_state
 from singer.schema import Schema
-from singer.bookmarks import write_bookmark, set_currently_syncing
-
-# import ordway_tap.kafka_consumer
-import ordway_tap.configs as TAP_CONFIG
+from singer.utils import handle_top_exception, parse_args, strptime_to_utc
+import tap_ordway.configs as TAP_CONFIG
+from .api.consts import DEFAULT_API_VERSION
 from .property import (
     get_key_properties,
-    get_stream_metadata,
-    get_replication_method,
     get_replication_key,
+    get_replication_method,
+    get_stream_metadata,
 )
 from .streams import AVAILABLE_STREAMS, check_dependency_conflicts, is_substream
 from .utils import (
-    print_record,
-    get_version,
-    get_full_table_version,
-    write_activate_version,
     get_filter_datetime,
+    get_full_table_version,
+    get_version,
+    print_record,
+    write_activate_version,
 )
-from .api.consts import DEFAULT_API_VERSION
 
 if TYPE_CHECKING:
-    from .streams.base import Stream, Substream
     from .base import DataContext
+    from .streams.base import Stream, Substream
 
 
-REQUIRED_CONFIG_KEYS = ["api_credentials", "start_date"]
-REQUIRED_API_CREDENTIAL_KEYS = [
-    "x_company",
-    "x_api_key",
-    "x_user_email",
-    "x_user_token",
+REQUIRED_CONFIG_KEYS = [
+    "company",
+    "api_key",
+    "user_email",
+    "user_token",
+    "start_date",
 ]
 LOGGER = get_logger()
 
@@ -271,19 +263,42 @@ def sync(config: Dict[str, Any], state: Dict[str, Any], catalog: Catalog) -> Non
     write_state(state)
 
 
+def set_global_config(config: Dict[str, Any]) -> None:
+    """Sets global configuration variables"""
+
+    # Set global configuration variables
+    TAP_CONFIG.api_credentials = {
+        "company": config["company"],
+        "api_key": config["api_key"],
+        "user_email": config["user_email"],
+        "user_token": config["user_token"],
+    }
+
+    company_token = config.get("company_token")
+    if company_token is not None:
+        TAP_CONFIG.api_credentials["company_token"] = company_token
+
+    TAP_CONFIG.api_version = config.get("api_version", DEFAULT_API_VERSION)
+    TAP_CONFIG.staging = config.get("staging", False)
+    TAP_CONFIG.api_url = config.get("api_url")
+    TAP_CONFIG.start_date = config["start_date"]
+    TAP_CONFIG.rate_limit_rps = config.get("rate_limit_rps")
+
+    if (
+        isinstance(TAP_CONFIG.rate_limit_rps, (int, float))
+        and TAP_CONFIG.rate_limit_rps <= 0
+    ):
+        raise ValueError(
+            "`rate_limit_rps` must be set to `null` or a number GREATER THAN 0"
+        )
+
+
 @handle_top_exception(LOGGER)
 def main():
     # Parse command line arguments
     args = parse_args(REQUIRED_CONFIG_KEYS)
-    # Check API credential keys
-    check_config(args.config["api_credentials"], REQUIRED_API_CREDENTIAL_KEYS)
 
-    # Set global configuration variables
-    TAP_CONFIG.api_credentials = args.config["api_credentials"]
-    TAP_CONFIG.api_version = args.config.get("api_version", DEFAULT_API_VERSION)
-    TAP_CONFIG.staging = args.config.get("staging", False)
-    TAP_CONFIG.api_url = args.config.get("api_url")
-    TAP_CONFIG.start_date = args.config["start_date"]
+    set_global_config(args.config)
 
     # If discover flag was passed, run discovery mode and dump output to stdout
     if args.discover:

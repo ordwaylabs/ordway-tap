@@ -1,2 +1,2 @@
 include LICENSE
-include ordway_tap/schemas/*.json
+include tap_ordway/schemas/*.json

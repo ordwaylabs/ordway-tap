@@ -1,9 +1,9 @@
 #!/usr/bin/env python
-from setuptools import setup, find_packages
-from os.path import join, abspath, dirname
+from os.path import abspath, dirname, join
 from re import search as re_search
+from setuptools import find_packages, setup
 
-PACKAGE_NAME = "ordway-tap"
+PACKAGE_NAME = "tap-ordway"
 PACKAGE_DIR = PACKAGE_NAME.replace("-", "_")
 ROOT_DIR = abspath(dirname(__file__))
 
@@ -46,14 +46,14 @@ setup(
         "License :: OSI Approved :: GNU Affero General Public License v3",
         "Operating System :: OS Independent",
     ],
-    py_modules=["ordway_tap"],
+    py_modules=["tap_ordway"],
     install_requires=INSTALL_REQUIRES,
     entry_points="""
     [console_scripts]
-    ordway-tap=ordway_tap:main
+    tap-ordway=tap_ordway:main
     """,
     packages=find_packages(exclude=["tests", "tests.*"]),
-    package_data={"schemas": ["ordway_tap/schemas/*.json"]},
+    package_data={"schemas": ["tap_ordway/schemas/*.json"]},
     include_package_data=True,
     extras_require=EXTRA_REQUIRES,
     keywords="singer ordway tap",
