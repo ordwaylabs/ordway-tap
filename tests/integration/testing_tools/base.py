@@ -2,7 +2,7 @@ from typing import TYPE_CHECKING, Union, Dict, Any, Optional, Tuple, List, Calla
 from unittest import TestCase
 from datetime import datetime, timezone
 from json import loads as json_loads, dumps as json_dumps
-from os import environ
+from os import environ, name as SYS_NAME
 from pathlib import Path
 from inspect import getfile
 from os.path import join, dirname, isfile
@@ -59,6 +59,9 @@ def write_artifact(
     """ Helper function for writing a file. """
 
     now = strftime(datetime.now(timezone.utc))
+
+    if SYS_NAME == "nt":
+        now = now.replace("-", "").replace(":", "")
 
     file_path = Path(now) if file_dir is None else file_dir / Path(now)
     file_path = file_path.with_suffix(suffix)
