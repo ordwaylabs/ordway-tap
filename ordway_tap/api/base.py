@@ -1,8 +1,7 @@
 from typing import TYPE_CHECKING, Any, Dict, Generator, List, Optional, Union
-import requests
 from backoff import expo
 from backoff import on_exception as backoff_on_exception
-from requests import Session
+from requests import RequestException, Session
 from singer import get_logger
 from singer.metrics import http_request_timer
 from singer.utils import strftime
@@ -95,7 +94,7 @@ class RequestHandler:
         self._session = Session()
 
     @ratelimit
-    @backoff_on_exception(expo, requests.exceptions.RequestException, max_tries=3)
+    @backoff_on_exception(expo, RequestException, max_tries=3)
     def _get(
         self, path: str, params: Dict[str, str]
     ) -> Union[Dict[str, Any], List[Dict[str, Any]]]:
