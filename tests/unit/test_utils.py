@@ -7,7 +7,7 @@ from ordway_tap.utils import get_company_id, get_full_table_version, get_version
 
 @patch.dict(
     "ordway_tap.configs.api_credentials",
-    {"x_company": "foo-bar"},
+    {"company": "foo-bar"},
     clear=True,
 )
 def test_get_company_id():
