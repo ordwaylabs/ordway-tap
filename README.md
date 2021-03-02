@@ -61,12 +61,10 @@ You can generate the catalog.json by following command:
 The sample config JSON is format is given below:
 ```json
 {
-  "api_credentials": {
-    "x_company": "Rocky",
-    "x_user_email": "me@example.com",
-    "x_user_token": "123usertoken",
-    "x_api_key": "123secret"
-  },
+  "company": "Rocky",
+  "user_email": "me@example.com",
+  "user_token": "123usertoken",
+  "api_key": "123secret",
   "start_date": "2019-12-01"
 }
 ```
