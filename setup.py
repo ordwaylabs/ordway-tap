@@ -38,6 +38,7 @@ setup(
     version=VERSION,
     description="Singer.io tap for extracting data",
     long_description=README,
+    long_description_content_type="text/markdown",
     author="Stitch",
     url="http://singer.io",
     classifiers=[
