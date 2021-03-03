@@ -8,20 +8,20 @@ jobs:
       - run:
           name: 'Setup virtual env'
           command: |
-            python3 -mvenv /usr/local/share/virtualenvs/tap-<tap_name>
-            source /usr/local/share/virtualenvs/tap-<tap_name>/bin/activate
+            python3 -mvenv /usr/local/share/virtualenvs/tap-ordway
+            source /usr/local/share/virtualenvs/tap-ordway/bin/activate
             pip install -U 'pip<19.2' setuptools
             pip install .[dev]
       - run:
           name: 'JSON Validator'
           command: |
             source /usr/local/share/virtualenvs/tap-tester/bin/activate
-            stitch-validate-json /usr/local/share/virtualenvs/tap-<tap_name>/lib/python3.5/site-packages/tap_<tap_name>/schemas/*.json
+            stitch-validate-json /usr/local/share/virtualenvs/tap-ordway/lib/python3.5/site-packages/tap_ordway/schemas/*.json
       - run:
           name: 'pylint'
           command: |
-            source /usr/local/share/virtualenvs/tap-<tap_name>/bin/activate
-            pylint tap_<tap_name> --disable 'broad-except,chained-comparison,empty-docstring,fixme,invalid-name,line-too-long,missing-class-docstring,missing-function-docstring,missing-module-docstring,no-else-raise,no-else-return,too-few-public-methods,too-many-arguments,too-many-branches,too-many-lines,too-many-locals,ungrouped-imports,wrong-spelling-in-comment,wrong-spelling-in-docstring,bad-whitespace'
+            source /usr/local/share/virtualenvs/tap-ordway/bin/activate
+            pylint tap_ordway --disable 'broad-except,chained-comparison,empty-docstring,fixme,invalid-name,line-too-long,missing-class-docstring,missing-function-docstring,missing-module-docstring,no-else-raise,no-else-return,too-few-public-methods,too-many-arguments,too-many-branches,too-many-lines,too-many-locals,ungrouped-imports,wrong-spelling-in-comment,wrong-spelling-in-docstring,bad-whitespace'
       - run:
           name: 'Integration Tests'
           command: |
@@ -29,7 +29,7 @@ jobs:
             source dev_env.sh
             source /usr/local/share/virtualenvs/tap-tester/bin/activate
             pip install .[dev,test] # Install tap for the test client subclass usage
-            run-test --tap=tap-<tap_name> \
+            run-test --tap=tap-ordway \
                      --target=target-stitch \
                      --orchestrator=stitch-orchestrator \
                      --email=harrison+sandboxtest@stitchdata.com \
