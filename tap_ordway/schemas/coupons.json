@@ -41,6 +41,7 @@
         },
         "duration_period": {
             "type": [
+                "null",
                 "integer"
             ]
         },

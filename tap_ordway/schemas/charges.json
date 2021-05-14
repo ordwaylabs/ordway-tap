@@ -77,7 +77,7 @@
         "list_price_base": {
             "type": [
                 "null",
-                "number"
+                "string"
             ]
         },
         "billing_period": {
@@ -141,41 +141,42 @@
             ]
         },
         "tiers": {
-            "type": [
-                "null",
-                "object"
-            ],
-            "additionalProperties": false,
-            "properties": {
-                "tier": {
-                    "type": [
-                        "null",
-                        "integer"
-                    ]
-                },
-                "starting_unit": {
-                    "type": [
-                        "null",
-                        "integer"
-                    ]
-                },
-                "ending_unit": {
-                    "type": [
-                        "null",
-                        "integer"
-                    ]
-                },
-                "price": {
-                    "type": [
-                        "null",
-                        "string"
-                    ]
-                },
-                "type": {
-                    "type": [
-                        "null",
-                        "string"
-                    ]
+            "items": {
+                "type": [
+                    "null",
+                    "object"
+                ],
+                "properties": {
+                    "tier": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "starting_unit": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ending_unit": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "price": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "type": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    }
                 }
             }
         }

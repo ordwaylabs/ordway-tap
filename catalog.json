@@ -268,6 +268,7 @@
           },
           "duration_period": {
             "type": [
+              "null",
               "integer"
             ]
           },
@@ -6530,7 +6531,7 @@
           "list_price_base": {
             "type": [
               "null",
-              "number"
+              "string"
             ]
           },
           "billing_period": {
@@ -6594,43 +6595,44 @@
             ]
           },
           "tiers": {
-            "properties": {
-              "tier": {
-                "type": [
-                  "null",
-                  "integer"
-                ]
+            "items": {
+              "properties": {
+                "tier": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "starting_unit": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "ending_unit": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "price": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "type": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
               },
-              "starting_unit": {
-                "type": [
-                  "null",
-                  "integer"
-                ]
-              },
-              "ending_unit": {
-                "type": [
-                  "null",
-                  "integer"
-                ]
-              },
-              "price": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "type": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              }
-            },
-            "type": [
-              "null",
-              "object"
-            ],
-            "additionalProperties": false
+              "type": [
+                "null",
+                "object"
+              ]
+            }
           }
         },
         "type": "object",
