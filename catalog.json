@@ -6632,7 +6632,11 @@
                 "null",
                 "object"
               ]
-            }
+            },
+            "type": [
+              "null",
+              "array"
+            ]
           }
         },
         "type": "object",

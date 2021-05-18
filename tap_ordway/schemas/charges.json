@@ -141,6 +141,10 @@
             ]
         },
         "tiers": {
+            "type": [
+                "null",
+                "array"
+            ],
             "items": {
                 "type": [
                     "null",
