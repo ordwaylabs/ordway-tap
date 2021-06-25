@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0
+  * Fix JSON Schema validator in CircleCI [#7](https://github.com/singer-io/tap-ordway/pull/7)
+  * Remove versions from Incremental Streams [#9](https://github.com/singer-io/tap-ordway/pull/9)
+  * Change when Full Table Streams send an `ACTIVATE_VERSION` message [#9](https://github.com/singer-io/tap-ordway/pull/9)
+
 ## 0.1.2
   * Fixed the schema transform issues
 
