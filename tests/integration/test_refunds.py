@@ -19,7 +19,7 @@ class RefundsTestCase(BaseOrdwayTestCase):
     MASKED_RESPONSE_FORMATS = [StrFormat.EMAIL]
 
     def test_stream_version(self):
-        self.assertStreamVersion("refunds", 1)
+        self.assertStreamVersion("refunds", None)
 
     def test_message_count(self):
         self.assertStreamInOutput("refunds")
@@ -42,7 +42,7 @@ class RefundsTestCase(BaseOrdwayTestCase):
                     )
                 )
             ),
-            1,
+            0,
         )
         self.assertEqual(
             len(
@@ -54,7 +54,7 @@ class RefundsTestCase(BaseOrdwayTestCase):
             ),
             1,
         )
-        self.assertMessageCountEqual(15, "refunds")
+        self.assertMessageCountEqual(14, "refunds")
 
     def test_records_included(self):
         self.assertMessagesIncludesAll(
@@ -77,7 +77,7 @@ class RefundsTestCase(BaseOrdwayTestCase):
                         "company_id": "test_company",
                         "refund_id": "REF-00120",
                     },
-                    version=1,
+                    version=None,
                 ),
                 RecordMessage(
                     "refunds",
@@ -97,7 +97,7 @@ class RefundsTestCase(BaseOrdwayTestCase):
                         "company_id": "test_company",
                         "refund_id": "REF-00121",
                     },
-                    version=1,
+                    version=None,
                 ),
                 RecordMessage(
                     "refunds",
@@ -117,7 +117,7 @@ class RefundsTestCase(BaseOrdwayTestCase):
                         "company_id": "test_company",
                         "refund_id": "REF-00122",
                     },
-                    version=1,
+                    version=None,
                 ),
                 RecordMessage(
                     "refunds",
@@ -137,7 +137,7 @@ class RefundsTestCase(BaseOrdwayTestCase):
                         "company_id": "test_company",
                         "refund_id": "REF-00131",
                     },
-                    version=1,
+                    version=None,
                 ),
                 RecordMessage(
                     "refunds",
@@ -157,7 +157,7 @@ class RefundsTestCase(BaseOrdwayTestCase):
                         "company_id": "test_company",
                         "refund_id": "REF-00130",
                     },
-                    version=1,
+                    version=None,
                 ),
             ],
             ignored_keys=["company_id"],

@@ -52,7 +52,7 @@ class InvoicesTestCase(BaseOrdwayTestCase):
     RESPONSE_MUTATORS = (_remove_custom_fields,)
 
     def test_stream_version(self):
-        self.assertStreamVersion("invoices", 1)
+        self.assertStreamVersion("invoices", None)
 
     def test_records_follow_schema(self):
         self.assertRecordMessagesFollowSchema()
@@ -68,7 +68,7 @@ class InvoicesTestCase(BaseOrdwayTestCase):
                 )
             ),
             56,
-            msg='"invoices" stream should emit 52 RECORDs',
+            msg='"invoices" stream should emit 56 RECORDs',
         )
         self.assertEqual(
             len(
@@ -78,7 +78,7 @@ class InvoicesTestCase(BaseOrdwayTestCase):
                     )
                 )
             ),
-            1,
+            0,
         )
         self.assertEqual(
             len(
@@ -90,7 +90,7 @@ class InvoicesTestCase(BaseOrdwayTestCase):
             ),
             1,
         )
-        self.assertMessageCountEqual(58, "invoices")
+        self.assertMessageCountEqual(57, "invoices")
 
     def test_records_included(self):
         self.assertMessagesIncludesAll(
@@ -178,7 +178,7 @@ class InvoicesTestCase(BaseOrdwayTestCase):
                         "created_by": "heeyeg5i@example.com",
                         "updated_by": "s1rkw1w4@example.com",
                     },
-                    version=1,
+                    version=None,
                 ),
                 RecordMessage(
                     "invoices",
@@ -263,7 +263,7 @@ class InvoicesTestCase(BaseOrdwayTestCase):
                         "created_by": "73tr1lsh@example.com",
                         "updated_by": "022pl4kr@example.com",
                     },
-                    version=1,
+                    version=None,
                 ),
                 RecordMessage(
                     "invoices",
@@ -348,7 +348,7 @@ class InvoicesTestCase(BaseOrdwayTestCase):
                         "created_by": "73tr1lsh@example.com",
                         "updated_by": "022pl4kr@example.com",
                     },
-                    version=1,
+                    version=None,
                 ),
                 RecordMessage(
                     "invoices",
@@ -433,7 +433,7 @@ class InvoicesTestCase(BaseOrdwayTestCase):
                         "created_by": "wx8626qy@example.com",
                         "updated_by": "lxkxssmk@example.com",
                     },
-                    version=1,
+                    version=None,
                 ),
             ],
             ignored_keys=["company_id"],

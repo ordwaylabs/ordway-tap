@@ -52,7 +52,7 @@ class PlansTestCase(BaseOrdwayTestCase):
                     )
                 )
             ),
-            1,
+            2,
         )
         self.assertEqual(
             len(
@@ -64,7 +64,7 @@ class PlansTestCase(BaseOrdwayTestCase):
             ),
             1,
         )
-        self.assertMessageCountEqual(7, "plans")
+        self.assertMessageCountEqual(8, "plans")
 
     def test_all_records_included(self):
         self.assertMessagesIncludesAll(
