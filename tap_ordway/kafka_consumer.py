@@ -26,7 +26,7 @@ def listen_topic(config, state):
         bootstrap_servers=kafka_credentials["bootstrap_servers"],
         client_id=kafka_credentials["client_id"],
         ssl_cafile=kafka_credentials["ssl_cafile"],
-        ssl_check_hostname=False,
+        ssl_check_hostname=True,
         security_protocol="SASL_SSL",
         sasl_mechanism="SCRAM-SHA-256",
         sasl_plain_username=kafka_credentials["username"],
