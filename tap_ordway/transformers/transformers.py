@@ -152,3 +152,40 @@ class SubscriptionTransformer(RecordTransformer):
             )
 
             yield subscription_plan
+
+class DebitMemoTransformer(RecordTransformer):
+    def pre_transform(self, data: Dict[str, Any], context: DataContext):
+        super().pre_transform(data, context)
+
+        debit_memo_lines = data.get("line_items", [])
+
+        for debit_memo_line in debit_memo_lines:
+            debit_memo_line.update(
+                {
+                    "debit_memo_id": str(data.get("debit_memo_id")),
+                    "company_id": str(data.get("company_id")),
+                    "customer_id": str(data.get("customer_id")),
+                    "billing_contact": data.get("billing_contact"),
+                    "shipping_contact": data.get("shipping_contact"),
+                    "debit_memo_date": str(data.get("debit_memo_date")),
+                    "due_date": str(data.get("due_date")),
+                    "billing_run_id": str(data.get("billing_run_id")),
+                    "subtotal": (data.get("subtotal")),
+                    "debit_amount": (data.get("debit_amount")),
+                    "debit_tax": (data.get("debit_tax")),
+                    "paid_amount": (data.get("paid_amount")),
+                    "balance": (data.get("balance")),
+                    "status": str(data.get("status")),
+                    "notes": str(data.get("notes")),
+                    "currency": str(data.get("currency")),
+                    "payment_terms": str(data.get("payment_terms")),
+                    "custom_fields": data.get("custom_fields"),
+                    "line_custom_fields": debit_memo_line.get("custom_fields"),
+                    "updated_date": str(data.get("updated_date")),
+                    "created_date": str(data.get("created_date")),
+                    "created_by": str(data.get("created_by")),
+                    "updated_by": str(data.get("updated_by")),
+                }
+            )
+
+            yield debit_memo_line
