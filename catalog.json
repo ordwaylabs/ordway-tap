@@ -7583,15 +7583,6 @@
           "customer_id": {
             "type": "string"
           },
-          "created_by_id": {
-            "type": "string"
-          },
-          "updated_by_id": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
           "company_id": {
             "type": "string"
           },
@@ -7638,8 +7629,11 @@
               "string"
             ]
           },
-          "currency_id": {
-            "type": "string"
+          "currency": {
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "debit_tax": {
             "type": [
@@ -7653,15 +7647,11 @@
               "number"
             ]
           },
-          "emailed": {
-            "type": "boolean"
-          },
           "custom_fields": {
             "type": [
               "null",
               "object"
-            ],
-            "additionalProperties": true
+            ]
           },
           "conversion_rate": {
             "type": "number"
@@ -7673,45 +7663,24 @@
               "string"
             ]
           },
-          "contacts_info": {
-            "type": [
-              "null",
-              "object"
-            ],
-            "additionalProperties": true
-          },
-          "pdf_file_name": {
+          "debit_pdf_url": {
+            "format": "uri",
             "type": [
               "null",
               "string"
             ]
           },
-          "pdf_content_type": {
+          "created_by": {
             "type": [
               "null",
               "string"
             ]
           },
-          "pdf_file_size": {
-            "type": [
-              "null",
-              "integer"
-            ]
-          },
-          "pdf_updated_at": {
-            "format": "date-time",
+          "updated_by": {
             "type": [
               "null",
               "string"
             ]
-          },
-          "created_at": {
-            "format": "date-time",
-            "type": "string"
-          },
-          "updated_at": {
-            "format": "date-time",
-            "type": "string"
           },
           "created_date": {
             "format": "date-time",
@@ -7727,18 +7696,6 @@
               "string"
             ]
           },
-          "bill_contact_id": {
-            "type": [
-              "null",
-              "integer"
-            ]
-          },
-          "shipping_contact_id": {
-            "type": [
-              "null",
-              "integer"
-            ]
-          },
           "billing_contact": {
             "type": [
               "null",
@@ -7750,6 +7707,27 @@
               "null",
               "object"
             ]
+          },
+          "debit_lines": {
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "payments": {
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "credits": {
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "journal_entry_id": {
+            "type": "string"
           }
         },
         "type": [
@@ -7787,24 +7765,6 @@
           "breadcrumb": [
             "properties",
             "customer_id"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "created_by_id"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "updated_by_id"
           ],
           "metadata": {
             "inclusion": "available"
@@ -7885,7 +7845,7 @@
         {
           "breadcrumb": [
             "properties",
-            "currency_id"
+            "currency"
           ],
           "metadata": {
             "inclusion": "available"
@@ -7904,15 +7864,6 @@
           "breadcrumb": [
             "properties",
             "subtotal"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "emailed"
           ],
           "metadata": {
             "inclusion": "available"
@@ -7948,7 +7899,7 @@
         {
           "breadcrumb": [
             "properties",
-            "contacts_info"
+            "debit_pdf_url"
           ],
           "metadata": {
             "inclusion": "available"
@@ -7957,7 +7908,7 @@
         {
           "breadcrumb": [
             "properties",
-            "pdf_file_name"
+            "created_by"
           ],
           "metadata": {
             "inclusion": "available"
@@ -7966,43 +7917,7 @@
         {
           "breadcrumb": [
             "properties",
-            "pdf_content_type"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "pdf_file_size"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "pdf_updated_at"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "created_at"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "updated_at"
+            "updated_by"
           ],
           "metadata": {
             "inclusion": "available"
@@ -8029,24 +7944,6 @@
         {
           "breadcrumb": [
             "properties",
-            "bill_contact_id"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "shipping_contact_id"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
             "billing_contact"
           ],
           "metadata": {
@@ -8057,6 +7954,42 @@
           "breadcrumb": [
             "properties",
             "shipping_contact"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "debit_lines"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payments"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "credits"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "journal_entry_id"
           ],
           "metadata": {
             "inclusion": "available"

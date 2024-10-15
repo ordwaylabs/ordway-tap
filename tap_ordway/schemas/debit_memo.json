@@ -1,187 +1,102 @@
 {
-    "type": [
-        "null",
-        "object"
-    ],
-    "additionalProperties": false,
-    "required": [
-        "company_id",
-        "debit_memo_id"
-    ],
-    "properties": {
-        "debit_memo_id": {
-            "type": "string"
-        },
-        "customer_id": {
-            "type": "integer"
-        },
-        "created_by_id": {
-            "type": "integer"
-        },
-        "updated_by_id": {
-            "type": [
-                "null",
-                "integer"
-            ]
-        },
-        "company_id": {
-            "type": "integer"
-        },
-        "status": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "debit_date": {
-            "type": [
-                "null",
-                "string"
-            ],
-            "format": "date"
-        },
-        "debit_amount": {
-            "type": [
-                "null",
-                "number"
-            ]
-        },
-        "reference_number": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "balance": {
-            "type": [
-                "null",
-                "number"
-            ]
-        },
-        "paid_amount": {
-            "type": [
-                "null",
-                "number"
-            ]
-        },
-        "notes": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "currency_id": {
-            "type": "integer"
-        },
-        "debit_tax": {
-            "type": [
-                "null",
-                "number"
-            ]
-        },
-        "subtotal": {
-            "type": [
-                "null",
-                "number"
-            ]
-        },
-        "emailed": {
-            "type": "boolean"
-        },
-        "custom_fields": {
-            "type": [
-                "null",
-                "object"
-            ],
-            "additionalProperties": true
-        },
-        "conversion_rate": {
-            "type": "number"
-        },
-        "reversed_on": {
-            "type": [
-                "null",
-                "string"
-            ],
-            "format": "date"
-        },
-        "contacts_info": {
-            "type": [
-                "null",
-                "object"
-            ],
-            "additionalProperties": true
-        },
-        "pdf_file_name": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "pdf_content_type": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "pdf_file_size": {
-            "type": [
-                "null",
-                "integer"
-            ]
-        },
-        "pdf_updated_at": {
-            "type": [
-                "null",
-                "string"
-            ],
-            "format": "date-time"
-        },
-        "created_at": {
-            "type": "string",
-            "format": "date-time"
-        },
-        "updated_at": {
-            "type": "string",
-            "format": "date-time"
-        },
-        "created_date": {
-			"type": [
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "required": ["company_id", "debit_memo_id"],
+  "properties": {
+    "debit_memo_id": {
+      "type": "string"
+    },
+    "customer_id": {  
+      "type": "string"
+    },
+    "company_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": ["null", "string"]
+    },
+    "debit_date": {
+      "type": ["null", "string"],
+      "format": "date"
+    },
+    "debit_amount": {
+      "type": ["null", "number"]
+    },
+    "reference_number": {
+      "type": ["null", "string"]
+    },
+    "balance": {
+      "type": ["null", "number"]
+    },
+    "paid_amount": {
+      "type": ["null", "number"]
+    },
+    "notes": {
+      "type": ["null", "string"]
+    },
+    "currency": {
+      "type": ["null", "string"]    
+    },
+    "debit_tax": {
+      "type": ["null", "number"]
+    },
+    "subtotal": {
+      "type": ["null", "number"]
+    },
+    "custom_fields": {
+      "type": ["null", "object"]
+    },
+    "conversion_rate": {
+      "type": "number"
+    },
+    "reversed_on": {
+      "type": ["null", "string"],
+      "format": "date"
+    },
+    "debit_pdf_url": {
+      "type": ["null", "string"],
+      "format": "uri"
+    },
+    "created_by": {
+      "type": ["null", "string"]
+    },
+    "updated_by": {
+      "type": ["null", "string"]
+    },
+    "created_date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "updated_date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "billing_contact": {
+      "type": ["null", "object"]
+    },
+    "shipping_contact": {
+      "type": ["null", "object"]
+    },
+    "debit_lines": {
+      "type": [
 				"null",
-				"string"
-			],
-			"format": "date-time"
-		},
-		"updated_date": {
-			"type": [
+				"array"
+			]
+    },
+    "payments": {
+      "type": [
 				"null",
-				"string"
-			],
-			"format": "date-time"
-		},
-        "bill_contact_id": {
-            "type": [
-                "null",
-                "integer"
-            ]
-        },
-        "shipping_contact_id": {
-            "type": [
-                "null",
-                "integer"
-            ]
-        },
-        "billing_contact": {
-            "type": [
-                "null",
-                "object"
-            ]
-        },
-        "shipping_contact": {
-            "type": [
-                "null",
-                "object"
-            ]
-        }
+				"array"
+			]
+    },
+    "credits": {
+     "type": [
+				"null",
+				"array"
+			]
+    },
+    "journal_entry_id":{
+      "type": "string"
     }
+  }
 }
