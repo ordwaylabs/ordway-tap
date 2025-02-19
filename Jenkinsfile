@@ -82,3 +82,6 @@ post {
                 docker rm \$(docker ps -aq) || true
                 """
         }
+    }
+}  
+    
