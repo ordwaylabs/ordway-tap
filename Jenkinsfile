@@ -96,7 +96,7 @@ pipeline {
                 docker exec tap sh -c 'python3 -c "import os, json; print(json.dumps(dict(os.environ), indent=2))" > /app/ordway-tap/config.json'
                 docker exec tap sh -c 'cat /app/ordway-tap/config.json'
                 docker exec tap sh -c 'tap-ordway -c /app/ordway-tap/config.json --catalog /app/ordway-tap/catalog.json  | /usr/local/bin/target-stitch  --config /app/ordway-tap/stitch_config.json'
-                """
+        
                 }
             post {
                 success {
