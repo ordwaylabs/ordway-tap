@@ -17,7 +17,7 @@ pipeline {
                      sh """
                         cd /data/workspace/singer-tap_dev
                         git reset --hard HEAD
-                        git pull origin ${params.Branch}
+                        git pull 
                      """
                  }
              }
