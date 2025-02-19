@@ -41,12 +41,12 @@ pipeline {
               steps {
                  script {
                  def imageExists = sh(
-                        script: "docker images -q mvn:v1",
+                        script: "docker images -q tap:v1",
                  returnStdout: true
                   ).trim()
 
                  if (imageExists != "") {
-                   echo "Image mvn:v1 exists locally. Skipping build."
+                   echo "Image tap:v1 exists locally. Skipping build."
                    } else {
                       echo "Image not found. Building..."
                       sh "docker build -f /data/workspace/singer-tap_dev/Dockerfile -t tap:v1 ."
