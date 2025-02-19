@@ -28,15 +28,7 @@ pipeline {
                        }
                    }
 
-        stage('Slack Notification'){
-
-            steps {
-
-                slackSend channel: '#ops',
-                          color: '#0000FF',
-                    message: "Build Started:\n Job Name: ${env.JOB_NAME}\n Build Number: ${env.BUILD_NUMBER}\n Parameter Passed: ${params.Environment}\n More info at: (<${env.BUILD_URL}|Open>) "
-            }
-        }
+        
         stage('Build Image') {
               steps {
                  script {
