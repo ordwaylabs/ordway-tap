@@ -54,7 +54,6 @@ pipeline {
 
                 sh """
                 docker run -itd --cpus="0.5"  --memory="0.5g" -v /data/workspace/singer-tap_dev:/app --name tap  tap:v1
-                docker exec  "mvntest-${suffix}"  chmod -R ug=rwX,g+s /project
                 """
                 }
             
