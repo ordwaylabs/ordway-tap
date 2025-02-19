@@ -83,7 +83,7 @@ pipeline {
 post {
         failure {
                 sh """
-                docker stop \$(docker ps -a | grep "mvntest-${suffix}" | awk '{print \$1}') || true
+                docker stop \$(docker ps -a | grep tap | awk '{print \$1}') || true
                 docker rm \$(docker ps -aq) || true
                 """
         }
