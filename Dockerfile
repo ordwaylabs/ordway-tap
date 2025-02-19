@@ -21,7 +21,6 @@ WORKDIR /app
 
 # Copy the current directory contents into the container
 COPY . .
-WORKDIR /app/ordway-tap
 
 # Create and activate the virtual environment in the same RUN step
 RUN pip install -e .
