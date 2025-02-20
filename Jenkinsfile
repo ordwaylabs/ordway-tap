@@ -37,7 +37,7 @@ pipeline {
             sh 'docker image prune -a --force || true'
 
             // Build the new Docker image
-            sh "docker build -f /data/workspace/singer-tap_dev/Dockerfile -t tap:${suffix} ."
+            sh "docker build -f /data/workspace/singer-tap_dev/Dockerfile -t tap:${suffix}:latest ."
         }
     }
 }
