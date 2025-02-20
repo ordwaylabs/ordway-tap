@@ -26,16 +26,18 @@ pipeline {
                        }
                    }
         
-        stage ('Build Image') {
-~            steps {
-~                sh """
-~                hostname
-~                sh 'docker stop $(docker ps -a | grep "tap" | awk \'{print $1}\')      || true'
-                   sh 'docker rm  $(docker ps -aq) || true'
-                   sh 'docker image prune -a --force      || true'
-~             
-~                docker build -f /data/workspace/Testing-qa-automation-new/Dockerfile -t "tap:${suffix}" .
-~                """
+      stage ('Build Image') {
+           steps {
+                sh """
+                hostname
+                 docker stop $(docker ps -a | grep "tap" | awk \'{print $1}\')      || true
+                 docker rm  $(docker ps -aq) || true
+                 docker image prune -a --force      || true
+                docker build -f /data/workspace/singer-tap_dev/Dockerfile -t "tap:${suffix}" .
+            """
+             } 
+        }
+    
 
 stage ('Creating Docker Container') {
     steps {
