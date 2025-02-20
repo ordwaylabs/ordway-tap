@@ -14,8 +14,6 @@ pipeline {
                     echo "Fetching latest changes from Git repository..."
                     sh """
                         cd /data/workspace/singer-tap_dev
-                        sudo rm -rf /data/workspace/singer-tap_dev/*
-                        git checkout ${params.branch}
                         git reset --hard HEAD
                         git pull origin ${params.branch}
                         sudo  chown -R jenkins:jenkins 
