@@ -32,7 +32,7 @@ pipeline {
                       sh 'docker stop $(docker ps -a | grep "tap" | awk \'{print $1}\')      || true'
                       sh 'docker rm  $(docker ps -aq) || true'
                       sh 'docker image prune -a --force      || true'
-                      sh "docker build -f /data/workspace/singer-tap_dev/Dockerfile -t tap:$suffix:latest ."
+                      sh "docker build -f /data/workspace/singer-tap_dev/Dockerfile -t tap:${suffix}-latest ."
                   }
                }
              
@@ -44,7 +44,7 @@ pipeline {
             steps {
 
                 sh """
-                docker run -itd --cpus="0.5"  --memory="0.5g" -v /data/workspace/singer-tap_dev:/app --name tap "tap-$suffix:latest"
+                docker run -itd --cpus="0.5"  --memory="0.5g" -v /data/workspace/singer-tap_dev:/app --name tap tap-${suffix}-latest
                 """
                 }
             
