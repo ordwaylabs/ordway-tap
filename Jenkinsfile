@@ -67,14 +67,5 @@ pipeline {
        
     }
 
-    post {
-        failure {
-            script {
-                sh """
-                docker stop \$(docker ps -a --filter "name=tap" --format "{{.ID}}") || true
-                docker rm \$(docker ps -aq --filter "name=tap") || true
-                """
-            }
-        }
-    }
+   
 }
