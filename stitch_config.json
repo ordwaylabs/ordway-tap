@@ -1,8 +1,8 @@
 {
-  "client_id": 217201,
+  "client_id": 217791,
   "api_key" : "Xs11JVbAJY75Y5R2GzHj51hmR000C7Uq3eLvIzjR",
-  "token": "a1be067bd7aa1a0a429fc200a177a8638b615bc4c6d67b2da5b2ec294d5967ce",
-  "access_token": "a1be067bd7aa1a0a429fc200a177a8638b615bc4c6d67b2da5b2ec294d5967ce",
+  "token": "49e4580b5709adc5989f0a9ef62800d9b25e1e58c46606a607b43369e1dffe45",
+  "access_token": "49e4580b5709adc5989f0a9ef62800d9b25e1e58c46606a607b43369e1dffe45",
   "small_batch_url": "https://api.stitchdata.com/v2/import/batch",
   "big_batch_url": "https://api.stitchdata.com/v2/import/batch",
   "batch_size_preferences": { "full_table_streams": [], "default": 500 }
