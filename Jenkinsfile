@@ -30,7 +30,7 @@ pipeline {
               steps {
                  script {
                       
-                      sh "docker build -f /data/workspace/singer-tap_dev/Dockerfile -t "tap:$suffix" ."
+                      sh "docker build -f /data/workspace/singer-tap_dev/Dockerfile -t tap:$suffix ."
                   }
                }
              }
