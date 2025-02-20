@@ -64,17 +64,7 @@ pipeline {
             }
         }
 
-        stage('Cleanup Containers') {
-            steps {
-                script {
-                    sh """
-                    docker stop \$(docker ps -a --filter "name=tap" --format "{{.ID}}") || true
-                    docker rm \$(docker ps -aq --filter "name=tap") || true
-                    docker image prune -a --force || true
-                    """
-                }
-            }
-        }
+       
     }
 
     post {
