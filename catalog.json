@@ -2348,7 +2348,8 @@
             "valid-replication-keys": [
               "updated_date"
             ],
-            "inclusion": "available"
+            "inclusion": "available",
+            "selected": "true"
           }
         },
         {
@@ -8037,7 +8038,6 @@
             ]
           },
           "email": {
-            "format": "email",
             "type": [
               "null",
               "string"
@@ -8162,7 +8162,8 @@
               "company_id"
             ],
             "valid-replication-keys": [],
-            "inclusion": "available"
+            "inclusion": "available",
+            "selected" : true
           }
         },
         {
