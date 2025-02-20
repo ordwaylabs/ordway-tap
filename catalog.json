@@ -7604,7 +7604,6 @@
             ]
           },
           "email": {
-            "format": "email",
             "type": [
               "null",
               "string"
