@@ -4,7 +4,7 @@ pipeline {
     }
 
     environment {
-        suffix = "${params.Environment}-${params.Runner}-${currentBuild.startTimeInMillis}"
+        suffix = "${params.branch}-${currentBuild.startTimeInMillis}"
 
                }
     stages {
@@ -29,15 +29,7 @@ pipeline {
         stage('Build Image') {
               steps {
                  script {
-                 def imageExists = sh(
-                        script: "docker images -q tap:v1",
-                 returnStdout: true
-                  ).trim()
-                 if (imageExists != "") {
-                   echo "Image tap:v1 exists locally. Skipping build."
-                   } else {
-                      echo "Image not found. Building..."
-                      sh "docker build -f /data/workspace/singer-tap_dev/Dockerfile -t tap:v1 ."
+                      sh "docker build -f /data/workspace/singer-tap_dev/Dockerfile -t "tap:${suffix}" ."
                   }
                }
              }
@@ -49,7 +41,7 @@ pipeline {
             steps {
 
                 sh """
-                docker run -itd --cpus="0.5"  --memory="0.5g" -v /data/workspace/singer-tap_dev:/app --name tap  tap:v1
+                docker run -itd --cpus="0.5"  --memory="0.5g" -v /data/workspace/singer-tap_dev:/app --name tap "tap:${suffix}"
                 """
                 }
             
