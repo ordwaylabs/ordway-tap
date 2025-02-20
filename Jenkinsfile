@@ -9,20 +9,19 @@ pipeline {
 
     stages {
         stage('Update Workspace') {
-            steps {
-                script {
-                    echo "Fetching latest changes from Git repository..."
-                    sh """
-                        cd /data/workspace/singer-tap_dev
-                        
-                        sudo rm -rf /data/workspace/singer-tap_dev/tap-ordway*
-                        git reset --hard HEAD
-                        git pull origin ${params.branch}
-                    """
-                }
-            }
+    steps {
+        script {
+            echo "Fetching latest changes from Git repository..."
+            sh """
+                cd /data/workspace/singer-tap_dev
+                git fetch --all
+                git reset --hard origin/${params.branch}
+                git clean -fd
+                git pull origin ${params.branch}
+            """
         }
-
+    }
+}
         stage('Build') {
             steps {
                 echo "Building branch ${params.branch}"
