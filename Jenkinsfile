@@ -29,7 +29,8 @@ pipeline {
         stage('Build Image') {
               steps {
                  script {
-                      sh "docker build -f /data/workspace/singer-tap_dev/Dockerfile -t "tap:${suffix}" ."
+                      
+                      sh "docker build -f /data/workspace/singer-tap_dev/Dockerfile -t "tap:$suffix" ."
                   }
                }
              }
@@ -41,7 +42,7 @@ pipeline {
             steps {
 
                 sh """
-                docker run -itd --cpus="0.5"  --memory="0.5g" -v /data/workspace/singer-tap_dev:/app --name tap "tap:${suffix}"
+                docker run -itd --cpus="0.5"  --memory="0.5g" -v /data/workspace/singer-tap_dev:/app --name tap "tap-$suffix"
                 """
                 }
             
