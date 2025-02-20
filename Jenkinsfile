@@ -37,7 +37,7 @@ pipeline {
             sh 'docker image prune -a --force || true'
 
             // Build the new Docker image
-            sh "docker build -f /data/workspace/singer-tap_dev/Dockerfile -t tap:${suffix}-latest ."
+            sh "docker build -f /data/workspace/singer-tap_dev/Dockerfile -t tap:${suffix} ."
         }
     }
 }
@@ -47,7 +47,7 @@ stage ('Creating Docker Container') {
         script {
             sh """
             docker run -itd --cpus="0.5" --memory="0.5g" \
-            -v /data/workspace/singer-tap_dev:/app --name tap "tap-${suffix}-latest"
+            -v /data/workspace/singer-tap_dev:/app --name tap "tap-${suffix}"
             """
         }
     }
