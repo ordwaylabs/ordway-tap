@@ -14,9 +14,10 @@ pipeline {
                     echo "Fetching latest changes from Git repository..."
                     sh """
                         cd /data/workspace/singer-tap_dev
-                        git reset --hard HEAD
+                        sudo chown -R jenkins:jenkins /data/workspace/singer-tap_dev/tap-ordway
+                        sudo rm -rf /data/workspace/singer-tap_dev/tap-ordway*
+                        
                         git pull origin ${params.branch}
-                        sudo  chown -R jenkins:jenkins 
                     """
                 }
             }
