@@ -27,28 +27,31 @@ pipeline {
                    }
         
         stage('Build Image') {
-              steps {
-                 script {
-                      sh 'docker stop $(docker ps -a | grep "tap" | awk \'{print $1}\')      || true'
-                      sh 'docker rm  $(docker ps -aq) || true'
-                      sh 'docker image prune -a --force      || true'
-                      sh "docker build -f /data/workspace/singer-tap_dev/Dockerfile -t tap:${suffix}-latest ."
-                  }
-               }
-             
-    
+    steps {
+        script {
+            // Stop and remove any existing "tap" containers
+            sh 'docker stop $(docker ps -a | grep "tap" | awk \'{print $1}\') || true'
+            sh 'docker rm $(docker ps -aq) || true'
+            
+            // Remove any unused images
+            sh 'docker image prune -a --force || true'
+
+            // Build the new Docker image
+            sh "docker build -f /data/workspace/singer-tap_dev/Dockerfile -t tap:${suffix}-latest /data/workspace/singer-tap_dev"
+        }
+    }
 }
 
-        stage ('creating Docker container'){
-
-            steps {
-
-                sh """
-                docker run -itd --cpus="0.5"  --memory="0.5g" -v /data/workspace/singer-tap_dev:/app --name tap tap-${suffix}-latest
-                """
-                }
-            
-            }
+stage ('Creating Docker Container') {
+    steps {
+        script {
+            sh """
+            docker run -itd --cpus="0.5" --memory="0.5g" \
+            -v /data/workspace/singer-tap_dev:/app --name tap tap-${suffix}-latest
+            """
+        }
+    }
+}
         stage ('singet tap commands execution ') {
             steps {
                 sh """
