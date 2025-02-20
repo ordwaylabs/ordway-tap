@@ -14,6 +14,7 @@ pipeline {
                     echo "Fetching latest changes from Git repository..."
                     sh """
                         cd /data/workspace/singer-tap_dev
+                        git checkout ${params.branch}
                         git reset --hard HEAD
                         git clean -fd
                         git pull origin ${params.branch}
