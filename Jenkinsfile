@@ -54,17 +54,24 @@ pipeline {
         }
 
         stage('Execute Tap Commands') {
-            steps {
-                script {
-                    sh """
-                    docker exec tap sh -c 'python3 -c "import os, json; print(json.dumps(dict(os.environ), indent=2))" > /app/config.json'
-                    docker exec -it tap  sh -c "export COMPANY='$COMPANY' export USER_EMAIL='$USER_EMAIL' export USER_TOKEN='$USER_TOKEN' export API_URL= '$API_URL' export API_KEY= 'API_KEY' export START_DATE = '$START_DATE'"
-                    docker exec tap cat /app/config.json
+           steps {
+              script {
+                   sh """
+                     docker exec tap sh -c 'python3 -c "import os, json; print(json.dumps(dict(os.environ), indent=2))" > /app/config.json'
+
+                     docker exec -it tap sh -c "
+                      export COMPANY='$COMPANY' &&
+                      export USER_EMAIL='$USER_EMAIL' &&
+                      export USER_TOKEN='$USER_TOKEN' &&
+                      export API_URL='$API_URL' &&
+                       export API_KEY='$API_KEY' &&
+                       export START_DATE='$START_DATE' "
+                     docker exec tap cat /app/config.json
                     docker exec tap sh -c 'tap-ordway -c /app/config.json --catalog /app/catalog.json | target-stitch --config /app/stitch_config.json'
-                    """
-                }
-            }
+            """
         }
+    }
+}
 
        
     }
