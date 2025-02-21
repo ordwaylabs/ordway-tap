@@ -58,7 +58,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                        # Set environment variables inside the container and generate config.json
+                        
                         docker exec tap sh -c '
                         echo "{
                           \\"company\\": \\"$COMPANY\\",
@@ -69,10 +69,10 @@ pipeline {
                           \\"start_date\\": \\"$START_DATE\\"
                         }" > /app/config.json'
 
-                        # Verify config.json contents
+                       
                         docker exec tap cat /app/config.json
 
-                        # Execute Tap commands
+                       
                         docker exec tap sh -c 'tap-ordway -c /app/config.json --catalog /app/catalog.json | target-stitch --config /app/stitch_config.json'
                     """
                 }
