@@ -59,7 +59,7 @@ pipeline {
                    sh """
                      docker exec tap sh -c 'python3 -c "import os, json; print(json.dumps(dict(os.environ), indent=2))" > /app/config.json'
 
-                     docker exec -it tap sh -c "
+                     docker exec tap sh -c "
                       export COMPANY='$COMPANY' &&
                       export USER_EMAIL='$USER_EMAIL' &&
                       export USER_TOKEN='$USER_TOKEN' &&
