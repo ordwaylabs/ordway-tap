@@ -57,7 +57,7 @@ pipeline {
            steps {
               script {
                    sh """
-                     docker exec tap sh -c 'python3 -c "import os, json; print(json.dumps(dict(os.environ), indent=2))" > /app/config.json'
+                     
 
                      docker exec tap sh -c "
                       export company='$COMPANY' &&
@@ -66,6 +66,7 @@ pipeline {
                       export api_url='$API_URL' &&
                        export api_key='$API_KEY' &&
                        export start_date='$START_DATE' "
+                       docker exec tap sh -c 'python3 -c "import os, json; print(json.dumps(dict(os.environ), indent=2))" > /app/config.json'
                      docker exec tap cat /app/config.json
                     docker exec tap sh -c 'tap-ordway -c /app/config.json --catalog /app/catalog.json | target-stitch --config /app/stitch_config.json'
             """
