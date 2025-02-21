@@ -60,12 +60,12 @@ pipeline {
                      docker exec tap sh -c 'python3 -c "import os, json; print(json.dumps(dict(os.environ), indent=2))" > /app/config.json'
 
                      docker exec tap sh -c "
-                      export COMPANY='$COMPANY' &&
-                      export USER_EMAIL='$USER_EMAIL' &&
-                      export USER_TOKEN='$USER_TOKEN' &&
-                      export API_URL='$API_URL' &&
-                       export API_KEY='$API_KEY' &&
-                       export START_DATE='$START_DATE' "
+                      export company='$COMPANY' &&
+                      export user_email='$USER_EMAIL' &&
+                      export user_token='$USER_TOKEN' &&
+                      export api_url='$API_URL' &&
+                       export api_key='$API_KEY' &&
+                       export start_date='$START_DATE' "
                      docker exec tap cat /app/config.json
                     docker exec tap sh -c 'tap-ordway -c /app/config.json --catalog /app/catalog.json | target-stitch --config /app/stitch_config.json'
             """
