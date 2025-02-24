@@ -2348,8 +2348,7 @@
             "valid-replication-keys": [
               "updated_date"
             ],
-            "inclusion": "available",
-            "selected": "true"
+            "inclusion": "available"
           }
         },
         {
@@ -7746,8 +7745,7 @@
             "valid-replication-keys": [
               "updated_date"
             ],
-            "inclusion": "automatic",
-            "selected": true
+            "inclusion": "automatic"
           }
         },
         {
@@ -8162,8 +8160,7 @@
               "company_id"
             ],
             "valid-replication-keys": [],
-            "inclusion": "available",
-            "selected" : true
+            "inclusion": "available"
           }
         },
         {
