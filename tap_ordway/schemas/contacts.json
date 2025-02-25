@@ -44,8 +44,7 @@
             "type": [
                 "null",
                 "string"
-            ],
-            "format": "email"
+            ]
         },
         "phone": {
             "type": [
