@@ -324,6 +324,17 @@ class Usages(Stream):
     transformer_class = RecordTransformer
     request_handler = RequestHandler("/usages", sort="updated_date,id")
 
+class DebitMemo(Stream):
+    """Debit Memo stream
+
+    Ordway Documentation: https://ordwaylabs.api-docs.io/v1/models/debit-memos
+    """
+
+    tap_stream_id = "debit_memo"
+    key_properties = ["debit_memo_id", "company_id"]
+    transformer_class = RecordTransformer
+    request_handler = RequestHandler("/debit_memos", sort="updated_at,id")
+
 
 AVAILABLE_STREAMS: Dict[str, Union[Type[Stream], Type["Substream"]]] = {
     "billing_runs": BillingRuns,
@@ -349,4 +360,5 @@ AVAILABLE_STREAMS: Dict[str, Union[Type[Stream], Type["Substream"]]] = {
     "contacts": Contacts,
     "payment_methods": PaymentMethods,
     "customer_notes": CustomerNotes,
+    "debit_memo": DebitMemo,
 }
