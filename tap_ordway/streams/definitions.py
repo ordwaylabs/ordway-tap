@@ -334,6 +334,8 @@ class DebitMemo(Stream):
     tap_stream_id = "debit_memo"
     key_properties = ["debit_memo_id", "company_id"]
     transformer_class = DebitMemoTransformer
+    replication_key = None
+    replication_method = "FULL_TABLE"
     request_handler = RequestHandler("/debit_memos", sort="updated_at,id")
 
 
