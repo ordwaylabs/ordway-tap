@@ -81,19 +81,40 @@
       "type": [
 				"null",
 				"array"
-			]
+			],
+			"items": {
+				"type": [
+					"null",
+					"object"
+				],
+				"additionalProperties": true
+			}
     },
     "payments": {
       "type": [
 				"null",
 				"array"
-			]
+			],
+			"items": {
+				"type": [
+					"null",
+					"object"
+				],
+				"additionalProperties": true
+			}
     },
     "credits": {
      "type": [
 				"null",
 				"array"
-			]
+			],
+			"items": {
+				"type": [
+					"null",
+					"object"
+				],
+				"additionalProperties": true
+			}
     },
     "journal_entry_id":{
       "type": "string"

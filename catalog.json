@@ -7570,7 +7570,7 @@
     {
       "tap_stream_id": "debit_memo",
       "replication_key": "updated_date",
-      "replication_method": "INCREMENTAL",
+      "replication_method": "FULL_TABLE",
       "key_properties": [
         "debit_memo_id",
         "company_id"
