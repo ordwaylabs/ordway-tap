@@ -8,6 +8,7 @@ from ..transformers import (
     OrderTransformer,
     RecordTransformer,
     SubscriptionTransformer,
+    DebitMemoTransformer
 )
 from .base import EndpointSubstream, ResponseSubstream, Stream
 
@@ -332,7 +333,7 @@ class DebitMemo(Stream):
 
     tap_stream_id = "debit_memo"
     key_properties = ["debit_memo_id", "company_id"]
-    transformer_class = RecordTransformer
+    transformer_class = DebitMemoTransformer
     request_handler = RequestHandler("/debit_memos", sort="updated_at,id")
 
 
