@@ -2642,8 +2642,7 @@
             "valid-replication-keys": [
               "updated_date"
             ],
-            "inclusion": "available",
-            "selected": true
+            "inclusion": "available"
           }
         }
       ]
