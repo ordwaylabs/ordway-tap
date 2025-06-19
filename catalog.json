@@ -2615,6 +2615,40 @@
       ]
     },
     {
+      "tap_stream_id": "journal_entries",
+      "replication_key": "updated_date",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "journal_entry_id",
+        "company_id"
+      ],
+      "schema": {
+        "properties": {},
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "journal_entries",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "journal_entry_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [
+              "updated_date"
+            ],
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ]
+    },
+    {
       "tap_stream_id": "payment_runs",
       "replication_method": "FULL_TABLE",
       "key_properties": [
