@@ -185,3 +185,8 @@ class DebitMemoTransformer(RecordTransformer):
             )
 
             yield debit_memo_line
+
+class ProductTransformer(RecordTransformer):
+    def pre_transform(self, data: Dict[str, Any], context: DataContext):
+        super().pre_transform(data, context)
+        return data
