@@ -1,0 +1,11 @@
+{
+	"type": [
+		"null",
+		"object"
+	],
+	"additionalProperties": false,
+	"required": [
+		"company_id"
+	],
+	"properties": {}
+}

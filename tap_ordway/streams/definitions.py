@@ -346,6 +346,17 @@ class JournalEntry(Stream):
     transformer_class = RecordTransformer
     request_handler = RequestHandler("/journal_entries", sort="updated_at,id")
 
+class Currencies(Stream):
+    """Currencies stream
+
+    Ordway Documentation: https://ordwaylabs.api-docs.io/v1/models/currencies
+    """
+
+    tap_stream_id = "currencies"
+    key_properties = ["company_id"]
+    transformer_class = RecordTransformer
+    request_handler = RequestHandler("/currencies", sort="updated_at,id")
+
 
 AVAILABLE_STREAMS: Dict[str, Union[Type[Stream], Type["Substream"]]] = {
     "billing_runs": BillingRuns,
@@ -372,5 +383,6 @@ AVAILABLE_STREAMS: Dict[str, Union[Type[Stream], Type["Substream"]]] = {
     "payment_methods": PaymentMethods,
     "customer_notes": CustomerNotes,
     "debit_memo": DebitMemo,
-    "journal_entries": JournalEntry
+    "journal_entries": JournalEntry,
+    "currencies": Currencies
 }
