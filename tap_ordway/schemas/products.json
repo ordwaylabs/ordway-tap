@@ -40,7 +40,17 @@
 		"show_revenue_schedules": {
 			"type": ["null", "boolean"]
 		},
-		"product_tax_group_id": {
+		"product_tax_group_name": {
+			"type": ["null", "string"]
+		},
+		"integration_status": {
+			"type": ["null", "string"]
+		},
+		"integration_failed_at": {
+			"type": ["null", "string"],
+			"format": "date-time"
+		},
+		"integration_messages": {
 			"type": ["null", "string"]
 		},
 		"income_account": {
