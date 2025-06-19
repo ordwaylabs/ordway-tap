@@ -30,6 +30,16 @@
 		"currency": {
 			"type": ["null", "string"]
 		},
+		"transaction_posting_entries": {
+			"type": ["null", "array"],
+			"items": {
+				"type": "object",
+				"properties": {}
+			}
+		},
+		"show_revenue_schedules": {
+			"type": ["null", "boolean"]
+		},
 		"income_account": {
 			"type": ["null", "string"]
 		},
