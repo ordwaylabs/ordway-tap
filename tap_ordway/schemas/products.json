@@ -40,6 +40,9 @@
 		"show_revenue_schedules": {
 			"type": ["null", "boolean"]
 		},
+		"product_tax_group_id": {
+			"type": ["null", "string"]
+		},
 		"income_account": {
 			"type": ["null", "string"]
 		},
