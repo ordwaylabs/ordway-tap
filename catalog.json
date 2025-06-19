@@ -2642,8 +2642,7 @@
             "valid-replication-keys": [
               "updated_date"
             ],
-            "inclusion": "available",
-            "selected": true
+            "inclusion": "available"
           }
         }
       ]
@@ -6053,6 +6052,37 @@
             "custom_fields"
           ],
           "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "currencies",
+      "replication_key": "updated_date",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "company_id"
+      ],
+      "schema": {
+        "properties": {},
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "currencies",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "company_id"
+            ],
+            "valid-replication-keys": [
+              "updated_date"
+            ],
             "inclusion": "available"
           }
         }
