@@ -148,6 +148,7 @@ class SubscriptionTransformer(RecordTransformer):
                     "updated_date": data.get("updated_date"),
                     "custom_fields": data.get("custom_fields"),
                     "charge_custom_fields": subscription_plan.get("custom_fields"),
+                    "transaction_posting_entries": subscription_plan.get("transaction_posting_entries")
                 }
             )
 
@@ -185,3 +186,8 @@ class DebitMemoTransformer(RecordTransformer):
             )
 
             yield debit_memo_line
+
+class ProductTransformer(RecordTransformer):
+    def pre_transform(self, data: Dict[str, Any], context: DataContext):
+        super().pre_transform(data, context)
+        return data

@@ -2348,8 +2348,7 @@
             "valid-replication-keys": [
               "updated_date"
             ],
-            "inclusion": "available",
-            "selected": "true"
+            "inclusion": "available"
           }
         },
         {
@@ -2610,6 +2609,39 @@
             "open_invoices_url"
           ],
           "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "journal_entries",
+      "replication_key": "updated_date",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "journal_entry_id",
+        "company_id"
+      ],
+      "schema": {
+        "properties": {},
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "journal_entries",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "journal_entry_id",
+              "company_id"
+            ],
+            "valid-replication-keys": [
+              "updated_date"
+            ],
             "inclusion": "available"
           }
         }
@@ -5553,6 +5585,47 @@
               "string"
             ]
           },
+          "transaction_posting_entries": {
+            "items": {
+              "properties": {},
+              "type": "object"
+            },
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "show_revenue_schedules": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "product_tax_group_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "integration_status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "integration_failed_at": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "integration_messages": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
           "income_account": {
             "type": [
               "null",
@@ -5761,6 +5834,60 @@
           "breadcrumb": [
             "properties",
             "currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "transaction_posting_entries"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "show_revenue_schedules"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "product_tax_group_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_failed_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_messages"
           ],
           "metadata": {
             "inclusion": "available"
@@ -7704,25 +7831,22 @@
             ]
           },
           "debit_lines": {
-            "type": ["null", "array"],
-            "items": {
-             "type": ["null", "object"],
-              "additionalProperties": true
-            }
+            "type": [
+              "null",
+              "array"
+            ]
           },
           "payments": {
-            "type": ["null", "array"],
-            "items": {
-             "type": ["null", "object"],
-              "additionalProperties": true
-            }
+            "type": [
+              "null",
+              "array"
+            ]
           },
           "credits": {
-            "type": ["null", "array"],
-            "items": {
-              "type": ["null", "object"],
-             "additionalProperties": true
-            }
+            "type": [
+              "null",
+              "array"
+            ]
           },
           "journal_entry_id": {
             "type": "string"
@@ -7746,8 +7870,7 @@
             "valid-replication-keys": [
               "updated_date"
             ],
-            "inclusion": "automatic",
-            "selected": true
+            "inclusion": "available"
           }
         },
         {
@@ -8162,8 +8285,7 @@
               "company_id"
             ],
             "valid-replication-keys": [],
-            "inclusion": "available",
-            "selected" : true
+            "inclusion": "available"
           }
         },
         {
