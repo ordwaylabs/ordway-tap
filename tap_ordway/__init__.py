@@ -161,6 +161,7 @@ _STREAM_VERSIONS = Dict[str, Optional[int]]  # pylint: disable=invalid-name
 
 # Could be refactored
 # pylint: disable=too-many-arguments
+#pylint: disable=R0917
 def prepare_stream(
     tap_stream_id: str,
     stream_defs: _STREAM_DEFS,

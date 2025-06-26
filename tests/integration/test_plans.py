@@ -1,7 +1,7 @@
 from unittest.mock import patch
 from singer.messages import ActivateVersionMessage, RecordMessage, SchemaMessage
-from .base import DEFAULT_MASKED_RESPONSE_FIELDS, BaseOrdwayTestCase
-from .testing_tools.mask import Format, StrFormat
+from base import DEFAULT_MASKED_RESPONSE_FIELDS, BaseOrdwayTestCase
+from testing_tools.mask import Format, StrFormat
 
 MASKED_RESPONSE_FIELDS = {
     "quantity": Format.AUTO,

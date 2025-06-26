@@ -1,8 +1,8 @@
 from unittest.mock import patch
 from singer.messages import ActivateVersionMessage, RecordMessage, SchemaMessage
-from .base import BaseOrdwayTestCase
-from .test_customers import MASKED_RESPONSE_FIELDS, _remove_custom_fields
-from .testing_tools.mask import StrFormat
+from base import BaseOrdwayTestCase
+from test_customers import MASKED_RESPONSE_FIELDS, _remove_custom_fields
+from testing_tools.mask import StrFormat
 
 
 class ContactsTestCase(BaseOrdwayTestCase):

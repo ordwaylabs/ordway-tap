@@ -1,7 +1,7 @@
 from singer.messages import ActivateVersionMessage, RecordMessage, SchemaMessage
-from .base import DEFAULT_MASKED_RESPONSE_FIELDS, BaseOrdwayTestCase
-from .testing_tools.mask import Format, StrFormat
-from .testing_tools.utils import alter_nested_value
+from base import DEFAULT_MASKED_RESPONSE_FIELDS, BaseOrdwayTestCase
+from testing_tools.mask import Format, StrFormat
+from testing_tools.utils import alter_nested_value
 
 MASKED_RESPONSE_FIELDS = {
     "quantity": Format.AUTO,

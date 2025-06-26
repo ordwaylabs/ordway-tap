@@ -20,16 +20,19 @@
       "format": "date"
     },
     "debit_amount": {
-      "type": ["null", "number"]
+      "type": ["null", "string"],
+      "format": "singer.decimal"
     },
     "reference_number": {
       "type": ["null", "string"]
     },
     "balance": {
-      "type": ["null", "number"]
+      "type": ["null", "string"],
+      "format": "singer.decimal"
     },
     "paid_amount": {
-      "type": ["null", "number"]
+      "type": ["null", "string"],
+      "format": "singer.decimal"
     },
     "notes": {
       "type": ["null", "string"]
@@ -38,10 +41,12 @@
       "type": ["null", "string"]    
     },
     "debit_tax": {
-      "type": ["null", "number"]
+      "type": ["null", "string"],
+      "format": "singer.decimal"
     },
     "subtotal": {
-      "type": ["null", "number"]
+      "type": ["null", "string"],
+      "format": "singer.decimal"
     },
     "custom_fields": {
       "type": ["null", "object"]
@@ -78,43 +83,25 @@
       "type": ["null", "object"]
     },
     "debit_lines": {
-      "type": [
-				"null",
-				"array"
-			],
-			"items": {
-				"type": [
-					"null",
-					"object"
-				],
-				"additionalProperties": true
-			}
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "object"],
+        "additionalProperties": true
+      }
     },
     "payments": {
-      "type": [
-				"null",
-				"array"
-			],
-			"items": {
-				"type": [
-					"null",
-					"object"
-				],
-				"additionalProperties": true
-			}
+      "type": ["null","array"],
+      "items": {
+        "type": ["null", "object"],
+        "additionalProperties": true
+      }
     },
     "credits": {
-     "type": [
-				"null",
-				"array"
-			],
-			"items": {
-				"type": [
-					"null",
-					"object"
-				],
-				"additionalProperties": true
-			}
+     "type": ["null", "array"],
+     "items": {
+      "type": ["null", "object"],
+      "additionalProperties": true
+    }
     },
     "journal_entry_id":{
       "type": "string"

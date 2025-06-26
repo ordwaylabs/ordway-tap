@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.3.0
+  * Add support for new Stream DebitMemo [#17](https://github.com/singer-io/tap-ordway/pull/17)
+
 ## 0.2.0
   * Fix JSON Schema validator in CircleCI [#7](https://github.com/singer-io/tap-ordway/pull/7)
   * Remove versions from Incremental Streams [#9](https://github.com/singer-io/tap-ordway/pull/9)
