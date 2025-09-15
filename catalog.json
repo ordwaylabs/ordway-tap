@@ -7831,18 +7831,36 @@
             ]
           },
           "debit_lines": {
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ]
+            },
             "type": [
               "null",
               "array"
             ]
           },
           "payments": {
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ]
+            },
             "type": [
               "null",
               "array"
             ]
           },
           "credits": {
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ]
+            },
             "type": [
               "null",
               "array"
