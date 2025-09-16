@@ -6373,7 +6373,7 @@
               "string"
             ]
           },
-          "status": {
+          "refund_status": {
             "type": [
               "null",
               "string"
@@ -6427,6 +6427,55 @@
             "type": [
               "null",
               "object"
+            ]
+          },
+          "conversion_rate": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "failure_reason": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "integration_failed_at": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "integration_messages": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "integration_status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "payment_run_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "invoice_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "credit_id": {
+            "type": [
+              "null",
+              "string"
             ]
           }
         },
@@ -6517,7 +6566,7 @@
         {
           "breadcrumb": [
             "properties",
-            "status"
+            "refund_status"
           ],
           "metadata": {
             "inclusion": "available"
@@ -6590,6 +6639,78 @@
           "breadcrumb": [
             "properties",
             "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "conversion_rate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "failure_reason"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_failed_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_messages"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_run_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoice_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "credit_id"
           ],
           "metadata": {
             "inclusion": "available"
