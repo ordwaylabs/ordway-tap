@@ -73,6 +73,12 @@
                 "object"
             ],
             "additionalProperties": true
+        },
+        "show_ssp": {
+            "type": [
+                "null",
+                "boolean"
+            ]
         }
     }
 }
