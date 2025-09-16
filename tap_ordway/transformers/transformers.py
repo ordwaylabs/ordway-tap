@@ -196,3 +196,8 @@ class PaymentTransformer(RecordTransformer):
     def pre_transform(self, data: Dict[str, Any], context: DataContext):
         super().pre_transform(data, context)
         return data
+
+class RefundTransformer(RecordTransformer):
+    def pre_transform(self, data: Dict[str, Any], context: DataContext):
+        super().pre_transform(data, context)
+        return data

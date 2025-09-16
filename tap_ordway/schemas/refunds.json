@@ -43,7 +43,7 @@
 				"string"
 			]
 		},
-		"status": {
+		"refund_status": {
 			"type": [
 				"null",
 				"string"
@@ -98,6 +98,55 @@
 				"null",
 				"object"
 			]
-		}
+		},
+		"conversion_rate": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "failure_reason": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "integration_failed_at": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "integration_messages": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "integration_status": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "payment_run_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "invoice_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+		"credit_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
 	}
 }
