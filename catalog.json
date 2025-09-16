@@ -5280,6 +5280,116 @@
               "null",
               "object"
             ]
+          },
+          "can_retry": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "conversion_rate": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "email_status": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "failed_attempt": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "failure_reason": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "integration_failed_at": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "integration_messages": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "integration_status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "opt": {
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "refunded_on": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "surcharge_fee": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "timeout_attempts": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "chart_of_account_id": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "currency_id": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "electronic_method_id": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "gateway_id": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "parent_id": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "payment_run_id": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         },
         "type": [
@@ -5523,6 +5633,168 @@
           "breadcrumb": [
             "properties",
             "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "can_retry"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "conversion_rate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "email_status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "failed_attempt"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "failure_reason"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_failed_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_messages"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "opt"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refunded_on"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "surcharge_fee"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "timeout_attempts"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "chart_of_account_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "currency_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "electronic_method_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "gateway_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "parent_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_run_id"
           ],
           "metadata": {
             "inclusion": "available"
