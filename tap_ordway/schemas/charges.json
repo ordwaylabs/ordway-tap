@@ -237,25 +237,6 @@
                 "boolean"
             ]
         },
-        "billing_day_type": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "bonus_expiry_date": {
-            "type": [
-                "null",
-                "string"
-            ],
-            "format": "date"
-        },
-        "bonus_unit_rollover_percentage": {
-            "type": [
-                "null",
-                "number"
-            ]
-        },
         "type": {
             "type": [
                 "null",
