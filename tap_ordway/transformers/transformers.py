@@ -69,6 +69,12 @@ class InvoiceTransformer(RecordTransformer):
                     "created_date": data.get("created_date"),
                     "created_by": data.get("created_by"),
                     "updated_by": data.get("updated_by"),
+                    "invoice_pdf_url":data.get("invoice_pdf_url"),
+                    "exchange_rate":data.get("exchange_rate"),
+                    "emailed":data.get("emailed"),
+                    "reversal_email":data.get("reversal_email"),
+                    "payment_term_id":data.get("payment_term_id"),
+                    "invoice_pdf_url":data.get("invoice_pdf_url"),
                 }
             )
 
@@ -99,6 +105,8 @@ class OrderTransformer(RecordTransformer):
                     "created_date": data.get("created_date"),
                     "updated_date": data.get("updated_date"),
                     "custom_fields": data.get("custom_fields"),
+                    "estimated_tax": data.get("estimated_tax"),
+                    "exchange_rate": data.get("exchange_rate"),
                 }
             )
 

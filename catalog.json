@@ -1303,6 +1303,36 @@
               "null",
               "string"
             ]
+          },
+          "discount_display_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "exchange_rate": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "payment_term_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "emailed": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "reversal_email": {
+            "type": [
+              "null",
+              "boolean"
+            ]
           }
         },
         "type": [
@@ -1758,6 +1788,51 @@
           "metadata": {
             "inclusion": "available"
           }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "discount_display_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "exchange_rate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_term_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "emailed"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "reversal_email"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
         }
       ]
     },
@@ -1899,6 +1974,24 @@
             "type": [
               "null",
               "object"
+            ]
+          },
+          "exchange_rate": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "estimated_tax": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "payment_term_id": {
+            "type": [
+              "null",
+              "string"
             ]
           }
         },
@@ -2126,6 +2219,33 @@
           "breadcrumb": [
             "properties",
             "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "exchange_rate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "estimated_tax"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_term_id"
           ],
           "metadata": {
             "inclusion": "available"

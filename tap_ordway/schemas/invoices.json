@@ -306,6 +306,36 @@
 				"string"
 			],
 			"format": "uri"
+		},
+		"discount_display_name": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"exchange_rate": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"payment_term_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"emailed": {
+			"type": [
+				"null",
+				"boolean"
+			]
+		},
+		"reversal_email": {
+			"type": [
+				"null",
+				"boolean"
+			]
 		}
 	}
 }
