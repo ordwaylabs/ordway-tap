@@ -4685,6 +4685,50 @@
               "null",
               "object"
             ]
+          },
+          "bill_contact_sf_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "shipping_contact_sf_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "pause_effective_date": {
+            "format": "date",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "resume_effective_date": {
+            "format": "date",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "pause_by_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "resume_by_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "exchange_rate": {
+            "type": [
+              "null",
+              "number"
+            ]
           }
         },
         "type": [
@@ -5226,6 +5270,69 @@
           "breadcrumb": [
             "properties",
             "charge_custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "bill_contact_sf_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "shipping_contact_sf_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "pause_effective_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "resume_effective_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "pause_by_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "resume_by_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "exchange_rate"
           ],
           "metadata": {
             "inclusion": "available"

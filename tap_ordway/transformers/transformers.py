@@ -156,7 +156,14 @@ class SubscriptionTransformer(RecordTransformer):
                     "updated_date": data.get("updated_date"),
                     "custom_fields": data.get("custom_fields"),
                     "charge_custom_fields": subscription_plan.get("custom_fields"),
-                    "transaction_posting_entries": subscription_plan.get("transaction_posting_entries")
+                    "transaction_posting_entries": subscription_plan.get("transaction_posting_entries"),
+                    "bill_contact_sf_id": data.get("bill_contact_sf_id"),
+                    "shipping_contact_sf_id": data.get("shipping_contact_sf_id"),
+                    "pause_effective_date": data.get("pause_effective_date"),
+                    "resume_effective_date": data.get("resume_effective_date"),
+                    "pause_by_type": data.get("pause_by_type"),
+                    "resume_by_type": data.get("resume_by_type"),
+                    "exchange_rate": data.get("exchange_rate")
                 }
             )
 
