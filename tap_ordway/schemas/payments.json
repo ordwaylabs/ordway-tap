@@ -164,9 +164,6 @@
 		"custom_fields": {
       "type": ["null", "object"]
     },
-    "can_retry": {
-      "type": ["null", "boolean"]
-    },
     "conversion_rate": {
       "type": ["null", "number"]
     },
@@ -197,24 +194,6 @@
       "format": "date-time"
     },
     "surcharge_fee": {
-      "type": ["null", "number"]
-    },
-    "timeout_attempts": {
-      "type": ["null", "number"]
-    },
-    "chart_of_account_id": {
-      "type": ["null", "number"]
-    },
-    "currency_id": {
-      "type": ["null", "number"]
-    },
-    "electronic_method_id": {
-      "type": ["null", "number"]
-    },
-    "gateway_id": {
-      "type": ["null", "number"]
-    },
-    "parent_id": {
       "type": ["null", "number"]
     },
     "payment_run_id": {

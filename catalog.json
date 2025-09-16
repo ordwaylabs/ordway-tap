@@ -5401,12 +5401,6 @@
               "object"
             ]
           },
-          "can_retry": {
-            "type": [
-              "null",
-              "boolean"
-            ]
-          },
           "conversion_rate": {
             "type": [
               "null",
@@ -5464,42 +5458,6 @@
             ]
           },
           "surcharge_fee": {
-            "type": [
-              "null",
-              "number"
-            ]
-          },
-          "timeout_attempts": {
-            "type": [
-              "null",
-              "number"
-            ]
-          },
-          "chart_of_account_id": {
-            "type": [
-              "null",
-              "number"
-            ]
-          },
-          "currency_id": {
-            "type": [
-              "null",
-              "number"
-            ]
-          },
-          "electronic_method_id": {
-            "type": [
-              "null",
-              "number"
-            ]
-          },
-          "gateway_id": {
-            "type": [
-              "null",
-              "number"
-            ]
-          },
-          "parent_id": {
             "type": [
               "null",
               "number"
@@ -5761,15 +5719,6 @@
         {
           "breadcrumb": [
             "properties",
-            "can_retry"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
             "conversion_rate"
           ],
           "metadata": {
@@ -5852,60 +5801,6 @@
           "breadcrumb": [
             "properties",
             "surcharge_fee"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "timeout_attempts"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "chart_of_account_id"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "currency_id"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "electronic_method_id"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "gateway_id"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "parent_id"
           ],
           "metadata": {
             "inclusion": "available"
