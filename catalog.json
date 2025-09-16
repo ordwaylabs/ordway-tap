@@ -7353,25 +7353,6 @@
               "boolean"
             ]
           },
-          "billing_day_type": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "bonus_expiry_date": {
-            "format": "date",
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "bonus_unit_rollover_percentage": {
-            "type": [
-              "null",
-              "number"
-            ]
-          },
           "fmv": {
             "type": [
               "null",
@@ -7738,33 +7719,6 @@
           "breadcrumb": [
             "properties",
             "backcharge_current_period"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "billing_day_type"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "bonus_expiry_date"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
-            "bonus_unit_rollover_percentage"
           ],
           "metadata": {
             "inclusion": "available"
