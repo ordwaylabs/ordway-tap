@@ -171,12 +171,6 @@
             ],
             "format": "date"
         },
-        "proration": {
-            "type": [
-                "null",
-                "boolean"
-            ]
-        },
         "refill_prepaid_units_for": {
             "type": [
                 "null",
@@ -201,22 +195,10 @@
                 "boolean"
             ]
         },
-        "rollover_percentage": {
+        "billing_period_start_alignment_month": {
             "type": [
                 "null",
                 "number"
-            ]
-        },
-        "start_alignment_month": {
-            "type": [
-                "null",
-                "number"
-            ]
-        },
-        "start_alignment": {
-            "type": [
-                "null",
-                "string"
             ]
         },
         "start_alignment_type": {
@@ -243,19 +225,13 @@
                 "string"
             ]
         },
-        "meter_id": {
+        "auto_refill_prepaid_units": {
             "type": [
                 "null",
                 "number"
             ]
         },
-        "auto_refill_prepayment_units": {
-            "type": [
-                "null",
-                "number"
-            ]
-        },
-        "backcharge": {
+        "backcharge_current_period": {
             "type": [
                 "null",
                 "boolean"
@@ -280,13 +256,7 @@
                 "number"
             ]
         },
-        "charge_name": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "charge_type": {
+        "type": {
             "type": [
                 "null",
                 "string"
@@ -314,12 +284,6 @@
             "type": [
                 "null",
                 "boolean"
-            ]
-        },
-        "billing_period_id": {
-            "type": [
-                "null",
-                "number"
             ]
         },
         "plan_id": {
