@@ -74,6 +74,21 @@
 		},
 		"custom_fields": {
 			"type": ["null", "object"]
+		},
+		"exchange_rate": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "estimated_tax": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+		"payment_term_id": {
+			"type": ["null", "string"]
 		}
 	}
 }
