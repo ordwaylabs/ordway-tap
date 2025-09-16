@@ -7096,12 +7096,6 @@
               "string"
             ]
           },
-          "plan": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
           "included_units": {
             "type": [
               "null",
@@ -7115,43 +7109,218 @@
             ]
           },
           "tiers": {
-            "properties": {
-              "tier": {
-                "type": [
-                  "null",
-                  "integer"
-                ]
+            "items": {
+              "properties": {
+                "tier": {
+                  "type": [
+                    "null",
+                    "string",
+                    "number"
+                  ]
+                },
+                "starting_unit": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "ending_unit": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "price": {
+                  "type": [
+                    "null",
+                    "string",
+                    "number"
+                  ]
+                },
+                "type": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
               },
-              "starting_unit": {
-                "type": [
-                  "null",
-                  "integer"
-                ]
-              },
-              "ending_unit": {
-                "type": [
-                  "null",
-                  "integer"
-                ]
-              },
-              "price": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              },
-              "type": {
-                "type": [
-                  "null",
-                  "string"
-                ]
-              }
+              "type": "object",
+              "additionalProperties": false
             },
             "type": [
               "null",
-              "object"
-            ],
-            "additionalProperties": false
+              "array"
+            ]
+          },
+          "prepaid_units_enable": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "prepaid_units_expiry": {
+            "format": "date",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "proration": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "refill_prepaid_units_for": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "refill_qty": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "refund_units_on_cancel": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "remove_units_on_cancel": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "rollover_percentage": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "start_alignment_month": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "start_alignment": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "start_alignment_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "usage_period": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "revenue_rule_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "meter_id": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "auto_refill_prepayment_units": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "backcharge": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "billing_day_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "bonus_expiry_date": {
+            "format": "date",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "bonus_unit_rollover_percentage": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "charge_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "charge_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "fmv": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "fmv_allocation_enabled": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "line_no": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "per_usage_rating": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "billing_period_id": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "plan_id": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         },
         "type": "object",
@@ -7353,15 +7522,6 @@
         {
           "breadcrumb": [
             "properties",
-            "plan"
-          ],
-          "metadata": {
-            "inclusion": "available"
-          }
-        },
-        {
-          "breadcrumb": [
-            "properties",
             "included_units"
           ],
           "metadata": {
@@ -7381,6 +7541,258 @@
           "breadcrumb": [
             "properties",
             "tiers"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "prepaid_units_enable"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "prepaid_units_expiry"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "proration"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refill_prepaid_units_for"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refill_qty"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refund_units_on_cancel"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "remove_units_on_cancel"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "rollover_percentage"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "start_alignment_month"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "start_alignment"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "start_alignment_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "usage_period"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "revenue_rule_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "meter_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "auto_refill_prepayment_units"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "backcharge"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_day_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "bonus_expiry_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "bonus_unit_rollover_percentage"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "fmv"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "fmv_allocation_enabled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "line_no"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "per_usage_rating"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_period_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "plan_id"
           ],
           "metadata": {
             "inclusion": "available"
@@ -7675,6 +8087,12 @@
               "object"
             ],
             "additionalProperties": true
+          },
+          "show_ssp": {
+            "type": [
+              "null",
+              "boolean"
+            ]
           }
         },
         "type": "object",
@@ -7787,6 +8205,15 @@
           "breadcrumb": [
             "properties",
             "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "show_ssp"
           ],
           "metadata": {
             "inclusion": "available"
