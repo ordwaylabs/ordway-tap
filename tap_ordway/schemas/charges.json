@@ -168,8 +168,7 @@
             "type": [
                 "null",
                 "string"
-            ],
-            "format": "date"
+            ]
         },
         "refill_prepaid_units_for": {
             "type": [
