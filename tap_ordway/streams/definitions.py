@@ -7,7 +7,9 @@ from ..transformers import (
     InvoiceTransformer,
     OrderTransformer,
     RecordTransformer,
-    SubscriptionTransformer
+    SubscriptionTransformer,
+    PlanTransformer,
+    ChargeTransformer
 )
 from .base import EndpointSubstream, ResponseSubstream, Stream
 
@@ -210,7 +212,7 @@ class Charges(ResponseSubstream):
     replication_key = None
     replication_method = "FULL_TABLE"
     path = ("charges",)
-    transformer_class = RecordTransformer
+    transformer_class = ChargeTransformer
 
 
 class Plans(Stream):
@@ -225,7 +227,7 @@ class Plans(Stream):
     valid_replication_keys: Sequence[str] = []
     replication_key = None
     replication_method = "FULL_TABLE"
-    transformer_class = RecordTransformer
+    transformer_class = PlanTransformer
     request_handler = RequestHandler("/plans")
 
 

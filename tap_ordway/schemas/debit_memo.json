@@ -85,25 +85,22 @@
     "debit_lines": {
       "type": ["null", "array"],
       "items": {
-        "type": ["null", "object"],
-        "additionalProperties": true
+        "type": ["object", "null"]
       }
     },
     "payments": {
-      "type": ["null","array"],
+      "type": ["null", "array"],
       "items": {
-        "type": ["null", "object"],
-        "additionalProperties": true
+        "type": ["object", "null"]
       }
     },
     "credits": {
-     "type": ["null", "array"],
-     "items": {
-      "type": ["null", "object"],
-      "additionalProperties": true
-    }
+      "type": ["null", "array"],
+      "items": {
+        "type": ["object", "null"]
+      }
     },
-    "journal_entry_id":{
+    "journal_entry_id": {
       "type": "string"
     }
   }

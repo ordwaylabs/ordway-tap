@@ -4,5 +4,7 @@ from .transformers import (
     CustomerTransformer,
     InvoiceTransformer,
     OrderTransformer,
-    SubscriptionTransformer
+    SubscriptionTransformer,
+    PlanTransformer,
+    ChargeTransformer
 )

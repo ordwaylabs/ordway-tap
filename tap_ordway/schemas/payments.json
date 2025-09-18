@@ -162,10 +162,42 @@
 			"format": "date-time"
 		},
 		"custom_fields": {
-			"type": [
-				"null",
-				"object"
-			]
-		}
-	}
+      "type": ["null", "object"]
+    },
+    "conversion_rate": {
+      "type": ["null", "number"]
+    },
+    "email_status": {
+      "type": ["null", "boolean"]
+    },
+    "failed_attempt": {
+      "type": ["null", "number"]
+    },
+    "failure_reason": {
+      "type": ["null", "string"]
+    },
+    "integration_failed_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "integration_messages": {
+      "type": ["null", "string"]
+    },
+    "integration_status": {
+      "type": ["null", "string"]
+    },
+    "opt": {
+      "type": ["null", "object"]
+    },
+    "refunded_on": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "surcharge_fee": {
+      "type": ["null", "number"]
+    },
+    "payment_run_id": {
+      "type": ["null", "string"]
+    }
+  }
 }

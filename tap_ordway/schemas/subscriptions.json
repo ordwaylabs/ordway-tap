@@ -186,6 +186,29 @@
 		},
 		"charge_custom_fields": {
 			"type": ["null", "object"]
+		},
+		"bill_contact_sf_id": {
+			"type": ["null", "string"]
+		},
+		"shipping_contact_sf_id": {
+			"type": ["null", "string"]
+		},
+		"pause_effective_date": {
+			"type": ["null", "string"],
+			"format": "date"
+		},
+		"resume_effective_date": {
+			"type": ["null", "string"],
+			"format": "date"
+		},
+		"pause_by_type": {
+			"type": ["null", "string"]
+		},
+		"resume_by_type": {
+			"type": ["null", "string"]
+		},
+		"exchange_rate": {
+			"type": ["null", "number"]
 		}
 	}
 }

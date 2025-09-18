@@ -122,12 +122,6 @@
                 "string"
             ]
         },
-        "plan": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
         "included_units": {
             "type": [
                 "null",
@@ -141,48 +135,143 @@
             ]
         },
         "tiers": {
+        "type": ["null", "array"],
+        "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+            "tier": {
+                "type": ["null", "string", "number"]
+            },
+            "starting_unit": {
+                "type": ["null", "string"]
+            },
+            "ending_unit": {
+                "type": ["null", "string"]
+            },
+            "price": {
+                "type": ["null", "string", "number"]
+            },
+            "type": {
+                "type": ["null", "string"]
+            }
+            }
+        }
+        },
+        "prepaid_units_enable": {
             "type": [
                 "null",
-                "array"
+                "boolean"
+            ]
+        },
+        "prepaid_units_expiry": {
+            "type": [
+                "null",
+                "string"
             ],
-            "items": {
-                "type": [
-                    "null",
-                    "object"
-                ],
-                "properties": {
-                    "tier": {
-                        "type": [
-                            "null",
-                            "integer"
-                        ]
-                    },
-                    "starting_unit": {
-                        "type": [
-                            "null",
-                            "string"
-                        ]
-                    },
-                    "ending_unit": {
-                        "type": [
-                            "null",
-                            "string"
-                        ]
-                    },
-                    "price": {
-                        "type": [
-                            "null",
-                            "string"
-                        ]
-                    },
-                    "type": {
-                        "type": [
-                            "null",
-                            "string"
-                        ]
-                    }
-                }
-            }
+            "format": "date"
+        },
+        "refill_prepaid_units_for": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "refill_qty": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "refund_units_on_cancel": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "remove_units_on_cancel": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "billing_period_start_alignment_month": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "start_alignment_type": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "status": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "usage_period": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "revenue_rule_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "auto_refill_prepaid_units": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "backcharge_current_period": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "type": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "fmv": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "fmv_allocation_enabled": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "line_no": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "per_usage_rating": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "plan_id": {
+            "type": [
+                "null",
+                "string"
+            ]
         }
     }
 }

@@ -69,6 +69,12 @@ class InvoiceTransformer(RecordTransformer):
                     "created_date": data.get("created_date"),
                     "created_by": data.get("created_by"),
                     "updated_by": data.get("updated_by"),
+                    "invoice_pdf_url":data.get("invoice_pdf_url"),
+                    "exchange_rate":data.get("exchange_rate"),
+                    "emailed":data.get("emailed"),
+                    "reversal_email":data.get("reversal_email"),
+                    "payment_term_id":data.get("payment_term_id"),
+                    "invoice_pdf_url":data.get("invoice_pdf_url"),
                 }
             )
 
@@ -99,6 +105,8 @@ class OrderTransformer(RecordTransformer):
                     "created_date": data.get("created_date"),
                     "updated_date": data.get("updated_date"),
                     "custom_fields": data.get("custom_fields"),
+                    "estimated_tax": data.get("estimated_tax"),
+                    "exchange_rate": data.get("exchange_rate"),
                 }
             )
 
@@ -148,7 +156,14 @@ class SubscriptionTransformer(RecordTransformer):
                     "updated_date": data.get("updated_date"),
                     "custom_fields": data.get("custom_fields"),
                     "charge_custom_fields": subscription_plan.get("custom_fields"),
-                    "transaction_posting_entries": subscription_plan.get("transaction_posting_entries")
+                    "transaction_posting_entries": subscription_plan.get("transaction_posting_entries"),
+                    "bill_contact_sf_id": data.get("bill_contact_sf_id"),
+                    "shipping_contact_sf_id": data.get("shipping_contact_sf_id"),
+                    "pause_effective_date": data.get("pause_effective_date"),
+                    "resume_effective_date": data.get("resume_effective_date"),
+                    "pause_by_type": data.get("pause_by_type"),
+                    "resume_by_type": data.get("resume_by_type"),
+                    "exchange_rate": data.get("exchange_rate")
                 }
             )
 
@@ -186,3 +201,28 @@ class DebitMemoTransformer(RecordTransformer):
             )
 
             yield debit_memo_line
+
+class ProductTransformer(RecordTransformer):
+    def pre_transform(self, data: Dict[str, Any], context: DataContext):
+        super().pre_transform(data, context)
+        return data
+
+class PaymentTransformer(RecordTransformer):
+    def pre_transform(self, data: Dict[str, Any], context: DataContext):
+        super().pre_transform(data, context)
+        return data
+
+class RefundTransformer(RecordTransformer):
+    def pre_transform(self, data: Dict[str, Any], context: DataContext):
+        super().pre_transform(data, context)
+        return data
+
+class PlanTransformer(RecordTransformer):
+    def pre_transform(self, data: Dict[str, Any], context: DataContext):
+        super().pre_transform(data, context)
+        return data
+
+class ChargeTransformer(RecordTransformer):
+    def pre_transform(self, data: Dict[str, Any], context: DataContext):
+        super().pre_transform(data, context)
+        return data
