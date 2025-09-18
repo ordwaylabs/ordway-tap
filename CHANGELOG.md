@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.1
+  * Updated Product to have transaction posting entries
+  * Updated Subscription to have transaction posting entries
+  * Added Journal Entries Schema [#18](https://github.com/singer-io/tap-ordway/pull/18)
+
 ## 0.4.0
   * Library version upgrades [#19](https://github.com/singer-io/tap-ordway/pull/19)
 
