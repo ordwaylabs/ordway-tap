@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.1
+  * Updated Product to have transaction posting entries
+  * Updated Subscription to have transaction posting entries
+  * Added Journal Entries Schema [#18](https://github.com/singer-io/tap-ordway/pull/18)
+
+## 0.4.0
+  * Library version upgrades [#19](https://github.com/singer-io/tap-ordway/pull/19)
+
 ## 0.3.0
   * Add support for new Stream DebitMemo [#17](https://github.com/singer-io/tap-ordway/pull/17)
 

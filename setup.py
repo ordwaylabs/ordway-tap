@@ -8,20 +8,20 @@ PACKAGE_DIR = PACKAGE_NAME.replace("-", "_")
 ROOT_DIR = abspath(dirname(__file__))
 
 INSTALL_REQUIRES = [
-    "singer-python>=5.0.12",
-    "requests",
-    "kafka-python",
-    "inflection",
+    "singer-python==6.1.1",
+    "requests==2.32.5",
+    "kafka-python==2.2.15",
+    "inflection==0.5.1",
 ]
 
 EXTRA_REQUIRES = {
     "dev": ["black==20.8b1", "pylint==3.3.4", "tox==3.20.1"],
     "testing": [
-        "mypy==0.790",
+        "mypy",
         "pytest==6.1.1",
         "pytest-cov==2.10.1",
         "pytest-xdist==2.1.0",
-        "vcrpy==4.1.1",
+        "vcrpy",
     ],
 }
 
