@@ -3,10 +3,6 @@
 		"null",
 		"object"
 	],
-	"additionalProperties": false,
-	"required": [
-		"company_id",
-		"journal_entry_id"
-	],
+	"additionalProperties": true,
 	"properties": {}
 }
