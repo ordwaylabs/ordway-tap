@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.2
+  * Updated missing fields from below Modules 
+  * Charges, Invoices, Orders, Payments, Plans, Refunds, Subscriptions
+  * https://github.com/singer-io/tap-ordway/pull/21
+
 ## 0.4.1
   * Updated Product to have transaction posting entries
   * Updated Subscription to have transaction posting entries
