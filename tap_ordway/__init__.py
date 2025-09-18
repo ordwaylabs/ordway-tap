@@ -21,7 +21,7 @@ from .streams import AVAILABLE_STREAMS, check_dependency_conflicts, is_substream
 from .utils import (
     get_filter_datetime,
     get_full_table_version,
-    get_version,
+    is_first_run,
     print_record,
     write_activate_version,
 )
@@ -161,6 +161,7 @@ _STREAM_VERSIONS = Dict[str, Optional[int]]  # pylint: disable=invalid-name
 
 # Could be refactored
 # pylint: disable=too-many-arguments
+#pylint: disable=R0917
 def prepare_stream(
     tap_stream_id: str,
     stream_defs: _STREAM_DEFS,
@@ -198,9 +199,18 @@ def prepare_stream(
                 key_properties=substream_def.key_properties,
             )
 
-            # Substreams and their parent stream are all FULL_TABLE, so
-            # no need to check substream bookmarks.
-            write_activate_version(substream_def.tap_stream_id, substream_version)
+            # All substreams are necessarily FULL_TABLE, so no need to
+            # check if they're INCREMENTAL
+            if is_first_run(substream_def.tap_stream_id, state):
+                write_activate_version(
+                    substream_def.tap_stream_id,
+                    substream_version,
+                )
+
+                write_bookmark(
+                    state, substream_def.tap_stream_id, "wrote_initial_activate_version", True
+                )
+                write_state(state)
 
     write_schema(
         stream_name=stream_def.tap_stream_id,
@@ -209,14 +219,21 @@ def prepare_stream(
     )
 
     filter_datetime = get_filter_datetime(stream_def, config["start_date"], state)
-    stream_version = get_version(stream_def, config["start_date"], filter_datetime)
+    stream_version = (
+        None if stream_def.is_valid_incremental else get_full_table_version()
+    )
     stream_versions[stream_def.tap_stream_id] = stream_version
 
-    if stream_version is not None:
+    if not stream_def.is_valid_incremental and is_first_run(
+        stream_def.tap_stream_id, state
+    ):
         write_activate_version(
             stream_def.tap_stream_id,
             stream_version,
         )
+
+        write_bookmark(state, stream_def.tap_stream_id, "wrote_initial_activate_version", True)
+        write_state(state)
 
     return filter_datetime
 
@@ -258,6 +275,23 @@ def sync(config: Dict[str, Any], state: Dict[str, Any], catalog: Catalog) -> Non
             )
 
         write_state(state)
+
+        for substream_def in stream_def.substreams:  # type: ignore
+            if not substream_def.is_selected:
+                continue
+
+            # All substreams are necessarily FULL_TABLE and thus have a version,
+            # so write their ACTIVATE_VERSION messages without check.
+            write_activate_version(
+                substream_def.tap_stream_id,
+                stream_versions[substream_def.tap_stream_id],
+            )
+
+        if stream_versions[stream_def.tap_stream_id] is not None:
+            write_activate_version(
+                stream_def.tap_stream_id,
+                stream_versions[stream_def.tap_stream_id],
+            )
 
     state = set_currently_syncing(state, None)
     write_state(state)

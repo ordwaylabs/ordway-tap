@@ -4,13 +4,13 @@ from os.path import abspath, dirname, join
 from pathlib import Path
 from tap_ordway import main
 from tap_ordway.api.consts import DEFAULT_API_VERSION
-from .testing_tools import TapArgs, TapExecutor, TapIntegrationTestCase
-from .testing_tools.mask import StrFormat
-from .testing_tools.utils import deselect_all_streams_except
+from testing_tools import TapArgs, TapExecutor, TapIntegrationTestCase
+from testing_tools.mask import StrFormat
+from testing_tools.utils import deselect_all_streams_except
 
 if TYPE_CHECKING:
     from vcr import VCR
-    from .testing_tools.mask import Format
+    from testing_tools.mask import Format
 
 TEST_FIXTURES_DIR = abspath(join(dirname(__file__), "..", "fixtures"))
 DEFAULT_START_DATE = "2020-08-01T00:00:00Z"

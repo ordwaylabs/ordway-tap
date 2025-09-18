@@ -166,8 +166,7 @@ class RequestHandler:
             if isinstance(results, dict):
                 results = [results]
 
-            for result in results:
-                yield result
+            yield from results
 
             if len(results) == 0:
                 self._exhausted = True

@@ -1,8 +1,11 @@
 from unittest import TestCase
-from unittest.mock import MagicMock, patch
-from datetime import datetime
-from pytz import UTC
-from tap_ordway.utils import denest, get_company_id, get_full_table_version, get_version
+from unittest.mock import patch
+from tap_ordway.utils import (
+    denest,
+    get_company_id,
+    get_full_table_version,
+    is_first_run,
+)
 
 
 @patch.dict(
@@ -22,38 +25,28 @@ def test_get_full_table_version(mocked_time):
     assert mocked_time.call_count == 1
 
 
-class GetVersionTestCase(TestCase):
-    @patch("tap_ordway.utils.get_full_table_version")
-    def test_full_table_stream(self, mocked_get_full_table_version):
-        """ Ensure get_full_table_version is invoked on FULL_TABLE streams """
+def test_is_first_run():
+    """Ensure returns True if `wrote_initial_activate_version` is either: a non-True value or not
+    found in bookmarks - else returns False
+    """
 
-        mocked_stream = MagicMock()
-        mocked_stream.is_valid_incremental = False
-
-        get_version(mocked_stream, "2020-01-01", None)
-
-        self.assertEqual(mocked_get_full_table_version.call_count, 1)
-
-    def test_version_is_1_when_incremental_first_run(self):
-        mocked_stream = MagicMock()
-        mocked_stream.is_valid_incremental = True
-
-        version = get_version(
-            mocked_stream, "2020-01-01", datetime(2018, 12, 1, tzinfo=UTC)
-        )
-        self.assertEqual(version, 1)
-
-        version = get_version(mocked_stream, "2020-01-01", None)
-        self.assertEqual(version, 1)
-
-    def test_version_is_None_on_incremental_non_first_runs(self):
-        mocked_stream = MagicMock()
-        mocked_stream.is_valid_incremental = True
-
-        version = get_version(
-            mocked_stream, "2020-01-01", datetime(2020, 2, 1, tzinfo=UTC)
-        )
-        self.assertIsNone(version)
+    assert (
+        is_first_run("payments", {"bookmarks": {"payments": {"wrote_initial_activate_version": True}}})
+        is False
+    )
+    assert (
+        is_first_run("payments", {"bookmarks": {"payments": {"wrote_initial_activate_version": False}}})
+        is True
+    )
+    assert is_first_run("payments", {"bookmarks": {}}) is True
+    assert (
+        is_first_run("payments", {"bookmarks": {"payments": {"wrote_initial_activate_version": 1}}})
+        is True
+    )
+    assert (
+        is_first_run("payments", {"bookmarks": {"payments": {"wrote_initial_activate_version": "true"}}})
+        is True
+    )
 
 
 class DenestTestCase(TestCase):
