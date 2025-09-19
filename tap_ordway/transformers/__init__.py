@@ -4,5 +4,5 @@ from .transformers import (
     CustomerTransformer,
     InvoiceTransformer,
     OrderTransformer,
-    SubscriptionTransformer
+    SubscriptionTransformer,
 )

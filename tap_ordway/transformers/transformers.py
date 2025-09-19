@@ -148,7 +148,6 @@ class SubscriptionTransformer(RecordTransformer):
                     "updated_date": data.get("updated_date"),
                     "custom_fields": data.get("custom_fields"),
                     "charge_custom_fields": subscription_plan.get("custom_fields"),
-                    "transaction_posting_entries": subscription_plan.get("transaction_posting_entries")
                 }
             )
 

@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.4.2
+  * Revert v0.4.1
+
 ## 0.4.1
   * Updated Product to have transaction posting entries
   * Updated Subscription to have transaction posting entries
