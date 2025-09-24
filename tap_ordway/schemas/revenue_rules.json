@@ -84,7 +84,7 @@
             ],
             "format": "date-time"
         },
-        "revenue_rules_entries": {
+        "revenue_rule_entries": {
             "type": [
                 "null",
                 "object"

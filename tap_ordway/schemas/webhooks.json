@@ -30,6 +30,12 @@
             "additionalProperties": true,
             "properties": {}
         },
+        "status": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
         "headers": {
             "type": [
                 "null",

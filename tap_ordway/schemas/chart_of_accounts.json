@@ -82,6 +82,24 @@
                 "null",
                 "object"
             ]
+        },
+        "integration_status": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "integration_failed_attempts": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "integration_messages": {
+            "type": [
+                "null",
+                "string"
+            ]
         }
     }
 }

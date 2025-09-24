@@ -563,6 +563,12 @@
             ],
             "additionalProperties": true
           },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
           "headers": {
             "items": {
               "properties": {
@@ -604,7 +610,8 @@
               "company_id"
             ],
             "valid-replication-keys": [],
-            "inclusion": "available"
+            "inclusion": "available",
+            "selected": true
           }
         },
         {
@@ -646,6 +653,15 @@
         {
           "breadcrumb": [
             "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
             "headers"
           ],
           "metadata": {
@@ -665,13 +681,19 @@
       "schema": {
         "properties": {
           "company_id": {
-            "type": "string"
+            "type": [
+              "string"
+            ]
           },
           "credit_id": {
-            "type": "string"
+            "type": [
+              "string"
+            ]
           },
           "customer_id": {
-            "type": "string"
+            "type": [
+              "string"
+            ]
           },
           "credit_date": {
             "format": "date",
@@ -791,6 +813,122 @@
               "null",
               "object"
             ]
+          },
+          "billing_contact": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "additionalProperties": true
+          },
+          "shipping_contact": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "additionalProperties": true
+          },
+          "subtotal": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "credit_tax": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "credit_pdf_url": {
+            "format": "uri",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "credit_number": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "conversion_rate": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "credit_line_items": {
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "additionalProperties": true
+            },
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "subtotals": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "invoices_applied": {
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "additionalProperties": true
+            },
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "debit_memos": {
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "additionalProperties": true
+            },
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "reversed_on": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "integration_status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "integration_failed_at": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "integration_messages": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         },
         "type": [
@@ -811,7 +949,8 @@
             "valid-replication-keys": [
               "updated_date"
             ],
-            "inclusion": "available"
+            "inclusion": "available",
+            "selected": true
           }
         },
         {
@@ -989,6 +1128,141 @@
           "breadcrumb": [
             "properties",
             "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_contact"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "shipping_contact"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "subtotal"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "credit_tax"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "credit_pdf_url"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "credit_number"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "conversion_rate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "credit_line_items"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "subtotals"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "invoices_applied"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "debit_memos"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "reversed_on"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_failed_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_messages"
           ],
           "metadata": {
             "inclusion": "available"
@@ -2448,6 +2722,158 @@
               "null",
               "string"
             ]
+          },
+          "bill_to_parent": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "billing_contact_email": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "shipping_contact_email": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "carr": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "discounted_carr": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "payment_gateway_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "gateway_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "gateway_account_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "last_invoiced_at": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ach_enabled": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "credit_enabled": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "ach_credit_enabled": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "ca_pad_enabled": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "affirm_enabled": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "processing_fee_enabled": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "payment_options": {
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "portal_status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "integration_status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "integration_failed_at": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "integration_messages": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "account_number": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "routing_number": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "bank_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "swift_code": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ach_credit_balance": {
+            "type": [
+              "null",
+              "number"
+            ]
           }
         },
         "type": [
@@ -2468,7 +2894,8 @@
             "valid-replication-keys": [
               "updated_date"
             ],
-            "inclusion": "available"
+            "inclusion": "available",
+            "selected": true
           }
         },
         {
@@ -2731,6 +3158,231 @@
           "metadata": {
             "inclusion": "available"
           }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "bill_to_parent"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "billing_contact_email"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "shipping_contact_email"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "carr"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "discounted_carr"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_gateway_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "gateway_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "gateway_account_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "last_invoiced_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ach_enabled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "credit_enabled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ach_credit_enabled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ca_pad_enabled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "affirm_enabled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "processing_fee_enabled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_options"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "portal_status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_failed_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_messages"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "account_number"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "routing_number"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "bank_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "swift_code"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ach_credit_balance"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
         }
       ]
     },
@@ -2748,7 +3400,7 @@
           "null",
           "object"
         ],
-        "additionalProperties": false
+        "additionalProperties": true
       },
       "stream": "journal_entries",
       "metadata": [
@@ -2902,6 +3554,24 @@
               "null",
               "boolean"
             ]
+          },
+          "filter_options_named": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "retry_failed_payments": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "payment_processing_surcharge": {
+            "type": [
+              "null",
+              "number"
+            ]
           }
         },
         "type": "object",
@@ -2917,7 +3587,8 @@
               "company_id"
             ],
             "valid-replication-keys": [],
-            "inclusion": "available"
+            "inclusion": "available",
+            "selected": true
           }
         },
         {
@@ -3108,6 +3779,33 @@
           "metadata": {
             "inclusion": "available"
           }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "filter_options_named"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "retry_failed_payments"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_processing_surcharge"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
         }
       ]
     },
@@ -3197,6 +3895,32 @@
               "null",
               "string"
             ]
+          },
+          "charge_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "payment_term": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "customer_filter_options": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "subscription_filter_options": {
+            "properties": {},
+            "type": [
+              "null",
+              "object"
+            ],
+            "additionalProperties": true
           }
         },
         "type": [
@@ -3215,7 +3939,8 @@
               "company_id"
             ],
             "valid-replication-keys": [],
-            "inclusion": "available"
+            "inclusion": "available",
+            "selected": true
           }
         },
         {
@@ -3330,6 +4055,42 @@
           "breadcrumb": [
             "properties",
             "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "charge_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "payment_term"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "customer_filter_options"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "subscription_filter_options"
           ],
           "metadata": {
             "inclusion": "available"
@@ -3729,6 +4490,12 @@
               "null",
               "string"
             ]
+          },
+          "exchange_rate_source": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         },
         "type": [
@@ -3749,7 +4516,8 @@
             "valid-replication-keys": [
               "updated_date"
             ],
-            "inclusion": "available"
+            "inclusion": "available",
+            "selected": true
           }
         },
         {
@@ -3949,6 +4717,15 @@
           "metadata": {
             "inclusion": "available"
           }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "exchange_rate_source"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
         }
       ]
     },
@@ -4099,6 +4876,19 @@
               "null",
               "string"
             ]
+          },
+          "key_metrics": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "additionalProperties": true
+          },
+          "custom_fields": {
+            "type": [
+              "null",
+              "object"
+            ]
           }
         },
         "type": [
@@ -4117,7 +4907,8 @@
               "company_id"
             ],
             "valid-replication-keys": [],
-            "inclusion": "available"
+            "inclusion": "available",
+            "selected": true
           }
         },
         {
@@ -4322,6 +5113,24 @@
           "breadcrumb": [
             "properties",
             "updated_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "key_metrics"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "custom_fields"
           ],
           "metadata": {
             "inclusion": "available"
@@ -6129,6 +6938,12 @@
               "null",
               "object"
             ]
+          },
+          "recognition_end_date": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         },
         "type": [
@@ -6149,7 +6964,8 @@
             "valid-replication-keys": [
               "updated_date"
             ],
-            "inclusion": "available"
+            "inclusion": "available",
+            "selected": true
           }
         },
         {
@@ -6444,6 +7260,15 @@
           "breadcrumb": [
             "properties",
             "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "recognition_end_date"
           ],
           "metadata": {
             "inclusion": "available"
@@ -6927,7 +7752,7 @@
               "string"
             ]
           },
-          "revenue_rules_entries": {
+          "revenue_rule_entries": {
             "properties": {
               "period_offset": {
                 "type": [
@@ -6962,7 +7787,8 @@
               "company_id"
             ],
             "valid-replication-keys": [],
-            "inclusion": "available"
+            "inclusion": "available",
+            "selected": true
           }
         },
         {
@@ -7085,7 +7911,7 @@
         {
           "breadcrumb": [
             "properties",
-            "revenue_rules_entries"
+            "revenue_rule_entries"
           ],
           "metadata": {
             "inclusion": "available"
@@ -7281,7 +8107,6 @@
             ]
           },
           "prepaid_units_expiry": {
-            "format": "date",
             "type": [
               "null",
               "string"
@@ -7814,7 +8639,7 @@
               "string"
             ]
           },
-          "template_id": {
+          "template_name": {
             "type": [
               "null",
               "string"
@@ -7869,7 +8694,8 @@
             "valid-replication-keys": [
               "updated_date"
             ],
-            "inclusion": "available"
+            "inclusion": "available",
+            "selected": true
           }
         },
         {
@@ -7929,7 +8755,7 @@
         {
           "breadcrumb": [
             "properties",
-            "template_id"
+            "template_name"
           ],
           "metadata": {
             "inclusion": "available"
@@ -9400,6 +10226,24 @@
               "null",
               "object"
             ]
+          },
+          "integration_status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "integration_failed_attempts": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "integration_messages": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         },
         "type": "object",
@@ -9415,7 +10259,8 @@
               "company_id"
             ],
             "valid-replication-keys": [],
-            "inclusion": "available"
+            "inclusion": "available",
+            "selected": true
           }
         },
         {
@@ -9530,6 +10375,33 @@
           "breadcrumb": [
             "properties",
             "custom_fields"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_failed_attempts"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "integration_messages"
           ],
           "metadata": {
             "inclusion": "available"

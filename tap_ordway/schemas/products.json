@@ -108,6 +108,9 @@
 		},
 		"custom_fields": {
 			"type": ["null", "object"]
+		},
+		"recognition_end_date": {
+			"type": ["null", "string"]
 		}
 	}
 }

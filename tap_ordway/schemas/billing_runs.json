@@ -86,6 +86,33 @@
                 "string"
             ],
             "format": "date-time"
+        },
+        "charge_type":{
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "payment_term":{
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "customer_filter_options": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "subscription_filter_options": {
+           "type": [
+                "null",
+                "object"
+            ],
+            "additionalProperties": true,
+            "properties": {}
         }
+
     }
 }
