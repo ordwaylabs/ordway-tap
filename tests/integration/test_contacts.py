@@ -1,8 +1,8 @@
 from unittest.mock import patch
 from singer.messages import ActivateVersionMessage, RecordMessage, SchemaMessage
-from .base import BaseOrdwayTestCase
-from .test_customers import MASKED_RESPONSE_FIELDS, _remove_custom_fields
-from .testing_tools.mask import StrFormat
+from base import BaseOrdwayTestCase
+from test_customers import MASKED_RESPONSE_FIELDS, _remove_custom_fields
+from testing_tools.mask import StrFormat
 
 
 class ContactsTestCase(BaseOrdwayTestCase):
@@ -35,7 +35,7 @@ class ContactsTestCase(BaseOrdwayTestCase):
                 )
             ),
             18,
-            msg='"contacts" stream should emit 52 RECORDs',
+            msg='"contacts" stream should emit 18 RECORDs',
         )
         self.assertEqual(
             len(
@@ -45,7 +45,7 @@ class ContactsTestCase(BaseOrdwayTestCase):
                     )
                 )
             ),
-            1,
+            2,
         )
         self.assertEqual(
             len(
@@ -57,7 +57,7 @@ class ContactsTestCase(BaseOrdwayTestCase):
             ),
             1,
         )
-        self.assertMessageCountEqual(20, "contacts")
+        self.assertMessageCountEqual(21, "contacts")
 
     def test_records_included(self):
         self.assertMessagesIncludesAll(

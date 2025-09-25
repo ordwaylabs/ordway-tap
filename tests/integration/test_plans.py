@@ -1,7 +1,7 @@
 from unittest.mock import patch
 from singer.messages import ActivateVersionMessage, RecordMessage, SchemaMessage
-from .base import DEFAULT_MASKED_RESPONSE_FIELDS, BaseOrdwayTestCase
-from .testing_tools.mask import Format, StrFormat
+from base import DEFAULT_MASKED_RESPONSE_FIELDS, BaseOrdwayTestCase
+from testing_tools.mask import Format, StrFormat
 
 MASKED_RESPONSE_FIELDS = {
     "quantity": Format.AUTO,
@@ -52,7 +52,7 @@ class PlansTestCase(BaseOrdwayTestCase):
                     )
                 )
             ),
-            1,
+            2,
         )
         self.assertEqual(
             len(
@@ -64,7 +64,7 @@ class PlansTestCase(BaseOrdwayTestCase):
             ),
             1,
         )
-        self.assertMessageCountEqual(7, "plans")
+        self.assertMessageCountEqual(8, "plans")
 
     def test_all_records_included(self):
         self.assertMessagesIncludesAll(

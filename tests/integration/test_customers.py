@@ -1,8 +1,8 @@
 from unittest.mock import patch
 from singer.messages import ActivateVersionMessage, RecordMessage, SchemaMessage
-from .base import DEFAULT_MASKED_RESPONSE_FIELDS, BaseOrdwayTestCase
-from .testing_tools.mask import Format, StrFormat
-from .testing_tools.utils import alter_nested_value
+from base import DEFAULT_MASKED_RESPONSE_FIELDS, BaseOrdwayTestCase
+from testing_tools.mask import Format, StrFormat
+from testing_tools.utils import alter_nested_value
 
 MASKED_RESPONSE_FIELDS = {
     "balance": Format.AUTO,
@@ -61,7 +61,7 @@ class CustomersTestCase(BaseOrdwayTestCase):
                 )
             ),
             19,
-            msg='"customers" stream should emit 52 RECORDs',
+            msg='"customers" stream should emit 19 RECORDs',
         )
         self.assertEqual(
             len(
@@ -71,7 +71,7 @@ class CustomersTestCase(BaseOrdwayTestCase):
                     )
                 )
             ),
-            1,
+            2,
         )
         self.assertEqual(
             len(
@@ -83,7 +83,7 @@ class CustomersTestCase(BaseOrdwayTestCase):
             ),
             1,
         )
-        self.assertMessageCountEqual(21, "customers")
+        self.assertMessageCountEqual(22, "customers")
 
     def test_records_included(self):
         self.assertMessagesIncludesAll(

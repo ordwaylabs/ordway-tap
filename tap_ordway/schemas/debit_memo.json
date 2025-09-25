@@ -6,7 +6,7 @@
     "debit_memo_id": {
       "type": "string"
     },
-    "customer_id": {  
+    "customer_id": {
       "type": "string"
     },
     "company_id": {
@@ -35,7 +35,7 @@
       "type": ["null", "string"]
     },
     "currency": {
-      "type": ["null", "string"]    
+      "type": ["null", "string"]
     },
     "debit_tax": {
       "type": ["null", "number"]
