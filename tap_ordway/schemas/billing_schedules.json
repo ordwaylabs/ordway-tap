@@ -147,6 +147,19 @@
 				"string"
 			],
 			"format": "date-time"
+		},
+		"key_metrics": {
+			"type": [
+				"null",
+				"object"
+			],
+			"additionalProperties": true
+		},
+		"custom_fields": {
+			"type": [
+				"null",
+				"object"
+			]
 		}
 	}
 }

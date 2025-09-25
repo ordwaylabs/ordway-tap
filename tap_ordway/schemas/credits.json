@@ -10,13 +10,19 @@
 	],
 	"properties": {
 		"company_id": {
-			"type": "string"
+			"type": [
+				"string"
+			]
 		},
 		"credit_id": {
-			"type": "string"
+			"type": [
+				"string"
+			]
 		},
 		"customer_id": {
-			"type": "string"
+			"type": [
+				"string"
+			]
 		},
 		"credit_date": {
 			"type": [
@@ -136,6 +142,119 @@
 				"null",
 				"object"
 			]
+		},
+		"billing_contact": {
+			"type": [
+				"null",
+				"object"
+			],
+			"additionalProperties": true
+		},
+		"shipping_contact": {
+			"type": [
+				"null",
+				"object"
+			],
+			"additionalProperties": true
+		},
+		"subtotal": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"credit_tax": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"credit_pdf_url": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "uri"
+		},
+		"credit_number": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"conversion_rate": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"credit_line_items": {
+			"type": [
+				"null",
+				"array"
+			],
+			"items": {
+				"type": [
+					"null",
+					"object"
+				],
+				"additionalProperties": true
+			}
+		},
+		"subtotals": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"invoices_applied": {
+			"type": [
+				"null",
+				"array"
+			],
+			"items": {
+				"type": [
+					"null",
+					"object"
+				],
+				"additionalProperties": true
+			}
+		},
+		"debit_memos": {
+			"type": [
+				"null",
+				"array"
+			],
+			"items": {
+				"type": [
+					"null",
+					"object"
+				],
+				"additionalProperties": true
+			}
+		},
+		"reversed_on": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date-time"
+		},
+		"integration_status": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"integration_failed_at": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date-time"
+		},
+		"integration_messages": {
+			"type": ["null", "string"]
 		}
 	}
 }

@@ -40,7 +40,7 @@
                 "string"
             ]
         },
-        "template_id": {
+        "template_name": {
             "type": [
                 "null",
                 "string"

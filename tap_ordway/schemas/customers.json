@@ -195,6 +195,158 @@
 				"string"
 			],
 			"format": "uri"
+		},
+		"bill_to_parent": {
+			"type": [
+				"null",
+				"boolean"
+			]
+		},
+		"billing_contact_email": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"shipping_contact_email": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"carr": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"discounted_carr": {
+			"type": [
+				"null",
+				"number"
+			]
+		},
+		"payment_gateway_id": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"gateway_name": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"gateway_account_name": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"last_invoiced_at": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date-time"
+		},
+		"ach_enabled": {
+			"type": [
+				"null",
+				"boolean"
+			]
+		},
+		"credit_enabled": {
+			"type": [
+				"null",
+				"boolean"
+			]
+		},
+		"ach_credit_enabled": {
+			"type": [
+				"null",
+				"boolean"
+			]
+		},
+		"ca_pad_enabled": {
+			"type": [
+				"null",
+				"boolean"
+			]
+		},
+		"affirm_enabled": {
+			"type": [
+				"null",
+				"boolean"
+			]
+		},
+		"processing_fee_enabled": {
+			"type": [
+				"null",
+				"boolean"
+			]
+		},
+		"payment_options": {
+			"type": [
+				"null",
+				"object"
+			]
+		},
+		"portal_status": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"integration_status": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"integration_failed_at": {
+			"type": [
+				"null",
+				"string"
+			],
+			"format": "date-time"
+		},
+		"integration_messages": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"account_number": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"routing_number": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"bank_name": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"swift_code": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"ach_credit_balance": {
+			"type": [
+				"null",
+				"number"
+			]
 		}
 	}
 }

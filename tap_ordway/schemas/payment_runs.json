@@ -132,6 +132,24 @@
                 "null",
                 "boolean"
             ]
+        },
+        "filter_options_named": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "retry_failed_payments": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "payment_processing_surcharge": {
+            "type": [
+                "null",
+                "number"
+            ]
         }
     }
 }
