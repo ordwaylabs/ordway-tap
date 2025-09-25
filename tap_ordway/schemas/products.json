@@ -30,29 +30,6 @@
 		"currency": {
 			"type": ["null", "string"]
 		},
-		"transaction_posting_entries": {
-			"type": ["null", "array"],
-			"items": {
-				"type": "object",
-				"properties": {}
-			}
-		},
-		"show_revenue_schedules": {
-			"type": ["null", "boolean"]
-		},
-		"product_tax_group_name": {
-			"type": ["null", "string"]
-		},
-		"integration_status": {
-			"type": ["null", "string"]
-		},
-		"integration_failed_at": {
-			"type": ["null", "string"],
-			"format": "date-time"
-		},
-		"integration_messages": {
-			"type": ["null", "string"]
-		},
 		"income_account": {
 			"type": ["null", "string"]
 		},
